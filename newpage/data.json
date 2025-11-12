@@ -1,0 +1,22 @@
+{
+    "projects": [
+        {
+            "name": "The Sky Project",
+            "description": "",
+            "genre": ["2D","Monster Collector","RPG","Turn-Battle"],
+            "developer": "Enthariel Games",
+            "development-date": "Sep 2024 - Sep 2025",
+            "role-descroption": "Trabajé como principal programador creando estructura de datos acerca del manejo de las criaturas, ataques, sistema de combate y movimiento del personaje sobre plataformas.",
+            "attributes": ["Indie", "Unity", "C#", "2D"]
+        },
+        {
+            "name": "Luminaria: Dark Echoes",
+            "description": "",
+            "genre": ["2D"],
+            "developer": "Enthariel Games",
+            "development-date": "Sep 2024 - Sep 2025",
+            "role-descroption": "Trabajé como principal programador creando estructura de datos acerca del manejo de las criaturas, ataques, sistema de combate y movimiento del personaje sobre plataformas.",
+            "attributes": ["Indie", "Unity", "C#", "2D"]
+        }
+    ]
+}

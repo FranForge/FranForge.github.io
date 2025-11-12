@@ -1,0 +1,20 @@
+body{
+    background-color: black;
+    color: white;
+}
+
+.attributes-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 8px;
+}
+
+.attribute-card {
+    background-color: #222;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    display: inline-block;
+}
