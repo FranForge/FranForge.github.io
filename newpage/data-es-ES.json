@@ -1,0 +1,45 @@
+{
+    "projects": 
+    [
+        {
+            "name": "The Sky Project",
+            "description": "En un mundo dividido por cuatro planos, donde el maná fluye como ríos de poder entre mundos, surge una historia de amor, pérdida y descubrimiento. Un ser celestial, habitante de un mundo aparentemente perfecto, emprenderá un viaje que desafiará todo cuanto conoce.",
+            "genre": ["2D","Monster Collector","RPG","Turn-Battle","Multijugador Local"],
+            "developer": "Enthariel Games",
+            "development-date": "Nov 2024 - Sep 2025",
+            "role-description": "Trabajé como principal programador creando estructura de datos acerca del manejo de las criaturas, ataques, sistema de combate y movimiento del personaje sobre plataformas.",
+            "job-date": "Sep 2024 - Sep 2025",
+            "attributes": ["Indie", "Unity", "C#", "2D"],
+            "platforms": []
+        },
+        {
+            "name": "Luminaria: Dark Echoes",
+            "description": "En Luminaria Dark Echoes, tú eres el héroe que debe salvar el mundo de la oscuridad. Este juego de acción y rol roguelike te ofrece una profunda historia steampunk y una variedad de jefes finales increíbles. Explorarás un mundo lleno de misterios y sorpresas, cada vez que juegues.",
+            "genre": ["2D","Survivor","Roguelite","Multijugador Local"],
+            "developer": "Enthariel Games",
+            "development-date": "Sep 2024 - Sep 2025",
+            "role-description": "Trabajé como principal programador creando estructura de datos acerca del manejo de las criaturas, ataques, sistema de combate y movimiento del personaje sobre plataformas.",
+            "job-date": "Sep 2023 - Dic 2024",
+            "attributes": ["Indie", "Unity", "C#", "2D"],
+            "platforms": ["Switch", "PS5", "Steam"]
+        },
+        {
+            "name": "Animal Strikers",
+            "description": "",
+            "genre": ["2D"],
+            "developer": "Enthariel Games",
+            "development-date": "Sep 2024 - Sep 2025",
+            "role-description": "Trabajé como principal programador creando estructura de datos acerca del manejo de las criaturas, ataques, sistema de combate y movimiento del personaje sobre plataformas.",
+            "job-date": "Sep 2024 - Sep 2025",
+            "attributes": ["Indie", "Unity", "C#", "2D"],
+            "platforms": ["Switch", "PS5", "Steam"]
+        }
+    ],
+    "localization": 
+    [
+        {
+            "id": "thumbnail",
+            "localization": "miniatura"
+        }
+    ]
+}
