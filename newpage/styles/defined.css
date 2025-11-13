@@ -8,6 +8,10 @@
     z-index: -10;
 }
 
+#hero.scroll-effect-on #hero-content{
+    opacity: 0;
+}
+
 #hero .clean-iframe-video{
     position: absolute;
     inset: 0;
@@ -33,6 +37,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    transition: opacity 1s ease;
 }
 
 #hero-title{
