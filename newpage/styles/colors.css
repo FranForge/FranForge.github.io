@@ -7,3 +7,19 @@
     --darkTextColor: #121212;
     --lightTextColor: #F5F5F5;
 }
+
+.black-section{
+    background-color: black;
+}
+
+.dark-section{
+    background-color: var(--darkPanelColor);
+}
+
+.light-section{
+    background-color: var(--lightPanelColor);
+}
+
+.white-section{
+    background-color: white;
+}

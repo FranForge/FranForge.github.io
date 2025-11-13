@@ -2,6 +2,7 @@
 @import url('styles/margins.css');
 @import url('styles/defined.css');
 @import url('styles/texts.css');
+@import url('styles/specials.css');
 
 :root{
     font-size: 2vh;

@@ -43,5 +43,4 @@ function displayRotatingTexts()
     }
 }
 
-//Se suscribe al evento del orquestador.
-window.addEventListener('orchestratorEffectsInitialize', displayRotatingTexts);
+displayRotatingTexts();

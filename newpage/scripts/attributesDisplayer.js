@@ -42,5 +42,4 @@ function displayAttributes()
     }
 }
 
-//Se suscribe al evento del orquestador.
-window.addEventListener('orchestratorEffectsInitialize', displayAttributes);
+displayAttributes();

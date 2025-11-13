@@ -6,11 +6,25 @@
     <body>
 
         <!-- HERO -->
-        <section id="hero">
-            <p>FranForge</p>
-            <p>
-                <span class="rotating-text" data-texts="Game,Gameplay,Systems,AI,Combat,Software,C#,C++"></span> 
-                Developer</p>
+        <section id="hero" class="dynamic-bg" data-bg-color1="#8921ff" data-bg-color2="#000000">
+            <div class="clean-iframe-video">
+                <iframe
+                    src="https://www.youtube.com/embed/F_iDRUY5_b0?si=Obh8RGkjTozKOmwg&autoplay=1&mute=1&controls=0&modestbranding=1&loop=1&playlist=F_iDRUY5_b0" 
+                    title="YouTube video player" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share;" 
+                    referrerpolicy="strict-origin-when-cross-origin">
+                </iframe>
+            </div>
+            <div class="background-panel"></div>
+            <div id="hero-content" class="content">
+                <p class="title">FranForge</p>
+                <p class="subtitle">
+                    <span class="rotating-text" data-texts="Game,Gameplay,Systems,AI,Combat,Software,C#,C++"></span> 
+                    Developer
+                </p>
+            </div>
+            
         </section>
 
         <!-- PRESENTATION -->
@@ -33,21 +47,68 @@
         <!-- HIGHLIGHTS -->
         <section id="highlights" class="horizontal-margin-30">
             <h1 class="lightgray-text">Videojuegos Destacados</h1>
-            <div class="game-cards-container" 
-            data-cards-id="The Sky Project,Animal Strikers,Luminaria: Dark Echoes"
-            data-cards-links="the-sky-project,animal-strikers,luminaria-dark-echoes" 
-            data-folder-path="projects"
-            data-page-name="index.html">
+            <div class="game-cards-container">
+
+                <!-- THE SKY PROJECT -->
+                <a href="projects/the-sky-project/index.html" class="game-card">
+                    <article class="content">
+                        <section class="text-container">
+                        <h2 data-text="name">The Sky Project</h2>
+                        <p data-text="role-description">Trabajé como principal programador creando estructura de datos acerca del manejo de las criaturas, ataques, sistema de combate y movimiento del personaje sobre plataformas.</p>
+                        <div class="divider"></div>
+                        <p data-text="job-date">Nov 2024 - Sep 2025</p>
+                        <section class="attributes-container" data-attributes="Indie,Unity,C#,2D"></section>
+                        </section>
+
+                        <section class="img-container">
+                        <img src="projects/the-sky-project/thumbnail.webp" alt="Miniatura de The Sky Project"/>
+                        <div class="read-more">Read more</div>
+                        </section>
+                    </article>
+                </a>
+
+                <!-- ANIMAL STRIKERS -->
+                <a href="projects/animal-strikers/index.html" class="game-card">
+                    <article class="content">
+                        <section class="text-container">
+                        <h2 data-text="name">Animal Strikers</h2>
+                        <p data-text="role-description">Trabajé como principal programador creando estructura de datos acerca del manejo de las criaturas, ataques, sistema de combate y movimiento del personaje sobre plataformas.</p>
+                        <div class="divider"></div>
+                        <p data-text="job-date">Sep 2023 - Dec 2024</p>
+                        <section class="attributes-container" data-attributes="Indie,Unity,C#,2D"></section>
+                        </section>
+
+                        <section class="img-container">
+                        <img src="projects/animal-strikers/thumbnail.webp" alt="Miniatura de The Sky Project"/>
+                        <div class="read-more">Read more</div>
+                        </section>
+                    </article>
+                </a>
+
+                <!-- LUMINARIA DARK ECHOES -->
+                <a href="projects/luminaria-dark-echoes/index.html" class="game-card">
+                    <article class="content">
+                        <section class="text-container">
+                        <h2 data-text="name">Luminaria: Dark Echoes</h2>
+                        <p data-text="role-description">Trabajé como principal programador creando estructura de datos acerca del manejo de las criaturas, ataques, sistema de combate y movimiento del personaje sobre plataformas.</p>
+                        <div class="divider"></div>
+                        <p data-text="job-date">Sep 2023 - Dec 2024</p>
+                        <section class="attributes-container" data-attributes="Indie,Unity,C#,2D"></section>
+                        </section>
+
+                        <section class="img-container">
+                        <img src="projects/luminaria-dark-echoes/thumbnail.webp" alt="Miniatura de The Sky Project"/>
+                        <div class="read-more">Read more</div>
+                        </section>
+                    </article>
+                </a>
+
             </div>
             <a href="">Ver todo</a>
         </section>
 
-        <script src="../scripts/localizationHandler.js"></script>
-        <script src="../scripts/loadJsonData.js"></script>
-        <script src="../scripts/homeBuilder.js"></script>
         <script src="../scripts/rotateTexts.js"></script>
         <script src="../scripts/attributesDisplayer.js"></script>
-        <script src="../scripts/orchestrator.js"></script>
 
     </body>
 </html>
