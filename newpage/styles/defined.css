@@ -270,7 +270,63 @@
     text-align: center;
 }
 
+/*BOTONES*/
+
+.button{
+    width: 250px;
+    height: 2.5rem;
+    border-radius: 100px;
+    padding: 2px;
+    background-color: black;
+    transition: background-color 0.25s ease;
+}
+
+.button:hover{
+    background-color: var(--brandColor);
+}
+
+.button .content{
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    background-color: var(--lightPanelColor);
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+
+    transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.button:hover .content{
+    background-color: var(--darkPanelColor);
+    color: white;
+}
+
 @media (max-width: 1000px){
+
+    #hero{
+        overflow: hidden;
+    }
+
+    #hero .clean-iframe-video{
+        position: absolute;
+        top: 0;
+        left: -200%;
+        width: 500%;
+    }
+
+    #hero-title{
+        font-size: 5vh;
+        line-height: 5vh;
+    }
+
+    #hero-subtitle{
+        font-size: 3vh;
+        line-height: 3vh;
+    }
+
     .game-card{
         flex-basis: 100%;
     }
