@@ -16,15 +16,22 @@ body{
 }
 
 h1{
+    color: grey;
     text-transform: uppercase;
     font-size: 1rem;
 }
 
 h2{
-    font-size: 1rem;
+    color: grey;
+    text-transform: uppercase;
+    font-size: 0.8rem;
 }
 
 a{
     text-decoration: none;
     color: inherit;
+}
+
+img{
+    object-fit: contain;
 }

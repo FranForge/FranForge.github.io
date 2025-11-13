@@ -14,16 +14,16 @@
     z-index: 0;
 }
 
-#hero .background-panel{
+#hero-background-panel{
     position: absolute;
     width: 100%;
     height: 100%;
     background-color: black;
-    opacity: 0.5;
+    opacity: 0.75;
     z-index: 1;
 }
 
-#hero .content{
+#hero-content{
     position: absolute;
     width: 100%;
     height: 100%;
@@ -35,7 +35,7 @@
     justify-content: center;
 }
 
-#hero .title{
+#hero-title{
     display: inline-block;
     font-size: 5rem;
     line-height: 5rem;
@@ -45,7 +45,7 @@
     color: var(--lightTextColor);
 }
 
-#hero .subtitle{
+#hero-subtitle{
     display: inline-block;
     font-size: 2rem;
     line-height: 2rem;
@@ -55,18 +55,116 @@
     color: var(--lightTextColor);
 }
 
-#hero .subtitle span{
+#hero-subtitle span{
     color: var(--brandColor);
 }
 
 /*PRESENTATION*/
 
 #presentation{
-    margin-top: 100vh;
-    background-color: white;
-    height: 100dvh;
+    position: relative;
+    height: 110dvh;
     width: 100%;
     color: black;
+}
+
+#presentation h1{
+    color: grey;
+    margin: 0;
+    line-height: 1rem;
+    font-size: 1rem;
+}
+
+#presentation-content{
+    position: absolute;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 70%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    z-index: 1;
+    gap: 50px;
+    clip-path: polygon(0 0, 100% 0%, 95% 100%, 0% 100%);
+}
+
+#presentation-resume{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    flex-basis: 10%;
+    border-right: 2px dashed lightgray;
+    padding: 2%;
+    height: 70%;
+}
+
+#presentation-resume .item{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    flex-basis: 20%;
+    font-weight: bolder;
+    line-height: 1rem;
+}
+
+#presentation-resume .item *{
+    max-height: 80px;
+    margin: 2px;
+}
+
+#presentation-resume .item .number{
+    font-size: 2rem;
+    line-height: 2rem;
+}
+
+#presentation-text-container{
+    padding-top: 10dvh;
+    padding-bottom: 10dvh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-basis: 50%;
+}
+
+#presentation-text-container img{
+    height: 100px;
+    width: 100%;
+    object-fit: contain;
+}
+
+#presentation-name{
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bolder;
+}
+
+#presentation-text-container span{
+    font-weight: bolder;
+}
+
+#presentation-img-container{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 35%;
+    height: 100%;
+    overflow: hidden;
+    background-color: black;
+}
+
+#presentation-img-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*HIGHLIGHTS*/
+
+#highlights{
+    padding-top: 20dvh;
+    padding-bottom: 20dvh;
 }
 
 /*ATRIBUTOS*/
