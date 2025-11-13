@@ -4,6 +4,34 @@
 @import url('styles/texts.css');
 @import url('styles/specials.css');
 
+@font-face{
+    font-family: 'Alfa-Slab-One';
+    src: url('fonts/Alfa_Slab_One/AlfaSlabOne-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Bowlby-One-SC';
+    src: url('fonts/Bowlby_One_SC/BowlbyOneSC-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Zain';
+    src: url('fonts/Zain/Zain-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Kanit';
+    src: url('fonts/Kanit/Kanit-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 :root{
     font-size: 2vh;
 }
@@ -13,6 +41,7 @@ body{
     background-color: white;
     color: var(--darkTextColor);
     text-align: center;
+    font-family: 'Zain';
 }
 
 h1{

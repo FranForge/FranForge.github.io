@@ -152,6 +152,7 @@
     font-size: 2rem;
     text-transform: uppercase;
     font-weight: bolder;
+    font-family: 'Kanit';
 }
 
 #presentation-text-container span{
@@ -281,6 +282,7 @@
     min-height: 4.3rem;
     margin: 0;
     text-align: center;
+    font-family: 'Kanit';
 }
 
 /*BOTONES*/
