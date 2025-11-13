@@ -1,0 +1,105 @@
+@import url('colors.css');
+
+/*ATRIBUTOS*/
+.attributes-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    justify-content: center;
+}
+
+.attribute-card {
+    background-color: #222;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    display: inline-block;
+}
+
+/*GAME CARDS*/
+.game-cards-container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.game-card{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-basis: 28%;
+    height: 600px;
+
+    padding: 2px;
+
+    background-color: var(--lightPanelColor);
+    border-radius: 4px;
+
+    transition: background-color 0.25s ease;
+}
+
+.game-card:hover{
+    background-color: var(--brandColor);
+}
+
+.game-card .content{
+    position: relative;
+    
+    flex-grow: 1;
+    padding: 0px;
+
+    background-color: var(--lightPanelColor);
+    border-radius: 4px;
+
+    overflow: hidden;
+}
+
+.game-card .text-container{
+    padding: 20px;
+}
+
+.game-card .img-container{
+    width: 100%;
+    height: 60%;
+    overflow: hidden;
+    background-color: black;
+}
+
+.game-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom;
+}
+
+.game-card .read-more{
+    position: absolute;
+    z-index: 2;
+    right: 10px;
+    bottom: 10px;
+    background-color: #222;
+    color: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    display: inline-block;
+
+    transition: background-color 0.25s ease;
+}
+
+.game-card:hover .read-more{
+    background-color: var(--brandColor);
+}
+
+.game-card h2{
+    font-size: 2rem;
+    min-height: 4.3rem;
+    margin: 0;
+    text-align: center;
+}

@@ -53,26 +53,34 @@ function buildGameCard(data, container, path, pageName)
 {
     //Crea el articulo con vinculo.
             const article = document.createElement('a');
+            article.classList.add('game-card');
             article.href = `${path}/${pageName}`;
+
+            const content = document.createElement('article');
+            content.classList.add('content');
+
+            //Crea el contenedor de texto.
+            const textCointainer = document.createElement('section');
+            textCointainer.className = "text-container";
 
             //Crea un titulo.
             const title = document.createElement('h2');
             title.textContent = data["name"];
-            article.appendChild(title);
+            textCointainer.appendChild(title);
 
             //Crea una descripcion.
             const description = document.createElement('p');
             description.textContent = data["role-description"];
-            article.appendChild(description);
+            textCointainer.appendChild(description);
 
             //Crea un divisor.
             const divisor = document.createElement('div');
-            article.appendChild(divisor);
+            textCointainer.appendChild(divisor);
 
             //Crea la seccion de fecha en la que participe.
             const jobDate = document.createElement('p');
             jobDate.textContent = data["job-date"];
-            article.appendChild(jobDate);
+            textCointainer.appendChild(jobDate);
 
             //Crea la seccion de atributos.
             const attributesSection = document.createElement('section');
@@ -94,19 +102,33 @@ function buildGameCard(data, container, path, pageName)
             }
 
             attributesSection.dataset.attributes = attributesList;
-            container.appendChild(attributesSection);
+            textCointainer.appendChild(attributesSection);
 
+            content.appendChild(textCointainer);
+
+            //-------------------------------------------------------------
+
+            //Crea el contenedor de imagen.
+            const imageCointainer = document.createElement('section');
+            imageCointainer.className = "img-container";
+            
             //Crea la imagen con relacion a la ruta.
             const thumbnail = document.createElement('img');
             thumbnail.src = `${path}/thumbnail.webp`;
             thumbnail.alt = `${data["name"]} ${GetLocalized("thumbnail")}.`;
-            container.appendChild(thumbnail);
-
+            imageCointainer.appendChild(thumbnail);
+            
             //Crea la decoracion de leer más.
             const readMore = document.createElement('div');
             readMore.className = "read-more";
             readMore.textContent = "Read more";
-            container.appendChild(readMore);
+            imageCointainer.appendChild(readMore);
+            
+            content.appendChild(imageCointainer);
+
+            //----------------------------------------------------------------
+
+            article.appendChild(content);
 
             container.appendChild(article);
 }

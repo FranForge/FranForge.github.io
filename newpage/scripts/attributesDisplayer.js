@@ -1,4 +1,21 @@
 
+function getColorFor(name)
+{
+    switch  (name)
+    {
+        case "Indie":
+            return "#299170";
+        case "2D":
+            return "#915D29";
+        case "Unity":
+        case "Unreal":
+            return "#372991";
+        case "C#":
+        case "C++":
+            return "#7C2991";
+    }
+}
+
 //Muestra los atributos de un contenedor.
 function displayAttributes()
 {
@@ -19,6 +36,7 @@ function displayAttributes()
             const card = document.createElement('div');
             card.className = 'attribute-card';
             card.textContent = attributes[j];
+            card.style.backgroundColor = getColorFor(attributes[j]);
             container.appendChild(card);
         }
     }
