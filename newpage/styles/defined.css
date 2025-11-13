@@ -92,15 +92,21 @@
 #presentation-resume{
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    gap: 20px;
     flex-basis: 10%;
     border-right: 2px dashed lightgray;
+    gap: 30px;
     padding: 2%;
     height: 70%;
 }
 
-#presentation-resume .item{
+#presentation-resume-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+#presentation-resume-container .item{
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
@@ -109,17 +115,19 @@
     line-height: 1rem;
 }
 
-#presentation-resume .item *{
+#presentation-resume-container .item *{
     max-height: 80px;
     margin: 2px;
 }
 
-#presentation-resume .item .number{
+#presentation-resume-container .item .number{
     font-size: 2rem;
     line-height: 2rem;
 }
 
 #presentation-text-container{
+    padding-left: 2dvh;
+    padding-right: 2dvh;
     padding-top: 10dvh;
     padding-bottom: 10dvh;
     display: flex;
@@ -147,7 +155,7 @@
 #presentation-img-container{
     position: absolute;
     right: 0;
-    top: 0;
+    bottom: 0;
     width: 35%;
     height: 100%;
     overflow: hidden;
@@ -206,7 +214,7 @@
     padding: 2px;
 
     background-color: var(--lightPanelColor);
-    border-radius: 4px;
+    border-radius: 0.5vh;
 
     transition: background-color 0.25s ease;
 }
@@ -219,10 +227,9 @@
     position: relative;
     
     flex-grow: 1;
-    padding: 0px;
 
     background-color: var(--lightPanelColor);
-    border-radius: 4px;
+    border-radius: 0.5vh;
 
     overflow: hidden;
 }
@@ -252,7 +259,7 @@
     background-color: #222;
     color: #fff;
     padding: 4px 8px;
-    border-radius: 4px;
+    border-radius: 0.5vh;
     font-size: 0.9rem;
     display: inline-block;
 
@@ -325,6 +332,35 @@
     #hero-subtitle{
         font-size: 3vh;
         line-height: 3vh;
+    }
+
+    #presentation{
+        height: 150dvh;
+        padding-bottom: 10dvh;
+    }
+
+    #presentation-content{
+        width: 100%;
+        height: 80%;
+        flex-direction: column;
+        clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
+    }
+
+    #presentation-resume{
+        width: 100%;
+    }
+
+    #presentation-resume-container{
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1dvh;
+    }
+
+    #presentation-img-container{
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 20%;
     }
 
     .game-card{
