@@ -1,6 +1,11 @@
 @import url('styles/colors.css');
 @import url('styles/margins.css');
 @import url('styles/defined.css');
+@import url('styles/texts.css');
+
+:root{
+    font-size: 2vh;
+}
 
 body{
     margin: 0;

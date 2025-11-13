@@ -34,7 +34,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     flex-basis: 28%;
-    height: 600px;
+    height: 75dvh;
 
     padding: 2px;
 
@@ -102,4 +102,10 @@
     min-height: 4.3rem;
     margin: 0;
     text-align: center;
+}
+
+@media (max-width: 1000px){
+    .game-card{
+        flex-basis: 100%;
+    }
 }
