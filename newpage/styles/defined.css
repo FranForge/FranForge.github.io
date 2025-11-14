@@ -185,16 +185,40 @@
     gap: 3vh;
 }
 
-/*TECHNICAL SKILLS*/
+/*SKILLS*/
+
+#skills{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
 
 #technical-skills{
-    background-color: white;
     padding-top: 10vh;
     padding-bottom: 10vh;
+    padding-left: 10vh;
+    padding-right: 10vh;
+    background-color: black;
+    color: white;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     gap: 2px;
+    flex-basis: 40%;
+    flex-grow: 1;
+}
+
+#soft-skills{
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    padding-left: 10vh;
+    padding-right: 10vh;
+    background-color: white;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    flex-basis: 40%;
+    flex-grow: 1;
 }
 
 .skill-card{
@@ -205,8 +229,10 @@
     padding: 10px;
     overflow: hidden;
     height: 5vh;
+    width: 100%;
     align-self: center;
     align-items: center;
+    color: grey;
 }
 
 .skill-card img{
@@ -215,12 +241,15 @@
     object-fit: contain;
 }
 
-.skill-card h2{
-    color: black;
+.skill-card p{
+    line-height: 1rem;
+    margin: 0;
 }
 
 .bar-container{
     min-width: 30vw;
+    max-width: 100%;
+    flex-grow: 1;
     height: 1vh;
     border-radius: 100px;
     background-color: black;
@@ -435,5 +464,23 @@
 
     .game-card{
         flex-basis: 100%;
+    }
+
+    #skills{
+        flex-direction: column;
+    }
+
+    #technical-skills{
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+
+    #soft-skills{
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+
+    .skill-card{
+        font-size: 0;
     }
 }
