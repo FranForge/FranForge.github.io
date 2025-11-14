@@ -640,4 +640,44 @@ header nav a img{
     .skill-card{
         font-size: 0;
     }
+
+    .timeline{
+        gap: 5vh;
+    }
+
+    .timeline-event,
+    .timeline-event-reversed {
+        flex-direction: row;
+        flex-wrap: wrap;
+        column-gap: 20px;
+    }
+
+    .timeline-event .timeline-event-left {
+        order: 2;
+        flex-basis: 90%;
+        text-align: left;
+    }
+
+    .timeline-event .timeline-event-right {
+        order: 3;
+        flex-basis: 90%;
+        text-align: left;
+    }
+
+    .timeline-event-reversed .timeline-event-left{
+        order: 3;
+        flex-basis: 90%;
+        text-align: left;
+    }
+
+    .timeline-event-reversed .timeline-event-right{
+        order: 2;
+        flex-basis: 90%;
+        text-align: left;
+    }
+
+    .timeline-point {
+        order: 1;
+        margin-bottom: -15vh;
+    }
 }
