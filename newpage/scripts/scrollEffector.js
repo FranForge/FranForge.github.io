@@ -6,7 +6,11 @@ function applyScrollEffect()
     for(let i = 0; i < elements.length; i++)
     {
         const yMinValue = elements[i].dataset.scrollMinY;
-        const yMaxValue = elements[i].dataset.scrollMaxY;
+
+        //Si es 0 se establece al maximo scroll de la pagina.
+        const yMaxValue = elements[i].dataset.scrollMaxY === "0"
+        ? document.body.scrollHeight
+        : Number(elements[i].dataset.scrollMaxY);
 
         //Verificamos el scroll de la ventana.
         window.addEventListener('scroll', () => {
