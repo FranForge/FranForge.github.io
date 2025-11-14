@@ -9,7 +9,7 @@ function applyScrollEffect()
 
         //Si es 0 se establece al maximo scroll de la pagina.
         const yMaxValue = elements[i].dataset.scrollMaxY === "0"
-        ? document.body.scrollHeight
+        ? Number.MAX_SAFE_INTEGER
         : Number(elements[i].dataset.scrollMaxY);
 
         //Verificamos el scroll de la ventana.
