@@ -26,3 +26,37 @@
     height: 120%;
     pointer-events: none;
 }
+
+.mobile-only{}
+
+.desktop-only{}
+
+@media (min-width: 1001px)
+{
+    .mobile-only{
+        display: none;
+        opacity: none;
+        pointer-events: none;
+    }
+
+    .desktop-only{
+        display: inherit;
+        opacity: inherit;
+        pointer-events: inherit;
+    }
+}
+
+@media (max-width: 1000px)
+{
+    .mobile-only{
+        display: inherit;
+        opacity: inherit;
+        pointer-events: inherit;
+    }
+
+    .desktop-only{
+        display: none;
+        opacity: none;
+        pointer-events: none;
+    }
+}
