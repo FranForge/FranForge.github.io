@@ -284,7 +284,7 @@ header nav a img{
 .skill-card{
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: left;
     gap: 20px;
     padding: 10px;
     overflow: hidden;
@@ -470,6 +470,15 @@ header nav a img{
 }
 
 @media (max-width: 1000px){
+
+    header section{
+        justify-content: center;
+    }
+
+    header.scroll-effect-on{
+        background-color: black;
+        border-bottom: var(--brandColor) solid 5px;
+    }
 
     #hero{
         overflow: hidden;
