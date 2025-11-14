@@ -71,7 +71,7 @@ header nav a img{
     opacity: 0;
 }
 
-#hero .clean-iframe-video{
+#hero .clean-fullscreen-iframe-video{
     position: absolute;
     inset: 0;
     z-index: 0;
@@ -560,6 +560,19 @@ header nav a img{
     left: 50%;
     transform: translate(-50%, 0%);
     border-radius: 50%;
+}
+
+#demoreel{
+    position: relative;
+    height: 110dvh;
+    width: 100%;
+    padding-top: 20vh;
+    padding-bottom: 20vh;
+}
+
+#demoreel-container{
+    height: 80%;
+    width: 60%;
 }
 
 @media (max-width: 1000px){
