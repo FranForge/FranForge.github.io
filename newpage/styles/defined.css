@@ -332,6 +332,11 @@ header nav a img{
     gap: 3vh;
 }
 
+#experience-container h1{
+    padding-top: 10vh;
+    border-bottom: grey 2px dashed;
+}
+
 /*ATRIBUTOS*/
 .attributes-container {
     display: flex;
