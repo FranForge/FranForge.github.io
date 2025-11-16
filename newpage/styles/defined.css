@@ -563,16 +563,21 @@ header nav a img{
 }
 
 #demoreel{
-    position: relative;
-    height: 110dvh;
+    height: 60dvh;
     width: 100%;
     padding-top: 20vh;
     padding-bottom: 20vh;
+    background-color: black;
 }
 
 #demoreel-container{
-    height: 80%;
-    width: 60%;
+    position: relative;
+    margin: auto;
+    height: 90%;
+    width: 45%;
+    background-color: gray;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 @media (max-width: 1000px){
@@ -697,5 +702,17 @@ header nav a img{
     .timeline-point {
         order: 1;
         margin-bottom: -15vh;
+    }
+
+    #demoreel{
+        height: 40dvh;
+        width: 100%;
+        padding-top: 5vh;
+        padding-bottom: 2vh;
+    }
+
+    #demoreel-container{
+        height: 60%;
+        width: 92%;
     }
 }
