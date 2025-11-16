@@ -595,7 +595,7 @@ header nav a img{
         overflow: hidden;
     }
 
-    #hero .clean-iframe-video{
+    #hero .clean-fullscreen-iframe-video{
         position: absolute;
         top: 0;
         left: -200%;
