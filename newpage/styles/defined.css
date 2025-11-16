@@ -599,6 +599,69 @@ header nav a img{
     padding-bottom: 20vh;
 }
 
+/* BLOG Y ARTICULOS */
+#blog{
+    padding-top: 20vh;
+    padding-bottom: 20vh;
+}
+
+.blog-article{
+    flex-basis: 45%;
+    min-height: 10dvh;
+    max-height: 15dvh;
+    background-color: var(--lightPanelColor);
+    border-radius: 10px;
+
+    transition: background-color 0.25s ease;
+}
+
+.blog-article:hover{
+    background-color: var(--brandColor);
+}
+
+.blog-article .content{
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 2px;
+    align-items: center;
+    align-self: center;
+    justify-content: center;
+    background-color: var(--lightPanelColor);
+    border-radius: 10px;
+    height: 95%;
+}
+
+.blog-article .text-container{
+    width: 100%;
+    height: 100%;
+    margin-left: 25%;
+    padding-left: 5px;
+    padding-right: 5px;
+    text-align: left;
+    align-items: center;
+    align-self: center;
+}
+
+.blog-article .img-container{
+    width: 20%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.blog-article .img-container img{
+    position: absolute;
+    left: -10%;
+    top: -10%;
+    height: 120%;
+    width: 120%;
+    object-fit: cover;
+}
+
 @media (max-width: 1000px){
 
     header section{
@@ -732,5 +795,9 @@ header nav a img{
     #demoreel-container{
         height: 60%;
         width: 92%;
+    }
+
+    .blog-article{
+        flex-basis: 100%;
     }
 }
