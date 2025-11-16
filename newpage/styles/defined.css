@@ -641,6 +641,7 @@ header nav a img{
     text-align: left;
     align-items: center;
     align-self: center;
+    color: grey;
 }
 
 .blog-article .img-container{
