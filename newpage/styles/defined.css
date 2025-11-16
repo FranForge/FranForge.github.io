@@ -358,7 +358,7 @@ header nav a img{
 }
 
 /*GAME CARDS*/
-.game-cards-container{
+.product-cards-container{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -366,12 +366,11 @@ header nav a img{
     gap: 40px;
 }
 
-.game-card{
+.product-card{
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     flex-basis: 28%;
-    height: 75dvh;
 
     padding: 2px;
 
@@ -381,11 +380,23 @@ header nav a img{
     transition: background-color 0.25s ease;
 }
 
-.game-card:hover{
+.product-card-long{
+    height: 75dvh;
+}
+
+.product-card-mid{
+    height: 50dvh;
+}
+
+.product-card-short{
+    height: 30vh;
+}
+
+.product-card:hover{
     background-color: var(--brandColor);
 }
 
-.game-card .content{
+.product-card .content{
     position: relative;
     
     flex-grow: 1;
@@ -396,25 +407,25 @@ header nav a img{
     overflow: hidden;
 }
 
-.game-card .text-container{
+.product-card .text-container{
     padding: 20px;
 }
 
-.game-card .img-container{
+.product-card .img-container{
     width: 100%;
     height: 60%;
     overflow: hidden;
     background-color: black;
 }
 
-.game-card img{
+.product-card img{
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: bottom;
 }
 
-.game-card .read-more{
+.product-card .read-more{
     position: absolute;
     right: 10px;
     bottom: 10px;
@@ -428,11 +439,11 @@ header nav a img{
     transition: background-color 0.25s ease;
 }
 
-.game-card:hover .read-more{
+.product-card:hover .read-more{
     background-color: var(--brandColor);
 }
 
-.game-card h2{
+.product-card h2{
     font-size: 2rem;
     min-height: 4.3rem;
     margin: 0;
@@ -580,6 +591,12 @@ header nav a img{
     overflow: hidden;
 }
 
+#products-and-services{
+    background-color: white;
+    padding-top: 20vh;
+    padding-bottom: 20vh;
+}
+
 @media (max-width: 1000px){
 
     header section{
@@ -642,7 +659,7 @@ header nav a img{
         height: 20%;
     }
 
-    .game-card{
+    .product-card{
         flex-basis: 100%;
     }
 
