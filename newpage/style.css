@@ -67,3 +67,17 @@ img{
     height: 100%;
     width: 100%;
 }
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+form button{
+    font-family: 'Zain';
+    font-weight: bold;
+}
+
+form textarea{
+    resize: none;
+}

@@ -45,12 +45,12 @@ header nav a{
     padding-left: 10px;
     padding-right: 10px;
     border-left: 1px white solid;
-    opacity: 0.8;
+    opacity: 0.8 !important;
     transition: opacity 0.25s ease;
 }
 
 header nav a:hover{
-    opacity: 1;
+    opacity: 1 !important;
 }
 
 header nav a img{
@@ -663,6 +663,98 @@ header nav a img{
     object-fit: cover;
 }
 
+footer{
+    background-color: black;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    color: white;
+}
+
+footer section{
+    flex-basis: 30%;
+}
+
+footer a{
+    opacity: 0.8 !important;
+    transition: opacity 0.25s ease;
+}
+
+footer a:hover{
+    opacity: 1 !important;
+}
+
+#contact form{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#contact form label{
+    font-size: 0.7rem;
+    text-align: left;
+    text-transform: uppercase;
+    color: grey;
+}
+
+#contact form input, #contact form textarea{
+    background-color: lightgray;
+    padding: 10px;
+    border-radius: 5px;
+    border: lightgray 2px solid;
+    margin-bottom: 10px;
+    color: black;
+    transition: background-color, 0.25s ease, border 0.25s ease, color 0.25s ease;
+    font-size: 1rem;
+}
+
+#contact form input::placeholder, #contact form textarea::placeholder{
+    color: grey;
+}
+
+#contact form button{
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    border: white 2px solid;
+    font-size: 1rem;
+    transition: background-color, 0.25s ease, border 0.25s ease, color 0.25s ease;
+}
+
+#contact form button:hover, #contact form input:hover, #contact form textarea:hover{
+    background-color: black;
+    border: var(--brandColor) 2px solid;
+    color: white;
+}
+
+#socials{
+    display: flex;
+    flex-direction: column;
+}
+
+#socials div{
+    display: flex;
+    flex-direction: row;
+    column-gap: 0px;
+    row-gap: 50px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+#socials a{
+    height: 5vh;
+    flex-basis: 20%;
+}
+
+#footer-info{
+    display: flex;
+    flex-direction: column;
+}
+
 @media (max-width: 1000px){
 
     header section{
@@ -799,6 +891,15 @@ header nav a img{
     }
 
     .blog-article{
+        flex-basis: 100%;
+    }
+
+    footer{
+        flex-wrap: wrap;
+        gap: 50px;
+    }
+
+    footer section{
         flex-basis: 100%;
     }
 }
