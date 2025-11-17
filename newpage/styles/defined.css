@@ -294,6 +294,15 @@ header nav a img{
     align-self: center;
     align-items: center;
     color: grey;
+    text-align: left;
+}
+
+#soft-skills .skill-card{
+    justify-content: center;
+}
+
+.skill-card h2{
+    width: 20%;
 }
 
 .skill-card img{
@@ -304,12 +313,13 @@ header nav a img{
 
 .skill-card p{
     line-height: 1rem;
+    width: 80%;
     margin: 0;
+    text-align: left;
 }
 
 .bar-container{
-    min-width: 30vw;
-    max-width: 100%;
+    width: 80%;
     flex-grow: 1;
     height: 1vh;
     border-radius: 100px;
@@ -836,6 +846,10 @@ footer a:hover{
 
     .skill-card{
         font-size: 0;
+    }
+
+    .skill-card h2{
+        width: 25%;
     }
 
     .timeline{
