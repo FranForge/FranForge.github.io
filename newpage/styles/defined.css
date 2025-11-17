@@ -666,10 +666,10 @@ header nav a img{
 
 .blog-article .img-container img{
     position: absolute;
-    left: -10%;
-    top: -10%;
-    height: 120%;
-    width: 120%;
+    left: -5%;
+    top: -5%;
+    height: 110%;
+    width: 110%;
     object-fit: cover;
 }
 
