@@ -78,6 +78,10 @@ form button{
     font-weight: bold;
 }
 
+form input, form textarea{
+    font-family: 'Zain';
+}
+
 form textarea{
     resize: none;
 }
