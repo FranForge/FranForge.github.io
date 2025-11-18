@@ -618,7 +618,6 @@ header nav a img{
 .blog-article{
     flex-basis: 45%;
     min-height: 10dvh;
-    max-height: 15dvh;
     background-color: var(--lightPanelColor);
     border-radius: 10px;
 
@@ -645,7 +644,7 @@ header nav a img{
 .blog-article .text-container{
     width: 100%;
     height: 100%;
-    margin-left: 25%;
+    margin-left: 35%;
     padding-left: 5px;
     padding-right: 5px;
     text-align: left;
@@ -655,7 +654,7 @@ header nav a img{
 }
 
 .blog-article .img-container{
-    width: 20%;
+    width: 30%;
     height: 100%;
     position: absolute;
     left: 0;
@@ -850,6 +849,10 @@ footer a:hover{
 
     .skill-card h2{
         width: 25%;
+    }
+
+    #soft-skills .skill-card h2{
+        width: 100%;
     }
 
     .timeline{
