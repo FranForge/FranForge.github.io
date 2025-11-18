@@ -238,7 +238,7 @@ header nav a img{
 
 /*HIGHLIGHTS*/
 
-#highlights{
+#highlights, #projects{
     display: flex;
     flex-direction: column;
     padding-top: 20dvh;

@@ -3,16 +3,30 @@ function getColorFor(name)
 {
     switch  (name)
     {
+        case "AAA":
+        case "AA":
         case "Indie":
-            return "#299170";
+        case "Solo":
+            return "#3D8A53";
         case "2D":
+        case "3D":
             return "#915D29";
         case "Unity":
         case "Unreal":
+        case "Blender":
             return "#372991";
+        case ".NET":
+            return "#6C3D8A";
         case "C#":
         case "C++":
-            return "#7C2991";
+        case "Bolt":
+        case "HTML":
+        case "CSS":
+        case "JS":
+            return "#8A3D84";
+        case "Git":
+        case "Plastic":
+            return "#8A413D";
     }
 }
 
