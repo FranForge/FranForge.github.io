@@ -67,6 +67,7 @@ header nav a img{
     top: 0;
     height: 100dvh;
     z-index: -10;
+    overflow-x: hidden;
 }
 
 #hero.scroll-effect-on #hero-content{
@@ -846,6 +847,7 @@ footer a:hover{
 }
 
 #video-presentation{
+    height: 60dvh;
     padding-top: 20vh;
     padding-bottom: 20vh;
     background-color: black;
@@ -859,6 +861,43 @@ footer a:hover{
     background-color: gray;
     border-radius: 10px;
     overflow: hidden;
+}
+
+#gallery{
+    height: 60dvh;
+    padding-top: 20vh;
+    padding-bottom: 20vh;
+    background-color: white;
+}
+
+.carrousel-container{
+    position: relative;
+    margin: auto;
+    height: 90%;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+}
+
+.carrousel-container button{
+    flex-basis: 10%;
+    min-height: 10vh;
+    max-height: 15vh;
+    overflow: hidden;
+}
+
+.carrousel-img{
+    flex-basis: 70%;
+    overflow: hidden;
+}
+
+.carrousel-img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 @media (max-width: 1000px){
@@ -893,13 +932,13 @@ footer a:hover{
     }
 
     #presentation{
-        height: 150dvh;
+        min-height: 250vh;
         padding-bottom: 10dvh;
     }
 
     #presentation-content{
         width: 100%;
-        height: 80%;
+        height: 70%;
         flex-direction: column;
         clip-path: polygon(0 0, 100% 0%, 100% 100%, 0% 100%);
     }
@@ -915,11 +954,15 @@ footer a:hover{
         gap: 1dvh;
     }
 
+    #presentation-text-container{
+        padding-bottom: 0;
+    }
+
     #presentation-img-container{
         bottom: 0;
         left: 0;
         width: 100%;
-        height: 20%;
+        height: 30%;
     }
 
     .product-card{
@@ -992,14 +1035,14 @@ footer a:hover{
         margin-bottom: -15vh;
     }
 
-    #demoreel{
+    #demoreel, #video-presentation, #gallery{
         height: 40dvh;
         width: 100%;
         padding-top: 5vh;
         padding-bottom: 2vh;
     }
 
-    #demoreel-container{
+    #demoreel-container, #video-presentation-container{
         height: 60%;
         width: 92%;
     }
