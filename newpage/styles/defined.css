@@ -879,6 +879,8 @@ footer a:hover{
     display: flex;
     flex-direction: column;
     color: white;
+    margin-left: 10vw;
+    margin-right: 10vw;
 }
 
 #work-container h2, #additional-notes-container h2{
@@ -1109,5 +1111,13 @@ footer a:hover{
 
     .carrousel-container button{
         max-width: 10dvw;
+    }
+
+    #work-container, #additional-notes-container{
+        display: flex;
+        flex-direction: column;
+        color: white;
+        margin-left: 2.5vw;
+        margin-right: 2.5vw;
     }
 }
