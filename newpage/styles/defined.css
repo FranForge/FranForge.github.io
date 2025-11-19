@@ -845,6 +845,22 @@ footer a:hover{
     font-size: 1rem;
 }
 
+#video-presentation{
+    padding-top: 20vh;
+    padding-bottom: 20vh;
+    background-color: black;
+}
+
+#video-presentation-container{
+    position: relative;
+    margin: auto;
+    height: 90%;
+    width: 45%;
+    background-color: gray;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
 @media (max-width: 1000px){
 
     header section{
