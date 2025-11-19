@@ -870,6 +870,24 @@ footer a:hover{
     background-color: white;
 }
 
+#work, #additional-notes{
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+
+#work-container, #additional-notes-container{
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+#work-container h2, #additional-notes-container h2{
+    color: white;
+    font-size: 1.5rem;
+    text-transform: none;
+    margin-bottom: 0;
+}
+
 .carrousel-container{
     position: relative;
     margin: auto;
@@ -880,10 +898,12 @@ footer a:hover{
     justify-content: center;
     align-self: center;
     align-items: center;
+    gap: 20px;
 }
 
 .carrousel-container button{
     flex-basis: 10%;
+    max-width: 2.5dvw;
     min-height: 10vh;
     max-height: 15vh;
     overflow: hidden;
@@ -898,6 +918,26 @@ footer a:hover{
     height: 100%;
     width: 100%;
     object-fit: cover;
+}
+
+.left-arrow-button{
+    background-color: black;
+    border: none;
+    clip-path: polygon(0% 50%, 100% 100%, 100% 0%);
+
+    transition: background-color 0.5s ease;
+}
+
+.right-arrow-button{
+    background-color: black;
+    border: none;
+    clip-path: polygon(100% 50%, 0% 100%, 0% 0%);
+
+    transition: background-color 0.5s ease;
+}
+
+.left-arrow-button:hover, .right-arrow-button:hover{
+    background-color: var(--brandColor);
 }
 
 @media (max-width: 1000px){
@@ -1062,5 +1102,9 @@ footer a:hover{
 
     .platform-button{
         flex-basis: 90%;
+    }
+
+    .carrousel-container button{
+        max-width: 10dvw;
     }
 }
