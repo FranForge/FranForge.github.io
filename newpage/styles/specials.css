@@ -1,4 +1,4 @@
-.clean-iframe-video{
+.clean-video{
     position: absolute;
     width: 100%;
     height: 100%;
@@ -6,7 +6,7 @@
     background-color: black;
 }
 
-.clean-fullscreen-iframe-video{
+.clean-fullscreen-video{
     position: absolute;
     width: 100dvw;
     height: 100dvh;
@@ -16,19 +16,23 @@
     background-color: black;
 }
 
-.clean-iframe-video iframe,
-.clean-fullscreen-iframe-video iframe{
+.clean-video iframe,
+.clean-video video,
+.clean-fullscreen-video iframe,
+.clean-fullscreen-video video{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
 }
 
-.clean-iframe-video iframe{
+.clean-video iframe,
+.clean-video video{
     height: 100%;
 }
 
-.clean-fullscreen-iframe-video iframe{
+.clean-fullscreen-video iframe,
+.clean-fullscreen-video video{
     pointer-events: none;
     height: 120%;
 }

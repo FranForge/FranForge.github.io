@@ -74,7 +74,7 @@ header nav a img{
     opacity: 0;
 }
 
-#hero .clean-fullscreen-iframe-video{
+#hero .clean-fullscreen-video{
     position: absolute;
     inset: 0;
     z-index: 0;
@@ -954,7 +954,7 @@ footer a:hover{
         overflow: hidden;
     }
 
-    #hero .clean-fullscreen-iframe-video{
+    #hero .clean-fullscreen-video{
         position: absolute;
         top: 0;
         left: -200%;
@@ -1056,12 +1056,14 @@ footer a:hover{
         order: 3;
         flex-basis: 90%;
         text-align: left;
+        border-bottom: 2px solid grey;
     }
 
     .timeline-event-reversed .timeline-event-left{
         order: 3;
         flex-basis: 90%;
         text-align: left;
+        border-bottom: 2px solid grey;
     }
 
     .timeline-event-reversed .timeline-event-right{
@@ -1072,7 +1074,8 @@ footer a:hover{
 
     .timeline-point {
         order: 1;
-        margin-bottom: -15vh;
+        margin-bottom: 0vh;
+        display: none;
     }
 
     #demoreel, #video-presentation, #gallery{
