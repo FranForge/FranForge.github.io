@@ -942,6 +942,58 @@ footer a:hover{
     background-color: var(--brandColor);
 }
 
+#blog-article{
+    background-color: var(--brandSecondaryColor);
+    text-align: justify;
+    padding-top: 20vh;
+    padding-bottom: 20vh;
+}
+
+#blog-article-title{
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+#blog-article-subtitle{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    margin-top: 0;
+}
+
+#blog-article-date{
+    color: grey;
+}
+
+#blog-article .content{
+    margin-left: 22dvw;
+    margin-right: 22dvw;
+    padding: 3dvw;
+    background-color: white;
+    color: "#3B3B3B";
+}
+
+#blog-article .content img{
+    width: 100%;
+    object-fit: contain;
+}
+
+#blog-article .content span{
+    font-weight: bold;
+    color: black;
+}
+
+#blog-article .content h1, #blog-article .content h2{
+    border-bottom: var(--brandColor) solid 2px;
+}
+
+.blog-article-divider{
+    height: 10px;
+    width: 100%;
+    background-color: var(--brandColor);
+    margin-bottom: 5vh;
+}
+
 @media (max-width: 1000px){
 
     header section{
@@ -1119,5 +1171,18 @@ footer a:hover{
         color: white;
         margin-left: 2.5vw;
         margin-right: 2.5vw;
+    }
+
+    #blog-article{
+        padding-top: 10vh;
+        padding-bottom: 0;
+    }
+
+    #blog-article .content{
+        margin-left: 0;
+        margin-right: 0;
+        padding: 4dvw;
+        background-color: white;
+        color: "#3B3B3B";
     }
 }
