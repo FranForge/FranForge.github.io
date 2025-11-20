@@ -1,208 +1,301 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
 
-<html lang="es" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-07LPHTN6QT"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-07LPHTN6QT"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-        gtag('config', 'G-07LPHTN6QT');
-    </script>
-    <link href="../../style.css" rel="stylesheet" />
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="color-scheme" content="light">
-    <meta name="description" content="Super friendly sports game with local multiplayer. Customize your cute animal and compete to win fun matches." />
-    <title>Animal Strikers | FranForge | Game Developer</title>
-    <link href="../../images/logo/FranForgeLogo.ico" rel="icon" type="image/x-icon" />
-    <link href="../../images/logo/FranForgeLogo.ico" rel="shortcut icon" type="image/x-icon" />
-</head>
-<body>
+            gtag('config', 'G-07LPHTN6QT');
+        </script>
+    
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- CABECERA -->
-    <header id="header"></header>
+        <link rel="stylesheet" href="../../style.css">
+        <link href="../../icons/logo.ico" rel="icon" type="image/x-icon" />
+        <link href="../../icons/logo.ico" rel="shortcut icon" type="image/x-icon" />
 
-    <!-- FULLSCREEN IMAGE MODAL -->
-    <div id="fullscreen-image"></div>
+        <title>Animal Strikers | FranForge Game Developer</title>
 
-    <!-- HERO -->
-    <div class="fullBox">
-        <section class="bgContainer fade-in">
-            <img data-src="../../images/projects/animal_strikers/banner.webp" class="bg" alt="Fondo" />
-            <section class="centerBox fade-in-delayed">
-                <img data-src="../../images/projects/animal_strikers/logo.webp" class="img50" alt="Animal Strikers" />
+    </head>
+    <body>
+        
+        <!-- HEADER NAV -->
+        <header class="scroll-effect" data-scroll-min-y="100" data-scroll-max-y="0">
+            <section>
+                <nav>
+                    <a href="../home.html" class="header-logo">
+                        <img data-src="../../icons/logo.svg" alt="FranForge">
+                    </a>
+                    <a href="../home.html#presentation" class="desktop-only">About me</a>
+                    <a href="all.html">Projects</a>
+                    <a href="../home.html#skills" class="desktop-only">Skills</a>
+                    <a href="../home.html#experience" class="desktop-only">Experience</a>
+                    <a href="../home.html#blog" class="desktop-only">Blogs</a>
+                    <a href="#contact">Contact</a>
+                </nav>
             </section>
+        </header>
+
+        <!-- HERO -->
+        <section id="hero" class="scroll-effect" data-scroll-min-y="100" data-scroll-max-y="0">
+            <div class="clean-fullscreen-video">
+                <img src="../../media/projects/animal-strikers/banner.webp" alt="Banner del proyecto">
+            </div>
+            <div id="hero-background-panel"></div>
+            <div id="hero-content" class="content">
+                <p id="hero-title">Animal Strikers</p>
+                <p id="hero-subtitle">
+                    <span class="rotating-text" data-texts="Indie,Unity,.NET,C#,Plastic,2D"></span>
+                </p>
+            </div>
+            
         </section>
-    </div>
 
-    <!-- DESCRIPTION -->
-    <div class="sectionBox whiteBox">
-        <section class="marginBox">
-            <h1 class="centerText hidden">DESCRIPTION</h1>
-            <section class="flexBox wrap gap5w">
-                <article class="flex40 hidden">
-                    <img onclick="ViewOnFullScreen(this.src, this.alt, 'Back')" data-src="../../images/projects/animal_strikers/splashart.webp" class="coverImg roundedBorder" alt="SplashArt" />
-                </article>
-                <article class="flex40 hidden">
-                    <p>
-                        <span>Title:</span> Animal Strikers
-                    </p>
-                    <p>
-                        <span>Developer:</span> Enthariel Games
-                    </p>
-                    <p>
-                        <span>Development Time:</span> September 2024 - December 2024
-                    </p>
-                    <p>
-                        <span>Game Engine:</span> Unity 6000.0.34f1.
-                    </p>
-                    <p>
-                        <span>Synopsis:</span>
-                        In Animal Strikers you'll put your football skills to the test. Through these little characters and their amazing abilities, you’ll be able to win matches like a true legend.
-                        <br />
-                        Play solo or with friends, as you can compete on the same device.
-                    </p>
-                    <p>
-                        <span>Genres and Tags:</span> Sports, Casual, Local Multiplayer.
-                    </p>
-                </article>
-            </section>
-        </section>
-    </div>
+        <!-- PRESENTATION -->
+        <section id="presentation">
+            <div id="presentation-content">
 
-    <!-- PLATFORMS -->
-    <div class="smallSectionBox purpleBox">
-        <section class="marginBox">
-            <h1 class="centerText hidden">PLATFORMS</h1>
-            <section class="flexBox wrap gap1w gap1h">
-
-                <!-- SWITCH -->
-                <a href="https://ec.nintendo.com/NZ/en/titles/70010000092953" class="animatedCircleButton flex15" target="_blank">
-                    <section class="centerBox hidden">
-                        <article class="switchInverted boxMin2h boxMin2w"></article>
+                <!-- TEXT -->
+                <div id="presentation-text-container">
+                    <h1>Animal Strikers</h1>
+                    <p id="presentation-name" class="big-text-family">
+                        A 2D casual sports game with local multiplayer.
+                    </p>
+                    <section class="project-description">
+                        <p>
+                            <span>Name:</span>
+                            Animal Strikers
+                        </p>
+                        <p>
+                            <span>Developer:</span>
+                            Enthariel Games
+                        </p>
+                        <p>
+                            <span>Period:</span>
+                            Sep 2023 - Dic 2024
+                        </p>
+                        <p>
+                            <span>Framework:</span>
+                            Unity 6000.0.34f1.
+                        </p>
+                        <p>
+                            <span>Synopsis:</span>
+                            In Animal Strikers, you’ll test your soccer skills with these little characters. 
+                            By mastering amazing abilities, you can win matches like a true legend. 
+                            Play solo or with friends, as you can compete on the same device.
+                        </p>
+                        <p>
+                            <span>Genre & tags:</span>
+                            Sports, Casual, Local Multiplayer
+                        </p>
                     </section>
-                    <section class="hiddenSection centerBox">
-                        <p>PLAY NOW</p>
+
+                    <!-- PLATFORMS -->
+                    <section class="platforms">
+
+                        <a href="https://ec.nintendo.com/NZ/en/titles/70010000092953" target="_blank" class="platform-button">
+                            <section class="content">
+                                <img src="../../icons/switch.svg" alt="Nitendo Switch Icon">
+                                <p>Switch</p>
+                            </section>
+                            <section class="reveal-content">
+                                <p>Play Now</p>
+                            </section>
+                        </a>
+
                     </section>
-                </a>
 
-            </section>
-        </section>
-    </div>
+                </div>
 
-    <!-- JOBS -->
-    <div id="jobs" class="sectionBox blackBox">
-        <section class="marginBox">
-            <h1 class="centerText">WORK DONE</h1>
-            <section class="spacedFlexBox wrap">
+                <!-- AWARDS -->
+                <!-- <div id="presentation-resume">
+                    <h1>Premios</h1>
 
-                <!-- PROGRAMMING -->
-                <article class="experienceBox flex45 hidden">
-                    <h2>Programming</h2>
-                    <section class="experienceWorkBox">
-                        <ul>
-                            <li>Team Leader</li>
-                        </ul>
-                        <ul>
-                            <li>Technical Director</li>
-                        </ul>
-                        <ul>
-                            <li>Fullstack Developer</li>
-                        </ul>
-                        <ul>
-                            <li>Game Systems Programmer</li>
-                        </ul>
-                        <ul>
-                            <li>Gameplay Programmer</li>
-                        </ul>
-                        <ul>
-                            <li>Backend Programmer</li>
-                        </ul>
-                        <ul>
-                            <li>Frontend Programmer</li>
-                        </ul>
-                        <ul>
-                            <li>Port Developer</li>
-                        </ul>
+                    <section id="presentation-resume-container">
+
+                        <article class="item">
+                            <h2>Mejor juego</h2>
+                            <p class="number">2024</p>
+                            <img data-src="../../media/awards/mangafest.webp" alt="Mangafest Sevilla">
+                        </article>
+
+                        <article class="item">
+                            <h2>Mejor juego del público</h2>
+                            <p class="number">2024</p>
+                            <img data-src="../../media/awards/madrid-otaku-black.webp" alt="Mangafest Sevilla">
+                        </article>
+
+                        <article class="item">
+                            <h2>Nominado a mejor diseño</h2>
+                            <p class="number">2024</p>
+                            <img data-src="../../media/awards/ps-talents-black.webp" alt="Mangafest Sevilla">
+                        </article>
+
+                        <article class="item">
+                            <h2>Mejor juego del público</h2>
+                            <p class="number">2023</p>
+                            <img data-src="../../media/awards/madrid-otaku-black.webp" alt="Mangafest Sevilla">
+                        </article>
+
                     </section>
-                </article>
+                </div> -->
 
-                <!-- OTHER -->
-                <article class="experienceBox flex45 hidden">
-                    <h2>Design</h2>
-                    <section class="experienceWorkBox">
-                        <ul>
-                            <li>Game Designer</li>
-                        </ul>
-                        <ul>
-                            <li>UI/UX Designer</li>
-                        </ul>
-                    </section>
-                </article>
+            </div>
 
+            <!-- IMAGE -->
+            <div id="presentation-img-container">
+                <img data-src="../../media/projects/animal-strikers/thumbnail.webp" alt="Splash Art de Proyecto">
+            </div>
+
+        </section>
+
+        <!-- VIDEO -->
+        <section id="video-presentation">
+            <h1>Summary Video</h1>
+            <div id="video-presentation-container">
+                <div class="clean-video">
+                    <video preload="metadata" controls>
+                        <source src="../../media/projects/animal-strikers/video.mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALLERY -->
+        <section id="gallery">
+            <h1>Gallery</h1>
+            <div class="carrousel-container"
+                 data-carrousel-path="../../media/projects/animal-strikers" 
+                 data-carrousel-images="game1.webp,game2.webp,game3.webp">
+                <button class="left-arrow-button" data-direction="-1"></button>
+                <img class="carrousel-img" alt="Imagen de Carrusel">
+                <button class="right-arrow-button" data-direction="1"></button>
+            </div>
+        </section>
+
+        <!-- WORK -->
+        <section id="work">
+            <h1>Roles Held</h1>
+            <section id="work-container">
+                <h2>Solo Programmer</h2>
+                <p>
+                    I developed all the systems, logic, tools, and game features from start to finish.
+                </p>
+                <h2>Port Developer</h2>
+                <p>
+                    I handled the deployment to Nintendo Switch.
+                </p>
+                <h2>Unity Developer</h2>
+                <p>
+                    I handled all kinds of tasks in Unity.
+                </p>
             </section>
         </section>
-    </div>
 
-    <!-- GALLERY -->
-    <div id="gallery" class="sectionBox blackBox">
-        <section class="marginBox">
-            <h1 class="centerText hidden">GALLERY</h1>
-            <section class="flexBox wrap gap1w gap1h">
+        <!-- ADDITIONAL NOTES -->
+        <!-- <section id="additional-notes">
+            <h1>Notas adicionales</h1>
+            <section id="additional-notes-container">
+                <p>
+                    No participe durante todo el proyecto por lo que si el juego se ha publicado y cambia de lo aqui visto 
+                    es decision exclusiva de la desarrolladora, durante mi periodo trabajando planteé mecánicas básicas y 
+                    sistemas. Además también participé en el diseño del juego en general.
+                </p>
+            </section>
+        </section> -->
 
-                <!-- VIDEO -->
-                <article class="flex100 roundedBorder bgContainer whiteBox boxMin60h aspect-16-9 hidden">
-                    <iframe class="bgAbove" data-src="https://www.youtube.com/embed/NpBxkJc0O1w?si=UkkK3X6sw3E8h84O" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </article>
+        <!-- FOOTER -->
+        <footer>
 
-                <!-- IMAGEN 1 -->
-                <article class="flex30 roundedBorder hidden">
-                    <img onclick="ViewOnFullScreen(this.src, this.alt, 'Back')" data-src="../../images/projects/animal_strikers/game1.webp" class="coverImg icon" alt="Gameplay1" />
-                </article>
+            <!-- SOCIALS -->
+            <section id="socials">
+                <h1>Social</h1>
+                <div>
+                    <!-- TWITTER -->
+                    <a href="https://x.com/FranForge" target="_blank" aria-label="Visit FranForge X Profile">
+                        <img data-src="../../icons/twitter-white.svg" alt="Twitter">
+                    </a>
 
-                <!-- IMAGEN 1 -->
-                <article class="flex30 roundedBorder hidden">
-                    <img onclick="ViewOnFullScreen(this.src, this.alt, 'Back')" data-src="../../images/projects/animal_strikers/game2.webp" class="coverImg icon" alt="Gameplay2" />
-                </article>
+                    <!-- INSTAGRAM -->
+                    <a href="https://www.instagram.com/franforge.dev/" target="_blank" aria-label="Visit FranForge Instagram Profile">
+                        <img data-src="../../icons/instagram-white.svg" alt="Instagram">
+                    </a>
 
-                <!-- IMAGEN 1 -->
-                <article class="flex30 roundedBorder hidden">
-                    <img onclick="ViewOnFullScreen(this.src, this.alt, 'Back')" data-src="../../images/projects/animal_strikers/game3.webp" class="coverImg icon" alt="Gameplay3" />
-                </article>
+                    <!-- TIKTOK -->
+                    <a href="https://www.tiktok.com/@franforgedev" target="_blank" aria-label="Visit FranForge Tiktok Profile">
+                        <img data-src="../../icons/tiktok-white.svg" alt="Tiktok">
+                    </a>
+
+                    <!-- YOUTUBE -->
+                    <a href="https://www.youtube.com/@FranForge/videos" target="_blank" aria-label="Visit FranForge Youtube Profile">
+                        <img data-src="../../icons/youtube-white.svg" alt="Youtube">
+                    </a>
+
+                    <!-- PATREON -->
+                    <a href="https://www.patreon.com/c/FranForge" target="_blank" aria-label="Visit FranForge Patreon Profile">
+                        <img data-src="../../icons/patreon-white.svg" alt="Patreon" aria-label="Visit FranForge Patreon Creator Profile">
+                    </a>
+
+                    <!-- LINKEDIN -->
+                    <a href="https://www.linkedin.com/in/francisco-jesus-huerta-hervas/" target="_blank" aria-label="Visit FranForge Linkedin Profile">
+                        <img data-src="../../icons/linkedin-white.svg" alt="Linkedin">
+                    </a>
+
+                    <!-- MAIL -->
+                    <a href="mailto:franforge3d@gmail.com" target="_blank" aria-label="Mail to franforge3d@gmail.com">
+                        <img data-src="../../icons/mail-white.svg" alt="Mail">
+                    </a>
+
+                    <!-- GITHUB -->
+                    <a href="https://github.com/FranForge" target="_blank" aria-label="Visit FranForge Github">
+                        <img data-src="../../icons/github-white.svg" alt="Github">
+                    </a>
+                </div>
+                
+            </section>
+
+            <!-- CONTACT -->
+            <section id="contact">
+                <h1>Contact</h1>
+                <form action="https://formkeep.com/f/cb60aea6d317" method="POST">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" value="" placeholder="Entity or Particular" required />
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" value="" placeholder="example@example.com" required />
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Please describe the reason for your contact here…" required></textarea>
+                    <button type="submit" name="" class="buttonLargue">Submit</button>
+                </form>
+            </section>
+
+            <!-- INFO -->
+            <section id="footer-info">
+
+                <h1>Information</h1>
+                <a href="../home.html#presentation">About me</a>
+                <a href="all.html">Projects</a>
+                <a href="../home.html#skills">Skills</a>
+                <a href="../home.html#experience">Experience</a>
+                <a href="../home.html#blog">Blogs</a>
+                <a href="../home.html#contact">Contact</a>
 
             </section>
-        </section>
-    </div>
 
-    <!-- SOCIAL -->
-    <div id="social" class="sectionBox whiteBox">
-        <section class="marginBox">
-            <h1 class="centerText hidden">PROJECT SOCIAL MEDIA</h1>
-            <section class="flexBox gap1w">
+        </footer>
 
-                <!-- TIKTOK -->
-                <a href="https://www.tiktok.com/@animalstrikers?lang=en" target="_blank" class="tiktok boxMin5h boxMin5w icon flex5 hidden"></a>
+        <script src="../../scripts/rotateTexts.js"></script>
+        <script src="../../scripts/attributesDisplayer.js"></script>
+        <script src="../../scripts/scrollEffector.js"></script>
+        <script src="../../scripts/displayBars.js"></script>
+        <script src="../../scripts/lazyLoadingImages.js"></script>
+        <script src="../../scripts/carouselDisplayer.js"></script>
 
-            </section>
-        </section>
-    </div>
-
-
-    <!-- CONTACT -->
-    <div id="contact" class="sectionBox blackBox"></div>
-
-    <!-- FOOTER -->
-    <footer id="footer" class="sectionBox purpleBox"></footer>
-
-    <script src="../../scripts/includeHeader.js"></script>
-    <script src="../../scripts/includeContact.js"></script>
-    <script src="../../scripts/includeFooter.js"></script>
-    <script src="../../scripts/lazyLoadingImages.js"></script>
-    <script src="../../scripts/revealHidden.js"></script>
-    <script src="../../scripts/fullscreenImageModal.js"></script>
-
-</body>
+    </body>
 </html>

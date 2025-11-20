@@ -1,95 +1,92 @@
-﻿@import url('styles/brand.css');
-@import url('styles/header.css');
-@import url('styles/boxes.css');
-@import url('styles/flexs.css');
-@import url('styles/images.css');
+@import url('styles/colors.css');
+@import url('styles/margins.css');
+@import url('styles/defined.css');
 @import url('styles/texts.css');
-@import url('styles/backgrounds.css');
-@import url('styles/buttons.css');
-@import url('styles/icons.css');
-@import url('styles/forms.css');
 @import url('styles/specials.css');
-@import url('styles/animations.css');
 
-@font-face {
-    font-family: 'Tahoma';
-    src: url('fonts/tahoma.ttf') format('truetype');
+@font-face{
+    font-family: 'Alfa-Slab-One';
+    src: url('fonts/Alfa_Slab_One/AlfaSlabOne-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'ArchivoBlack';
-    src: url('fonts/ArchivoBlack.ttf') format('truetype');
+    font-family: 'Bowlby-One-SC';
+    src: url('fonts/Bowlby_One_SC/BowlbyOneSC-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
-    font-family: 'Rubik';
-    src: url('fonts/RubikMonoOne.ttf') format('truetype');
+    font-family: 'Zain';
+    src: url('fonts/Zain/Zain-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 
-html {
+@font-face {
+    font-family: 'Kanit';
+    src: url('fonts/Kanit/Kanit-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root{
+    font-size: 2vh;
     scroll-behavior: smooth;
 }
 
-::selection {
-    background-color: var(--brandColor);
-    color: white;
-}
-
-body {
+body{
     margin: 0;
-    padding: 0;
-    overflow-x: hidden;
     background-color: black;
-    font-family: 'Tahoma', sans-serif;
+    color: var(--darkTextColor);
+    text-align: center;
+    font-family: 'Zain';
 }
 
-h1 {
-    font-size: 3vh;
+h1{
+    color: grey;
+    text-transform: uppercase;
+    font-size: 1rem;
 }
 
-h2 {
-    font-size: 2.5vh;
+h2{
+    color: grey;
+    text-transform: uppercase;
+    font-size: 0.8rem;
 }
 
-h3 {
-    font-size: 2vh;
-}
-
-h4 {
-    font-size: 2vh;
-}
-
-h5 {
-    font-size: 1.9vh;
-}
-
-p {
-    text-align: justify;
-    font-size: 1.9vh;
-}
-
-a {
-    font-size: 1.9vh;
+a{
     text-decoration: none;
     color: inherit;
 }
 
-p a{
-    font-weight: bold;
-    text-decoration: underline;
+img{
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
 }
 
-li {
-    font-size: 1.9vh;
+form{
+    display: flex;
+    flex-direction: column;
 }
 
-span {
+form button{
+    font-family: 'Zain';
     font-weight: bold;
-    color: var(--brandColor);
+}
+
+form input, form textarea{
+    font-family: 'Zain';
+}
+
+form textarea{
+    resize: none;
+}
+
+video{
+    width: 100%;
+    height: 100%;
 }

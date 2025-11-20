@@ -1,0 +1,16 @@
+.horizontal-margin-30{
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+.horizontal-center-margin{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 1000px){
+    .horizontal-margin-30{
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}

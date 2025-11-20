@@ -1,720 +1,799 @@
-﻿<!DOCTYPE html>
-
+<!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-07LPHTN6QT"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+    <head>
 
-        gtag('config', 'G-07LPHTN6QT');
-    </script>
-    <link href="../style.css" rel="stylesheet" />
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="color-scheme" content="light">
-    <meta name="description" content="FranForge – Unity Game Developer with 2+ years of experience. Discover projects, services, and much more." />
-    <title>Home | FranForge | Game Developer</title>
-    <link href="../images/logo/FranForgeLogo.ico" rel="icon" type="image/x-icon" />
-    <link href="../images/logo/FranForgeLogo.ico" rel="shortcut icon" type="image/x-icon" />
-</head>
-<body>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-07LPHTN6QT"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-    <!-- CABECERA -->
-    <header id="header"></header>
+            gtag('config', 'G-07LPHTN6QT');
+        </script>
+    
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- FULLSCREEN IMAGE MODAL -->
-    <div id="fullscreen-image"></div>
+        <link rel="stylesheet" href="../style.css">
+        <link href="../icons/logo.ico" rel="icon" type="image/x-icon" />
+        <link href="../icons/logo.ico" rel="shortcut icon" type="image/x-icon" />
 
-    <!-- START -->
-    <div id="start" class="fullBox bg1">
-        <section class="marginBox flexBox">
-            <article class="flex40 centerBox hidden">
-                <img data-src="../images/logo/Logo_WDegreeOutline.svg" class="img40" alt="FranForge Logo" />
-            </article>
-            <article class="flex40 centerBox whiteText boldText shadowText hidden">
-                <p class="bigText smallMarginText">
-                    FranForge
+        <title>Home | FranForge Game Developer</title>
+    </head>
+    <body>
+
+        <!-- HEADER NAV -->
+        <header class="scroll-effect" data-scroll-min-y="100" data-scroll-max-y="0">
+            <section>
+                <nav>
+                    <a href="home.html" class="header-logo">
+                        <img data-src="../icons/logo.svg" alt="FranForge">
+                    </a>
+                    <a href="#presentation" class="desktop-only">About me</a>
+                    <a href="projects/all.html">Projects</a>
+                    <a href="#skills" class="desktop-only">Skills</a>
+                    <a href="#experience" class="desktop-only">Experience</a>
+                    <a href="#blog" class="desktop-only">Blogs</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+            </section>
+        </header>
+
+        <!-- HERO -->
+        <section id="hero" class="scroll-effect" data-scroll-min-y="100" data-scroll-max-y="0">
+            <div class="clean-fullscreen-video">
+                <video preload="auto" autoplay muted loop>
+                    <source src="../media/projects/magictory/video.mp4">
+                </video>
+            </div>
+            <div id="hero-background-panel"></div>
+            <div id="hero-content" class="content">
+                <p id="hero-title">FranForge</p>
+                <p id="hero-subtitle">
+                    <span class="rotating-text" data-texts="Game,Gameplay,Systems,AI,Combat,Software,C#,C++"></span> 
+                    Developer
                 </p>
-                <p class="smallMarginText centerText">
-                    UNITY GAME DEVELOPER
-                </p>
-                <p class="smallMarginText centerText">
-                    C#, C++, HTML, CSS, JS
-                </p>
-            </article>
+            </div>
+            
         </section>
-    </div>
 
-    <!-- COUNTER AND WARNING MESSAGE -->
-     
-     <a href="projects/animal-strikers-es.html">
-        <div id="counter" class="blackBox">
-            <section class="marginBox">
+        <!-- PRESENTATION -->
+        <section id="presentation">
+            <div id="presentation-content">
 
-                <!-- IMAGEN DEL CONTADOR DE FONDO -->
-                <section id="counter_bg">
-                    <img src="../images/projects/animal_strikers/banner.webp" alt="">
-                </section>
-
-                <section id="counter_above">
-                    <article class="flex100 flexBox">
-                        <p id="counter_days" class="centerText bigText smallMarginText">
-                            365d
-                        </p>
-                        <p class="centerText bigText smallMarginText">:</p>
-                        <p id="counter_hours" class="centerText bigText smallMarginText">
-                            24h
-                        </p>
-                        <p class="centerText bigText smallMarginText">:</p>
-                        <p id="counter_minutes" class="centerText bigText smallMarginText">
-                            60m
-                        </p>
-                        <p class="centerText bigText smallMarginText">:</p>
-                        <p id="counter_seconds" class="centerText bigText smallMarginText">
-                            60s
-                        </p>
-                    </article>
-
-                    <!-- TEXTO DEL CONTADOR MIENTRAS CUENTA -->
-                    <article class="flex100 flexBox">
-                        <h1 class="">CONTADOR PARA PROBAR</h1>
-                    </article>
-                </section>
-
-                <!-- TEXTO DEL CONTADOR AL FINALIZAR -->
-                <section id="counter_finish">
-                    <article class="flex100 flexBox">
-                        <p class="bigText">NOW AVAILABLE</p>
-                    </article>
-                </section>
-
-            </section>
-        </div>
-     </a>
-
-    <!-- WHO -->
-    <div id="who" class="sectionBox whiteBox">
-        <section class="marginBox">
-            <h1 class="centerText hidden">WHO AM I?</h1>
-            <section class="flexBox wrap">
-                <article class="flex60 hidden">
-                    <p>
-                        My name is <span>Francisco Jesús Huerta Hervás</span> 
-                        and I am a video game developer very passionate about the industry.
+                <!-- TEXT -->
+                <div id="presentation-text-container">
+                    <h1>Desarrollador de Videojuegos especializado en Unity</h1>
+                    <p id="presentation-name" class="big-text-family">
+                        My name is Francisco Jesús Huerta Hervás, Game Developer.
                     </p>
                     <p>
-                        I dream of creating unique and complex interactive experiences 
-                        because I love challenges. I have experience developing in 
-                        <span>Unity</span> and <span>C#</span>, and thanks to this 
-                        I have published on <span>Nintendo Switch</span>, 
-                        <span>Steam</span>, and <span>Google Play</span>. 
-                        I have worked on both independent professional projects 
-                        and small personal projects, where I constantly strive 
-                        to improve and optimize the outcome.
+                        I specialize in developing <span>gameplay</span> and <span>systems</span> 
+                        from the ground up. Since 2021, I have been working on various games and 
+                        small projects using <span>Unity</span> and briefly <span>Unreal</span>. 
+                        With them, I have published on platforms such as <span>Steam</span>, 
+                        <span>Google Play</span>, and consoles like <span>Nintendo Switch</span>, 
+                        all of which has strengthened my skills as a <span>Game Developer</span>.
                     </p>
-                    <p>
-                        I am currently expanding my horizons by exploring 
-                        <span>Unreal Engine</span> along with <span>C++</span> 
-                        as a personal and professional challenge.
-                    </p>
-                    <p>
-                        Always motivated by learning and continuous improvement, 
-                        whether working alone or in a team.
-                    </p>
-                    <p class="boldText purpleText">
-                        "Efficient, motivated, and eager to improve."
-                    </p>
-                </article>
-                <article class="flex40 centerBox hidden">
-                    <img onclick="ViewOnFullScreen(this.src, this.alt, 'Back')" data-src="../images/logo/Logo_Persona.webp" class="img80p circleImg" alt="FranForge's face" />
-                </article>
-            </section>
-            <section class="centerBox">
-                <br />
-                <a href="#contact" class="rectangleButton hidden">Contact</a>
-            </section>
+                    <img data-src="../icons/logo.svg" alt="Logo de FranForge">
+                    <p>¿Are you interested in my work?</p>
+                    <a href="" class="button horizontal-center-margin">
+                        <section class="content">
+                            <p>Contact me!</p>
+                        </section>
+                    </a>
+                </div>
+
+                <!-- RESUME -->
+                <div id="presentation-resume">
+                    <h1>Resumen</h1>
+
+                    <section id="presentation-resume-container">
+
+                        <!-- PROJECTS -->
+                        <a href="projects/all.html" class="item">
+                            <h2>Projects</h2>
+                            <p class="number">+10</p>
+                            <img data-src="../icons/project.svg" alt="Icono de Proyecto">
+                        </a>
+                        
+                        <!-- COMERCIAL GAMES -->
+                        <a href="#highlights" class="item">
+                            <h2>Released Projects</h2>
+                            <p class="number">3</p>
+                            <img data-src="../icons/gamepad.svg" alt="Icono de Mando">
+                        </a>
+
+                        <!-- UNITY ASSETS -->
+                        <a href="https://assetstore.unity.com/packages/tools/utilities/debugtoolsplus-316084" target="_blank" class="item">
+                            <h2>Unity Assets</h2>
+                            <p class="number">1</p>
+                            <img data-src="../icons/unity.svg" alt="Icono de Unity">
+                        </a>
+
+                        <!-- CERTIFICATES -->
+                        <a href="#certificates" class="item">
+                            <h2>Certificates</h2>
+                            <p class="number">4</p>
+                            <img data-src="../icons/certificate.svg" alt="Icono de Certificados">
+                        </a>
+
+                    </section>
+
+                </div>
+
+            </div>
+
+            <!-- IMAGE -->
+            <div id="presentation-img-container">
+                <img data-src="../media/owner/FranForge_Logo_Persona.png" alt="Retrato de Francisco Jesús Huerta Hervás">
+            </div>
+
         </section>
-    </div>
 
-    <!-- DEMOREEL -->
-    <div id="demoreel" class="sectionBox blackBox bg2">
-        <h1 class="centerText hidden">DEMOREEL</h1>
-        <section class="marginBox">
-            <!-- VIDEO -->
-            <article class="flex100 roundedBorder bgContainer whiteBox boxMin60h aspect-16-9 hidden">
-                <iframe class="bgAbove" data-src="https://www.youtube.com/embed/kGLQr77SHkI?si=KR9ZIV4OwIJVLYZX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            </article>
-        </section>
-    </div>
+        <!-- HIGHLIGHTS -->
+        <section id="highlights" class="horizontal-margin-30">
+            <h1>Featured Projects</h1>
+            <div class="product-cards-container">
 
-    <!--  NEWS -->
-    <div id="news" class="sectionBox blackBox bg2">
-        <section class="marginBox">
-            <h1 class="centerText hidden">NEWS AND ARTICLES</h1>
-            <section class="flexBox wrap gap1w gap2h">
-
-                <!-- UNREAL ENGINE -->
-                <a href="blog/first-time-unreal.html" class="flex45">
-                    <article class="newBox hidden">
-                        
-                        <section class="newContent">
-                            <section>
-                                <h2>First time with C++ in Unreal Engine 5</h2>
-                            </section>
-
-                            <section>
-                                <img data-src="../images/icons/unreal.svg" alt="">
-                            </section>
+                <!-- THE SKY PROJECT -->
+                <a href="projects/the-sky-project.html" class="product-card product-card-long">
+                    <article class="content">
+                        <section class="text-container">
+                        <h2 data-text="name">The Sky Project</h2>
+                        <p data-text="role-description">
+                            I worked as the lead programmer, creating the system architecture 
+                            for features such as creature data, attacks, and the combat system.
+                        </p>
+                        <div class="divider"></div>
+                        <p data-text="job-date">Nov 2024 - Sep 2025</p>
+                        <section class="attributes-container" data-attributes="Indie,Unity,.NET,C#,Plastic,2D"></section>
                         </section>
 
-                        <section class="hiddenSection">
-                            <img data-src="../images/icons/arrowRight.svg" alt="">
-                        </section>
-                        
-                    </article>
-                </a>
-
-                <!-- VIEW MORE -->
-                <!--
-                <a href="blog/all-en.html" class="flex45">
-                    <article class="newBox hidden">
-                        
-                        <section class="newContent">
-                            <section>
-                                <h2>Other articles</h2>
-                            </section>
-
-                            <section>
-                                <img data-src="../images/icons/more.svg" alt="">
-                            </section>
-                        </section>
-
-                        <section class="hiddenSection">
-                            <img data-src="../images/icons/arrowRight.svg" alt="">
-                        </section>
-                        
-                    </article>
-                </a>
-                -->
-
-            </section>
-        </section>
-    </div>
-
-    <!-- PROJECTS -->
-    <div id="projects" class="sectionBox blackBox bg2">
-        <section class="marginBox">
-            <h1 class="centerText hidden">PROJECTS</h1>
-            <section class="flexBox wrap">
-
-                <!-- SKY PROJECT -->
-                <a href="projects/the-sky-project.html" class="flex30">
-                    <article class="cardBox box30h hidden">
-                        <section>
-                            <img data-src="../images/projects/sky_project/thumbnail.webp" class="coverImg" alt="The Sky Project thumbnail" />
-                        </section>
-                        <section class="hiddenSection centerBox purpleBox">
-                            <h2>The Sky Project</h2>
-                            <div class="flexBox gap1w">
-                                <article class="flex30 boxMin5h boxMin5w">
-                                    <div class="unityInverted"></div>
-                                </article>
-                            </div>
-                        </section>
-                    </article>
-                </a>
-
-                <!-- LUMINARIA DARK ECHOES -->
-                <a href="projects/luminaria-dark-echoes.html" class="flex30">
-                    <article class="cardBox box30h hidden">
-                        <section>
-                            <img data-src="../images/projects/luminaria/thumbnail.webp" class="coverImg" alt="Luminaria Dark Echoes thumbnail" />
-                        </section>
-                        <section class="hiddenSection centerBox purpleBox">
-                            <h2>Luminaria: Dark Echoes</h2>
-                            <div class="flexBox gap1w">
-                                <article class="flex30 boxMin5h boxMin5w">
-                                    <div class="steamInverted"></div>
-                                </article>
-                                <article class="flex30 boxMin5h boxMin5w">
-                                    <div class="playstationInverted"></div>
-                                </article>
-                                <article class="flex30 boxMin5h boxMin5w">
-                                    <div class="switchInverted"></div>
-                                </article>
-                            </div>
+                        <section class="img-container">
+                        <img data-src="../media/projects/the-sky-project/thumbnail.webp" alt="Miniatura de The Sky Project"/>
+                        <div class="read-more">Read more</div>
                         </section>
                     </article>
                 </a>
 
                 <!-- ANIMAL STRIKERS -->
-                <a href="projects/animal-strikers.html" class="flex30">
-                    <article class="cardBox box30h hidden">
-                        <section>
-                            <img src="../images/projects/animal_strikers/thumbnail.webp" class="coverImg" alt="Animal Strikers thumbnail" />
+                <a href="projects/animal-strikers.html" class="product-card product-card-long">
+                    <article class="content">
+                        <section class="text-container">
+                        <h2 data-text="name">Animal Strikers</h2>
+                        <p data-text="role-description">
+                            I worked as the sole programmer, developing all mechanics from scratch, 
+                            implementing local multiplayer, and handling the Nintendo Switch port.
+                        </p>
+                        <div class="divider"></div>
+                        <p data-text="job-date">Sep 2023 - Dec 2024</p>
+                        <section class="attributes-container" data-attributes="Indie,Unity,.NET,C#,Plastic,2D"></section>
                         </section>
-                        <section class="hiddenSection centerBox purpleBox">
-                            <h2>Animal Strikers</h2>
-                            <div class="flexBox gap1w">
-                                <article class="flex30 boxMin5h boxMin5w">
-                                    <div class="switchInverted"></div>
-                                </article>
-                            </div>
+
+                        <section class="img-container">
+                        <img data-src="../media/projects/animal-strikers/thumbnail.webp" alt="Miniatura de Animal Strikers"/>
+                        <div class="read-more">Read more</div>
                         </section>
                     </article>
                 </a>
 
-                <!-- CONFINIO REALITY PRISON -->
-                <a href="projects/confinio-reality-prison.html" class="flex30">
-                    <article class="cardBox box30h hidden">
-                        <section>
-                            <img src="../images/projects/confinio/thumbnail.webp" class="coverImg" alt="Confinio Reality Prison thumbnail" />
+                <!-- LUMINARIA DARK ECHOES -->
+                <a href="projects/luminaria-dark-echoes.html" class="product-card product-card-long">
+                    <article class="content">
+                        <section class="text-container">
+                        <h2 data-text="name">Luminaria: Dark Echoes</h2>
+                        <p data-text="role-description">
+                            I worked as the lead programmer and team leader, 
+                            developing mechanics and mentoring other developers.
+                        </p>
+                        <div class="divider"></div>
+                        <p data-text="job-date">Sep 2023 - Dec 2024</p>
+                        <section class="attributes-container" data-attributes="Indie,Unity,.NET,C#,Plastic,2D"></section>
                         </section>
-                        <section class="hiddenSection centerBox purpleBox">
-                            <h2>Confinio: Reality Prision</h2>
-                            <div class="flexBox gap1w">
-                                <article class="flex30 boxMin5h boxMin5w">
-                                    <div class="steamInverted"></div>
-                                </article>
-                            </div>
+
+                        <section class="img-container">
+                        <img data-src="../media/projects/luminaria-dark-echoes/thumbnail.webp" alt="Miniatura de Luminaria: Dark Echoes"/>
+                        <div class="read-more">Read more</div>
                         </section>
                     </article>
                 </a>
 
-                <!-- MECHANIC PARTY -->
-                <a href="projects/mechanic-party.html" class="flex30">
-                    <article class="cardBox box30h hidden">
-                        <section>
-                            <img data-src="../images/projects/mechanic_party/thumbnail.webp" class="coverImg" alt="Mechanic Party thumbnail" />
-                        </section>
-                        <section class="hiddenSection centerBox purpleBox">
-                            <h2>Mechanic Party</h2>
-                            <div class="flexBox gap1w">
-                                <article class="flex30 boxMin5h boxMin5w">
-                                    <div class="unityInverted"></div>
-                                </article>
-                            </div>
-                        </section>
+            </div>
+            <a href="projects/all.html" class="button horizontal-center-margin">
+                <section class="content">
+                    <p>View all</p>
+                </section>
+            </a>
+        </section>
+
+        <!-- SKILLS -->
+        <section id="skills">
+
+            <!-- TECHNICAL SKILLS -->
+            <section id="technical-skills">
+                <h1>Technical Skills</h1>
+                <div class="divider"></div>
+
+                <!-- UNITY -->
+                <section class="skill-card">
+                    <img data-src="../icons/unity-white.svg" alt="Unity">
+                    <h2>Unity</h2>
+                    <article class="bar-container">
+                        <article class="bar" data-bar-fill="80%"></article>
                     </article>
-                </a>
+                </section>
+
+                <!-- UNREAL -->
+                <section class="skill-card">
+                    <img data-src="../icons/unreal-white.svg" alt="Unreal">
+                    <h2>Unreal</h2>
+                    <article class="bar-container">
+                        <article class="bar" data-bar-fill="30%"></article>
+                    </article>
+                </section>
+
+                <!-- C# -->
+                <section class="skill-card">
+                    <img data-src="../icons/csharp.svg" alt="C#">
+                    <h2>C#</h2>
+                    <article class="bar-container">
+                        <article class="bar" data-bar-fill="80%"></article>
+                    </article>
+                </section>
+
+                <!-- C++ -->
+                <section class="skill-card">
+                    <img data-src="../icons/cplusplus.svg" alt="C++">
+                    <h2>C++</h2>
+                    <article class="bar-container">
+                        <article class="bar" data-bar-fill="30%"></article>
+                    </article>
+                </section>
+
+                <!-- HTML -->
+                <section class="skill-card">
+                    <img data-src="../icons/html.svg" alt="HTML">
+                    <h2>HTML</h2>
+                    <article class="bar-container">
+                        <article class="bar" data-bar-fill="80%"></article>
+                    </article>
+                </section>
+
+                <!-- CSS -->
+                <section class="skill-card">
+                    <img data-src="../icons/css.svg" alt="CSS">
+                    <h2>CSS</h2>
+                    <article class="bar-container">
+                        <article class="bar" data-bar-fill="60%"></article>
+                    </article>
+                </section>
+
+                <!-- JS -->
+                <section class="skill-card">
+                    <img data-src="../icons/js.svg" alt="JavaScript">
+                    <h2>JS</h2>
+                    <article class="bar-container">
+                        <article class="bar" data-bar-fill="30%"></article>
+                    </article>
+                </section>
+
+                <!-- PLASTIC -->
+                <section class="skill-card">
+                    <img data-src="../icons/plastic.svg" alt="Plastic">
+                    <h2>Plastic</h2>
+                    <article class="bar-container">
+                        <article class="bar" data-bar-fill="60%"></article>
+                    </article>
+                </section>
+
+                <!-- GITHUB -->
+                <section class="skill-card">
+                    <img data-src="../icons/github.svg" alt="Github">
+                    <h2>Github</h2>
+                    <article class="bar-container">
+                        <article class="bar" data-bar-fill="30%"></article>
+                    </article>
+                </section>
+
+                <!-- BLENDER -->
+                <section class="skill-card">
+                    <img data-src="../icons/blender.svg" alt="Github">
+                    <h2>Blender</h2>
+                    <article class="bar-container">
+                        <article class="bar" data-bar-fill="80%"></article>
+                    </article>
+                </section>
+
+                <!-- PREMIERE -->
+                <section class="skill-card">
+                    <img data-src="../icons/premiere.svg" alt="Github">
+                    <h2>Premiere</h2>
+                    <article class="bar-container">
+                        <article class="bar" data-bar-fill="80%"></article>
+                    </article>
+                </section>
+
+                <!-- AFTER EFFECTS -->
+                <section class="skill-card">
+                    <img data-src="../icons/after-effects.svg" alt="Github">
+                    <h2>After Effects</h2>
+                    <article class="bar-container">
+                        <article class="bar" data-bar-fill="70%"></article>
+                    </article>
+                </section>
+
+                <!-- PHOTOSHOP -->
+                <section class="skill-card">
+                    <img data-src="../icons/photoshop.svg" alt="Github">
+                    <h2>Photoshop</h2>
+                    <article class="bar-container">
+                        <article class="bar" data-bar-fill="40%"></article>
+                    </article>
+                </section>
 
             </section>
-        </section>
-    </div>
 
-    <!-- SERVICES -->
-    <div id="services" class="sectionBox purpleBox">
-        <section class="marginBox">
-            <h1 class="centerText hidden">SERVICES</h1>
+            <!-- SOFT SKILLS -->
+            <section id="soft-skills">
+                <h1>Soft Skills</h1>
+                <div class="divider"></div>
 
-            <!-- WEBSITES -->
-            <section class="flexBox wrap serviceBox">
+                <!-- COMUNICATION -->
+                <section class="skill-card">
+                    <img data-src="../icons/message.svg" alt="Comunicativo">
+                    <h2>Communicative</h2>
+                    <p>Able to communicate effectively and outgoing with the team.</p>
+                </section>
 
-                <!-- IMAGE -->
-                <a href="services/website-creation.html" class="flex50">
-                    <article class="centerBox">
-                        <img src="../images/icons/web.svg" class="img80p" alt="Web" />
-                    </article>
-                </a>
+                <!-- TEAM WORK -->
+                <section class="skill-card">
+                    <img data-src="../icons/team.svg" alt="Trabajo en equipo">
+                    <h2>Teamwork</h2>
+                    <p>I work collaboratively, seeking input and offering help whenever possible.</p>
+                </section>
 
-                <!-- DESCRIPTION -->
-                <a href="services/website-creation.html" class="flex50">
-                    <article class="centerBox">
-                        <h2>Website Creation</h2>
-                        <p>I design, host, and optimize your dream website for both desktop and mobile devices.</p>
-                    </article>
-                </a>
+                <!-- CONFLICTS -->
+                <section class="skill-card">
+                    <img data-src="../icons/warning.svg" alt="Resolución de problemas">
+                    <h2>Problem Solving</h2>
+                    <p>I always strive to solve problems, both technically and personally.</p>
+                </section>
+
+                <!-- VERSATILE -->
+                <section class="skill-card">
+                    <img data-src="../icons/versatile.svg" alt="Versátil">
+                    <h2>Versatile</h2>
+                    <p>I adapt quickly to new environments and tools, approaching challenges with agility.</p>
+                </section>
+
+                <!-- AUTONOME -->
+                <section class="skill-card">
+                    <img data-src="../icons/skill.svg" alt="Autónomo">
+                    <h2>Autonome</h2>
+                    <p>Although I work well in a team, I am also quite independent. I work, learn, and improve on my own.</p>
+                </section>
+
+                <!-- EMPATIC -->
+                <section class="skill-card">
+                    <img data-src="../icons/shake-hands.svg" alt="Empático">
+                    <h2>Empatic</h2>
+                    <p>I have a certain sensitivity to put myself in others’ shoes and understand different perspectives.</p>
+                </section>
+
+                <!-- CREATIVE -->
+                <section class="skill-card">
+                    <img data-src="../icons/idea.svg" alt="Creativo">
+                    <h2>Creative</h2>
+                    <p>I’m always coming up with new ideas in my head, exploring different approaches and creating.</p>
+                </section>
+
+                <!-- EFFICIENT -->
+                <section class="skill-card">
+                    <img data-src="../icons/speed.svg" alt="Ágil">
+                    <h2>Agile</h2>
+                    <p>I always aim to have everything ready on time, and I’m generally quite fast at work.</p>
+                </section>
 
             </section>
 
-            <br />
-
-            <!-- PRIVATE LESSONS -->
-            <section class="reverseFlexBox wrap serviceBox">
-
-                <!-- IMAGE -->
-                <a href="https://www.tusclasesparticulares.com/online/programacion/clases-unity-orientadas-programacion-5183291" target="_blank" class="flex50">
-                    <article class="centerBox">
-                        <img data-src="../images/icons/teacher.svg" class="img80p" alt="Web" />
-                    </article>
-                </a>
-
-                <!-- DESCRIPTION -->
-                <a href="https://www.tusclasesparticulares.com/online/programacion/clases-unity-orientadas-programacion-5183291" target="_blank" class="flex50">
-                    <article class="centerBox">
-                        <h2>Programming Lessons</h2>
-                        <p>Private remote lessons in C# or Unity Engine.</p>
-                    </article>
-                </a>
-
-            </section>
-
         </section>
-    </div>
 
+        <!-- EXPERIENCE -->
+        <section id="experience">
+            <section id="experience-container">
 
-    <!-- PRODUCTS -->
-    <div id="products" class="sectionBox whiteBox">
-        <section class="marginBox">
-            <h1 class="centerText">PRODUCTS</h1>
-            <section class="flexBox wrap">
+                <!-- PROFESIONAL EXPERIENCE -->
+                <h1 id="professional-experience">Professional Experience</h1>
 
-                <!-- UNITY DEBUG TOOLS PLUS -->
-                <a href="https://assetstore.unity.com/packages/tools/utilities/debugtoolsplus-316084" target="_blank" class="flex30">
-                    <article class="cardBoxPurple box30h hidden">
-                        <section>
-                            <img data-src="../images/products/debug-tools-plus/thumbnail.webp" class="coverImg" alt="Debug Tools Plus thumbnail" />
+                <section class="timeline">
+
+                    <!-- SR UNITY DEVELOPER, TEAM LEAD PROGRAMER, CTO -->
+                    <article class="timeline-event">
+
+                        <section class="timeline-event-left">
+                            <h2>Senior Unity Developer, Team Leader Programmer and CTO</h2>
+                            <p>Developed systems from scratch with Unity.</p>
+                            <p>Mentored other developers.</p>
+                            <p>Planned project architecture and version control.</p>
+                            <p>Handled console ports, including Nintendo Switch.</p>
                         </section>
-                        <section class="hiddenSection centerBox purpleBox">
-                            <h2>Debug Tools Plus</h2>
-                            <div class="flexBox gap1w">
-                                <article class="flex30 boxMin5h boxMin5w">
-                                    <div class="unityInverted"></div>
-                                </article>
-                            </div>
-                        </section>
-                    </article>
-                </a>
-
-            </section>
-        </section>
-    </div>
-
-    <!-- SOFTWARE -->
-    <div id="software" class="sectionBox blackBox">
-        <section class="marginBox">
-            <h1 id="engines" class="centerText hidden">GRAPHICS ENGINES</h1>
-
-            <!-- UNITY -->
-            <article class="barContentBox spacedCenteredFlexBox">
-                <h2>Unity Engine</h2>
-                <section class="bar">
-                    <article class="filledBar bar90 hidden"></article>
-                </section>
-            </article>
-
-            <!-- UNREAL -->
-            <article class="barContentBox spacedCenteredFlexBox">
-                <h2>Unreal Engine</h2>
-                <section class="bar">
-                    <article class="filledBar bar20 hidden"></article>
-                </section>
-            </article>
-
-            <br />
-
-            <h1 id="languages" class="centerText hidden">LANGUAGES</h1>
-
-            <!-- C# -->
-            <article class="barContentBox spacedCenteredFlexBox">
-                <h2>C#</h2>
-                <section class="bar">
-                    <article class="filledBar bar90 hidden"></article>
-                </section>
-            </article>
-
-            <!-- C++ -->
-            <article class="barContentBox spacedCenteredFlexBox">
-                <h2>C++</h2>
-                <section class="bar">
-                    <article class="filledBar bar40 hidden"></article>
-                </section>
-            </article>
-
-            <!-- HTML# -->
-            <article class="barContentBox spacedCenteredFlexBox">
-                <h2>HTML</h2>
-                <section class="bar">
-                    <article class="filledBar bar90 hidden"></article>
-                </section>
-            </article>
-
-            <!-- CSS -->
-            <article class="barContentBox spacedCenteredFlexBox">
-                <h2>CSS</h2>
-                <section class="bar">
-                    <article class="filledBar bar70 hidden"></article>
-                </section>
-            </article>
-
-            <!-- JS -->
-            <article class="barContentBox spacedCenteredFlexBox">
-                <h2>JS</h2>
-                <section class="bar">
-                    <article class="filledBar bar20 hidden"></article>
-                </section>
-            </article>
-
-        </section>
-    </div>
-
-    <!-- EXPERIENCE -->
-    <div id="experience" class="sectionBox whiteBox">
-        <section class="marginBox">
-            <h1 class="centerText hidden">EXPERIENCE</h1>
-            <section class="spacedFlexBox wrap gap1w">
-
-                <!-- COLUMN 1 -->
-                <section class="flex45">
-                    <article class="experienceBox hidden">
-                        <h2>Professional Experience</h2>
-
-                        <!-- ENTHARIEL GAMES -->
-                        <a href="#EntharielGames">
-                            <article id="EntharielGames" class="experienceWorkBox">
-                                <h3 class="centerText">Unity Developer, Team Lead Programmer & CTO</h3>
-                                <p class="boldText">Enthariel Games</p>
-                                <p>March 2023 - September 2025</p>
-                                <p class="boldText">Seville, Spain</p>
-                                <section class="readMore">
-
-                                    <!-- ROLES -->
-                                    <section class="experienceWorkRoleBox">
-                                        <p>Unity Developer, Team Lead Programmer, CTO (October 2024-September 2025)</p>
-                                    </section>
-                                    <section class="experienceWorkRoleBox">
-                                        <p>Unity Developer, Team Lead Programmer (February 2024-October 2024)</p>
-                                    </section>
-                                    <section class="experienceWorkRoleBox">
-                                        <p>Unity Developer (March 2023-February 2024)</p>
-                                    </section>
-
-                                    <ul>
-                                        <li>
-                                            Published video games on <span>Nintendo Switch</span>, 
-                                            <span>Steam</span>, and <span>Google Play</span>, 
-                                            including currently available titles
-                                            such as <span>Animal Strikers</span> and 
-                                            <span>Luminaria: Dark Echoes</span>.
-
-                                        </li>
-                                    </ul>
-                                    <ul>
-                                        <li>
-                                            Developed mechanics such as <span>local multiplayer</span>, 
-                                            a lightweight online system <span>(Photon PUN)</span>, 2D and 3D
-                                            <span>platformer character controllers</span>, <span>turn-based RPG</span> 
-                                            battles, generic minigames, and more using <span>Unity</span>.
-
-                                        </li>
-                                    </ul>
-                                </section>
-                            </article>
-                        </a>
-
-                        <!-- PRIVATE TUTOR -->
-                        <a href="#ParticularTutor">
-                            <article id="ParticularTutor" class="experienceWorkBox">
-                                <h3 class="centerText">Private Tutor in C# and Unity Programming</h3>
-                                <p class="boldText">Personal</p>
-                                <p>May 2024 - July 2024</p>
-                                <p class="boldText">Remote, Spain</p>
-                                <section class="readMore">
-                                    <ul>
-                                        <li>
-                                            I worked as a support tutor for the <span>Programming</span> module 
-                                            in the <span>video game development</span> degree.
-                                        </li>
-                                    </ul>
-                                </section>
-                            </article>
-                        </a>
-
-                        <!-- TRECE COMPUTER -->
-                        <a href="#TreceComputer">
-                            <article id="TreceComputer" class="experienceWorkBox">
-                                <h3 class="centerText">IT Technician</h3>
-                                <p class="boldText">Trece Computer</p>
-                                <p>March 2021-June 2021</p>
-                                <p class="boldText">La Algaba, Spain</p>
-                                <section class="readMore">
-                                    <ul>
-                                        <li>
-                                            Repaired desktop computers, laptops, and mobile devices.
-                                        </li>
-                                    </ul>
-                                    <ul>
-                                        <li>
-                                            Formatted and installed operating systems on various devices, and configured basic environments for standard users.
-                                        </li>
-                                    </ul>
-                                </section>
-                            </article>
-                        </a> 
-
-                    </article>
-                    <article class="experienceBox hidden">
-                        <h2>Certificates</h2>
-
-                        <!-- FUNDAMENTOS DE C# -->
-                        <a href="#CSharpFoundational">
-                            <article id="CSharpFoundational" class="experienceWorkBox">
-                                <h3 class="centerText">Foundational C#</h3>
-                                <section class="readMore centerBox">
-                                    <img onclick="ViewOnFullScreen(this.src, this.alt, 'Back')" data-src="../images/certificates/FoundationalCSharp.webp" alt="Foundational C# Certificate" class="coverImg">
-                                    <p class="boldText">Microsoft, freeCodeCamp</p>
-                                    <p>Agosto 2025</p>
-                                    <a class="rectangleButton centerButton" href="https://www.freecodecamp.org/certification/franforge/foundational-c-sharp-with-microsoft" target="_blank">
-                                        VIEW
-                                    </a>
-                                </section>
-                            </article>
-                        </a>
-
-                        <!-- C# TOTAL UDEMY -->
-                         <a href="#CSharpTotalUdemy">
-                            <article id="CSharpTotalUdemy" class="experienceWorkBox">
-                                <h3 class="centerText">C# TOTAL - Expert Programmer in 28 Days</h3>
-                                <section class="readMore centerBox">
-                                    <img onclick="ViewOnFullScreen(this.src, this.alt, 'Back')" data-src="../images/certificates/UdemyCSharp.webp" alt="C# Expert Programmer Certificate" class="coverImg">
-                                    <p class="boldText">Udemy</p>
-                                    <p>Septiembre 2025</p>
-                                    <a class="rectangleButton centerButton" href="https://www.udemy.com/certificate/UC-d9f81b21-1c16-495a-b306-b8bfd5e9af47" target="_blank">
-                                        VIEW
-                                    </a>
-                                </section>
-                            </article>
-                        </a>
-
-                        <!-- C++ INTRODUCTION -->
-                         <a href="#CPlusPlusIntroduction">
-                            <article id="CPlusPlusIntroduction" class="experienceWorkBox">
-                                <h3 class="centerText">Introduction to C++</h3>
-                                <section class="readMore centerBox">
-                                    <img onclick="ViewOnFullScreen(this.src, this.alt, 'Back')" data-src="../images/certificates/IntroductionCPlusPlus.webp" alt="C++ Introduction Certificate" class="coverImg">
-                                    <p class="boldText">sololearn</p>
-                                    <p>September 2025</p>
-                                    <a class="rectangleButton centerButton" href="https://www.sololearn.com/certificates/CC-XZFQ08VJ" target="_blank">
-                                        VIEW
-                                    </a>
-                                </section>
-                            </article>
-                        </a>
-
-                        <!-- C++ INTERMEDIATE -->
-                         <a href="#CPlusPlusIntermediate">
-                            <article id="CPlusPlusIntermediate" class="experienceWorkBox">
-                                <h3 class="centerText">C++ Intermediate</h3>
-                                <section class="readMore centerBox">
-                                    <img onclick="ViewOnFullScreen(this.src, this.alt, 'Back')" data-src="../images/certificates/CPlusPlusIntermediate.webp" alt="C++ Intermediate Certificate" class="coverImg">
-                                    <p class="boldText">sololearn</p>
-                                    <p>September 2025</p>
-                                    <a class="rectangleButton centerButton" href="https://www.sololearn.com/certificates/CC-MBPVFRRD" target="_blank">
-                                        VIEW
-                                    </a>
-                                </section>
-                            </article>
-                        </a>
-
-                    </article>
-                </section>
-
-                <!-- COLUMN 2 -->
-                <section class="flex45">
-                    <article class="experienceBox hidden">
-                        <h2>Education</h2>
-
-                        <!-- 3D -->
-                        <a href="#FPGS_3D">
-                            <article id="FPGS_3D" class="experienceWorkBox">
-                                <h3 class="centerText">Higher Technician in 3D Animation, Games and Interactive Environments</h3>
-                                <section class="readMore">
-                                    <p class="boldText">IES Profesor Tierno Galván</p>
-                                    <p>2021-2023</p>
-                                    <p class="boldText">Alcalá de Guadaíra, Spain</p>
-                                </section>
-                            </article>
-                        </a>
-
-                        <!-- IT -->
-                        <a href="#FPGM_IT">
-                            <article id="FPGM_IT" class="experienceWorkBox">
-                                <h3 class="centerText">Intermediate Technician in Microcomputer Systems and Networks</h3>
-                                <section class="readMore">
-                                    <p class="boldText">IES San Jerónimo</p>
-                                    <p>2019-2021</p>
-                                    <p class="boldText">San Jerónimo, Spain</p>
-                                </section>
-                            </article>
-                        </a>
-
-                        <!-- ESO -->
-                        <a href="#ESO">
-                            <article id="ESO" class="experienceWorkBox">
-                                <h3 class="centerText">Compulsory Secondary Education (ESO)</h3>
-                                <section class="readMore">
-                                    <p class="boldText">IES Torre de los Guzmanes</p>
-                                    <p>2015-2019</p>
-                                    <p class="boldText">La Algaba, Spain</p>
-                                </section>
-                            </article>
-                        </a>
-
-                    </article>
-                    <article class="experienceBox hidden">
-                        <h2>Skills</h2>
-
-                        <article class="experienceWorkBox">
-                            <ul>
-                            <li class="boldText">Quick task execution</li>
-                        </ul>
-                        <ul>
-                            <li class="boldText">Teamwork</li>
-                        </ul>
-                        <ul>
-                            <li class="boldText">Creative</li>
-                        </ul>
-                        <ul>
-                            <li class="boldText">Efficient problem-solving</li>
-                        </ul>
-                        <ul>
-                            <li class="boldText">Cheerful and sociable</li>
-                        </ul>
-                        </article>
                         
+                        <section class="timeline-point"></section>
+
+                        <section class="timeline-event-right">
+                            <p class="fake-header">Enthariel Games - Sevilla, Spain</p>
+                            <p>Oct 2024 - Sep 2025</p>
+                        </section>
+
                     </article>
+
+                    <!-- MID UNITY DEVELOPER, TEAM LEAD PROGRAMER -->
+                    <article class="timeline-event-reversed">
+
+                        <section class="timeline-event-right">
+                            <h2>Mid Unity Developer and Team Leader Programmer</h2>
+                            <p>Developed systems from scratch with Unity.</p>
+                            <p>Collaborated with other developers on various projects.</p>
+                            <p>Published games on platforms such as Steam and Google Play.</p>
+                        </section>
+                        
+                        <section class="timeline-point"></section>
+
+                        <section class="timeline-event-left">
+                            <p class="fake-header">Enthariel Games - Sevilla, Spain</p>
+                            <p>Feb 2024 - Oct 2024</p>
+                        </section>
+
+                    </article>
+
+                    <!-- JR UNITY DEVELOPER -->
+                    <article class="timeline-event">
+
+                        <section class="timeline-event-left">
+                            <h2>Junior Unity Developer</h2>
+                            <p>Handled multiple tasks in Unity and developed various systems.</p>
+                            <p>Implemented art and content in Unity.</p>
+                        </section>
+                        
+                        <section class="timeline-point"></section>
+
+                        <section class="timeline-event-right">
+                            <p class="fake-header">Enthariel Games - Sevilla, Spain</p>
+                            <p>Mar 2023 - Feb 2024</p>
+                        </section>
+
+                    </article>
+
+                    <!-- IT TECHNICIAN -->
+                    <article class="timeline-event-reversed">
+
+                        <section class="timeline-event-right">
+                            <h2>Junior IT Technician</h2>
+                            <p>Diagnosed hardware and software issues.</p>
+                            <p>Repaired mobile devices, laptops, and desktops.</p>
+                            <p>Handled in-store sales.</p>
+                        </section>
+                        
+                        <section class="timeline-point"></section>
+
+                        <section class="timeline-event-left">
+                            <p class="fake-header">Trece Computer - Sevilla, Spain</p>
+                            <p>Mar 2021 - Jun 2021</p>
+                        </section>
+
+                    </article>
+
+                </section>
+
+                <!-- CERTIFICATES -->
+                <h1 id="certificates">Certificates</h1>
+
+                <section class="timeline">
+
+                    <!-- SR UNITY DEVELOPER, TEAM LEAD PROGRAMER, CTO -->
+                    <article class="timeline-event">
+
+                        <section class="timeline-event-left">
+                            <h2>C++ Intermediate</h2>
+                        </section>
+                        
+                        <section class="timeline-point"></section>
+
+                        <section class="timeline-event-right">
+                            <p class="fake-header">sololearn</p>
+                            <p>Sep 2025</p>
+                        </section>
+
+                    </article>
+
+                    <!-- MID UNITY DEVELOPER, TEAM LEAD PROGRAMER -->
+                    <article class="timeline-event-reversed">
+
+                        <section class="timeline-event-right">
+                            <h2>Introduction to C++</h2>
+                        </section>
+                        
+                        <section class="timeline-point"></section>
+
+                        <section class="timeline-event-left">
+                            <p class="fake-header">sololearn</p>
+                            <p>Sep 2025</p>
+                        </section>
+
+                    </article>
+
+                    <!-- C# FOUNDATIONAL -->
+                    <article class="timeline-event">
+
+                        <section class="timeline-event-left">
+                            <h2>C# Expert</h2>
+                        </section>
+                        
+                        <section class="timeline-point"></section>
+
+                        <section class="timeline-event-right">
+                            <p class="fake-header">Udemy</p>
+                            <p>Sep 2025</p>
+                        </section>
+
+                    </article>
+
+                    <!-- MID UNITY DEVELOPER, TEAM LEAD PROGRAMER -->
+                    <article class="timeline-event-reversed">
+
+                        <section class="timeline-event-right">
+                            <h2>C# Foundational</h2>
+                        </section>
+                        
+                        <section class="timeline-point"></section>
+
+                        <section class="timeline-event-left">
+                            <p class="fake-header">freecodecamp.org, Microsoft</p>
+                            <p>Ago 2025</p>
+                        </section>
+
+                    </article>
+
+                </section>
+
+                <!-- ACADEMIC -->
+                <h1 id="academic">Formación</h1>
+
+                <section class="timeline">
+
+                    <!-- SR UNITY DEVELOPER, TEAM LEAD PROGRAMER, CTO -->
+                    <article class="timeline-event">
+
+                        <section class="timeline-event-left">
+                            <h2>Higher Technician in 3D Animation, Games, and Interactive Environments</h2>
+                        </section>
+                        
+                        <section class="timeline-point"></section>
+
+                        <section class="timeline-event-right">
+                            <p class="fake-header">IES Profesor Tierno Galván - Sevilla, Spain</p>
+                            <p>Sep 2021 - Jun 2023</p>
+                        </section>
+
+                    </article>
+
+                    <!-- MID UNITY DEVELOPER, TEAM LEAD PROGRAMER -->
+                    <article class="timeline-event-reversed">
+
+                        <section class="timeline-event-right">
+                            <h2>Intermediate Technician in Computer Systems and Networks</h2>
+                        </section>
+                        
+                        <section class="timeline-point"></section>
+
+                        <section class="timeline-event-left">
+                            <p class="fake-header">IES San Jerónimo - Sevilla, Spain</p>
+                            <p>Sep 2019 - Jun 2021</p>
+                        </section>
+
+                    </article>
+
+                    <!-- JR UNITY DEVELOPER -->
+                    <article class="timeline-event">
+
+                        <section class="timeline-event-left">
+                            <h2>Compulsory Secondary Education (CSE)</h2>
+                        </section>
+                        
+                        <section class="timeline-point"></section>
+
+                        <section class="timeline-event-right">
+                            <p class="fake-header">IES Torre de los Guzmanes - Sevilla, España</p>
+                            <p>Sep 2015 - Jun 2019</p>
+                        </section>
+
+                    </article>
+
                 </section>
 
             </section>
-            <section class="centerBox">
-                <br />
-                <a href="../documents/Fco_Jesús_Huerta_Hervás_CV_EN_2025.pdf" class="rectangleButton hidden" download>Download CV .pdf</a>
-                <br>
-                <a href="#contact" class="rectangleButton hidden">Contact</a>
-            </section>
+
+            <a href="../documents/Fco_Jesús_Huerta_Hervás_CV_EN_Tech_2025.pdf" download="Francisco_Jesus_Huerta_Hervas_Resume_2025.pdf" class="button horizontal-center-margin">
+                <section class="content">
+                    <p>Resume</p>
+                </section>
+            </a>
+
         </section>
-    </div>
 
+        <!-- DEMOREEL -->
+        <section id="demoreel">
+            <h1>Demoreel</h1>
+            <article id="demoreel-container">
+                <div class="clean-video">
+                    <video preload="metadata" controls>
+                        <source src="../media/owner/Demoreel_2024_OnlyGameplay.webm">
+                    </video>
+                </div>
+            </article>
+        </section>
 
-    <!-- CONTACT -->
-    <div id="contact" class="sectionBox blackBox"></div>
+        <!-- PRODUCTS AND SERVICES -->
+        <section id="products-and-services">
+            <h1>Products and Services</h1>
+            <div id="products-and-services-container" class="horizontal-margin-30 product-cards-container">
 
-    <!-- FOOTER -->
-    <footer id="footer" class="sectionBox purpleBox"></footer>
+                <!-- ASSETS -->
+                <a href="https://assetstore.unity.com/packages/tools/utilities/debugtoolsplus-316084" target="_blank" class="product-card product-card-short">
+                    <article class="content">
+                        <section class="text-container">
+                        <h2 data-text="name">Assets</h2>
+                        </section>
 
-    <script src="../scripts/includeHeader.js"></script>
-    <script src="../scripts/includeContact.js"></script>
-    <script src="../scripts/includeFooter.js"></script>
-    <script src="../scripts/lazyLoadingImages.js"></script>
-    <script src="../scripts/revealHidden.js"></script>
-    <script src="../scripts/countdown.js" defer></script>
-    <script src="../scripts/fullscreenImageModal.js"></script>
-    <script>
-    document.addEventListener("DOMContentLoaded", () => {
-        startCountdown('2025-07-28T12:00:00', {
-        counter: 'counter',
-        days: 'counter_days',
-        hours: 'counter_hours',
-        minutes: 'counter_minutes',
-        seconds: 'counter_seconds',
-        info: 'counter_above',
-        finish: 'counter_finish'
-        });
-    });
-    </script>
+                        <section class="img-container">
+                        <img data-src="../media/cards/assets-card.webp" alt="Miniatura de Assets"/>
+                        <div class="read-more">Read more</div>
+                        </section>
+                    </article>
+                </a>
 
-</body>
+                <!-- WEB CREATION -->
+                <!-- <a href="services/web-creation.html" class="product-card product-card-short">
+                    <article class="content">
+                        <section class="text-container">
+                        <h2 data-text="name">Websites</h2>
+                        </section>
+
+                        <section class="img-container">
+                        <img data-src="../media/cards/web-card.webp" alt="Miniatura de Páginas Web"/>
+                        <div class="read-more">Read more</div>
+                        </section>
+                    </article>
+                </a> -->
+
+                <!-- CLASSES -->
+                <a href="https://www.tusclasesparticulares.com/online/desarrollo-videojuegos/crea-propio-videojuego-desde-cero-usando-unity-6621303" target="_blank" class="product-card product-card-short">
+                    <article class="content">
+                        <section class="text-container">
+                        <h2 data-text="name">Classes</h2>
+                        </section>
+
+                        <section class="img-container">
+                        <img data-src="../media/cards/class-card.webp" alt="Miniatura de Clases"/>
+                        <div class="read-more">Read more</div>
+                        </section>
+                    </article>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- BLOG -->
+        <section id="blog" class="horizontal-margin-30">
+            <h1>Blog and Articles</h1>
+            <div class="product-cards-container">
+
+                <!-- 1ST TIME UNREAL ENGINE -->
+                <a href="blogs/1st-time-unreal5-cpp.html" class="blog-article">
+                    <article class="content">
+                        <section class="text-container">
+                            <h2>First Experience with Unreal Engine 5 using C++</h2>
+                            <p>Explore my experience with Unreal Engine 5 from a Unity developer’s perspective.</p>
+                        </section>
+                        <section class="img-container">
+                            <img data-src="../media/blogs/first-time-unreal/thumbnail.webp" alt="Miniatura">
+                            <article class="read-more"></article>
+                        </section>
+                    </article>
+                </a>
+                
+            </div>
+
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+
+            <!-- SOCIALS -->
+            <section id="socials">
+                <h1>Social</h1>
+                <div>
+                    <!-- TWITTER -->
+                    <a href="https://x.com/FranForge" target="_blank" aria-label="Visit FranForge X Profile">
+                        <img data-src="../icons/twitter-white.svg" alt="Twitter">
+                    </a>
+
+                    <!-- INSTAGRAM -->
+                    <a href="https://www.instagram.com/franforge.dev/" target="_blank" aria-label="Visit FranForge Instagram Profile">
+                        <img data-src="../icons/instagram-white.svg" alt="Instagram">
+                    </a>
+
+                    <!-- TIKTOK -->
+                    <a href="https://www.tiktok.com/@franforgedev" target="_blank" aria-label="Visit FranForge Tiktok Profile">
+                        <img data-src="../icons/tiktok-white.svg" alt="Tiktok">
+                    </a>
+
+                    <!-- YOUTUBE -->
+                    <a href="https://www.youtube.com/@FranForge/videos" target="_blank" aria-label="Visit FranForge Youtube Profile">
+                        <img data-src="../icons/youtube-white.svg" alt="Youtube">
+                    </a>
+
+                    <!-- PATREON -->
+                    <a href="https://www.patreon.com/c/FranForge" target="_blank" aria-label="Visit FranForge Patreon Profile">
+                        <img data-src="../icons/patreon-white.svg" alt="Patreon" aria-label="Visit FranForge Patreon Creator Profile">
+                    </a>
+
+                    <!-- LINKEDIN -->
+                    <a href="https://www.linkedin.com/in/francisco-jesus-huerta-hervas/" target="_blank" aria-label="Visit FranForge Linkedin Profile">
+                        <img data-src="../icons/linkedin-white.svg" alt="Linkedin">
+                    </a>
+
+                    <!-- MAIL -->
+                    <a href="mailto:franforge3d@gmail.com" target="_blank" aria-label="Mail to franforge3d@gmail.com">
+                        <img data-src="../icons/mail-white.svg" alt="Mail">
+                    </a>
+
+                    <!-- GITHUB -->
+                    <a href="https://github.com/FranForge" target="_blank" aria-label="Visit FranForge Github">
+                        <img data-src="../icons/github-white.svg" alt="Github">
+                    </a>
+                </div>
+                
+            </section>
+
+            <!-- CONTACT -->
+            <section id="contact">
+                <h1>Contact</h1>
+                <form action="https://formkeep.com/f/cb60aea6d317" method="POST">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" value="" placeholder="Entity or Individual" required />
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" value="" placeholder="example@example.com" required />
+
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Please describe the reason for your contact here…" required></textarea>
+                    <button type="submit" name="" class="buttonLargue">Submit</button>
+                </form>
+            </section>
+
+            <!-- INFO -->
+            <section id="footer-info">
+
+                <h1>Information</h1>
+                <a href="#presentation">About me</a>
+                <a href="projects/all.html">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#blog">Blogs</a>
+                <a href="#contact">Contact</a>
+
+            </section>
+
+        </footer>
+
+        <script src="../scripts/rotateTexts.js"></script>
+        <script src="../scripts/attributesDisplayer.js"></script>
+        <script src="../scripts/scrollEffector.js"></script>
+        <script src="../scripts/displayBars.js"></script>
+        <script src="../scripts/lazyLoadingImages.js"></script>
+
+    </body>
 </html>

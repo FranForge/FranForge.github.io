@@ -1,186 +1,302 @@
-﻿<!DOCTYPE html>
-
+<!DOCTYPE html>
 <html lang="es" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-07LPHTN6QT"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+    <head>
 
-        gtag('config', 'G-07LPHTN6QT');
-    </script>
-    <link href="../../style.css" rel="stylesheet" />
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="color-scheme" content="light">
-    <meta name="description" content="Novela visual donde eliges tu propio destino. Despiertas atrapado tanto física como mentalmente, y cada decisión cuenta." />
-    <title>Confinio: Reality Prison | FranForge | Game Developer</title>
-    <link href="../../images/logo/FranForgeLogo.ico" rel="icon" type="image/x-icon" />
-    <link href="../../images/logo/FranForgeLogo.ico" rel="shortcut icon" type="image/x-icon" />
-</head>
-<body>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-07LPHTN6QT"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-    <!-- CABECERA -->
-    <header id="header"></header>
+            gtag('config', 'G-07LPHTN6QT');
+        </script>
+    
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- FULLSCREEN IMAGE MODAL -->
-    <div id="fullscreen-image"></div>
+        <link rel="stylesheet" href="../../style.css">
+        <link href="../../icons/logo.ico" rel="icon" type="image/x-icon" />
+        <link href="../../icons/logo.ico" rel="shortcut icon" type="image/x-icon" />
 
-    <!-- HERO -->
-    <div class="fullBox">
-        <section class="bgContainer fade-in">
-            <img data-src="../../images/projects/confinio/banner.webp" class="bg" alt="Fondo" />
-            <section class="centerBox fade-in-delayed">
-                <img data-src="../../images/projects/confinio/logo.webp" class="img50" alt="Confinio: Reality Prison" />
+        <title>Confinio: Reality Prison | FranForge Game Developer</title>
+
+    </head>
+    <body>
+        
+        <!-- HEADER NAV -->
+        <header class="scroll-effect" data-scroll-min-y="100" data-scroll-max-y="0">
+            <section>
+                <nav>
+                    <a href="../home.html" class="header-logo">
+                        <img data-src="../../icons/logo.svg" alt="FranForge">
+                    </a>
+                    <a href="../home.html#presentation" class="desktop-only">Sobre mí</a>
+                    <a href="all.html">Proyectos</a>
+                    <a href="../home.html#skills" class="desktop-only">Habilidades</a>
+                    <a href="../home.html#experience" class="desktop-only">Experiencia</a>
+                    <a href="../home.html#blog" class="desktop-only">Blogs</a>
+                    <a href="#contact">Contactar</a>
+                </nav>
             </section>
+        </header>
+
+        <!-- HERO -->
+        <section id="hero" class="scroll-effect" data-scroll-min-y="100" data-scroll-max-y="0">
+            <div class="clean-fullscreen-video">
+                <img src="../../media/projects/confinio-reality-prison/banner.webp" alt="Banner del proyecto">
+            </div>
+            <div id="hero-background-panel"></div>
+            <div id="hero-content" class="content">
+                <p id="hero-title">Confinio: Reality Prison</p>
+                <p id="hero-subtitle">
+                    <span class="rotating-text" data-texts="Indie,Unity,.NET,C#,Plastic,2D"></span>
+                </p>
+            </div>
+            
         </section>
-    </div>
 
-    <!-- DESCRIPTION -->
-    <div class="sectionBox whiteBox">
-        <section class="marginBox">
-            <h1 class="centerText hidden">DESCRIPCIÓN</h1>
-            <section class="flexBox wrap gap5w">
-                <article class="flex40 hidden">
-                    <img onclick="ViewOnFullScreen(this.src, this.alt, 'Volver')" data-src="../../images/projects/confinio/splashart.webp" class="coverImg roundedBorder" alt="SplashArt" />
-                </article>
-                <article class="flex40 hidden">
-                    <p>
-                        <span>Nombre:</span> Confinio: Reality Prison
-                    </p>
-                    <p>
-                        <span>Desarrolladora:</span> Enthariel Games
-                    </p>
-                    <p>
-                        <span>Tiempo de Desarrollo:</span> Noviembre 2023 - Diciembre 2024
-                    </p>
-                    <p>
-                        <span>Motor Gráfico:</span> Unity 2022.3.54f1.
-                    </p>
-                    <p>
-                        <span>Sinopsis:</span>
-                        Adéntrate en Confinio: Reality Prison,
-                        una novela gráfica 2D donde la oscuridad envuelve tu pasado y la incertidumbre guía tus pasos.
-                        Despierta en una celda sin memoria donde tus decisiones marcaran tu destino.
+        <!-- PRESENTATION -->
+        <section id="presentation">
+            <div id="presentation-content">
 
-                        <br /><br />
-                        Acabas de despertar, estás confundido,
-
-                        Miras alrededor sin saber dónde estás. Parece una celda, ¿Estás atrapado?
-                        No recuerdas nada de lo ocurrido.
-                        <br /><br />
-                        ¿Cómo has llegado ahí? ¿Qué está pasando?
-                        Demasiadas preguntas sin resolver. ¿Hay más personas aquí? ¿Confiarías en ellas?
-                        ¿Dejarías que te ayuden? Muchas decisiones por tomar.
+                <!-- TEXT -->
+                <div id="presentation-text-container">
+                    <h1>Confinio: Reality Prison</h1>
+                    <p id="presentation-name" class="big-text-family">
+                        Una novela visual donde cada decisión cuenta.
                     </p>
-                    <p>
-                        <span>Géneros y Etiquetas:</span> Novela visual, 2D, Terror psicológico.
-                    </p>
-                </article>
-            </section>
-        </section>
-    </div>
+                    <section class="project-description">
+                        <p>
+                            <span>Nombre:</span>
+                            Confinio: Reality Prison
+                        </p>
+                        <p>
+                            <span>Desarrollador:</span>
+                            Enthariel Games
+                        </p>
+                        <p>
+                            <span>Periodo:</span>
+                            Nov 2023 - Dic 2024
+                        </p>
+                        <p>
+                            <span>Framework:</span>
+                            Unity 2022.3.54f1.
+                        </p>
+                        <p>
+                            <span>Sinopsis:</span>
+                            Adéntrate en Confinio: Reality Prison, una novela gráfica 2D 
+                            donde la oscuridad envuelve tu pasado y la incertidumbre guía tus pasos. 
+                            Despierta en una celda sin memoria donde tus decisiones marcaran tu destino.
+                            <br><br>
 
-    <!-- PLATFORMS -->
-    <div class="smallSectionBox purpleBox">
-        <section class="marginBox">
-            <h1 class="centerText hidden">PLATAFORMAS</h1>
-            <section class="flexBox wrap gap1w gap1h">
+                            Acabas de despertar, estás confundido, Miras alrededor sin saber dónde estás. 
+                            Parece una celda, ¿Estás atrapado? No recuerdas nada de lo ocurrido.
+                            <br><br>
 
-                <!-- STEAM -->
-                <a href="https://store.steampowered.com/app/3030830/Confinio_Reality_Prison/?l=spanish" target="_blank" class="animatedCircleButton flex15">
-                    <section class="centerBox">
-                        <article class="steamInverted boxMin2h boxMin2w hidden"></article>
+                            ¿Cómo has llegado ahí? ¿Qué está pasando? Demasiadas preguntas sin resolver. 
+                            ¿Hay más personas aquí? ¿Confiarías en ellas? ¿Dejarías que te ayuden? 
+                            Muchas decisiones por tomar.
+                        </p>
+                        <p>
+                            <span>Géneros y Etiquetas:</span>
+                            Novela visual, 2D, Terror psicológico.
+                        </p>
                     </section>
-                    <section class="hiddenSection centerBox">
-                        <p>DEMO</p>
+
+                    <!-- PLATFORMS -->
+                    <section class="platforms">
+
+                        <a href="https://store.steampowered.com/app/3030830/Confinio_Reality_Prison/?l=spanish" target="_blank" class="platform-button">
+                            <section class="content">
+                                <img src="../../icons/steam.svg" alt="Steam Icon">
+                                <p>Steam</p>
+                            </section>
+                            <section class="reveal-content">
+                                <p>Jugar Demo</p>
+                            </section>
+                        </a>
+
                     </section>
-                </a>
 
-            </section>
-        </section>
-    </div>
+                </div>
 
-    <!-- JOBS -->
-    <div id="jobs" class="sectionBox blackBox">
-        <section class="marginBox">
-            <h1 class="centerText hidden">TRABAJO REALIZADO</h1>
-            <section class="flexBox wrap">
+                <!-- AWARDS -->
+                <!-- <div id="presentation-resume">
+                    <h1>Premios</h1>
 
-                <!-- PROGRAMACION -->
-                <article class="experienceBox flex45 hidden">
-                    <h2>Programación</h2>
-                    <section class="experienceWorkBox">
-                        <ul>
-                            <li>Minigames Programmer</li>
-                        </ul>
+                    <section id="presentation-resume-container">
+
+                        <article class="item">
+                            <h2>Mejor juego</h2>
+                            <p class="number">2024</p>
+                            <img data-src="../../media/awards/mangafest.webp" alt="Mangafest Sevilla">
+                        </article>
+
+                        <article class="item">
+                            <h2>Mejor juego del público</h2>
+                            <p class="number">2024</p>
+                            <img data-src="../../media/awards/madrid-otaku-black.webp" alt="Mangafest Sevilla">
+                        </article>
+
+                        <article class="item">
+                            <h2>Nominado a mejor diseño</h2>
+                            <p class="number">2024</p>
+                            <img data-src="../../media/awards/ps-talents-black.webp" alt="Mangafest Sevilla">
+                        </article>
+
+                        <article class="item">
+                            <h2>Mejor juego del público</h2>
+                            <p class="number">2023</p>
+                            <img data-src="../../media/awards/madrid-otaku-black.webp" alt="Mangafest Sevilla">
+                        </article>
+
                     </section>
-                </article>
+                </div> -->
 
+            </div>
+
+            <!-- IMAGE -->
+            <div id="presentation-img-container">
+                <img data-src="../../media/projects/confinio-reality-prison/thumbnail.webp" alt="Splash Art de Proyecto">
+            </div>
+
+        </section>
+
+        <!-- VIDEO -->
+        <section id="video-presentation">
+            <h1>Vídeo resumen</h1>
+            <div id="video-presentation-container">
+                <div class="clean-video">
+                    <video preload="metadata" controls>
+                        <source src="../../media/projects/confinio-reality-prison/video.mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALLERY -->
+        <section id="gallery">
+            <h1>Galería</h1>
+            <div class="carrousel-container"
+                 data-carrousel-path="../../media/projects/confinio-reality-prison" 
+                 data-carrousel-images="game1.webp,game2.webp,game3.webp">
+                <button class="left-arrow-button" data-direction="-1"></button>
+                <img class="carrousel-img" alt="Imagen de Carrusel">
+                <button class="right-arrow-button" data-direction="1"></button>
+            </div>
+        </section>
+
+        <!-- WORK -->
+        <section id="work">
+            <h1>Cargos ocupados</h1>
+            <section id="work-container">
+                <h2>Minigames programmer</h2>
+                <p>
+                    Desarrollé los minijuegos de la novela.
+                </p>
             </section>
         </section>
-    </div>
 
-    <!-- GALLERY -->
-    <div id="gallery" class="sectionBox blackBox">
-        <section class="marginBox">
-            <h1 class="centerText hidden">GALERÍA</h1>
-            <section class="flexBox wrap gap1w gap1h">
+        <!-- ADDITIONAL NOTES -->
+        <!-- <section id="additional-notes">
+            <h1>Notas adicionales</h1>
+            <section id="additional-notes-container">
+                <p>
+                    No participe durante todo el proyecto por lo que si el juego se ha publicado y cambia de lo aqui visto 
+                    es decision exclusiva de la desarrolladora, durante mi periodo trabajando planteé mecánicas básicas y 
+                    sistemas. Además también participé en el diseño del juego en general.
+                </p>
+            </section>
+        </section> -->
 
-                <!-- VIDEO -->
-                <article class="flex100 roundedBorder bgContainer whiteBox boxMin60h aspect-16-9 hidden">
-                    <iframe class="bgAbove" data-src="https://www.youtube-nocookie.com/embed/ip2jfI3oJE4?si=kYn9ox0C9knPjXlb" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </article>
+        <!-- FOOTER -->
+        <footer>
 
-                <!-- IMAGEN 1 -->
-                <article class="flex30 roundedBorder hidden">
-                    <img onclick="ViewOnFullScreen(this.src, this.alt, 'Volver')" data-src="../../images/projects/confinio/game1.webp" class="coverImg icon" alt="Gameplay1" />
-                </article>
+            <!-- SOCIALS -->
+            <section id="socials">
+                <h1>Redes</h1>
+                <div>
+                    <!-- TWITTER -->
+                    <a href="https://x.com/FranForge" target="_blank" aria-label="Visit FranForge X Profile">
+                        <img data-src="../../icons/twitter-white.svg" alt="Twitter">
+                    </a>
 
-                <!-- IMAGEN 1 -->
-                <article class="flex30 roundedBorder hidden">
-                    <img onclick="ViewOnFullScreen(this.src, this.alt, 'Volver')" data-src="../../images/projects/confinio/game2.webp" class="coverImg icon" alt="Gameplay2" />
-                </article>
+                    <!-- INSTAGRAM -->
+                    <a href="https://www.instagram.com/franforge.dev/" target="_blank" aria-label="Visit FranForge Instagram Profile">
+                        <img data-src="../../icons/instagram-white.svg" alt="Instagram">
+                    </a>
 
-                <!-- IMAGEN 1 -->
-                <article class="flex30 roundedBorder hidden">
-                    <img onclick="ViewOnFullScreen(this.src, this.alt, 'Volver')" data-src="../../images/projects/confinio/game3.webp" class="coverImg icon" alt="Gameplay3" />
-                </article>
+                    <!-- TIKTOK -->
+                    <a href="https://www.tiktok.com/@franforgedev" target="_blank" aria-label="Visit FranForge Tiktok Profile">
+                        <img data-src="../../icons/tiktok-white.svg" alt="Tiktok">
+                    </a>
+
+                    <!-- YOUTUBE -->
+                    <a href="https://www.youtube.com/@FranForge/videos" target="_blank" aria-label="Visit FranForge Youtube Profile">
+                        <img data-src="../../icons/youtube-white.svg" alt="Youtube">
+                    </a>
+
+                    <!-- PATREON -->
+                    <a href="https://www.patreon.com/c/FranForge" target="_blank" aria-label="Visit FranForge Patreon Profile">
+                        <img data-src="../../icons/patreon-white.svg" alt="Patreon" aria-label="Visit FranForge Patreon Creator Profile">
+                    </a>
+
+                    <!-- LINKEDIN -->
+                    <a href="https://www.linkedin.com/in/francisco-jesus-huerta-hervas/" target="_blank" aria-label="Visit FranForge Linkedin Profile">
+                        <img data-src="../../icons/linkedin-white.svg" alt="Linkedin">
+                    </a>
+
+                    <!-- MAIL -->
+                    <a href="mailto:franforge3d@gmail.com" target="_blank" aria-label="Mail to franforge3d@gmail.com">
+                        <img data-src="../../icons/mail-white.svg" alt="Mail">
+                    </a>
+
+                    <!-- GITHUB -->
+                    <a href="https://github.com/FranForge" target="_blank" aria-label="Visit FranForge Github">
+                        <img data-src="../../icons/github-white.svg" alt="Github">
+                    </a>
+                </div>
+                
+            </section>
+
+            <!-- CONTACT -->
+            <section id="contact">
+                <h1>Contactar</h1>
+                <form action="https://formkeep.com/f/cb60aea6d317" method="POST">
+                    <label for="name">Nombre:</label>
+                    <input type="text" id="name" name="name" value="" placeholder="Entidad o Particular" required />
+
+                    <label for="email">Correo electr&oacute;nico:</label>
+                    <input type="email" id="email" name="email" value="" placeholder="example@example.com" required />
+
+                    <label for="message">Mensaje:</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Describa el motivo de su contacto aqui..." required></textarea>
+                    <button type="submit" name="" class="buttonLargue">Enviar</button>
+                </form>
+            </section>
+
+            <!-- INFO -->
+            <section id="footer-info">
+
+                <h1>Información</h1>
+                <a href="../home.html#presentation">Sobre mi</a>
+                <a href="all.html">Proyectos</a>
+                <a href="../home.html#skills">Habilidades</a>
+                <a href="../home.html#experience">Experiencia</a>
+                <a href="../home.html#blog">Blogs</a>
+                <a href="../home.html#contact">Contactar</a>
 
             </section>
-        </section>
-    </div>
 
-    <!-- SOCIAL -->
-    <div id="social" class="sectionBox whiteBox">
-        <section class="marginBox">
-            <h1 class="centerText hidden">REDES DEL PROYECTO</h1>
-            <section class="flexBox gap1w">
+        </footer>
 
-                <!-- TWITTER -->
-                <a href="https://x.com/Confinio_game" target="_blank" class="twitter boxMin5h boxMin5w icon flex5 hidden"></a>
+        <script src="../../scripts/rotateTexts.js"></script>
+        <script src="../../scripts/attributesDisplayer.js"></script>
+        <script src="../../scripts/scrollEffector.js"></script>
+        <script src="../../scripts/displayBars.js"></script>
+        <script src="../../scripts/lazyLoadingImages.js"></script>
+        <script src="../../scripts/carouselDisplayer.js"></script>
 
-                <!-- INSTAGRAM -->
-                <a href="https://www.instagram.com/confinio_reality_prison/" target="_blank" class="instagram boxMin5h boxMin5w icon flex5 hidden"></a>
-
-            </section>
-        </section>
-    </div>
-
-    <!-- CONTACT -->
-    <div id="contact" class="sectionBox blackBox"></div>
-
-    <!-- FOOTER -->
-    <footer id="footer" class="sectionBox purpleBox"></footer>
-
-    <script src="../../scripts/includeHeader.js"></script>
-    <script src="../../scripts/includeContact.js"></script>
-    <script src="../../scripts/includeFooter.js"></script>
-    <script src="../../scripts/lazyLoadingImages.js"></script>
-    <script src="../../scripts/revealHidden.js"></script>
-    <script src="../../scripts/fullscreenImageModal.js"></script>
-
-</body>
+    </body>
 </html>

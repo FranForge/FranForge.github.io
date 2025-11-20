@@ -1,282 +1,326 @@
-﻿<!DOCTYPE html>
-
+<!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-07LPHTN6QT"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
+    <head>
 
-        gtag('config', 'G-07LPHTN6QT');
-    </script>
-    <link href="../../style.css" rel="stylesheet" />
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="color-scheme" content="light">
-    <meta name="description" content="Local co-op game for up to 4 players on the same screen. Survive relentless enemy hordes. Try the demo on Steam!" />
-    <title>Luminaria: Dark Echoes | FranForge | Game Developer</title>
-    <link href="../../images/logo/FranForgeLogo.ico" rel="icon" type="image/x-icon" />
-    <link href="../../images/logo/FranForgeLogo.ico" rel="shortcut icon" type="image/x-icon" />
-</head>
-<body>
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-07LPHTN6QT"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-    <!-- CABECERA -->
-    <header id="header"></header>
+            gtag('config', 'G-07LPHTN6QT');
+        </script>
+    
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- FULLSCREEN IMAGE MODAL -->
-    <div id="fullscreen-image"></div>
+        <link rel="stylesheet" href="../../style.css">
+        <link href="../../icons/logo.ico" rel="icon" type="image/x-icon" />
+        <link href="../../icons/logo.ico" rel="shortcut icon" type="image/x-icon" />
 
-    <!-- HERO -->
-    <div class="fullBox">
-        <section class="bgContainer fade-in">
-            <img data-src="../../images/projects/luminaria/banner.webp" class="bg" alt="Fondo" />
-            <section class="centerBox fade-in-delayed">
-                <img data-src="../../images/projects/luminaria/logo.webp" class="img50" alt="Luminaria Dark Echoes" />
+        <title>Luminaria: Dark Echoes | FranForge Game Developer</title>
+
+    </head>
+    <body>
+        
+        <!-- HEADER NAV -->
+        <header class="scroll-effect" data-scroll-min-y="100" data-scroll-max-y="0">
+            <section>
+                <nav>
+                    <a href="../home.html" class="header-logo">
+                        <img data-src="../../icons/logo.svg" alt="FranForge">
+                    </a>
+                    <a href="../home.html#presentation" class="desktop-only">About me</a>
+                    <a href="all.html">Projects</a>
+                    <a href="../home.html#skills" class="desktop-only">Skills</a>
+                    <a href="../home.html#experience" class="desktop-only">Experience</a>
+                    <a href="../home.html#blog" class="desktop-only">Blogs</a>
+                    <a href="#contact">Contact</a>
+                </nav>
             </section>
-        </section>
-    </div>
+        </header>
 
-    <!-- DESCRIPTION -->
-    <div class="sectionBox whiteBox">
-        <section class="marginBox">
-            <h1 class="centerText hidden">DESCRIPTION</h1>
-            <section class="flexBox wrap gap5w">
-                <article class="flex40 hidden">
-                    <img onclick="ViewOnFullScreen(this.src, this.alt, 'Back')" data-src="../../images/projects/luminaria/splashart.webp" class="coverImg roundedBorder" alt="SplashArt" />
-                </article>
-                <article class="flex40 hidden">
-                    <p>
-                        <span>Title:</span> Luminaria: Dark Echoes
+        <!-- HERO -->
+        <section id="hero" class="scroll-effect" data-scroll-min-y="100" data-scroll-max-y="0">
+            <div class="clean-fullscreen-video">
+                <img src="../../media/projects/luminaria-dark-echoes/banner.webp" alt="Banner del proyecto">
+            </div>
+            <div id="hero-background-panel"></div>
+            <div id="hero-content" class="content">
+                <p id="hero-title">Luminaria: Dark Echoes</p>
+                <p id="hero-subtitle">
+                    <span class="rotating-text" data-texts="Indie,Unity,.NET,C#,Plastic,2D"></span>
+                </p>
+            </div>
+            
+        </section>
+
+        <!-- PRESENTATION -->
+        <section id="presentation">
+            <div id="presentation-content">
+
+                <!-- TEXT -->
+                <div id="presentation-text-container">
+                    <h1>Luminaria: Dark Echoes</h1>
+                    <p id="presentation-name" class="big-text-family">
+                        A 2D steampunk survivor game with local co-op.
                     </p>
-                    <p>
-                        <span>Developer:</span> Enthariel Games
-                    </p>
-                    <p>
-                        <span>Development Time:</span> September 2023 - December 2024
-                    </p>
-                    <p>
-                        <span>Game Engine:</span> Unity 2022.3.54f1.
-                    </p>
-                    <p>
-                        <span>Synopsis:</span>
-                        In Luminaria: Dark Echoes,
-                        you are the hero who must save the world from darkness. This action
-                        RPG roguelike offers a deep steampunk story and a variety of amazing
-                        final bosses. Explore a world full of mystery and surprises every time you play.
-                    </p>
-                    <p>
-                        <span>Genres and Tags:</span> Survivor, Roguelite, Local Multiplayer.
-                    </p>
-                </article>
+                    <section class="project-description">
+                        <p>
+                            <span>Name:</span>
+                            Luminaria: Dark Echoes
+                        </p>
+                        <p>
+                            <span>Developer:</span>
+                            Enthariel Games
+                        </p>
+                        <p>
+                            <span>Period:</span>
+                            Sep 2023 - Dic 2024
+                        </p>
+                        <p>
+                            <span>Framework:</span>
+                            Unity 2022.3.54f1.
+                        </p>
+                        <p>
+                            <span>Synopsis:</span>
+                            In Luminaria: Dark Echoes, you are the hero tasked with saving the world 
+                            from darkness. This roguelike action RPG offers a rich steampunk story 
+                            and a variety of incredible final bosses. Explore a world full of mysteries 
+                            and surprises, with something new awaiting every time you play.
+                        </p>
+                        <p>
+                            <span>Genre & Tags:</span>
+                            Survivor, Roguelite, Local Multiplayer.
+                        </p>
+                    </section>
+
+                    <!-- PLATFORMS -->
+                    <section class="platforms">
+
+                        <a href="https://store.steampowered.com/app/2690580/Luminaria_Dark_Echoes/" target="_blank" class="platform-button">
+                            <section class="content">
+                                <img src="../../icons/steam.svg" alt="Steam Icon">
+                                <p>Steam</p>
+                            </section>
+                            <section class="reveal-content">
+                                <p>Play Now</p>
+                            </section>
+                        </a>
+
+                        <a href="https://www.nintendo.com/es-es/Juegos/Programas-descargables-Nintendo-Switch/Luminaria-Dark-Echoes-2837089.html" target="_blank" class="platform-button">
+                            <section class="content">
+                                <img src="../../icons/switch.svg" alt="Nitendo Switch Icon">
+                                <p>Switch</p>
+                            </section>
+                            <section class="reveal-content">
+                                <p>Play Now</p>
+                            </section>
+                        </a>
+
+                        <a href="https://store.playstation.com/es-es/concept/10013956" target="_blank" class="platform-button">
+                            <section class="content">
+                                <img src="../../icons/ps.svg" alt="Playstation Icon">
+                                <p>Playstation</p>
+                            </section>
+                            <section class="reveal-content">
+                                <p>Play Now</p>
+                            </section>
+                        </a>
+
+                    </section>
+
+                </div>
+
+                <!-- AWARDS -->
+                <div id="presentation-resume">
+                    <h1>Premios</h1>
+
+                    <section id="presentation-resume-container">
+
+                        <article class="item">
+                            <h2>Best Game</h2>
+                            <p class="number">2024</p>
+                            <img data-src="../../media/awards/mangafest.webp" alt="Mangafest Sevilla">
+                        </article>
+
+                        <article class="item">
+                            <h2>Audience’s Choice Award</h2>
+                            <p class="number">2024</p>
+                            <img data-src="../../media/awards/madrid-otaku-black.webp" alt="Mangafest Sevilla">
+                        </article>
+
+                        <article class="item">
+                            <h2>Nominated for Best Design</h2>
+                            <p class="number">2024</p>
+                            <img data-src="../../media/awards/ps-talents-black.webp" alt="Mangafest Sevilla">
+                        </article>
+
+                        <article class="item">
+                            <h2>Audience’s Choice Award</h2>
+                            <p class="number">2023</p>
+                            <img data-src="../../media/awards/madrid-otaku-black.webp" alt="Mangafest Sevilla">
+                        </article>
+
+                    </section>
+                </div>
+
+            </div>
+
+            <!-- IMAGE -->
+            <div id="presentation-img-container">
+                <img data-src="../../media/projects/luminaria-dark-echoes/thumbnail.webp" alt="Splash Art de Proyecto">
+            </div>
+
+        </section>
+
+        <!-- VIDEO -->
+        <section id="video-presentation">
+            <h1>Summary Video</h1>
+            <div id="video-presentation-container">
+                <div class="clean-video">
+                    <video preload="metadata" controls>
+                        <source src="../../media/projects/luminaria-dark-echoes/video.mp4">
+                    </video>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALLERY -->
+        <section id="gallery">
+            <h1>Gallery</h1>
+            <div class="carrousel-container"
+                 data-carrousel-path="../../media/projects/luminaria-dark-echoes" 
+                 data-carrousel-images="game1.webp,game2.webp,game3.webp,game4.gif,game5.gif,game6.gif">
+                <button class="left-arrow-button" data-direction="-1"></button>
+                <img class="carrousel-img" alt="Imagen de Carrusel">
+                <button class="right-arrow-button" data-direction="1"></button>
+            </div>
+        </section>
+
+        <!-- WORK -->
+        <section id="work">
+            <h1>Roles Held</h1>
+            <section id="work-container">
+                <h2>Team Lead Programmer</h2>
+                <p>
+                    I managed the programming team throughout the development process.
+                </p>
+                <h2>Game Core Systems Programmer</h2>
+                <p>
+                    I developed the core mechanics and systems of the video game.
+                </p>
+                <h2>Unity Developer</h2>
+                <p>
+                    I handled a wide range of tasks in Unity.
+                </p>
+                <h2>Technical Artist</h2>
+                <p>
+                    I integrated game assets into Unity.
+                </p>
             </section>
         </section>
-    </div>
 
+        <!-- ADDITIONAL NOTES -->
+        <!-- <section id="additional-notes">
+            <h1>Notas adicionales</h1>
+            <section id="additional-notes-container">
+                <p>
+                    No participe durante todo el proyecto por lo que si el juego se ha publicado y cambia de lo aqui visto 
+                    es decision exclusiva de la desarrolladora, durante mi periodo trabajando planteé mecánicas básicas y 
+                    sistemas. Además también participé en el diseño del juego en general.
+                </p>
+            </section>
+        </section> -->
 
-    <!-- PLATFORMS -->
-    <div class="smallSectionBox purpleBox">
-        <section class="marginBox">
-            <h1 class="centerText hidden">PLATFORMS</h1>
-            <section class="flexBox wrap gap1w gap1h">
+        <!-- FOOTER -->
+        <footer>
 
-                <!-- STEAM -->
-                <a href="https://store.steampowered.com/app/2690580/Luminaria_Dark_Echoes/" target="_blank" class="animatedCircleButton flex15">
-                    <section class="centerBox hidden">
-                        <article class="steamInverted boxMin2h boxMin2w"></article>
-                    </section>
-                    <section class="hiddenSection centerBox">
-                        <p>PLAY NOW</p>
-                    </section>
-                </a>
+            <!-- SOCIALS -->
+            <section id="socials">
+                <h1>Social</h1>
+                <div>
+                    <!-- TWITTER -->
+                    <a href="https://x.com/FranForge" target="_blank" aria-label="Visit FranForge X Profile">
+                        <img data-src="../../icons/twitter-white.svg" alt="Twitter">
+                    </a>
 
-                <!-- PS5 -->
-                <a href="https://store.playstation.com/es-es/concept/10013956" target="_blank" class="animatedCircleButton flex15">
-                    <section class="centerBox hidden">
-                        <article class="playstationInverted boxMin2h boxMin2w"></article>
-                    </section>
-                    <section class="hiddenSection centerBox">
-                        <p>PLAY NOW</p>
-                    </section>
-                </a>
+                    <!-- INSTAGRAM -->
+                    <a href="https://www.instagram.com/franforge.dev/" target="_blank" aria-label="Visit FranForge Instagram Profile">
+                        <img data-src="../../icons/instagram-white.svg" alt="Instagram">
+                    </a>
 
-                <!-- SWITCH -->
-                <a href="https://www.nintendo.com/es-es/Juegos/Programas-descargables-Nintendo-Switch/Luminaria-Dark-Echoes-2837089.html" class="animatedCircleButton flex15">
-                    <section class="centerBox hidden">
-                        <article class="switchInverted boxMin2h boxMin2w"></article>
-                    </section>
-                    <section class="hiddenSection centerBox">
-                        <p>PLAY NOW</p>
-                    </section>
-                </a>
+                    <!-- TIKTOK -->
+                    <a href="https://www.tiktok.com/@franforgedev" target="_blank" aria-label="Visit FranForge Tiktok Profile">
+                        <img data-src="../../icons/tiktok-white.svg" alt="Tiktok">
+                    </a>
+
+                    <!-- YOUTUBE -->
+                    <a href="https://www.youtube.com/@FranForge/videos" target="_blank" aria-label="Visit FranForge Youtube Profile">
+                        <img data-src="../../icons/youtube-white.svg" alt="Youtube">
+                    </a>
+
+                    <!-- PATREON -->
+                    <a href="https://www.patreon.com/c/FranForge" target="_blank" aria-label="Visit FranForge Patreon Profile">
+                        <img data-src="../../icons/patreon-white.svg" alt="Patreon" aria-label="Visit FranForge Patreon Creator Profile">
+                    </a>
+
+                    <!-- LINKEDIN -->
+                    <a href="https://www.linkedin.com/in/francisco-jesus-huerta-hervas/" target="_blank" aria-label="Visit FranForge Linkedin Profile">
+                        <img data-src="../../icons/linkedin-white.svg" alt="Linkedin">
+                    </a>
+
+                    <!-- MAIL -->
+                    <a href="mailto:franforge3d@gmail.com" target="_blank" aria-label="Mail to franforge3d@gmail.com">
+                        <img data-src="../../icons/mail-white.svg" alt="Mail">
+                    </a>
+
+                    <!-- GITHUB -->
+                    <a href="https://github.com/FranForge" target="_blank" aria-label="Visit FranForge Github">
+                        <img data-src="../../icons/github-white.svg" alt="Github">
+                    </a>
+                </div>
+                
+            </section>
+
+            <!-- CONTACT -->
+            <section id="contact">
+                <h1>Contact</h1>
+                <form action="https://formkeep.com/f/cb60aea6d317" method="POST">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" value="" placeholder="Entity or Particular" required />
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" value="" placeholder="example@example.com" required />
+
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Please describe the reason for your contact here…" required></textarea>
+                    <button type="submit" name="" class="buttonLargue">Submit</button>
+                </form>
+            </section>
+
+            <!-- INFO -->
+            <section id="footer-info">
+
+                <h1>Information</h1>
+                <a href="../home.html#presentation">About me</a>
+                <a href="all.html">Projects</a>
+                <a href="../home.html#skills">Skills</a>
+                <a href="../home.html#experience">Experience</a>
+                <a href="../home.html#blog">Blogs</a>
+                <a href="../home.html#contact">Contact</a>
 
             </section>
-        </section>
-    </div>
 
+        </footer>
 
-    <!-- JOBS -->
-    <div id="jobs" class="sectionBox blackBox">
-        <section class="marginBox">
-            <h1 class="centerText hidden">WORK DONE</h1>
-            <section class="spacedFlexBox wrap">
+        <script src="../../scripts/rotateTexts.js"></script>
+        <script src="../../scripts/attributesDisplayer.js"></script>
+        <script src="../../scripts/scrollEffector.js"></script>
+        <script src="../../scripts/displayBars.js"></script>
+        <script src="../../scripts/lazyLoadingImages.js"></script>
+        <script src="../../scripts/carouselDisplayer.js"></script>
 
-                <!-- PROGRAMMING -->
-                <article class="experienceBox flex45 hidden">
-                    <h2>Programming</h2>
-                    <section class="experienceWorkBox">
-                        <ul>
-                            <li>Team Leader</li>
-                        </ul>
-                        <ul>
-                            <li>Technical Director</li>
-                        </ul>
-                        <ul>
-                            <li>Fullstack Developer</li>
-                        </ul>
-                        <ul>
-                            <li>Game Systems Programmer</li>
-                        </ul>
-                        <ul>
-                            <li>Gameplay Programmer</li>
-                        </ul>
-                        <ul>
-                            <li>Backend Programmer</li>
-                        </ul>
-                    </section>
-                </article>
-
-                <!-- OTHER -->
-                <article class="experienceBox flex45 hidden">
-                    <h2>Other</h2>
-                    <section class="experienceWorkBox">
-                        <ul>
-                            <li>I also contributed to the creation of promotional materials such as teasers and trailers, although it was not my main role.</li>
-                        </ul>
-                    </section>
-                </article>
-
-            </section>
-        </section>
-    </div>
-
-
-    <!-- GALLERY -->
-    <div id="gallery" class="sectionBox blackBox">
-        <section class="marginBox">
-            <h1 class="centerText hidden">GALLERY</h1>
-            <section class="flexBox wrap gap1w gap1h">
-
-                <!-- VIDEO -->
-                <article class="flex100 roundedBorder bgContainer whiteBox boxMin60h aspect-16-9 hidden">
-                    <iframe class="bgAbove" data-src="https://www.youtube-nocookie.com/embed/P1srlu4cuNc?si=1oBByN0UJ1hydQcP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </article>
-
-                <!-- IMAGEN 1 -->
-                <article class="flex30 roundedBorder hidden">
-                    <img onclick="ViewOnFullScreen(this.src, this.alt, 'Back')" data-src="../../images/projects/luminaria/game1.webp" class="coverImg icon" alt="Gameplay1" />
-                </article>
-
-                <!-- IMAGEN 1 -->
-                <article class="flex30 roundedBorder hidden">
-                    <img onclick="ViewOnFullScreen(this.src, this.alt, 'Back')" data-src="../../images/projects/luminaria/game2.webp" class="coverImg icon" alt="Gameplay2" />
-                </article>
-
-                <!-- IMAGEN 1 -->
-                <article class="flex30 roundedBorder hidden">
-                    <img onclick="ViewOnFullScreen(this.src, this.alt, 'Back')" data-src="../../images/projects/luminaria/game3.webp" class="coverImg icon" alt="Gameplay3" />
-                </article>
-
-            </section>
-        </section>
-    </div>
-
-    <!-- AWARDS -->
-    <div id="awards" class="sectionBox whiteBox">
-        <section class="marginBox">
-            <h1 class="centerText hidden">AWARDS</h1>
-            <section class="flexBox wrap gap1w gap1h">
-
-                <!-- AWARD 1 -->
-                <article class="cardBox box30h flex30 hidden">
-                    <section>
-                        <img data-src="../../images/awards/Mangafest.webp" class="fitImg" alt="Mangafest" />
-                    </section>
-                    <section class="hiddenSection centerBox purpleBox">
-                        <h2>Mangafest 2023</h2>
-                        <p>Best Game</p>
-                    </section>
-                </article>
-
-                <!-- AWARD 2 -->
-                <article class="cardBox box30h flex30 hidden">
-                    <section>
-                        <img data-src="../../images/awards/MadridOtaku.webp" class="fitImg" alt="Madrid Otaku" />
-                    </section>
-                    <section class="hiddenSection centerBox purpleBox">
-                        <h2>Madrid Otaku 2024</h2>
-                        <p>Audience Award for Best Game</p>
-                    </section>
-                </article>
-
-                <!-- AWARD 3 -->
-                <article class="cardBox box30h flex30 hidden">
-                    <section>
-                        <img data-src="../../images/awards/PSTalents.webp" class="fitImg" alt="Playstation Talents" />
-                    </section>
-                    <section class="hiddenSection centerBox purpleBox">
-                        <h2>PlayStation Talents 2024</h2>
-                        <p>Nominated for Best Game Design</p>
-                    </section>
-                </article>
-
-                <!-- AWARD 4 -->
-                <article class="cardBox box30h flex30 hidden">
-                    <section>
-                        <img data-src="../../images/awards/MadridOtaku.webp" class="fitImg" alt="Madrid Otaku" />
-                    </section>
-                    <section class="hiddenSection centerBox purpleBox">
-                        <h2>Madrid Otaku 2025</h2>
-                        <p>Audience Award for Best Game</p>
-                    </section>
-                </article>
-
-            </section>
-        </section>
-    </div>
-
-    <!-- SOCIAL -->
-    <div id="social" class="sectionBox whiteBox">
-        <section class="marginBox">
-            <h1 class="centerText hidden">PROJECT SOCIALS</h1>
-            <section class="flexBox gap1w">
-
-                <!-- TWITTER -->
-                <a href="https://x.com/luminariaechoes?lang=es" target="_blank" class="twitter boxMin5h boxMin5w icon flex5 hidden"></a>
-
-                <!-- INSTAGRAM -->
-                <a href="https://www.instagram.com/luminariaechoes/" target="_blank" class="instagram boxMin5h boxMin5w icon flex5 hidden"></a>
-
-                <!-- TIKTOK -->
-                <a href="https://www.tiktok.com/tag/LuminariaDarkEchoes" target="_blank" class="tiktok boxMin5h boxMin5w icon flex5 hidden"></a>
-
-            </section>
-        </section>
-    </div>
-
-    <!-- CONTACT -->
-    <div id="contact" class="sectionBox blackBox"></div>
-
-    <!-- FOOTER -->
-    <footer id="footer" class="sectionBox purpleBox"></footer>
-
-    <script src="../../scripts/includeHeader.js"></script>
-    <script src="../../scripts/includeContact.js"></script>
-    <script src="../../scripts/includeFooter.js"></script>
-    <script src="../../scripts/lazyLoadingImages.js"></script>
-    <script src="../../scripts/revealHidden.js"></script>
-    <script src="../../scripts/fullscreenImageModal.js"></script>
-
-</body>
+    </body>
 </html>

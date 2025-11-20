@@ -1,125 +1,76 @@
-﻿@import url('brand.css');
-
-.desktopOnly{
-    
+.clean-video{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: black;
 }
 
-.mobileOnly{
-
+.clean-fullscreen-video{
+    position: absolute;
+    width: 100dvw;
+    height: 100dvh;
+    overflow: hidden;
+    margin: 0;
+    padding: 0%;
+    background-color: black;
 }
 
-article.hidden,
-section.hidden{
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity ease 0.5s, transform ease 1s;
+.clean-video iframe,
+.clean-video video,
+.clean-video img,
+.clean-fullscreen-video iframe,
+.clean-fullscreen-video video,
+.clean-fullscreen-video img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
-article.reveal,
-section.reveal{
-    opacity: 1;
-    transform: translate(0);
+.clean-video iframe,
+.clean-video video,
+.clean-video img{
+    height: 100%;
 }
 
-a.hidden{
-    opacity: 0;
-    transform: scale(0.8);
-}
-
-a.reveal{
-    opacity: 1;
-    transform: scale(1);
-    transition: transform ease 0.5;
-}
-
-h1.hidden{
-    opacity: 0;
-    transform: translateY(-30px);
-    transition: opacity 1s ease, transform 1s ease;
-}
-
-h1.reveal{
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.filledBar.hidden{
-    transform: translateX(-100%);
-    transition: transform 2s ease;
-}
-
-.filledBar.reveal{
-    transform: translateX(0%);
-}
-
-#fullscreen-image{
-    position: fixed;
-    height: 100vh;
-    width: 100vw;
-    z-index: 999;
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
-    justify-self: center;
-    display: flex;
-    flex-direction: column;
-    display: flex;
-    opacity: 0;
+.clean-fullscreen-video iframe,
+.clean-fullscreen-video video,
+.clean-fullscreen-video img{
     pointer-events: none;
-    transition: opacity 0.3s ease;
+    height: 120%;
 }
 
-#fullscreen-image.visible{
-    opacity: 1;
-    pointer-events: auto;
-}
+.mobile-only{}
 
-#fullscreen-image section{
-    align-items: center;
-    justify-content: center;
-    justify-items: center;
-    justify-self: center;
-    display: flex;
-    flex-direction: column;
-    padding: 1vh;
-    background-color: var(--brandSecondaryColor);
-    width: 80%;
-    height: 80%;
-    border-radius: 1vh;
-}
+.desktop-only{}
 
-#fullscreen-image img{
-    object-fit: contain;
-    width: 90%;
-    height: 80%;
-    margin: 1vh;
-}
-
-@media (max-width: 1000px) {
-    .desktopOnly {
+@media (min-width: 1001px)
+{
+    .mobile-only{
         display: none;
-        width: 0;
-        height: 0;
-        margin: 0;
-        padding: 0;
+        opacity: none;
+        pointer-events: none;
     }
 
-    #fullscreen-image section{
-        width: 100%;
-        padding: 1px;
-    }
-
-    #fullscreen-image img{
-        width: 100%;
+    .desktop-only{
+        display: inherit;
+        opacity: inherit;
+        pointer-events: inherit;
     }
 }
 
-@media (min-width: 1000px) {
-    .mobileOnly {
+@media (max-width: 1000px)
+{
+    .mobile-only{
+        display: inherit;
+        opacity: inherit;
+        pointer-events: inherit;
+    }
+
+    .desktop-only{
         display: none;
-        width: 0;
-        height: 0;
-        margin: 0;
-        padding: 0;
+        opacity: none;
+        pointer-events: none;
     }
 }
