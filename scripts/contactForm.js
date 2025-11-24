@@ -5,13 +5,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
     form.addEventListener("submit", async (e) => {
 
-        console.log("Submit ejecutado");
+        console.log(`Submit ejecutado desde ${window.location.origin}`);
 
         //Evita que recargue la web.
         e.preventDefault();
 
         //Crea el formulario.
         const formData = new FormData(form);
+        console.log("Formulario creado con exito.");
 
         try {
             const result = await fetch("https://api.franforge.es/api/ContactForm/send", {
