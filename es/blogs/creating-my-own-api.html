@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-07LPHTN6QT"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'G-07LPHTN6QT');
+        </script>
+    
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="../../style.css">
+        <link href="../../icons/logo.ico" rel="icon" type="image/x-icon" />
+        <link href="../../icons/logo.ico" rel="shortcut icon" type="image/x-icon" />
+
+        <title>Creando mi propia API REST | FranForge Game Developer</title>
+
+    </head>
+    <body>
+        
+        <!-- HEADER NAV -->
+        <header class="scroll-effect" data-scroll-min-y="100" data-scroll-max-y="0">
+            <section>
+                <nav>
+                    <a href="../home.html" class="header-logo">
+                        <img data-src="../../icons/logo.svg" alt="FranForge">
+                    </a>
+                    <a href="../home.html#presentation" class="desktop-only">Sobre mí</a>
+                    <a href="all.html">Proyectos</a>
+                    <a href="../home.html#skills" class="desktop-only">Habilidades</a>
+                    <a href="../home.html#experience" class="desktop-only">Experiencia</a>
+                    <a href="../home.html#blog" class="desktop-only">Blogs</a>
+                    <a href="#contact">Contactar</a>
+                </nav>
+            </section>
+        </header>
+
+        <!-- BLOG -->
+        <section id="blog-article">
+            <section class="content">
+                <p id="blog-article-title">Creando mi propia API REST.</p>
+                <p id="blog-article-subtitle">Usando .NET Core, Render y JS.</p>
+                <div class="blog-article-divider"></div>
+                <p id="blog-article-date">Actualizado: 13:01-25/11/2025</p>
+                <img data-src="../../media/blogs/creating-my-own-api/api-rest-flow.webp" alt="API REST flujo">
+                <p>
+                    Recientemente me interesé por el diseño web, tras rehacer mi página web desde 0 y lidiar con 
+                    <span>JavaScript</span> decidí llevarlo a un mayor nivel creando mi propia <span>API Rest</span> 
+                    con <span>.NET Core</span> y mi mejor amigo <span>C#</span>. Para los recién llegados al mundillo, 
+                    como yo hace unas semanas, una API REST es un sistema que permite comunicar diferentes puntos 
+                    mediante peticiones HTTP, un protocolo rápido que transporta mensajes y los traduce para estos 
+                    extremos.
+                </p>
+                <div class="blog-article-divider"></div>
+                <h1>¿Cómo funciona una API REST?</h1>
+                <p>
+                    La cosa es sencilla, el cliente, generalmente un navegador realiza una petición a un servidor que 
+                    aloja la API usando una URL de acceso, el servidor maneja esa petición que el desarrollador previamente 
+                    ha desarrollado, en mi caso con .NET Core y devuelve una respuesta. Puede ser un error, un estado, 
+                    un recurso, ...
+                </p>
+                <p>
+                    Todo esto como ya mencioné lo habilita el desarrollador, puedes tener acceso a una base de datos por 
+                    ejemplo, de hecho es un caso bastante común, o métodos genéricos como los que tengo activos en mi API 
+                    ahora mismo para que funcionen desde esta web.
+                </p>
+                <div class="blog-article-divider"></div>
+                <h1>¿Qué he desarrollado con la API REST?</h1>
+                <p>
+                    Comencé probando cosas simples como era crear una base de datos <span>SQLite</span> y conectarla a 
+                    un controlador, por así decirlo, el sistema que gestiona tu petición HTTP y la procesa para mandar 
+                    una respuesta al cliente. Además probé <span>Swagger</span>, una herramienta básica pero muy 
+                    potente que trae .NET Core instalada al crear el proyecto de API REST que permite probar todas las 
+                    posibles peticiones que tienes en tu sistema. Todo esto de la base de datos molaba pero no era lo 
+                    que necesitaba si quería aplicarlo a un proyecto real como es el siguiente.
+                </p>
+                <p>
+                    Actualmente en la web, hay un formulario de contacto que anteriormente tenía apuntando a un servicio 
+                    externo, ya que mi web se aloja en Github Pages, un servicio de hosting rápido y gratuito directamente 
+                    sincronizado con Github y sus repositorios, este no me permitía usar servicios de correo SMTP y 
+                    similares, por lo que la opción más sencilla era apuntar a otro servicio. El problema estaba en 
+                    acceder a ese servicio, era un paso intermedio que a su vez se me olvidaba y podía ocasionar que 
+                    ni me enterara de cuando me contactaba alguien a través de la web. La solución que se me ocurrió  
+                    fue crear la API para mandarme a mi mismo un correo electrónico y recibir la notificación en el móvil,  
+                    mucho más sencillo y directo que entrar a un servicio externo. Después de un breve tiempo informándome 
+                    e intentando realizar el sistema que mandaba correos funcionaba, al menos en localhost.
+                </p>
+                <img data-src="../../media/blogs/creating-my-own-api/received-mail-from-api.webp" alt="Correo recibido">
+                <p>
+                    Decidí subirlo a <a href="https://render.com/" target="_blank"><span>Render</span></a>, alojamiento en 
+                    la nube para procesar backend con planes de pago pero también gratuitos con algunos límites como que 
+                    tras unos minutos de inactividad tu sistema se apagaría hasta recibir una nueva orden que lo 
+                    reactivara, perfecto para mi y justo lo que no me permitía Github Pages. Todo parecía bonito hasta 
+                    que me encontré con dos problemas principales. Se debía subir con <span>Docker</span> o similar 
+                    (No tenía ni idea de que era Docker) y que los servicios SMTP por seguridad, estaban bloqueados 
+                    en Render y otros proveedores. Es entonces cuando decidí pivotar a algún sistema HTTP puro sin SMTP.
+                </p>
+                <p>
+                    Consultando un poco que servicios me permitían una notificacióin rápida en móvil o similar descubrí 
+                    que <span>Telegram</span> y <span>Discord</span> permiten que sus bots se integren con APIs como esta, 
+                    de cabeza recurrí a Telegram para crear un bot y conectarlo a mi API.
+                </p>
+                <div class="blog-article-divider"></div>
+                <h1>Creando un bot para Telegram.</h1>
+                <p>
+                    Crear un bot para Telegram es bastante sencillo, solo tienes que recurrir a <span>@BotFather</span> 
+                    dentro de la aplicación, gracioso cuanto menos, y ejecutar el comando <span>/start</span> seguido 
+                    de <span>/newbot</span>, el mismo te ayudará con la creación de tu bot y te proporcionará el 
+                    <span>API Token</span>, necesario para usarlo desde tu API, este código es intransferible y no 
+                    debe conocerlo nadie por lo que como al mandar correos con mi <span>App Password</span> de Google 
+                    lo incluimos en una variable de entorno que solo conocerá tu SO al probar y tu API REST.
+                </p>
+                <p>
+                    Otro paso necesario para poder manejar el bot y que se dirija exclusivamente a tu chat de Telegram y 
+                    no a cualquier otro es iniciar tu bot con <span>/start</span> y recoger el id de tu chat a través de 
+                    una ruta que te proporciona Telegram para poder ver un JSON con la información del bot que creaste 
+                    <span>(https://api.telegram.org/bot"BOT_TOKEN"/getUpdates)</span>, una vez ahí te aparecerá tu chat id.
+                </p>
+                <p>
+                    Una vez tengamos tanto el token del bot como el id de tu chat agregamos como variables de entorno y 
+                    ya podemos manejar el bot desde nuestra API REST. Tan solo queda manejar la petición desde nuestro 
+                    cliente, en mi caso con un formulario y JS para mandar los datos y mostrar una respuesta visual.
+                </p>
+                <img data-src="../../media/blogs/creating-my-own-api/received-telegram-from-api.webp" alt="Mensaje del bot de Telegram recibido">
+                <p>
+                    Asi de sencillo creé mi propia API REST personal y poco a poco conociéndome tendrá más funcionalidades 
+                    para la web como una newsletter o servicios varios.
+                </p>
+                <div class="blog-article-divider"></div>
+                <h1>Consejo adicional con Render</h1>
+                <p>
+                    Anteriormente mencioné que Render tras unos minutos de inactividad se apaga hasta recibir otra petición 
+                    en el plan gratuito, para una mayor agilidad y experiencia para el usuario esto se puede soliucionar un 
+                    poco ya que si manda el formulario tendría que esperar para mandar el mensaje a que la API se encendiera 
+                    de nuevo y que esta procesara la petición arruinando así la respuesta del usuario visible con JS.
+                </p>
+                <p>
+                    Por ello en mi web uso con JS un método al ingresar a la web y cada 5 minutos manda una petición ping al 
+                    servidor que si este estuviera apagado actúa como inicio, así al mandar un formulario no esperaría a que 
+                    se encenciera, sino que ya estaría encendida en la mayoría de los casos.
+                </p>
+            </section>
+        </section>
+
+        <!-- FOOTER -->
+        <footer>
+
+            <!-- SOCIALS -->
+            <section id="socials">
+                <h1>Redes</h1>
+                <div>
+                    <!-- TWITTER -->
+                    <a href="https://x.com/FranForge" target="_blank" aria-label="Visit FranForge X Profile">
+                        <img data-src="../../icons/twitter-white.svg" alt="Twitter">
+                    </a>
+
+                    <!-- INSTAGRAM -->
+                    <a href="https://www.instagram.com/franforge.dev/" target="_blank" aria-label="Visit FranForge Instagram Profile">
+                        <img data-src="../../icons/instagram-white.svg" alt="Instagram">
+                    </a>
+
+                    <!-- TIKTOK -->
+                    <a href="https://www.tiktok.com/@franforgedev" target="_blank" aria-label="Visit FranForge Tiktok Profile">
+                        <img data-src="../../icons/tiktok-white.svg" alt="Tiktok">
+                    </a>
+
+                    <!-- YOUTUBE -->
+                    <a href="https://www.youtube.com/@FranForge/videos" target="_blank" aria-label="Visit FranForge Youtube Profile">
+                        <img data-src="../../icons/youtube-white.svg" alt="Youtube">
+                    </a>
+
+                    <!-- PATREON -->
+                    <a href="https://www.patreon.com/c/FranForge" target="_blank" aria-label="Visit FranForge Patreon Profile">
+                        <img data-src="../../icons/patreon-white.svg" alt="Patreon" aria-label="Visit FranForge Patreon Creator Profile">
+                    </a>
+
+                    <!-- LINKEDIN -->
+                    <a href="https://www.linkedin.com/in/francisco-jesus-huerta-hervas/" target="_blank" aria-label="Visit FranForge Linkedin Profile">
+                        <img data-src="../../icons/linkedin-white.svg" alt="Linkedin">
+                    </a>
+
+                    <!-- MAIL -->
+                    <a href="mailto:franforge3d@gmail.com" target="_blank" aria-label="Mail to franforge3d@gmail.com">
+                        <img data-src="../../icons/mail-white.svg" alt="Mail">
+                    </a>
+
+                    <!-- GITHUB -->
+                    <a href="https://github.com/FranForge" target="_blank" aria-label="Visit FranForge Github">
+                        <img data-src="../../icons/github-white.svg" alt="Github">
+                    </a>
+                </div>
+                
+            </section>
+
+            <!-- CONTACT -->
+            <section id="contact">
+                <h1>Contactar</h1>
+                <form id="contact-form" method="POST">
+                    <label for="Name">Nombre:</label>
+                    <input type="text" id="name" name="Name" value="" placeholder="Entidad o Particular" required />
+
+                    <label for="Email">Correo electr&oacute;nico:</label>
+                    <input type="email" id="email" name="Email" value="" placeholder="example@example.com" required />
+
+                    <label for="Message">Mensaje:</label>
+                    <textarea id="message" name="Message" rows="4" placeholder="Describa el motivo de su contacto aqui..." required></textarea>
+                    <button type="submit" name="Submit" class="buttonLargue">Enviar</button>
+                </form>
+                <section id="contact-submit-successfully-message">
+                    <p>Su mensaje se ha enviado correctamente.</p>
+                </section>
+                <section id="contact-submit-failed-message">
+                    <p>
+                        Ha habido un problema enviando el mensaje.
+                    </p>
+                    <p id="contact-submit-failed-error">ERROR 404</p>
+                </section>
+            </section>
+
+            <!-- INFO -->
+            <section id="footer-info">
+
+                <h1>Información</h1>
+                <a href="../home.html#presentation">Sobre mi</a>
+                <a href="all.html">Projectos</a>
+                <a href="../home.html#skills">Habilidades</a>
+                <a href="../home.html#experience">Experiencia</a>
+                <a href="../home.html#blog">Blogs</a>
+                <a href="../home.html#contact">Contactar</a>
+
+            </section>
+
+        </footer>
+
+        <script src="../../scripts/rotateTexts.js"></script>
+        <script src="../../scripts/attributesDisplayer.js"></script>
+        <script src="../../scripts/scrollEffector.js"></script>
+        <script src="../../scripts/displayBars.js"></script>
+        <script src="../../scripts/lazyLoadingImages.js"></script>
+        <script src="../../scripts/carouselDisplayer.js"></script>
+        <script src="../../scripts/contactForm.js"></script>
+        <script src="../../scripts/awakeApiInterval.js"></script>
+
+    </body>
+</html>
