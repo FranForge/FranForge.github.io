@@ -2,7 +2,7 @@
 //Realiza un Ping a la Api para activarla.
 function pingApi()
 {
-    fetch("https://api.franforge.es/api/ping")
+    fetch("https://api.franforge.es/api/Ping")
         .catch(() => {
 
         });
