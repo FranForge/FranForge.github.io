@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const newSubscriber = { Id: formData.get("Email") };
 
         try {
-            const result = await fetch("https://api.franforge.es/api/NewsletterRequests", {
+            const result = await fetch("https://api.franforge.es/api/NewsletterRequests/subscribe", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(newSubscriber)
