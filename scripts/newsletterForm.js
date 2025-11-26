@@ -1,7 +1,7 @@
 //Espera a que el DOM se haya cargado.
 document.addEventListener("DOMContentLoaded", () => {
 
-    const form = document.getElementById("contact-form");
+    const form = document.getElementById("newsletter-form");
     console.log("Form encontrado:", form);
 
     form.addEventListener("submit", async (e) => {
@@ -15,56 +15,59 @@ document.addEventListener("DOMContentLoaded", () => {
         const formData = new FormData(form);
         console.log("Formulario creado con exito.");
 
+        const newSubscriber = { Id: formData.get("Email") };
+
         try {
-            const result = await fetch("https://api.franforge.es/api/ContactForm/send", {
+            const result = await fetch("https://api.franforge.es/api/NewsletterRequests", {
                 method: "POST",
-                body: formData
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(newSubscriber)
             });
 
             if (!result.ok) {
                 const text = await result.text();
                 console.error("Respuesta no OK:", result.status, text);
-                displayContactError(text);
+                displayNewsletterError(text);
                 return;
             }
 
             console.log("Formulario enviado correctamente");
-            displayContactSuccess();
+            displayNewsletterSuccess();
 
         } catch (err) {
             console.error("Error enviando formulario", err);
-            displayContactError(err.message || "Something went wrong.");
+            displayNewsletterError(err.message || "Something went wrong.");
         }
     });
 });
 
 //Muestra la confirmacion en pantalla.
-function displayContactSuccess()
+function displayNewsletterSuccess()
 {
-    const successContainer = document.getElementById("contact-success");
+    const successContainer = document.getElementById("newsletter-success");
     if(successContainer == undefined) return;
 
     successContainer.classList.add("show");
 
-    setTimeout(() => hideContactMessage(successContainer), 5000);
+    setTimeout(() => hideNewsletterMessage(successContainer), 5000);
 }
 
 //Muestra el error en pantalla ademas de la advertencia.
-function displayContactError(errorText)
+function displayNewsletterError(errorText)
 {
-    const errorContainer = document.getElementById("contact-failed");
+    const errorContainer = document.getElementById("newsletter-failed");
     if(errorContainer == undefined) return;
 
     errorContainer.classList.add("show");
 
-    const errorMessage = document.getElementById("contact-failed-error");
+    const errorMessage = document.getElementById("newsletter-failed-error");
     errorMessage.textContent = errorText;
 
-    setTimeout(() => hideContactMessage(errorContainer), 5000);
+    setTimeout(() => hideNewsletterMessage(errorContainer), 5000);
 }
 
 //Espera x segundos y oculta el mensaje.
-function hideContactMessage(element)
+function hideNewsletterMessage(element)
 {
     element.classList.remove("show");
 }

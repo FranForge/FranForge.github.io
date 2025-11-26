@@ -60,8 +60,8 @@
     }
 }
 
-#contact-submit-successfully-message,
-#contact-submit-failed-message{
+.success-response,
+.failed-response{
     display: flex;
     flex-direction: column;
     padding-left: 50px;
@@ -80,16 +80,16 @@
     transition: opacity 0.5s ease;
 }
 
-#contact-submit-successfully-message{
+.success-response{
     background-color: lightgreen;
 }
 
-#contact-submit-failed-message{
+.failed-response{
     background-color: lightsalmon;
 }
 
-#contact-submit-successfully-message.show, 
-#contact-submit-failed-message.show{
+.success-response.show, 
+.failed-response.show{
     max-height: 10rem;
     max-width: 100dvw;
     flex-grow: 1;

@@ -42,100 +42,100 @@
         </header>
 
         <!-- BLOG -->
-<section id="blog-article">
-    <section class="content">
-        <p id="blog-article-title">Creating My Own REST API.</p>
-        <p id="blog-article-subtitle">Using .NET Core, Render, and JS.</p>
-        <div class="blog-article-divider"></div>
-        <p id="blog-article-date">Updated: 13:01-25/11/2025</p>
-        <img data-src="../../media/blogs/creating-my-own-api/api-rest-flow.webp" alt="REST API flow">
-        <p>
-            Recently, I became interested in web development. After rebuilding my website from scratch and dealing with 
-            <span>JavaScript</span>, I decided to take it to the next level by creating my own <span>REST API</span> 
-            with <span>.NET Core</span> and my best friend <span>C#</span>. For newcomers like me a few weeks ago, 
-            a REST API is a system that allows communication between different points via HTTP requests, a fast protocol 
-            that transports messages and translates them for these endpoints.
-        </p>
-        <div class="blog-article-divider"></div>
-        <h1>How Does a REST API Work?</h1>
-        <p>
-            It’s simple: the client, usually a browser, sends a request to a server that hosts the API using an access URL. 
-            The server handles that request, which the developer has previously created—in my case with .NET Core—and 
-            returns a response. This could be an error, a status, a resource, ...
-        </p>
-        <p>
-            As I mentioned, the developer enables all this. For example, you can have access to a database, which is quite common, 
-            or generic methods like the ones I currently have active in my API so they can work from this website.
-        </p>
-        <div class="blog-article-divider"></div>
-        <h1>What Have I Developed with the REST API?</h1>
-        <p>
-            I started testing simple things, like creating a <span>SQLite</span> database and connecting it to a controller—
-            the system that handles your HTTP request and processes it to send a response back to the client. I also tried 
-            <span>Swagger</span>, a basic but very powerful tool included with .NET Core when creating a REST API project, 
-            which allows testing all possible requests in your system. The database part was cool but not enough for a real 
-            project like the next one.
-        </p>
-        <p>
-            Currently on the website, there is a contact form that previously pointed to an external service. Since my site 
-            is hosted on Github Pages, a fast and free hosting service directly synced with Github and its repositories, 
-            it didn’t allow me to use SMTP mail services or similar. The easiest option was to point to another service. 
-            The problem was accessing that service—it was an extra step that I often forgot, which could result in missing 
-            notifications when someone contacted me through the site. My solution was to create the API to send myself 
-            an email and receive the notification on my phone—much simpler and more direct than using an external service. 
-            After a brief time learning and trying to implement it, the email-sending system worked, at least on localhost.
-        </p>
-        <img data-src="../../media/blogs/creating-my-own-api/received-mail-from-api.webp" alt="Received email">
-        <p>
-            I decided to upload it to <a href="https://render.com/" target="_blank"><span>Render</span></a>, a cloud hosting 
-            service for backend processing with both paid and free plans. The free plan has some limitations, like your system 
-            shutting down after a few minutes of inactivity until a new request reactivates it, which was perfect for me and 
-            something Github Pages didn’t allow. Everything seemed fine until I encountered two main problems: it had to be 
-            deployed with <span>Docker</span> or similar (I had no idea what Docker was), and SMTP services were blocked for 
-            security on Render and other providers. That’s when I decided to pivot to a pure HTTP system without SMTP.
-        </p>
-        <p>
-            After checking which services allowed fast notifications to mobile or similar, I discovered that <span>Telegram</span> 
-            and <span>Discord</span> allow bots to integrate with APIs like this. I immediately went for Telegram to create a bot 
-            and connect it to my API.
-        </p>
-        <div class="blog-article-divider"></div>
-        <h1>Creating a Telegram Bot</h1>
-        <p>
-            Creating a Telegram bot is quite simple: you just need to go to <span>@BotFather</span> in the app—fun, to say the least— 
-            and run the command <span>/start</span> followed by <span>/newbot</span>. It will guide you through creating your bot 
-            and provide the <span>API Token</span> required to use it from your API. This code is private and should not be shared, 
-            so, like sending emails with my <span>Google App Password</span>, we store it in an environment variable only accessible 
-            to your OS when testing and your REST API.
-        </p>
-        <p>
-            Another necessary step to ensure the bot only sends messages to your Telegram chat and not to others is to start your bot 
-            with <span>/start</span> and get your chat ID via a route provided by Telegram to view a JSON with your bot’s information 
-            <span>(https://api.telegram.org/bot"BOT_TOKEN"/getUpdates)</span>. Your chat ID will appear there.
-        </p>
-        <p>
-            Once we have both the bot token and chat ID, we add them as environment variables, and we can manage the bot from our REST API. 
-            The only thing left is to handle the request from our client—in my case, a form with JS to send data and display a visual response.
-        </p>
-        <img data-src="../../media/blogs/creating-my-own-api/received-telegram-from-api.webp" alt="Telegram bot message received">
-        <p>
-            That’s how I created my personal REST API, and gradually, as I get to know it better, it will have more functionalities for the website, 
-            like a newsletter or other services.
-        </p>
-        <div class="blog-article-divider"></div>
-        <h1>Additional Advice with Render</h1>
-        <p>
-            As mentioned earlier, Render shuts down after a few minutes of inactivity on the free plan until it receives another request. 
-            This can slow down user experience, as submitting a form would require waiting for the API to wake up and process the request, 
-            delaying the visible JS response.
-        </p>
-        <p>
-            To solve this, on my website I use a JS method that, upon entering the site and every 5 minutes, sends a ping request to the server. 
-            If the server is off, this acts as a startup. This way, when submitting a form, the API is already active in most cases, 
-            so there’s no waiting.
-        </p>
-    </section>
-</section>
+        <section id="blog-article">
+            <section class="content">
+                <p id="blog-article-title">Creating My Own REST API.</p>
+                <p id="blog-article-subtitle">Using .NET Core, Render, and JS.</p>
+                <div class="blog-article-divider"></div>
+                <p id="blog-article-date">Updated: 13:01-25/11/2025</p>
+                <img data-src="../../media/blogs/creating-my-own-api/api-rest-flow.webp" alt="REST API flow">
+                <p>
+                    Recently, I became interested in web development. After rebuilding my website from scratch and dealing with 
+                    <span>JavaScript</span>, I decided to take it to the next level by creating my own <span>REST API</span> 
+                    with <span>.NET Core</span> and my best friend <span>C#</span>. For newcomers like me a few weeks ago, 
+                    a REST API is a system that allows communication between different points via HTTP requests, a fast protocol 
+                    that transports messages and translates them for these endpoints.
+                </p>
+                <div class="blog-article-divider"></div>
+                <h1>How Does a REST API Work?</h1>
+                <p>
+                    It’s simple: the client, usually a browser, sends a request to a server that hosts the API using an access URL. 
+                    The server handles that request, which the developer has previously created—in my case with .NET Core—and 
+                    returns a response. This could be an error, a status, a resource, ...
+                </p>
+                <p>
+                    As I mentioned, the developer enables all this. For example, you can have access to a database, which is quite common, 
+                    or generic methods like the ones I currently have active in my API so they can work from this website.
+                </p>
+                <div class="blog-article-divider"></div>
+                <h1>What Have I Developed with the REST API?</h1>
+                <p>
+                    I started testing simple things, like creating a <span>SQLite</span> database and connecting it to a controller—
+                    the system that handles your HTTP request and processes it to send a response back to the client. I also tried 
+                    <span>Swagger</span>, a basic but very powerful tool included with .NET Core when creating a REST API project, 
+                    which allows testing all possible requests in your system. The database part was cool but not enough for a real 
+                    project like the next one.
+                </p>
+                <p>
+                    Currently on the website, there is a contact form that previously pointed to an external service. Since my site 
+                    is hosted on Github Pages, a fast and free hosting service directly synced with Github and its repositories, 
+                    it didn’t allow me to use SMTP mail services or similar. The easiest option was to point to another service. 
+                    The problem was accessing that service—it was an extra step that I often forgot, which could result in missing 
+                    notifications when someone contacted me through the site. My solution was to create the API to send myself 
+                    an email and receive the notification on my phone—much simpler and more direct than using an external service. 
+                    After a brief time learning and trying to implement it, the email-sending system worked, at least on localhost.
+                </p>
+                <img data-src="../../media/blogs/creating-my-own-api/received-mail-from-api.webp" alt="Received email">
+                <p>
+                    I decided to upload it to <a href="https://render.com/" target="_blank"><span>Render</span></a>, a cloud hosting 
+                    service for backend processing with both paid and free plans. The free plan has some limitations, like your system 
+                    shutting down after a few minutes of inactivity until a new request reactivates it, which was perfect for me and 
+                    something Github Pages didn’t allow. Everything seemed fine until I encountered two main problems: it had to be 
+                    deployed with <span>Docker</span> or similar (I had no idea what Docker was), and SMTP services were blocked for 
+                    security on Render and other providers. That’s when I decided to pivot to a pure HTTP system without SMTP.
+                </p>
+                <p>
+                    After checking which services allowed fast notifications to mobile or similar, I discovered that <span>Telegram</span> 
+                    and <span>Discord</span> allow bots to integrate with APIs like this. I immediately went for Telegram to create a bot 
+                    and connect it to my API.
+                </p>
+                <div class="blog-article-divider"></div>
+                <h1>Creating a Telegram Bot</h1>
+                <p>
+                    Creating a Telegram bot is quite simple: you just need to go to <span>@BotFather</span> in the app—fun, to say the least— 
+                    and run the command <span>/start</span> followed by <span>/newbot</span>. It will guide you through creating your bot 
+                    and provide the <span>API Token</span> required to use it from your API. This code is private and should not be shared, 
+                    so, like sending emails with my <span>Google App Password</span>, we store it in an environment variable only accessible 
+                    to your OS when testing and your REST API.
+                </p>
+                <p>
+                    Another necessary step to ensure the bot only sends messages to your Telegram chat and not to others is to start your bot 
+                    with <span>/start</span> and get your chat ID via a route provided by Telegram to view a JSON with your bot’s information 
+                    <span>(https://api.telegram.org/bot"BOT_TOKEN"/getUpdates)</span>. Your chat ID will appear there.
+                </p>
+                <p>
+                    Once we have both the bot token and chat ID, we add them as environment variables, and we can manage the bot from our REST API. 
+                    The only thing left is to handle the request from our client—in my case, a form with JS to send data and display a visual response.
+                </p>
+                <img data-src="../../media/blogs/creating-my-own-api/received-telegram-from-api.webp" alt="Telegram bot message received">
+                <p>
+                    That’s how I created my personal REST API, and gradually, as I get to know it better, it will have more functionalities for the website, 
+                    like a newsletter or other services.
+                </p>
+                <div class="blog-article-divider"></div>
+                <h1>Additional Advice with Render</h1>
+                <p>
+                    As mentioned earlier, Render shuts down after a few minutes of inactivity on the free plan until it receives another request. 
+                    This can slow down user experience, as submitting a form would require waiting for the API to wake up and process the request, 
+                    delaying the visible JS response.
+                </p>
+                <p>
+                    To solve this, on my website I use a JS method that, upon entering the site and every 5 minutes, sends a ping request to the server. 
+                    If the server is off, this acts as a startup. This way, when submitting a form, the API is already active in most cases, 
+                    so there’s no waiting.
+                </p>
+            </section>
+        </section>
 
 
         <!-- FOOTER -->
@@ -191,6 +191,19 @@
             <!-- CONTACT -->
             <section id="contact">
                 <h1>Contact</h1>
+
+                <!-- RESULT -->
+                <section id="contact-success" class="success-response">
+                    <p>Your message has been sent successfully.</p>
+                </section>
+                <section id="contact-failed" class="failed-response">
+                    <p>
+                        There was a problem sending the message.
+                    </p>
+                    <p id="contact-error">ERROR 404</p>
+                </section>
+
+                <!-- CONTACT FORM -->
                 <form id="contact-form" method="POST">
                     <label for="Name">Name:</label>
                     <input type="text" id="name" name="Name" value="" placeholder="Entity or Individual" required />
@@ -202,15 +215,7 @@
                     <textarea id="message" name="Message" rows="4" placeholder="Please describe the reason for your contact here…" required></textarea>
                     <button type="submit" name="Submit" class="buttonLargue">Submit</button>
                 </form>
-                <section id="contact-submit-successfully-message">
-                    <p>Your message has been sent successfully.</p>
-                </section>
-                <section id="contact-submit-failed-message">
-                    <p>
-                        There was a problem sending the message.
-                    </p>
-                    <p id="contact-submit-failed-error">ERROR 404</p>
-                </section>
+
             </section>
 
             <!-- INFO -->
@@ -226,6 +231,30 @@
 
             </section>
 
+            <!-- NEWSLETTER -->
+            <section id="newsletter">
+                <h1>Newsletter</h1>
+                <p>Subscribe so you don’t miss anything!</p>
+
+                <!-- RESULT -->
+                <section id="newsletter-success" class="success-response">
+                    <p>Your message has been sent successfully.</p>
+                </section>
+                <section id="newsletter-failed" class="failed-response">
+                    <p>
+                        There was a problem sending the message.
+                    </p>
+                    <p id="newsletter-error">ERROR 404</p>
+                </section>
+
+                <!-- NEWSLETTER FORM -->
+                <form id="newsletter-form">
+                    <label for="Email">Correo electr&oacute;nico:</label>
+                    <input type="email" id="email" name="Email" value="" placeholder="example@example.com" required />
+                    <button type="submit" name="Submit" class="buttonLargue">Suscribirse</button>
+                </form>
+            </section>
+
         </footer>
 
         <script src="../../scripts/rotateTexts.js"></script>
@@ -235,6 +264,7 @@
         <script src="../../scripts/lazyLoadingImages.js"></script>
         <script src="../../scripts/carouselDisplayer.js"></script>
         <script src="../../scripts/contactForm.js"></script>
+        <script src="../../scripts/newsletterForm.js"></script>
         <script src="../../scripts/awakeApiInterval.js"></script>
 
     </body>
