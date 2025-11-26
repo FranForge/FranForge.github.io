@@ -15,13 +15,10 @@ document.addEventListener("DOMContentLoaded", () => {
         const formData = new FormData(form);
         console.log("Formulario creado con exito.");
 
-        const newSubscriber = { Id: formData.get("Email") };
-
         try {
             const result = await fetch("https://api.franforge.es/api/NewsletterRequests/subscribe", {
                 method: "POST",
-                headers: { "Content-Type": "application/json" },
-                body: JSON.stringify(newSubscriber)
+                body: formData
             });
 
             if (!result.ok) {
