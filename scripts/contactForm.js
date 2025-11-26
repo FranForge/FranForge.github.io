@@ -30,6 +30,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             console.log("Formulario enviado correctamente");
             displayContactSuccess();
+            form.reset();
 
         } catch (err) {
             console.error("Error enviando formulario", err);

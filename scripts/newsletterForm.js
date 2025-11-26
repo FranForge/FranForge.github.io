@@ -33,6 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             console.log("Formulario enviado correctamente");
             displayNewsletterSuccess();
+            form.reset();
 
         } catch (err) {
             console.error("Error enviando formulario", err);
