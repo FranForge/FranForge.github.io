@@ -58,7 +58,7 @@ function displayContactError(errorText)
 
     errorContainer.classList.add("show");
 
-    const errorMessage = document.getElementById("contact-failed-error");
+    const errorMessage = document.getElementById("contact-error");
     errorMessage.textContent = errorText;
 
     setTimeout(() => hideContactMessage(errorContainer), 5000);

@@ -61,7 +61,7 @@ function displayNewsletterError(errorText)
 
     errorContainer.classList.add("show");
 
-    const errorMessage = document.getElementById("newsletter-failed-error");
+    const errorMessage = document.getElementById("newsletter-error");
     errorMessage.textContent = errorText;
 
     setTimeout(() => hideNewsletterMessage(errorContainer), 5000);
