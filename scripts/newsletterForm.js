@@ -13,6 +13,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
         //Crea el formulario.
         const formData = new FormData(form);
+        const email = formData.get("Email");
+        formData.remove("Email");
+        formData.append("Id", email);
         console.log("Formulario creado con exito.");
 
         try {
