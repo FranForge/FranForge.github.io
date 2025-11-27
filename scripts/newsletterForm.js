@@ -14,9 +14,10 @@ document.addEventListener("DOMContentLoaded", () => {
         //Crea el formulario.
         const formData = new FormData(form);
         const email = formData.get("Email");
-        formData.remove("Email");
+        formData.delete("Email");
         formData.append("Id", email);
         console.log("Formulario creado con exito.");
+        console.log([...formData.entries()]);
 
         try {
             const result = await fetch("https://api.franforge.es/api/NewsletterRequests/subscribe", {
