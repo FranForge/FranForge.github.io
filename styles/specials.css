@@ -90,7 +90,7 @@
 
 .success-response.show, 
 .failed-response.show{
-    max-height: 10rem;
+    max-height: 50dvh;
     max-width: 100dvw;
     flex-grow: 1;
     font-size: 1rem;
