@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log([...formData.entries()]);
 
         try {
-            const result = await fetch("https://api.franforge.es/api/NewsletterRequests/subscribe", {
+            const result = await fetch("https://api.franforge.es/api/Newsletter/subscribe", {
                 method: "POST",
                 body: formData
             });
