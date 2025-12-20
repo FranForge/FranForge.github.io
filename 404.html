@@ -1,44 +1,56 @@
 ﻿<!DOCTYPE html>
+<html lang="es" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
 
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-07LPHTN6QT"></script>
-    <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-07LPHTN6QT"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
 
-  gtag('config', 'G-07LPHTN6QT');
-    </script>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="color-scheme" content="light">
-    <meta name="description" content="Web Portfolio sobre un desarrollador Fullstack en Unity con 2 años de experiencia." />
-    <title>FranForge - Pagina no encontrada</title>
-    <link href="style.css" rel="stylesheet" />
-    <link href="images/logo/FranForgeLogo.ico" rel="icon" type="image/x-icon" />
-    <link href="images/logo/FranForgeLogo.ico" rel="shortcut icon" type="image/x-icon" />
-</head>
-<body>
-    <div class="fullBox bg1">
-        <section class="marginBox flexBox">
-            <article class="flex40 centerBox">
-                <img data-src="images/logo/Logo_Builder.svg" class="img40" alt="FranForge Logo" />
-            </article>
-            <article class="flex40 centerBox whiteText boldText shadowText">
-                <p class="bigText smallMarginText">
-                    404
+            gtag('config', 'G-07LPHTN6QT');
+        </script>
+    
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="style.css">
+        <link href="icons/logo.ico" rel="icon" type="image/x-icon" />
+        <link href="icons/logo.ico" rel="shortcut icon" type="image/x-icon" />
+
+        <title>Error 404 | FranForge Game Developer</title>
+
+        <meta name="description" content="FranForge, desarrollador de videojuegos, aplicaciones 
+        y web con más de 3 años de experiencia. Ha publicado proyectos en Google Play, Steam y Nintendo Switch.">
+        <meta name="keywords" content="web, proyectos, servicios, español, Unity, C#, Unreal, C++">
+        <meta name="author" content="FranForge">
+        <meta name="robots" content="index, follow">
+
+    </head>
+    <body>
+
+        <!-- HERO -->
+        <section id="hero" class="scroll-effect" data-scroll-min-y="100" data-scroll-max-y="0">
+            <div class="clean-fullscreen-video">
+                <video preload="auto" autoplay muted loop>
+                    <source src="media/projects/magictory/video.mp4">
+                </video>
+            </div>
+            <div id="hero-background-panel"></div>
+            <div id="hero-content" class="content">
+                <p id="hero-title">404: Not Found</p>
+                <p id="hero-subtitle">
+                    <span class="rotating-text" data-texts="Redirecting to home...,Please wait..."></span>
                 </p>
-                <p class="smallMarginText centerText">
-                    UPS! THE PAGE WAS NOT FOUND
-                </p>
-                <a href="index.html" class="rectangleButton">GO HOME</a>
-            </article>
+            </div>
+            
         </section>
-    </div>
 
-    <script src="scripts/lazyLoadingImages.js"></script>
+        <script src="scripts/rotateTexts.js"></script>
+        <script src="scripts/lazyLoadingImages.js"></script>
+        <script src="scripts/awakeApiInterval.js"></script>
+        <script src="scripts/notFoundRedirection.js"></script>
 
-</body>
+    </body>
 </html>

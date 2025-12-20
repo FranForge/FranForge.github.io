@@ -16,6 +16,9 @@ function getColorFor(name)
         case "Blender":
             return "#372991";
         case ".NET":
+        case ".NET Core":
+        case ".NET Framework":
+        case "Swagger":
             return "#6C3D8A";
         case "C#":
         case "C++":
