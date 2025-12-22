@@ -11,3 +11,8 @@ The website was built from scratch by me using HTML, CSS, and JavaScript, so it 
 - Visual Studio Code as the IDE.
 - Canva, Krita, and Inkscape for image and logo creation.
 - DaVinci Resolve as the video editor.
+
+# Languages used
+- HTML
+- CSS
+- JavaScript
