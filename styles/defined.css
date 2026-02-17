@@ -557,10 +557,12 @@ header nav a img{
 
 .timeline-event-left{
     text-align: right;
+    align-items: flex-end;
 }
 
 .timeline-event-right{
     text-align: left;
+    align-items: flex-start;
 }
 
 .timeline-point{
@@ -1031,6 +1033,25 @@ footer a:hover{
     margin-bottom: 0;
 }
 
+.arrow-button{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+
+    background-image: url("../icons/arrow.svg"); /* tu icono */
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    text-decoration: none;
+
+    transition: ease 0.5s;
+}
+
+.arrow-button:hover{
+    filter: brightness(0.5);
+}
+
 @media (max-width: 1000px){
 
     header section{
@@ -1161,6 +1182,16 @@ footer a:hover{
         order: 2;
         flex-basis: 90%;
         text-align: left;
+    }
+
+    .timeline-event-left{
+        text-align: left;
+        align-items: flex-start;
+    }
+
+    .timeline-event-right{
+        text-align: left;
+        align-items: flex-start;
     }
 
     .timeline-point {
