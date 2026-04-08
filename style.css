@@ -75,4 +75,5 @@ p{
 
 span{
     color: var(--span-color);
+    font-weight: bold;
 }

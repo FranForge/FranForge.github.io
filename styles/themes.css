@@ -41,3 +41,14 @@
     --highlight: var(--brand-color);
     --span-color: var(--brand-color);
 }
+
+.theme-black-over-white{
+    --bg: white;
+    --text-color: var(--dark-grey);
+    --text-font: 'Zain';
+    --title-color: black;
+    --title-font: 'Zain';
+    --border-color: var(--brand-color);
+    --highlight: var(--brand-color);
+    --span-color: black;
+}

@@ -5,11 +5,15 @@
 .z-bot{ z-index: -10;}
 
 /*SIZES*/
+.h-5{height: 5dvh;}
 .h-8{height: 8dvh;}
 .h-10{ height: 10dvh;}
 .h-100{ height: 100dvh;}
+.h-110{ height: 110dvh;}
 .h-100-p{height: 100%;}
 .w-100{ width: 100dvw;}
+.w-30-p{ width: 30%;}
+.w-70-p{width: 70%;}
 .w-100-p{width: 100%;}
 
 /*POSITIONS*/
@@ -18,30 +22,53 @@
 .pos-absolute {position: absolute;}
 .pos-relative {position: relative;}
 .pos-0 {top: 0; left: 0;}
+.pos-100 {bottom: 0; right: 0;}
 
 /*FLEXS*/
 .flex { display: flex; }
 .flex-row { flex-direction: row; }
 .flex-col { flex-direction: column; }
+.flex-row-reverse { flex-direction: row-reverse;}
+.flex-col-reverse { flex-direction: column-reverse;}
+.flex-20 {flex-basis: 20%;}
+.flex-30 {flex-basis: 30%;}
+.flex-50 {flex-basis: 50%;}
 .wrap {flex-wrap: wrap;}
+.grow {flex-grow: 1;}
+.shrink {flex-shrink: 1;}
+
+/*GAPS*/
+.gap { gap: var(--gap); }
+.gap-25 {gap: 25px;}
+.gap-50{ gap: 50px;}
 
 /*UTILITIES*/
+.items-start { align-items: start;}
 .items-center { align-items: center; }
 .items-end{ align-items: end;}
+.justify-start { justify-content: start;}
 .justify-center { justify-content: center; }
 .justify-end { justify-content: flex-end; }
-.gap { gap: var(--gap); }
 .overflow-hidden{ overflow: hidden;}
 .fit{object-fit: contain;}
+.cover{object-fit: cover;}
 .bg{ background: var(--bg);}
 .text-shadow{text-shadow: black 2px 2px;}
 
 /*MARGINS*/
+.m-x-auto {margin-left: auto; margin-right: auto;}
 .m-0{margin: 0 0;}
 .m-x{ margin: var(--margin-x);}
 .m-x-5{margin: 0 5dvw;}
 .m-x-10{margin: 0 10dvw;}
-.m-x-auto {margin-left: auto; margin-right: auto;}
+.m-x-l-5{margin-left: 5dvw;}
+.m-x-l-10{margin-left: 10dvw;}
+.m-x-l-20{margin-left: 20dvw;}
+.m-x-l-30{margin-left: 30dvw;}
+.m-x-r-5{margin-right: 5dvh;}
+.m-x-r-10{margin-right: 10dvw;}
+.m-x-r-20{margin-right: 20dvw;}
+.m-x-r-30{margin-right: 30dvw;}
 
 /*PADDINGS*/
 .p-0{padding: 0;}
@@ -78,3 +105,6 @@
 .tiny-line{line-height: var(--tiny-font-size);}
 .bold-text{font-weight: bold;}
 .uppercase{text-transform: uppercase;}
+.text-left{text-align: left;}
+.text-center{text-align: center;}
+.text-right{text-align: right;}
