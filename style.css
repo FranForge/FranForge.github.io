@@ -1,8 +1,8 @@
+@import url('styles/variables.css');
 @import url('styles/colors.css');
-@import url('styles/margins.css');
-@import url('styles/defined.css');
-@import url('styles/texts.css');
-@import url('styles/specials.css');
+@import url('styles/themes.css');
+@import url('styles/effects.css');
+@import url('styles/layout.css');
 
 @font-face{
     font-family: 'Alfa-Slab-One';
@@ -33,60 +33,36 @@
 }
 
 :root{
-    font-size: 2vh;
+    font-size: var(--font-mid);
     scroll-behavior: smooth;
 }
 
 body{
     margin: 0;
-    background-color: black;
-    color: var(--darkTextColor);
-    text-align: center;
-    font-family: 'Zain';
+    background: var(--bg);
+    color: var(--text-color);
+    font-family: var(--text-font);
+}
+
+h1, h2, h3, h4, h5{
+    color: var(--title-color);
+    font-family: var(--title-font);
 }
 
 h1{
-    color: grey;
-    text-transform: uppercase;
-    font-size: 1rem;
+    font-size: 2rem;
 }
 
 h2{
-    color: grey;
-    text-transform: uppercase;
-    font-size: 0.8rem;
+    font-size: 1.5rem;
+    
+}
+
+h3{
+    font-size: 1.2rem;
 }
 
 a{
+    color: var(--text-color);
     text-decoration: none;
-    color: inherit;
-}
-
-img{
-    object-fit: contain;
-    height: 100%;
-    width: 100%;
-}
-
-form{
-    display: flex;
-    flex-direction: column;
-}
-
-form button{
-    font-family: 'Zain';
-    font-weight: bold;
-}
-
-form input, form textarea{
-    font-family: 'Zain';
-}
-
-form textarea{
-    resize: none;
-}
-
-video{
-    width: 100%;
-    height: 100%;
 }

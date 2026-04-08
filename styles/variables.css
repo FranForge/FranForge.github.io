@@ -1,0 +1,30 @@
+:root{
+    --brand-color: #8921ff;
+    --brand-secondary-color: #b26eff;
+
+    --light-grey: rgb(210, 210, 210);
+    --dark-grey: rgb(40, 40, 40);
+    --semi-transparent-color: rgba(0, 0, 0, 0.5);
+    --transparent-color: rgba(0, 0, 0, 0);
+
+    --bg: white;
+    --text-color: black;
+    --text-font: 'Zain';
+    --title-color: black;
+    --title-font: 'Zain';
+    --border-color: black;
+    --border-width: 2px;
+    --highlight: var(--brand-color);
+
+    --blur: 10px;
+    --gap: 10px;
+
+    --padding-y: 20dvh 0; 
+    --padding-small: 10px;
+    
+    --margin-x: 20dvw;
+
+    --font-big: 3dvh;
+    --font-mid: 2dvh;
+    --font-small: 1dvh;
+}
