@@ -188,40 +188,34 @@
         </section>
 
         <!-- SYSTEMS -->
-        <section id="systems" class="information-container">
+        <section id="systems" class="information-container whiteBox">
             <div class="information-content">
-                <h1 class="big-text-family">Sistemas Implementados</h1>
+                <h1 class="title">Sistemas Implementados</h1>
                 <section id="systems-container">
 
                     <!-- ITEMS AND INVENTORY -->
-                    <h2 class="big-text-family">Inventario y Objetos</h2>
+                    <h2 class="subtitle underline-dashed">Inventario y Objetos</h2>
                     <ul>
-                        <li>ScriptableObjects para definir tipos de recursos.</li>
+                        <li>ScriptableObjects para definir tipos de recursos y ahorro de memoria.</li>
                         <li>Structs para representar pilas de recursos.</li>
                         <li>Structs en vez de clases y Arrays en vez de Listas para reducir GC.</li>
                         <li>Crafting: Sistema de recetas que se basa en listas de recursos requeridos y lista de estructuras que pueden fabricarlos.</li>
                     </ul>
-                    <h3>Descripción</h3>
+                    <h3 class="small-title decorated-left-text">Descripción</h3>
                     <p>
-                        En un juego de automatización y gestión de recursos un sistema de inventario y objetos es crucial, 
-                        para esto implementé todo un sistema de objetos ScriptableObjects que definian cada tipo de 
+                        Implementé todo un sistema de objetos ScriptableObjects que definian cada tipo de 
                         recurso, luego una struct Stack contenía la referencia al tipo de recurso y un integer para la cantidad. 
                         Por último una clase Inventory tenía un array de stacks con una cantidad máxima que se definía desde el 
                         Inspector de Unity.
                     </p>
-                    <h3>Decisiones técnicas</h3>
-                    <ul>
-                        <li>ScriptableObject: permiten reutilizar datos sin duplicar memoria.</li>
-                        <li>Structs + Arrays: mejor rendimiento en operaciones frecuentes.</li>
-                    </ul>
 
                     <!-- INTERACTIONS -->
-                    <h2 class="big-text-family">Sistema de Interacción</h2>
+                    <h2 class="subtitle underline-dashed">Sistema de Interacción</h2>
                     <ul>
                         <li>Sistema basado en interfaces.</li>
                         <li>Interacción mediante Physics.OverlapSphere.</li>
                     </ul>
-                    <h3>Descripción</h3>
+                    <h3 class="small-title decorated-left-text">Descripción</h3>
                     <p>
                         Sistema de interacción basado en interfaces que implementan todos los objetos con los que el jugador puede interactuar, 
                         cada objeto implementa su propia lógica y al interactuar con ellos el movimiento del jugador se bloquea mientras esta 
@@ -229,84 +223,113 @@
                     </p>
 
                     <!-- BUILDER -->
-                    <h2 class="big-text-family">Sistema de Construcción</h2>
+                    <h2 class="subtitle underline-dashed">Sistema de Construcción</h2>
                     <ul>
-                        <li>ActionMap exclusivo para construcción.</li>
+                        <li>ActionMap exclusivo para mayor control en construcción.</li>
                         <li>ScriptableObjects para definir las estructuras.</li>
                         <li>Desbloqueo de estructuras mediante progresión.</li>
                         <li>Conexiones entre estructuras dependiente de otras.</li>
                         <li>Interfaz que define los requisitos para construir.</li>
                     </ul>
-                    <h3>Descipción</h3>
+                    <h3 class="small-title decorated-left-text">Descripción</h3>
                     <p>
                         Sistema de construcción basado en un ActionMap específico que habilita cámara libre y control por cursor.
                         Las estructuras se definen mediante ScriptableObjects y se desbloquean progresivamente.
                         Cada construcción valida sus requisitos mediante una interfaz antes de ser colocada.
                     </p>
-                    <h3>Decisiones técnicas</h3>
-                    <ul>
-                        <li>ActionMap exclusivo para mayor control.</li>
-                        <li>ScriptableObject: Mayor gestión y ahorro de memoria.</li>
-                    </ul>
-                    
+
                     <!-- TICK -->
-                    <h2 class="big-text-family">Sistema propio de actualización (Tick)</h2>
+                    <h2 class="subtitle underline-dashed">Sistema propio de actualización (Tick)</h2>
                     <ul>
                         <li>Optimización de recursos.</li>
-                        <li>Centralización de llamadas.</li>
-                        <li>Tick cada determinado tiempo con IEnumerator y Coroutine.</li>
+                        <li>Centralización de llamadas para reducir carga.</li>
+                        <li>Tick cada determinado tiempo con IEnumerator y Coroutine para reducir consumo de Update.</li>
                         <li>Implementación de Tick mediante interfaces.</li>
+                        <li>Separación lógica y visual, Tick solo se usa para cálculos de producción.</li>
                     </ul>
-                    <h3>Descripción</h3>
+                    <h3 class="small-title decorated-left-text">Descripción</h3>
                     <p>
                         Sistema de actualización basado en ticks donde un TickManager ejecuta de forma periódica
                         la lógica de todos los objetos que implementan ITickable.
                         Los elementos se registran en una lista y son procesados mediante Coroutine,
                         reduciendo la dependencia de Update en cálculos frecuentes.
                     </p>
-                    <h3>Decisiones técnicas</h3>
-                    <ul>
-                        <li>Sistema de Tick: reduce recursos consumidos en múltiples Update.</li>
-                        <li>Separación lógica y visual: Tick solo se usa para cálculos de producción.</li>
-                    </ul>
 
                     <!-- CHUNKS -->
-                    <h2 class="big-text-family">Segmentación de mapa (Chunks)</h2>
+                    <h2 class="subtitle underline-dashed">Segmentación de mapa (Chunks)</h2>
                     <ul>
                         <li>Optimización de recursos.</li>
                         <li>Segmentación del mapa.</li>
                         <li>Carga y descarga visual.</li>
                     </ul>
-                    <h3>Descripción</h3>
+                    <h3 class="small-title decorated-left-text">Descripción</h3>
                     <p>
                         El mapa se divide en segmentos que se cargan y descarga dependiendo de la proximidad al jugador, 
                         permite ahorrar recursos si el jugador no está cerca de zonas no visibles o relevantes.
                     </p>
-                    <h3>Decisiones técnicas</h3>
-                    <ul>
-                        <li>Sistema de Chunks: gestiona la parte visual dinámica solo cuando está el jugador cerca.</li>
-                    </ul>
 
                     <!-- LODs -->
-                    <h2 class="big-text-family">Niveles de detalle (LODs)</h2>
-                    <p>
-                        Junto al sistema de chunks y Tick para optimizar finalmente el rendimiento de forma exponencial se 
-                        implementó un sistema de LODs, cada objeto del juego tiene diferentes modelos con diferentes niveles 
-                        de detalle, dependiendo de la distancia del jugador a dicho objeto se muestra un modelo u otro, 
-                        esto hace que los objetos que están lejos del jugador tengan un nivel de detalle bajo y por lo tanto 
-                        sean más baratos de renderizar, mientras que los objetos cercanos al jugador tienen un nivel de detalle 
-                        alto para que se vean mejor.
-                    </p>
+                    <h2 class="subtitle underline-dashed">Niveles de detalle (LODs)</h2>
+                    <ul>
+                        <li>Diferentes niveles de detalle para mayor rendimiento.</li>
+                    </ul>
 
                     <!-- NAVMESH -->
-                    <h2 class="big-text-family">Navegación (NavMesh)</h2>
+                    <h2 class="subtitle underline-dashed">Movimiento del personaje (NavMesh)</h2>
+                    <ul>
+                        <li>Cálculo de rutas con NavMesh.</li>
+                        <li>NavMeshObstacle para elementos del mapa dinámicos.</li>
+                        <li>Movimiento Point and Click.</li>
+                        <li>Diferente movimiento en ratón y mando para mayor fluidez.</li>
+                    </ul>
+                    <h3 class="small-title decorated-left-text">Descripción</h3>
                     <p>
-                        El juego tiene una vista cenital por lo que al principio me gustó que el jugador se moviese hacia donde se 
-                        hace clic en la pantalla, para esto la forma más sencilla era usar el componente NavMesh de Unity, este 
-                        permite sin mucha complicación calcular la ruta que seguirá el jugador para llegar desde el punto actual 
-                        al nuevo, pero a la hora de agregar nuevas estructuras decidí probar a recalcular el NavMesh cuando una 
-                        estructura se instanciaba o se destruía, después de varios cálculos mudé a NavMeshObstacle para las estructuras 
-                        además haciendo que este funcionara una vez se construyeran y estuivieran quietas para ahorrar recursos.
+                        Para mover al personaje desde una vista cenital usé NavMesh de Unity para poder mover al personaje por el terreno 
+                        con el cursor, más tarde implementé un movimiento normal para el mando mediante joystick.
+                    </p>
+
+                </section>
+            </div>
+        </section>
+
+        <!-- DEVELOPMENT -->
+        <section id="development" class="information-container blackBox">
+            <div class="information-content">
+                <h1 class="title">Desarrollo</h1>
+                <section id="development-container">
+                    <h2 class="subtitle underline-dashed">Arquitectura</h2>
+                    <p>
+
+                    </p>
+
+                    <h2>Decisiones Técnicas</h2>
+                    <h3 class="small-title decorated-left-text">Optimización</h3>
+                    <p>
+                        La optimización es algo que estuvo presente en todo el desarrollo, siempre se iteraba y verificaba como 
+                        funcionaba el juego y cuantos FPS estables había al realizar diferentes acciones.
+                    </p>
+
+                    <h2 class="subtitle underline-dashed">Retos y dificultades</h2>
+                    <p>
+
+                    </p>
+                </section>
+            </div>
+        </section>
+
+        <!-- LEARN -->
+        <section id="learn" class="information-container whiteBox">
+            <div class="information-content">
+                <h1 class="title">Aprendizaje</h1>
+                <section id="development-container">
+                    <h2 class="subtitle underline-dashed">¿Qué aprendí?</h2>
+                    <p>
+
+                    </p>
+
+                    <h2 class="subtitle underline-dashed">Posibles Mejoras</h2>
+                    <p>
+                        
                     </p>
 
                 </section>
@@ -314,7 +337,7 @@
         </section>
 
         <!-- GALLERY -->
-        <section id="gallery">
+        <section id="gallery" class="blackBox">
             <h1>Galería</h1>
             <div class="carrousel-container"
                  data-carrousel-path="../../media/projects/magictory" 
