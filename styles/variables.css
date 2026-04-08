@@ -14,6 +14,7 @@
     --title-font: 'Zain';
     --border-color: black;
     --border-width: 2px;
+    --span-color: black;
     --highlight: var(--brand-color);
 
     --blur: 10px;

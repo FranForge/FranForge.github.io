@@ -6,6 +6,7 @@
     --title-font: 'Zain';
     --border-color: var(--brand-color);
     --highlight: var(--brand-color);
+    --span-color: var(--brand-color);
 }
 
 .theme-header-a{
@@ -16,4 +17,5 @@
     --title-font: 'Zain';
     --border-color: var(--light-grey);
     --highlight: var(--light-grey);
+    --span-color: var(--brand-color);
 }
