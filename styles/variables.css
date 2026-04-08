@@ -25,7 +25,10 @@
     
     --margin-x: 20dvw;
 
-    --font-big: 3dvh;
-    --font-mid: 2dvh;
-    --font-small: 1dvh;
+    --font-size: 2dvh;
+    --huge-font-size: 5rem;
+    --big-font-size: 2rem;
+    --mid-font-size: 1rem;
+    --small-font-size: 0.75rem;
+    --tiny-font-size: 0.5rem;
 }

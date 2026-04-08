@@ -19,3 +19,25 @@
     --highlight: var(--light-grey);
     --span-color: var(--brand-color);
 }
+
+.theme-hero-panel{
+    --bg: rgba(0, 0, 0, 0.75);
+    --text-color: var(--light-grey);
+    --text-font: 'Zain';
+    --title-color: var(--light-grey);
+    --title-font: 'Zain';
+    --border-color: var(--light-grey);
+    --highlight: var(--light-grey);
+    --span-color: var(--brand-color);
+}
+
+.theme-hero-content{
+    --bg: black;
+    --text-color: white;
+    --text-font: 'Zain';
+    --title-color: white;
+    --title-font: 'Zain';
+    --border-color: var(--brand-color);
+    --highlight: var(--brand-color);
+    --span-color: var(--brand-color);
+}

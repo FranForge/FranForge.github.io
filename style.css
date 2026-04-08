@@ -1,5 +1,4 @@
 @import url('styles/variables.css');
-@import url('styles/colors.css');
 @import url('styles/themes.css');
 @import url('styles/effects.css');
 @import url('styles/layout.css');
@@ -33,7 +32,7 @@
 }
 
 :root{
-    font-size: var(--font-mid);
+    font-size: var(--font-size);
     scroll-behavior: smooth;
 }
 
@@ -51,20 +50,27 @@ h1, h2, h3, h4, h5{
 
 h1{
     font-size: 2rem;
+    line-height: 2rem;
 }
 
 h2{
     font-size: 1.5rem;
+    line-height: 1.5rem;
     
 }
 
 h3{
     font-size: 1.2rem;
+    line-height: 1.2rem;
 }
 
 a{
     color: var(--text-color);
     text-decoration: none;
+}
+
+p{
+    color: var(--text-color);
 }
 
 span{

@@ -32,38 +32,63 @@
 
         <!-- HEADER NAV -->
         <header class="pos-fixed z-top h-10 w-100 border-b overflow-hidden bg flex flex-row items-center 
-        justify-end theme-header-base scroll-effect" id="header" 
-        data-scroll-min-y="100" data-scroll-max-y="0">
+                justify-end theme-header-base scroll-effect" id="header" 
+                data-scroll-min-y="100" data-scroll-max-y="0">
 
             <section class="flex flex-row m-x-5 justify-center gap mx-auto">
+
                 <nav class="flex items-center justify-center gap text-white">
+
                     <a href="home.html" class="header-logo">
                         <img class="h-8 fit" data-src="../icons/logo.svg" alt="FranForge">
                     </a>
-                    <a href="#presentation" class="flex border-l-solid border-l p-x-l-small theme-header-a text-shadow desktop-only">About me</a>
-                    <a href="projects/all.html" class="flex border-l-solid border-l p-x-l-small theme-header-a text-shadow">Projects</a>
-                    <a href="#skills" class="flex border-l-solid border-l p-x-l-small theme-header-a text-shadow desktop-only">Skills</a>
-                    <a href="#experience" class="flex border-l-solid border-l p-x-l-small theme-header-a text-shadow desktop-only">Experience</a>
-                    <a href="#blog" class="flex border-l-solid border-l p-x-l-small theme-header-a text-shadow desktop-only">Blogs</a>
-                    <a href="#contact" class="flex border-l-solid border-l p-x-l-small theme-header-a text-shadow">Contact</a>
+                    <a href="#presentation" class="flex border-l-solid border-l p-x-l-small theme-header-a text-shadow desktop-only">
+                        About me
+                    </a>
+                    <a href="projects/all.html" class="flex border-l-solid border-l p-x-l-small theme-header-a text-shadow">
+                        Projects
+                    </a>
+                    <a href="#skills" class="flex border-l-solid border-l p-x-l-small theme-header-a text-shadow desktop-only">
+                        Skills
+                    </a>
+                    <a href="#experience" class="flex border-l-solid border-l p-x-l-small theme-header-a text-shadow desktop-only">
+                        Experience
+                    </a>
+                    <a href="#blog" class="flex border-l-solid border-l p-x-l-small theme-header-a text-shadow desktop-only">
+                        Blogs
+                    </a>
+                    <a href="#contact" class="flex border-l-solid border-l p-x-l-small theme-header-a text-shadow">
+                        Contact
+                    </a>
+
                 </nav>
+
             </section>
+
         </header>
 
         <!-- HERO -->
-        <section id="hero" class="scroll-effect" data-scroll-min-y="100" data-scroll-max-y="0">
+        <section id="hero" class="pos-sticky h-100 z-bot overflow-hidden scroll-effect" data-scroll-min-y="100" data-scroll-max-y="0">
+
             <div class="clean-fullscreen-video">
+                
                 <video preload="auto" autoplay muted loop>
                     <source src="../media/projects/magictory/video.mp4">
                 </video>
+
             </div>
-            <div id="hero-background-panel"></div>
-            <div id="hero-content" class="content">
-                <p id="hero-title">FranForge</p>
-                <p id="hero-subtitle">
+
+            <div id="hero-background-panel" class="pos-absolute pos-0 h-100-p w-100-p bg theme-hero-panel"></div>
+
+            <div id="hero-content" class="pos-absolute pos-0 h-100-p w-100-p flex flex-col justify-center items-center theme-hero-content">
+                
+                <p id="hero-title" class="huge-text huge-line uppercase bold-text m-0 p-0">FranForge</p>
+
+                <p id="hero-subtitle" class="big-text big-line uppercase bold-text m-0 p-0">
                     <span class="rotating-text" data-texts="Game,Gameplay,Systems,AI,Combat,Software,C#,C++"></span> 
                     Developer
                 </p>
+
             </div>
             
         </section>
