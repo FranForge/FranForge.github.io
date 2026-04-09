@@ -212,7 +212,6 @@ span {
   width: 70%;
   height: 100%;
   gap: 50px;
-  clip-path: polygon(0 0, 100% 0%, 95% 100%, 0% 100%);
 }
 .summary-section .short-section {
   display: flex;
@@ -281,6 +280,41 @@ span {
     margin-left: 5dvw;
     margin-right: 5dvw;
   }
+}
+
+.button {
+  border-radius: 100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border: 2px solid;
+  border-color: black;
+  min-width: 200px;
+  min-height: 50px;
+  overflow: hidden;
+  transition: border-color 0.25s ease;
+}
+.button .content {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  transition: background-color 0.25s ease;
+}
+.button .content p {
+  color: black;
+  transition: color 0.25s ease;
+}
+.button:hover {
+  border-color: #8921ff;
+}
+.button:hover .content {
+  background-color: black;
+}
+.button:hover .content p {
+  color: white;
 }
 
 .home-header {

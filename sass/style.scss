@@ -160,6 +160,12 @@ $tiny: 0.5rem;
     }
 }
 
+//General
+//----------------------------------------------------------------------
+@mixin rounded{
+    border-radius: 100px;
+}
+
 //======================================================================
 // HTML PURO
 //======================================================================
@@ -310,7 +316,6 @@ span{
         width: 70%;
         height: 100%;
         gap: 50px;
-        clip-path: polygon(0 0, 100% 0%, 95% 100%, 0% 100%);
     }
 
     .short-section{
@@ -367,6 +372,45 @@ span{
 
     .content{
         @include margin-x-large();
+    }
+}
+
+//Botones
+//----------------------------------------------------------------------
+.button{
+    @include rounded();
+    @include flex-x-center();
+    position: relative;
+    border: 2px solid;
+    border-color: black;
+    min-width: 200px;
+    min-height: 50px;
+    overflow: hidden;
+    transition: border-color 0.25s ease;
+
+    .content{
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        transition: background-color 0.25s ease;
+
+        p{
+            color: black;
+            transition: color 0.25s ease;
+        }
+    }
+
+    &:hover{
+        border-color: colors.$brand-color;
+
+        .content{
+            background-color: black;
+
+            p{
+                color: white;
+            }
+        }
     }
 }
 
