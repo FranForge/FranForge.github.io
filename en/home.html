@@ -15,7 +15,7 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="../sass/style.css">
         <link href="../icons/logo.ico" rel="icon" type="image/x-icon" />
         <link href="../icons/logo.ico" rel="shortcut icon" type="image/x-icon" />
 
@@ -31,33 +31,32 @@
     <body>
 
         <!-- HEADER NAV -->
-        <header class="pos-fixed z-top h-10 w-100 border-b overflow-hidden bg flex flex-row items-center 
-                justify-end theme-header-base scroll-effect" id="header" 
+        <header class="home-header scroll-effect" id="header" 
                 data-scroll-min-y="100" data-scroll-max-y="0">
 
-            <section class="flex flex-row m-x-5 justify-center gap mx-auto">
+            <section class="content">
 
-                <nav class="flex items-center justify-center gap text-white">
+                <nav class="navigation">
 
-                    <a href="home.html" class="header-logo">
-                        <img class="h-8 fit" data-src="../icons/logo.svg" alt="FranForge">
+                    <a href="home.html">
+                        <img data-src="../icons/logo.svg" alt="FranForge">
                     </a>
-                    <a href="#presentation" class="flex border-l-solid border-l p-x-l-small theme-header-a text-shadow desktop-only">
+                    <a href="#presentation" class="link">
                         About me
                     </a>
-                    <a href="projects/all.html" class="flex border-l-solid border-l p-x-l-small theme-header-a text-shadow">
+                    <a href="projects/all.html" class="link">
                         Projects
                     </a>
-                    <a href="#skills" class="flex border-l-solid border-l p-x-l-small theme-header-a text-shadow desktop-only">
+                    <a href="#skills" class="link">
                         Skills
                     </a>
-                    <a href="#experience" class="flex border-l-solid border-l p-x-l-small theme-header-a text-shadow desktop-only">
+                    <a href="#experience" class="link">
                         Experience
                     </a>
-                    <a href="#blog" class="flex border-l-solid border-l p-x-l-small theme-header-a text-shadow desktop-only">
+                    <a href="#blog" class="link">
                         Blogs
                     </a>
-                    <a href="#contact" class="flex border-l-solid border-l p-x-l-small theme-header-a text-shadow">
+                    <a href="#contact" class="link">
                         Contact
                     </a>
 
@@ -68,9 +67,9 @@
         </header>
 
         <!-- HERO -->
-        <section id="hero" class="pos-sticky h-100 z-bot overflow-hidden scroll-effect" data-scroll-min-y="100" data-scroll-max-y="0">
+        <section id="hero" class="hero scroll-effect" data-scroll-min-y="100" data-scroll-max-y="0">
 
-            <div class="clean-fullscreen-video">
+            <div class="black-bg-panel">
                 
                 <video preload="auto" autoplay muted loop>
                     <source src="../media/projects/magictory/video.mp4">
@@ -78,13 +77,13 @@
 
             </div>
 
-            <div id="hero-background-panel" class="pos-absolute pos-0 h-100-p w-100-p bg theme-hero-panel"></div>
+            <div id="hero-background-panel" class="black-bg-translucid-panel"></div>
 
-            <div id="hero-content" class="pos-absolute pos-0 h-100-p w-100-p flex flex-col justify-center items-center theme-hero-content">
+            <div id="hero-content" class="content">
                 
-                <p id="hero-title" class="huge-text huge-line uppercase bold-text m-0 p-0">FranForge</p>
+                <p id="hero-title" class="title">FranForge</p>
 
-                <p id="hero-subtitle" class="big-text big-line uppercase bold-text m-0 p-0">
+                <p id="hero-subtitle" class="subtitle">
                     <span class="rotating-text" data-texts="Game,Gameplay,Systems,AI,Combat,Software,C#,C++"></span> 
                     Developer
                 </p>

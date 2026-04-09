@@ -1,0 +1,314 @@
+@use 'colors';
+@use 'fonts';
+
+//======================================================================
+// VARIABLES
+//======================================================================
+
+//Dinamicas
+//----------------------------------------------------------------------
+$bg: black;
+$text-color: white;
+$text-font: #{fonts.$main-font};
+$title-color: white;
+$title-font: #{fonts.$title-font};
+$border-color: colors.$brand-color;
+$highlight: colors.$brand-color;
+$span-color: colors.$brand-color;
+
+//Header
+//----------------------------------------------------------------------
+$huge: 5rem;
+$big: 2rem;
+$mid: 1rem;
+$small: 0.75rem;
+$tiny: 0.5rem;
+
+//======================================================================
+// HTML PURO
+//======================================================================
+
+:root{
+    scroll-behavior: smooth;
+    font-size: 2dvh;
+    font-family: #{fonts.$main-font};
+}
+
+body{
+    margin: 0;
+    background-color: black;
+    color: $text-color;
+    font-family: $text-font;
+}
+
+h1, h2, h3, h4, h5{
+    color: $title-color;
+    font-family: $title-font;
+}
+
+h1{
+    font-size: 2rem;
+    line-height: 2rem;
+}
+
+h2{
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    
+}
+
+h3{
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+}
+
+p{
+    color: $text-color;
+    font-family: $text-font;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    color: $text-color;
+    font-family: $text-font;
+}
+
+span{
+    font-weight: bold;
+    color: $span-color;
+    font-family: $text-font;
+}
+
+//======================================================================
+// ELEMENTOS BASE (MIXINS)
+//======================================================================
+
+
+
+//Establece un flex para mostrar las cosas en horizontal y al final.
+@mixin flex-end{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+//Muestra sombra en los textos.
+@mixin text-shadow{
+    text-shadow: black 2px 2px;
+}
+
+//Muestra una seccion de fondo que no se mueve.
+@mixin sticky-background-section{
+    position: sticky;
+    top: 0;
+    height: 100dvh;
+    width: 100dvw;
+    z-index: -10;
+    overflow-x: hidden;
+}
+
+@mixin background-panel($background: black, $opacity: 0.75){
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: $background;
+    opacity: $opacity;
+}
+
+//Margen
+//----------------------------------------------------------------------
+@mixin margin-0{margin: 0;}
+
+//Establece la pagina centrada horizontalmente dejando bastante espacio 
+//hacia los lados en PC y poco en movil.
+@mixin margin-x-large{
+    margin-left: 20dvw;
+    margin-right: 20dvw;
+
+    @media (max-width: 768px) {
+    margin-left: 5dvw;
+    margin-right: 5dvw;
+  }
+}
+
+//Textos
+//----------------------------------------------------------------------
+@mixin text-left { text-align: left; }
+@mixin text-center { text-align: center; }
+@mixin text-right { text-align: right; }
+@mixin uppercase { text-transform: uppercase; }
+@mixin lowercase { text-transform: lowercase; }
+@mixin huge-text { font-size: $huge; }
+@mixin big-text { font-size: $big; }
+@mixin mid-text { font-size: $mid; }
+@mixin small-text { font-size: $small; }
+@mixin tiny-text { font-size: $tiny; }
+@mixin huge-line { line-height: $huge; }
+@mixin big-line { line-height: $big; }
+@mixin mid-line { line-height: $mid; }
+@mixin small-line { line-height: $small; }
+@mixin tiny-line { line-height: $tiny; }
+@mixin bold-text { font-weight: bold; }
+@mixin italic-text { font-style: italic; }
+@mixin underline-text { text-decoration: underline; }
+
+//======================================================================
+// ELEMENTOS UTILES (CLASES)
+//======================================================================
+
+//Margen
+//----------------------------------------------------------------------
+.margin-0{@include margin-0();}
+
+//Textos
+//----------------------------------------------------------------------
+.text-left { @include text-left(); }
+.text-center { @include text-center(); }
+.text-right { @include text-right(); }
+.uppercase { @include uppercase(); }
+.lowercase { @include lowercase(); }
+.huge-text { @include huge-text(); }
+.big-text { @include big-text(); }
+.mid-text { @include mid-text(); }
+.small-text { @include small-text(); }
+.tiny-text { @include tiny-text(); }
+.huge-line { @include huge-line(); }
+.big-line { @include big-line(); }
+.mid-line { @include mid-line(); }
+.small-line { @include small-line(); }
+.tiny-line { @include tiny-line(); }
+.bold-text { @include bold-text(); }
+.italic-text { @include italic-text(); }
+.underline-text { @include underline-text(); }
+
+//======================================================================
+// ELEMENTOS COMPLEJOS GENERICOS
+//======================================================================
+
+//Seccion que se muestra por debajo.
+//----------------------------------------------------------------------
+.sticky-section{
+    @include sticky-background-section();
+
+    &.scroll-effect-on{
+
+        .content{
+            opacity: 0;
+        }
+
+    }
+
+    .content{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        transition: opacity 1s ease;
+    }
+}
+
+//Paneles
+//----------------------------------------------------------------------
+.black-bg-panel{@include background-panel(black, 1);}
+.black-bg-translucid-panel{@include background-panel(black, 0.75);}
+
+//======================================================================
+// ELEMENTOS COMPLEJOS DEFINIDOS
+//======================================================================
+
+//Header
+//----------------------------------------------------------------------
+.home-header{
+    @include text-shadow();
+    position: fixed;
+    width: 100dvw;
+    height: 10dvh;
+    z-index: 10;
+    overflow: hidden;
+    border-bottom: colors.$transparent-color solid 2px;
+    transition: background-color 1s ease, border-bottom 1s ease;
+
+    &.scroll-effect-on{
+        background-color: colors.$semi-transparent-color;
+        border-bottom: colors.$brand-color solid 2px;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+    }
+
+    .content{
+        height: 100%;
+        width: 90dvw;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .navigation{
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        color: white;
+        padding: 10px;
+        align-items: center;
+        align-self: center;
+        justify-content: center;
+
+        a{
+            padding-left: 10px;
+            padding-right: 10px;
+            opacity: 0.8;
+            transition: opacity 0.25s ease;
+
+            &:hover{
+                opacity: 1;
+            }
+
+            img{
+                height: 8dvh;
+                width: auto;
+                object-fit: contain;
+            }
+        }
+
+        .link{
+            border-left: 1px white solid;
+        }
+    }
+}
+
+//Hero
+//----------------------------------------------------------------------
+.hero{
+    @extend .sticky-section;
+
+    .title{
+        @include margin-0();
+        @include huge-text();
+        @include huge-line();
+        @include uppercase();
+        @include bold-text();
+        @include text-center();
+    }
+
+    .subtitle{
+        @include margin-0();
+        @include big-text();
+        @include big-line();
+        @include uppercase();
+        @include bold-text();
+        @include text-center();
+    }
+}
+
+//======================================================================
+// TEMAS
+//======================================================================
+

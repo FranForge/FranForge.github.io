@@ -1,0 +1,259 @@
+@font-face {
+  font-family: "Alfa-Slab-One";
+  src: url("../fonts/Alfa_Slab_One/AlfaSlabOne-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Bowlby-One-SC";
+  src: url("../fonts/Bowlby_One_SC/BowlbyOneSC-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Zain";
+  src: url("../fonts/Zain/Zain-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Kanit";
+  src: url("../fonts/Kanit/Kanit-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+:root {
+  scroll-behavior: smooth;
+  font-size: 2dvh;
+  font-family: Zain;
+}
+
+body {
+  margin: 0;
+  background-color: black;
+  color: white;
+  font-family: Zain;
+}
+
+h1, h2, h3, h4, h5 {
+  color: white;
+  font-family: Kanit;
+}
+
+h1 {
+  font-size: 2rem;
+  line-height: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+}
+
+p {
+  color: white;
+  font-family: Zain;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  color: white;
+  font-family: Zain;
+}
+
+span {
+  font-weight: bold;
+  color: #8921ff;
+  font-family: Zain;
+}
+
+.margin-0 {
+  margin: 0;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.lowercase {
+  text-transform: lowercase;
+}
+
+.huge-text {
+  font-size: 5rem;
+}
+
+.big-text {
+  font-size: 2rem;
+}
+
+.mid-text {
+  font-size: 1rem;
+}
+
+.small-text {
+  font-size: 0.75rem;
+}
+
+.tiny-text {
+  font-size: 0.5rem;
+}
+
+.huge-line {
+  line-height: 5rem;
+}
+
+.big-line {
+  line-height: 2rem;
+}
+
+.mid-line {
+  line-height: 1rem;
+}
+
+.small-line {
+  line-height: 0.75rem;
+}
+
+.tiny-line {
+  line-height: 0.5rem;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+.italic-text {
+  font-style: italic;
+}
+
+.underline-text {
+  text-decoration: underline;
+}
+
+.sticky-section, .hero {
+  position: sticky;
+  top: 0;
+  height: 100dvh;
+  width: 100dvw;
+  z-index: -10;
+  overflow-x: hidden;
+}
+.sticky-section.scroll-effect-on .content, .scroll-effect-on.hero .content {
+  opacity: 0;
+}
+.sticky-section .content, .hero .content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: opacity 1s ease;
+}
+
+.black-bg-panel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 1;
+}
+
+.black-bg-translucid-panel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.75;
+}
+
+.home-header {
+  text-shadow: black 2px 2px;
+  position: fixed;
+  width: 100dvw;
+  height: 10dvh;
+  z-index: 10;
+  overflow: hidden;
+  border-bottom: rgba(0, 0, 0, 0) solid 2px;
+  transition: background-color 1s ease, border-bottom 1s ease;
+}
+.home-header.scroll-effect-on {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-bottom: #8921ff solid 2px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+.home-header .content {
+  height: 100%;
+  width: 90dvw;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.home-header .navigation {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  padding: 10px;
+  align-items: center;
+  align-self: center;
+  justify-content: center;
+}
+.home-header .navigation a {
+  padding-left: 10px;
+  padding-right: 10px;
+  opacity: 0.8;
+  transition: opacity 0.25s ease;
+}
+.home-header .navigation a:hover {
+  opacity: 1;
+}
+.home-header .navigation a img {
+  height: 8dvh;
+  width: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.home-header .navigation .link {
+  border-left: 1px white solid;
+}
+
+.hero .title {
+  margin: 0;
+  font-size: 5rem;
+  line-height: 5rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+}
+.hero .subtitle {
+  margin: 0;
+  font-size: 2rem;
+  line-height: 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+}/*# sourceMappingURL=style.css.map */
