@@ -5,80 +5,13 @@
 // VARIABLES
 //======================================================================
 
-//Dinamicas
-//----------------------------------------------------------------------
-$bg: black;
-$text-color: white;
-$text-font: #{fonts.$main-font};
-$title-color: white;
-$title-font: #{fonts.$title-font};
-$border-color: colors.$brand-color;
-$highlight: colors.$brand-color;
-$span-color: colors.$brand-color;
-
-//Header
+//Textos
 //----------------------------------------------------------------------
 $huge: 5rem;
 $big: 2rem;
 $mid: 1rem;
 $small: 0.75rem;
 $tiny: 0.5rem;
-
-//======================================================================
-// HTML PURO
-//======================================================================
-
-:root{
-    scroll-behavior: smooth;
-    font-size: 2dvh;
-    font-family: #{fonts.$main-font};
-}
-
-body{
-    margin: 0;
-    background-color: black;
-    color: $text-color;
-    font-family: $text-font;
-}
-
-h1, h2, h3, h4, h5{
-    color: $title-color;
-    font-family: $title-font;
-}
-
-h1{
-    font-size: 2rem;
-    line-height: 2rem;
-}
-
-h2{
-    font-size: 1.5rem;
-    line-height: 1.5rem;
-    
-}
-
-h3{
-    font-size: 1.2rem;
-    line-height: 1.2rem;
-}
-
-p{
-    color: $text-color;
-    font-family: $text-font;
-}
-
-a{
-    text-decoration: none;
-    color: inherit;
-    color: $text-color;
-    font-family: $text-font;
-}
-
-span{
-    font-weight: bold;
-    color: $span-color;
-    font-family: $text-font;
-}
 
 //======================================================================
 // ELEMENTOS BASE (MIXINS)
@@ -162,6 +95,95 @@ span{
 @mixin italic-text { font-style: italic; }
 @mixin underline-text { text-decoration: underline; }
 
+//Secciones
+//----------------------------------------------------------------------
+@mixin section-base{position: relative;}
+
+//Temas
+//----------------------------------------------------------------------
+@mixin theme($background: white, $text: black, $text-f: #{fonts.$main-font}, 
+             $title: black, $title-f: #{fonts.$title-font}, 
+             $border: black, $span: black, $highlights: black){
+
+    background: $background;
+    color: $text;
+    font-family: $text-f;
+    border-color: $border;
+
+    body{
+        background: $background;
+        color: $text;
+        font-family: $text-f;
+    }
+
+    h1, h2, h3, h4, h5 {
+        color: $title;
+        font-family: $title-f;
+    }
+
+    p{
+        color: $text;
+        font-family: $text-f;
+    }
+
+    a {
+        color: $text;
+        font-family: $text-f;
+    }
+
+    span {
+        color: $span;
+    }
+}
+
+//======================================================================
+// HTML PURO
+//======================================================================
+
+:root{
+    scroll-behavior: smooth;
+    font-size: 2dvh;
+    font-family: #{fonts.$main-font};
+}
+
+body{
+    margin: 0;
+    background: black;
+    color: white;
+}
+
+h1, h2, h3, h4, h5{
+    @include uppercase();
+    color: white;
+    font-family: #{fonts.$title-font};
+}
+
+h1{
+    font-size: 2rem;
+    line-height: 2rem;
+}
+
+h2{
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    
+}
+
+h3{
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+span{
+    color: colors.$brand-color;
+    font-weight: bold;
+}
+
 //======================================================================
 // ELEMENTOS UTILES (CLASES)
 //======================================================================
@@ -199,6 +221,7 @@ span{
 //----------------------------------------------------------------------
 .sticky-section{
     @include sticky-background-section();
+    
 
     &.scroll-effect-on{
 
@@ -225,6 +248,26 @@ span{
 //----------------------------------------------------------------------
 .black-bg-panel{@include background-panel(black, 1);}
 .black-bg-translucid-panel{@include background-panel(black, 0.75);}
+
+//Secciones
+//----------------------------------------------------------------------
+
+//Seccion resumen que tiene una imagen en el lateral.
+.summary-section{
+    @include section-base();
+    height: 110dvh;
+    width: 100dvw;
+    overflow: hidden;
+}
+
+.information-section{
+    @include section-base();
+    min-height: 70dvh;
+
+    .content{
+        @include margin-x-large();
+    }
+}
 
 //======================================================================
 // ELEMENTOS COMPLEJOS DEFINIDOS
@@ -315,3 +358,24 @@ span{
 // TEMAS
 //======================================================================
 
+.theme-transparent{
+    @include theme(transparent, 
+                white, 
+                #{fonts.$main-font}, 
+                black, 
+                #{fonts.$title-font}, 
+                colors.$brand-color, 
+                colors.$brand-color, 
+                colors.$brand-color);
+}
+
+.theme-black-over-white-serious{
+    @include theme(white, 
+                black, 
+                #{fonts.$main-font}, 
+                black, 
+                #{fonts.$title-font}, 
+                black, 
+                black, 
+                black);
+}

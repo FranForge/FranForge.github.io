@@ -30,12 +30,12 @@
 
 body {
   margin: 0;
-  background-color: black;
+  background: black;
   color: white;
-  font-family: Zain;
 }
 
 h1, h2, h3, h4, h5 {
+  text-transform: uppercase;
   color: white;
   font-family: Kanit;
 }
@@ -55,22 +55,14 @@ h3 {
   line-height: 1.2rem;
 }
 
-p {
-  color: white;
-  font-family: Zain;
-}
-
 a {
   text-decoration: none;
   color: inherit;
-  color: white;
-  font-family: Zain;
 }
 
 span {
-  font-weight: bold;
   color: #8921ff;
-  font-family: Zain;
+  font-weight: bold;
 }
 
 .margin-0 {
@@ -186,6 +178,28 @@ span {
   opacity: 0.75;
 }
 
+.summary-section {
+  position: relative;
+  height: 110dvh;
+  width: 100dvw;
+  overflow: hidden;
+}
+
+.information-section {
+  position: relative;
+  min-height: 70dvh;
+}
+.information-section .content {
+  margin-left: 20dvw;
+  margin-right: 20dvw;
+}
+@media (max-width: 768px) {
+  .information-section .content {
+    margin-left: 5dvw;
+    margin-right: 5dvw;
+  }
+}
+
 .home-header {
   text-shadow: black 2px 2px;
   position: fixed;
@@ -254,4 +268,58 @@ span {
   text-transform: uppercase;
   font-weight: bold;
   text-align: center;
+}
+
+.theme-transparent {
+  background: transparent;
+  color: white;
+  font-family: Zain;
+  border-color: #8921ff;
+}
+.theme-transparent body {
+  background: transparent;
+  color: white;
+  font-family: Zain;
+}
+.theme-transparent h1, .theme-transparent h2, .theme-transparent h3, .theme-transparent h4, .theme-transparent h5 {
+  color: black;
+  font-family: Kanit;
+}
+.theme-transparent p {
+  color: white;
+  font-family: Zain;
+}
+.theme-transparent a {
+  color: white;
+  font-family: Zain;
+}
+.theme-transparent span {
+  color: #8921ff;
+}
+
+.theme-black-over-white-serious {
+  background: white;
+  color: black;
+  font-family: Zain;
+  border-color: black;
+}
+.theme-black-over-white-serious body {
+  background: white;
+  color: black;
+  font-family: Zain;
+}
+.theme-black-over-white-serious h1, .theme-black-over-white-serious h2, .theme-black-over-white-serious h3, .theme-black-over-white-serious h4, .theme-black-over-white-serious h5 {
+  color: black;
+  font-family: Kanit;
+}
+.theme-black-over-white-serious p {
+  color: black;
+  font-family: Zain;
+}
+.theme-black-over-white-serious a {
+  color: black;
+  font-family: Zain;
+}
+.theme-black-over-white-serious span {
+  color: black;
 }/*# sourceMappingURL=style.css.map */
