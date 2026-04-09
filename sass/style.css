@@ -65,6 +65,22 @@ span {
   font-weight: bold;
 }
 
+img {
+  height: 10dvh;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+video {
+  display: block;
+  min-height: 100%;
+  min-width: 100%;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .margin-0 {
   margin: 0;
 }
@@ -145,14 +161,14 @@ span {
   position: sticky;
   top: 0;
   height: 100dvh;
-  width: 100dvw;
+  width: 100%;
   z-index: -10;
   overflow-x: hidden;
 }
-.sticky-section.scroll-effect-on .content, .scroll-effect-on.hero .content {
+.sticky-section.scroll-effect-on > .content, .scroll-effect-on.hero > .content {
   opacity: 0;
 }
-.sticky-section .content, .hero .content {
+.sticky-section > .content, .hero > .content {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -181,13 +197,8 @@ span {
 .summary-section {
   position: relative;
   height: 110dvh;
-  width: 100dvw;
+  width: 100%;
   overflow: hidden;
-}
-.summary-section img {
-  height: 10dvh;
-  -o-object-fit: contain;
-     object-fit: contain;
 }
 .summary-section .title {
   font-size: 1rem;
@@ -203,7 +214,7 @@ span {
   text-transform: uppercase;
   font-family: Zain;
 }
-.summary-section .content {
+.summary-section > .content {
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
@@ -216,7 +227,7 @@ span {
 .summary-section .short-section {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   padding: 10dvh 2dvh;
   flex-basis: 10%;
@@ -243,7 +254,7 @@ span {
 .summary-section .long-section {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   padding: 10dvh 2dvh;
   flex-basis: 50%;
@@ -269,17 +280,105 @@ span {
 
 .information-section {
   position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
   min-height: 70dvh;
+  padding: 10vh 0;
 }
-.information-section .content {
+.information-section > .content {
   margin-left: 20dvw;
   margin-right: 20dvw;
 }
 @media (max-width: 768px) {
-  .information-section .content {
+  .information-section > .content {
     margin-left: 5dvw;
     margin-right: 5dvw;
   }
+}
+
+.cards-section {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+.cards-section .card {
+  border-radius: 0.5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  position: relative;
+  flex-basis: 30%;
+  border-style: solid;
+  border-width: 2px;
+  overflow: hidden;
+  height: 70dvh;
+  transition: border-color 0.25s ease;
+}
+.cards-section .card .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding: 10px;
+}
+.cards-section .card .content .description {
+  width: 100%;
+}
+.cards-section .card .content .date {
+  width: 100%;
+  border-top: rgb(210, 210, 210) 2px dashed;
+}
+.cards-section .card .content .attributes-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow: hidden;
+  gap: 5px;
+}
+.cards-section .card .content .attributes-container .attribute-card {
+  border-radius: 0.5vh;
+  padding: 5px;
+  color: white;
+}
+.cards-section .card .img-section {
+  position: absolute;
+  bottom: 0;
+  height: 45%;
+  width: 100%;
+  background-color: black;
+}
+.cards-section .card .img-section img {
+  min-height: 100%;
+  min-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.cards-section .card .img-section .read-more {
+  border-radius: 0.5vh;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background-color: black;
+  padding: 5px;
+  color: white;
+}
+.cards-section .card:hover {
+  border-color: #8921ff;
+}
+.cards-section .card:hover .read-more {
+  background-color: #8921ff;
+  transition: background-color 0.25s ease;
 }
 
 .button {
@@ -297,10 +396,15 @@ span {
   transition: border-color 0.25s ease;
 }
 .button .content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   height: 100%;
   width: 100%;
   overflow: hidden;
+  background-color: white;
   transition: background-color 0.25s ease;
 }
 .button .content p {
@@ -401,7 +505,7 @@ span {
   font-family: Zain;
 }
 .theme-transparent h1, .theme-transparent h2, .theme-transparent h3, .theme-transparent h4, .theme-transparent h5 {
-  color: black;
+  color: white;
   font-family: Kanit;
 }
 .theme-transparent p {
@@ -441,4 +545,31 @@ span {
 }
 .theme-black-over-white-serious span {
   color: black;
+}
+
+.theme-white-card {
+  background: white;
+  color: black;
+  font-family: Zain;
+  border-color: white;
+}
+.theme-white-card body {
+  background: white;
+  color: black;
+  font-family: Zain;
+}
+.theme-white-card h1, .theme-white-card h2, .theme-white-card h3, .theme-white-card h4, .theme-white-card h5 {
+  color: grey;
+  font-family: Kanit;
+}
+.theme-white-card p {
+  color: black;
+  font-family: Zain;
+}
+.theme-white-card a {
+  color: black;
+  font-family: Zain;
+}
+.theme-white-card span {
+  color: #8921ff;
 }/*# sourceMappingURL=style.css.map */

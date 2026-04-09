@@ -50,10 +50,24 @@ $tiny: 0.5rem;
     text-shadow: black 2px 2px;
 }
 
+@mixin flex-y-start{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+@mixin flex-y-start-reversed{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
 @mixin flex-y-center{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
 }
 
@@ -64,12 +78,26 @@ $tiny: 0.5rem;
     align-items: center;
 }
 
+@mixin flex-y-end{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+
+@mixin flex-y-end-reversed{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: end;
+    align-items: center;
+}
+
 //Muestra una seccion de fondo que no se mueve.
 @mixin sticky-background-section{
     position: sticky;
     top: 0;
     height: 100dvh;
-    width: 100dvw;
+    width: 100%;
     z-index: -10;
     overflow-x: hidden;
 }
@@ -127,7 +155,7 @@ $tiny: 0.5rem;
 //----------------------------------------------------------------------
 @mixin theme($background: white, $text: black, $text-f: #{fonts.$main-font}, 
              $title: black, $title-f: #{fonts.$title-font}, 
-             $border: black, $span: black, $highlights: black){
+             $border: black, $span: black){
 
     background: $background;
     color: $text;
@@ -162,9 +190,8 @@ $tiny: 0.5rem;
 
 //General
 //----------------------------------------------------------------------
-@mixin rounded{
-    border-radius: 100px;
-}
+@mixin rounded{border-radius: 100px;}
+@mixin border-radius{border-radius: 0.5vh;}
 
 //======================================================================
 // HTML PURO
@@ -214,6 +241,20 @@ span{
     font-weight: bold;
 }
 
+img{
+    height: 10dvh;
+    object-fit: contain;
+}
+
+video{
+    display: block;
+    min-height: 100%;
+    min-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 //======================================================================
 // ELEMENTOS UTILES (CLASES)
 //======================================================================
@@ -255,13 +296,13 @@ span{
 
     &.scroll-effect-on{
 
-        .content{
+        > .content{
             opacity: 0;
         }
 
     }
 
-    .content{
+    > .content{
         position: absolute;
         width: 100%;
         height: 100%;
@@ -286,13 +327,8 @@ span{
 .summary-section{
     @include section-base();
     height: 110dvh;
-    width: 100dvw;
+    width: 100%;
     overflow: hidden;
-
-    img{
-        height: 10dvh;
-        object-fit: contain;
-    }
 
     .title{
         @include mid-text();
@@ -310,7 +346,7 @@ span{
         font-family: #{fonts.$main-font};
     }
 
-    .content{
+    > .content{
         @include flex-x-center-reversed();
         position: absolute;
         width: 70%;
@@ -368,10 +404,93 @@ span{
 
 .information-section{
     @include section-base();
+    @include text-center();
+    @include flex-y-center();
+    gap: 20px;
     min-height: 70dvh;
+    padding: 10vh 0;
 
-    .content{
+    > .content{
         @include margin-x-large();
+    }
+}
+
+.cards-section{
+    @include section-base();
+    @include flex-x-center();
+    flex-wrap: wrap;
+    gap: 40px;
+
+    .card{
+        @include border-radius();
+        @include flex-y-start();
+        position: relative;
+        flex-basis: 30%;
+        border-style: solid;
+        border-width: 2px;
+        overflow: hidden;
+        height: 70dvh;
+        transition: border-color 0.25s ease;
+
+        .content{
+            @include flex-y-start();
+            padding: 10px;
+
+            .description{
+                width: 100%;
+            }
+
+            .date{
+                width: 100%;
+                border-top: colors.$light-grey 2px dashed;
+            }
+
+            .attributes-container{
+                @include flex-x-center();
+                width: 100%;
+                overflow: hidden;
+                gap: 5px;
+
+                .attribute-card{
+                    @include border-radius();
+                    padding: 5px;
+                    color: white;
+                }
+            }
+        }
+
+        .img-section{
+            position: absolute;
+            bottom: 0;
+            height: 45%;
+            width: 100%;
+            background-color: black;
+
+            img{
+                min-height: 100%;
+                min-width: 100%;
+                object-fit: cover;
+            }
+
+            .read-more{
+                @include border-radius();
+                position: absolute;
+                bottom: 10px;
+                right: 10px;
+                background-color: black;
+                padding: 5px;
+                color: white;
+            }
+        }
+
+        &:hover{
+            border-color: colors.$brand-color;
+
+            .read-more{
+                background-color: colors.$brand-color;
+                transition: background-color 0.25s ease;
+            }
+        }
     }
 }
 
@@ -389,10 +508,12 @@ span{
     transition: border-color 0.25s ease;
 
     .content{
+        @include flex-x-center();
         position: absolute;
         height: 100%;
         width: 100%;
         overflow: hidden;
+        background-color: white;
         transition: background-color 0.25s ease;
 
         p{
@@ -507,9 +628,8 @@ span{
     @include theme(transparent, 
                 white, 
                 #{fonts.$main-font}, 
-                black, 
+                white, 
                 #{fonts.$title-font}, 
-                colors.$brand-color, 
                 colors.$brand-color, 
                 colors.$brand-color);
 }
@@ -521,6 +641,15 @@ span{
                 black, 
                 #{fonts.$title-font}, 
                 black, 
-                black, 
                 black);
+}
+
+.theme-white-card{
+    @include theme(white, 
+                black, 
+                #{fonts.$main-font}, 
+                grey, 
+                #{fonts.$title-font}, 
+                white, 
+                colors.$brand-color);
 }
