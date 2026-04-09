@@ -184,6 +184,89 @@ span {
   width: 100dvw;
   overflow: hidden;
 }
+.summary-section img {
+  height: 10dvh;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.summary-section .title {
+  font-size: 1rem;
+  line-height: 1rem;
+  margin: 3dvh 0;
+  color: grey;
+  font-family: Zain;
+}
+.summary-section .subtitle {
+  font-size: 2rem;
+  line-height: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-family: Zain;
+}
+.summary-section .content {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  width: 70%;
+  height: 100%;
+  gap: 50px;
+  clip-path: polygon(0 0, 100% 0%, 95% 100%, 0% 100%);
+}
+.summary-section .short-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10dvh 2dvh;
+  flex-basis: 10%;
+  gap: 25px;
+  border-right: rgb(210, 210, 210) 2px dashed;
+}
+.summary-section .short-section a {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  align-items: center;
+}
+.summary-section .short-section a img {
+  height: 8dvh;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.summary-section .short-section a .title {
+  margin: 0;
+}
+.summary-section .short-section a .subtitle {
+  margin: 0;
+}
+.summary-section .long-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10dvh 2dvh;
+  flex-basis: 50%;
+}
+.summary-section .img-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 35%;
+  height: 100%;
+  overflow: hidden;
+  clip-path: polygon(10% 0, 100% 0%, 100% 100%, 0% 100%);
+}
+.summary-section .img-section img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 
 .information-section {
   position: relative;
@@ -218,6 +301,7 @@ span {
 }
 .home-header .content {
   display: flex;
+  flex-direction: row;
   justify-content: end;
   align-items: center;
   height: 100%;
@@ -228,6 +312,7 @@ span {
 }
 .home-header .navigation {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   height: 100%;

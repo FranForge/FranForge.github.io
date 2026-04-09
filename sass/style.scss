@@ -19,18 +19,28 @@ $tiny: 0.5rem;
 
 @mixin flex-x-start{
     display: flex;
+    flex-direction: row;
     justify-content: start;
     align-items: center;    
 }
 
 @mixin flex-x-center{
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;    
 }
 
+@mixin flex-x-center-reversed{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center; 
+}
+
 @mixin flex-x-end{
     display: flex;
+    flex-direction: row;
     justify-content: end;
     align-items: center;
 }
@@ -38,6 +48,20 @@ $tiny: 0.5rem;
 //Muestra sombra en los textos.
 @mixin text-shadow{
     text-shadow: black 2px 2px;
+}
+
+@mixin flex-y-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-y-center-reversed{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
 }
 
 //Muestra una seccion de fondo que no se mueve.
@@ -258,6 +282,83 @@ span{
     height: 110dvh;
     width: 100dvw;
     overflow: hidden;
+
+    img{
+        height: 10dvh;
+        object-fit: contain;
+    }
+
+    .title{
+        @include mid-text();
+        @include mid-line();
+        margin: 3dvh 0;
+        color: grey;
+        font-family: #{fonts.$main-font};
+    }
+
+    .subtitle{
+        @include big-text();
+        @include big-line();
+        @include bold-text();
+        @include uppercase();
+        font-family: #{fonts.$main-font};
+    }
+
+    .content{
+        @include flex-x-center-reversed();
+        position: absolute;
+        width: 70%;
+        height: 100%;
+        gap: 50px;
+        clip-path: polygon(0 0, 100% 0%, 95% 100%, 0% 100%);
+    }
+
+    .short-section{
+        @include flex-y-center();
+        padding: 10dvh 2dvh;
+        flex-basis: 10%;
+        gap: 25px;
+        border-right: colors.$light-grey 2px dashed;
+
+        a{
+            @include flex-y-center-reversed();
+            
+            img{
+                height: 8dvh;
+                object-fit: contain;
+            }
+
+            .title{
+                @include margin-0();
+            }
+
+            .subtitle{
+                @include margin-0();
+            }
+        }
+    }
+
+    .long-section{
+        @include flex-y-center();
+        padding: 10dvh 2dvh;
+        flex-basis: 50%;
+    }
+
+    .img-section{
+        @include flex-x-center();
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 35%;
+        height: 100%;
+        overflow: hidden;
+        clip-path: polygon(10% 0, 100% 0%, 100% 100%, 0% 100%);
+
+        img{
+            height: 100%;
+            object-fit: cover;
+        }
+    }
 }
 
 .information-section{
