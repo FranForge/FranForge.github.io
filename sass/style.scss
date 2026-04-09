@@ -84,10 +84,19 @@ span{
 // ELEMENTOS BASE (MIXINS)
 //======================================================================
 
+@mixin flex-x-start{
+    display: flex;
+    justify-content: start;
+    align-items: center;    
+}
 
+@mixin flex-x-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
 
-//Establece un flex para mostrar las cosas en horizontal y al final.
-@mixin flex-end{
+@mixin flex-x-end{
     display: flex;
     justify-content: end;
     align-items: center;
@@ -241,25 +250,19 @@ span{
     }
 
     .content{
+        @include flex-x-end();
         height: 100%;
         width: 90dvw;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
         gap: 10px;
         margin-left: auto;
         margin-right: auto;
     }
 
     .navigation{
+        @include flex-x-center();
         height: 100%;
-        display: flex;
-        flex-direction: row;
         color: white;
         padding: 10px;
-        align-items: center;
-        align-self: center;
-        justify-content: center;
 
         a{
             padding-left: 10px;
