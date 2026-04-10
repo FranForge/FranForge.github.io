@@ -188,6 +188,18 @@ $tiny: 0.5rem;
     }
 }
 
+@mixin paint-before-bg($background: white){
+    &::before{
+        background-color: $background;
+    }
+}
+
+@mixin blur{
+    background-color: colors.$semi-transparent-color;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
 //General
 //----------------------------------------------------------------------
 @mixin rounded{border-radius: 100px;}
@@ -283,6 +295,12 @@ video{
 .bold-text { @include bold-text(); }
 .italic-text { @include italic-text(); }
 .underline-text { @include underline-text(); }
+
+@mixin hanging-indent($amount){
+    padding-left: $amount;
+    padding-right: $amount;
+    text-indent: -$amount;
+}
 
 //======================================================================
 // ELEMENTOS COMPLEJOS GENERICOS
@@ -668,6 +686,77 @@ video{
     transition: width 0.5s ease;
 }
 
+//Timeline
+//----------------------------------------------------------------------
+.timeline{
+    @include flex-y-start();
+    align-items: end;
+    border-left-width: 5px;
+    border-left-style: solid;
+    margin: 0 10px;
+    padding-left: 80px;
+    gap: 50px;
+
+    .event{
+        @include flex-y-center();
+        @include border-radius();
+        @include text-left();
+        @include mid-line();
+        @include mid-text();
+        align-items: start;
+        position: relative;
+        width: 100%;
+        padding: 20px;
+        border-style: double;
+        border-width: 2px;
+
+        &::before{
+            content: "";
+            position: absolute;
+            left: -54px;
+            top: 50%;
+            height: 25px;
+            width: 25px;
+            clip-path: circle(50% at center);
+        }
+
+        h1, h2, h3, h4, h5{
+            @include mid-text();
+            border-bottom-style: dashed;
+            border-bottom-width: 2px;
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 10px 0;
+            margin-top: 0;
+            width: 100%;
+        }
+
+        p{
+            @include text-left();
+            @include mid-line();
+            @include hanging-indent(20px);
+            margin: 1px 0;
+            width: 100%;
+        }
+
+        .info{
+            @include flex-x-center();
+            margin-bottom: 20px;
+            width: 100%;
+            gap: 10px;
+
+            .name{
+                @include bold-text();
+            }
+
+            .date{
+                @include italic-text();
+                @include text-right();
+            }
+        }
+    }
+}
+
 //Responsive
 //----------------------------------------------------------------------
 .desktop{
@@ -699,10 +788,8 @@ video{
     transition: background-color 1s ease, border-bottom 1s ease;
 
     &.scroll-effect-on{
-        background-color: colors.$semi-transparent-color;
+        @include blur();
         border-bottom: colors.$brand-color solid 2px;
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
     }
 
     .content{
@@ -827,4 +914,17 @@ video{
 
 .theme-purple-bar{
     @include theme(colors.$brand-color);
+}
+
+.theme-blur{
+    @include theme(transparent, 
+                white, 
+                #{fonts.$main-font}, 
+                white, 
+                #{fonts.$main-font}, 
+                white, 
+                colors.$brand-secondary-color);
+                
+    @include blur();
+    @include paint-before-bg();
 }
