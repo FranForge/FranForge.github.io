@@ -603,12 +603,89 @@ video{
     }
 }
 
+.horizontal-cards-section{
+    @include section-base();
+    @include flex-x-center();
+    flex-wrap: wrap;
+    gap: 40px;
+
+    .card{
+        @include border-radius();
+        @include flex-x-start();
+        @include text-left();
+        position: relative;
+        border-style: solid;
+        border-width: 2px;
+        flex-basis: 47%;
+        overflow: hidden;
+        min-height: 15dvh;
+        transition: border-color 0.25s ease;
+
+        @media (max-aspect-ratio: 16/9){
+            @include flex-y-start();
+            flex-basis: 100%;
+            min-height: 50dvh;
+        }
+
+        > .content{
+            @include flex-y-start();
+            padding: 10px;
+            width: 70%;
+            height: 100%;
+
+            @media (max-aspect-ratio: 16/9){
+                width: 100%;
+                height: 30%;
+            }
+
+            h1, h2, h3, h4, h5{
+                @include mid-line();
+                @include mid-text();
+                margin: 0;
+                margin-bottom: 10px;
+                width: 100%;
+            }
+
+            p{
+                @include mid-line();
+                @include mid-text();
+                margin: 0;
+                width: 100%;
+            }
+        }
+
+        .img-section{
+            position: absolute;
+            right: 0;
+            height: 100%;
+            width: 30%;
+            background-color: black;
+
+            @media (max-aspect-ratio: 16/9){
+                width: 100%;
+                height: 70%;
+                bottom: 0;
+            }
+
+            img{
+                min-height: 100%;
+                min-width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &:hover{
+            border-color: colors.$brand-color;
+        }
+    }
+}
+
 //Seccion que muestra cartas donde las cartas tienen columnas.
 .column-cards-section{
     @include section-base();
     gap: 20px;
 
-    .column-card{
+    .card{
         @include flex-x-start();
         gap: 50px;
         width: 90%;
@@ -632,6 +709,10 @@ video{
 
         img{
             height: 5dvh;
+        }
+
+        &:hover{
+            border-color: colors.$brand-color;
         }
     }
 }
