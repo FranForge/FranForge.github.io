@@ -348,6 +348,9 @@ video {
     margin-right: 5dvw;
   }
 }
+.information-section > .content h1 {
+  padding-top: 10dvh;
+}
 
 .split-section {
   position: relative;
@@ -612,7 +615,7 @@ video {
   border-bottom-width: 2px;
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 10px 0;
+  margin-bottom: 10px;
   margin-top: 0;
   width: 100%;
 }
@@ -895,37 +898,32 @@ video {
   color: black;
 }
 
-.theme-blur {
-  background: transparent;
+.theme-semi-transparent {
+  background: rgba(0, 0, 0, 0.5);
   color: white;
   font-family: Zain;
   border-color: white;
 }
-.theme-blur body {
-  background: transparent;
+.theme-semi-transparent body {
+  background: rgba(0, 0, 0, 0.5);
   color: white;
   font-family: Zain;
 }
-.theme-blur h1, .theme-blur h2, .theme-blur h3, .theme-blur h4, .theme-blur h5 {
+.theme-semi-transparent h1, .theme-semi-transparent h2, .theme-semi-transparent h3, .theme-semi-transparent h4, .theme-semi-transparent h5 {
   color: white;
   font-family: Zain;
 }
-.theme-blur p {
+.theme-semi-transparent p {
   color: white;
   font-family: Zain;
 }
-.theme-blur a {
+.theme-semi-transparent a {
   color: white;
   font-family: Zain;
 }
-.theme-blur span {
+.theme-semi-transparent span {
   color: #b26eff;
 }
-.theme-blur {
-  background-color: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-}
-.theme-blur::before {
+.theme-semi-transparent::before {
   background-color: white;
 }/*# sourceMappingURL=style.css.map */
