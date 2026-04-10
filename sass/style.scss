@@ -406,6 +406,10 @@ video{
             flex-basis: 100%;
             padding: 5dvw 5dvw;
         }
+
+        .title{
+            font-family: #{fonts.$title-font};
+        }
     }
 
     .img-section{
@@ -452,7 +456,40 @@ video{
     }
 }
 
-.cards-section{
+.split-section{
+    @include section-base();
+    @include flex-x-center();
+    align-items: stretch;
+    width: 100%;
+
+    @media (max-aspect-ratio: 16/9){
+        @include flex-y-start();
+    }
+
+    .content{
+        @include flex-y-start();
+        align-items: start;
+        flex-basis: 50%;
+        padding: 10dvh;
+
+        @media (max-aspect-ratio: 16/9){
+            padding: 5dvh 0;
+            width: 100%;
+        }
+
+        h1{
+            width: 100%;
+            border-bottom-style: dashed;
+            border-bottom-width: 2px;
+
+            @media (max-aspect-ratio: 16/9){
+                @include text-center();
+            }
+        }
+    }
+}
+
+.vertical-cards-section{
     @include section-base();
     @include flex-x-center();
     flex-wrap: wrap;
@@ -479,6 +516,7 @@ video{
 
             .date{
                 width: 100%;
+                line-height: 1rem;
                 border-top: colors.$light-grey 2px dashed;
             }
 
@@ -492,6 +530,7 @@ video{
                     @include border-radius();
                     padding: 5px;
                     color: white;
+                    line-height: 1rem;
                 }
             }
         }
@@ -535,6 +574,39 @@ video{
     }
 }
 
+//Seccion que muestra cartas donde las cartas tienen columnas.
+.column-cards-section{
+    @include section-base();
+    gap: 20px;
+
+    .column-card{
+        @include flex-x-start();
+        gap: 50px;
+        width: 90%;
+        margin: auto;
+
+        h1, h2, h3, h4, h5{
+            @include mid-text();
+            @include mid-line();
+            flex: 0 0 20%;
+            width: 20%;
+
+            @media (max-aspect-ratio:16/9){
+                width: auto;
+            }
+        }
+
+        p{
+            @include mid-text();
+            @include mid-line();
+        }
+
+        img{
+            height: 5dvh;
+        }
+    }
+}
+
 //Botones
 //----------------------------------------------------------------------
 .button{
@@ -574,6 +646,26 @@ video{
             }
         }
     }
+}
+
+//Bars
+//----------------------------------------------------------------------
+.bar-container{
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+    height: 1vh;
+    border-radius: 100px;
+    background-color: black;
+    overflow: hidden;
+}
+
+.bar{
+    height: 100%;
+    background-color: var(--brandColor);
+    border-radius: 100px;
+
+    transition: width 0.5s ease;
 }
 
 //Responsive
@@ -713,6 +805,16 @@ video{
                 black);
 }
 
+.theme-white-over-black-serious{
+    @include theme(black, 
+                white, 
+                #{fonts.$main-font}, 
+                white, 
+                #{fonts.$title-font}, 
+                white, 
+                white);
+}
+
 .theme-white-card{
     @include theme(white, 
                 black, 
@@ -721,4 +823,8 @@ video{
                 #{fonts.$title-font}, 
                 white, 
                 colors.$brand-color);
+}
+
+.theme-purple-bar{
+    @include theme(colors.$brand-color);
 }

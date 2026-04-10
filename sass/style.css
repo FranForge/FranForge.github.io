@@ -289,6 +289,9 @@ video {
     padding: 5dvw 5dvw;
   }
 }
+.summary-section .long-section .title {
+  font-family: Kanit;
+}
 .summary-section .img-section {
   display: flex;
   flex-direction: row;
@@ -346,7 +349,50 @@ video {
   }
 }
 
-.cards-section {
+.split-section {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-items: stretch;
+  width: 100%;
+}
+@media (max-aspect-ratio: 16/9) {
+  .split-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+  }
+}
+.split-section .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  align-items: start;
+  flex-basis: 50%;
+  padding: 10dvh;
+}
+@media (max-aspect-ratio: 16/9) {
+  .split-section .content {
+    padding: 5dvh 0;
+    width: 100%;
+  }
+}
+.split-section .content h1 {
+  width: 100%;
+  border-bottom-style: dashed;
+  border-bottom-width: 2px;
+}
+@media (max-aspect-ratio: 16/9) {
+  .split-section .content h1 {
+    text-align: center;
+  }
+}
+
+.vertical-cards-section {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -355,7 +401,7 @@ video {
   flex-wrap: wrap;
   gap: 40px;
 }
-.cards-section .card {
+.vertical-cards-section .card {
   border-radius: 0.5vh;
   display: flex;
   flex-direction: column;
@@ -369,21 +415,22 @@ video {
   height: 70dvh;
   transition: border-color 0.25s ease;
 }
-.cards-section .card .content {
+.vertical-cards-section .card .content {
   display: flex;
   flex-direction: column;
   justify-content: start;
   align-items: center;
   padding: 10px;
 }
-.cards-section .card .content .description {
+.vertical-cards-section .card .content .description {
   width: 100%;
 }
-.cards-section .card .content .date {
+.vertical-cards-section .card .content .date {
   width: 100%;
+  line-height: 1rem;
   border-top: rgb(210, 210, 210) 2px dashed;
 }
-.cards-section .card .content .attributes-container {
+.vertical-cards-section .card .content .attributes-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -392,25 +439,26 @@ video {
   overflow: hidden;
   gap: 5px;
 }
-.cards-section .card .content .attributes-container .attribute-card {
+.vertical-cards-section .card .content .attributes-container .attribute-card {
   border-radius: 0.5vh;
   padding: 5px;
   color: white;
+  line-height: 1rem;
 }
-.cards-section .card .img-section {
+.vertical-cards-section .card .img-section {
   position: absolute;
   bottom: 0;
   height: 45%;
   width: 100%;
   background-color: black;
 }
-.cards-section .card .img-section img {
+.vertical-cards-section .card .img-section img {
   min-height: 100%;
   min-width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.cards-section .card .img-section .read-more {
+.vertical-cards-section .card .img-section .read-more {
   border-radius: 0.5vh;
   position: absolute;
   bottom: 10px;
@@ -419,17 +467,49 @@ video {
   padding: 5px;
   color: white;
 }
-.cards-section .card:hover {
+.vertical-cards-section .card:hover {
   border-color: #8921ff;
 }
-.cards-section .card:hover .read-more {
+.vertical-cards-section .card:hover .read-more {
   background-color: #8921ff;
   transition: background-color 0.25s ease;
 }
 @media (max-aspect-ratio: 16/9) {
-  .cards-section .card {
+  .vertical-cards-section .card {
     flex-basis: 100%;
   }
+}
+
+.column-cards-section {
+  position: relative;
+  gap: 20px;
+}
+.column-cards-section .column-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 50px;
+  width: 90%;
+  margin: auto;
+}
+.column-cards-section .column-card h1, .column-cards-section .column-card h2, .column-cards-section .column-card h3, .column-cards-section .column-card h4, .column-cards-section .column-card h5 {
+  font-size: 1rem;
+  line-height: 1rem;
+  flex: 0 0 20%;
+  width: 20%;
+}
+@media (max-aspect-ratio: 16/9) {
+  .column-cards-section .column-card h1, .column-cards-section .column-card h2, .column-cards-section .column-card h3, .column-cards-section .column-card h4, .column-cards-section .column-card h5 {
+    width: auto;
+  }
+}
+.column-cards-section .column-card p {
+  font-size: 1rem;
+  line-height: 1rem;
+}
+.column-cards-section .column-card img {
+  height: 5dvh;
 }
 
 .button {
@@ -470,6 +550,23 @@ video {
 }
 .button:hover .content p {
   color: white;
+}
+
+.bar-container {
+  display: flex;
+  flex-grow: 1;
+  width: 100%;
+  height: 1vh;
+  border-radius: 100px;
+  background-color: black;
+  overflow: hidden;
+}
+
+.bar {
+  height: 100%;
+  background-color: var(--brandColor);
+  border-radius: 100px;
+  transition: width 0.5s ease;
 }
 
 @media (max-aspect-ratio: 16/9) {
@@ -630,6 +727,33 @@ video {
   color: black;
 }
 
+.theme-white-over-black-serious {
+  background: black;
+  color: white;
+  font-family: Zain;
+  border-color: white;
+}
+.theme-white-over-black-serious body {
+  background: black;
+  color: white;
+  font-family: Zain;
+}
+.theme-white-over-black-serious h1, .theme-white-over-black-serious h2, .theme-white-over-black-serious h3, .theme-white-over-black-serious h4, .theme-white-over-black-serious h5 {
+  color: white;
+  font-family: Kanit;
+}
+.theme-white-over-black-serious p {
+  color: white;
+  font-family: Zain;
+}
+.theme-white-over-black-serious a {
+  color: white;
+  font-family: Zain;
+}
+.theme-white-over-black-serious span {
+  color: white;
+}
+
 .theme-white-card {
   background: white;
   color: black;
@@ -655,4 +779,31 @@ video {
 }
 .theme-white-card span {
   color: #8921ff;
+}
+
+.theme-purple-bar {
+  background: #8921ff;
+  color: black;
+  font-family: Zain;
+  border-color: black;
+}
+.theme-purple-bar body {
+  background: #8921ff;
+  color: black;
+  font-family: Zain;
+}
+.theme-purple-bar h1, .theme-purple-bar h2, .theme-purple-bar h3, .theme-purple-bar h4, .theme-purple-bar h5 {
+  color: black;
+  font-family: Kanit;
+}
+.theme-purple-bar p {
+  color: black;
+  font-family: Zain;
+}
+.theme-purple-bar a {
+  color: black;
+  font-family: Zain;
+}
+.theme-purple-bar span {
+  color: black;
 }/*# sourceMappingURL=style.css.map */
