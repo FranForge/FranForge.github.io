@@ -147,6 +147,12 @@ $tiny: 0.5rem;
 @mixin italic-text { font-style: italic; }
 @mixin underline-text { text-decoration: underline; }
 
+@mixin hanging-indent($amount){
+    padding-left: $amount;
+    padding-right: $amount;
+    text-indent: -$amount;
+}
+
 //Secciones
 //----------------------------------------------------------------------
 @mixin section-base{position: relative;}
@@ -267,6 +273,16 @@ video{
     object-fit: cover;
 }
 
+input, textarea {
+                width: 100%;
+                padding: 10px;
+                box-sizing: border-box;
+                background: rgba(255, 255, 255, 0.1);
+                border: 1px solid white;
+                color: inherit;
+                font-family: inherit;
+            }
+
 //======================================================================
 // ELEMENTOS UTILES (CLASES)
 //======================================================================
@@ -296,18 +312,30 @@ video{
 .italic-text { @include italic-text(); }
 .underline-text { @include underline-text(); }
 
-@mixin hanging-indent($amount){
-    padding-left: $amount;
-    padding-right: $amount;
-    text-indent: -$amount;
-}
+//Flex
+//----------------------------------------------------------------------
+.flex-x-start{@include flex-x-start();}
+.flex-x-center{@include flex-x-center();}
+.flex-x-end{@include flex-x-end();}
+.flex-y-start{@include flex-y-start();}
+.flex-y-center{@include flex-y-center();}
+.flex-y-end{@include flex-y-end();}
+.wrap{flex-wrap: wrap;}
+.gap-20{gap: 20px;}
 
 //======================================================================
 // ELEMENTOS COMPLEJOS GENERICOS
 //======================================================================
 
-//Seccion que se muestra por debajo.
+//Paneles
 //----------------------------------------------------------------------
+.black-bg-panel{@include background-panel(black, 1);}
+.black-bg-translucid-panel{@include background-panel(black, 0.75);}
+
+//Secciones
+//----------------------------------------------------------------------
+
+//Seccion que se muestra por debajo.
 .sticky-section{
     @include sticky-background-section();
     
@@ -332,14 +360,6 @@ video{
         transition: opacity 1s ease;
     }
 }
-
-//Paneles
-//----------------------------------------------------------------------
-.black-bg-panel{@include background-panel(black, 1);}
-.black-bg-translucid-panel{@include background-panel(black, 0.75);}
-
-//Secciones
-//----------------------------------------------------------------------
 
 //Seccion resumen que tiene una imagen en el lateral.
 .summary-section{
@@ -941,7 +961,7 @@ video{
 
 //Header
 //----------------------------------------------------------------------
-.home-header{
+.header{
     @include text-shadow();
     position: fixed;
     width: 100dvw;
@@ -1028,6 +1048,51 @@ video{
         @media (max-aspect-ratio: 16/9){
             @include mid-text();
             @include mid-line();
+        }
+    }
+}
+
+//Hero
+//----------------------------------------------------------------------
+.footer{
+    @include flex-x-center();
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 50px;
+    padding-top: 10dvh;
+
+    .content{
+        @include flex-y-start();
+        flex-basis: 28%;
+        gap: 20px;
+
+        img{
+            height: 4dvh;
+            width: auto;
+            object-fit: contain;
+        }
+
+        a{
+            opacity: 0.8;
+            transition: opacity 0.25s ease;
+
+            &:hover{
+                opacity: 1;
+            }
+        }
+
+        .flex-x{
+            @include flex-x-center();
+            width: 100%;
+            height: auto;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .flex-y{
+            @include flex-y-start();
+            width: 100%;
+            height: auto;
         }
     }
 }

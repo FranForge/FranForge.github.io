@@ -81,6 +81,16 @@ video {
      object-fit: cover;
 }
 
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid white;
+  color: inherit;
+  font-family: inherit;
+}
+
 .margin-0 {
   margin: 0;
 }
@@ -157,6 +167,72 @@ video {
   text-decoration: underline;
 }
 
+.flex-x-start {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+}
+
+.flex-x-center {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-x-end {
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+}
+
+.flex-y-start {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.flex-y-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.flex-y-end {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.gap-20 {
+  gap: 20px;
+}
+
+.black-bg-panel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 1;
+}
+
+.black-bg-translucid-panel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.75;
+}
+
 .sticky-section, .hero {
   position: sticky;
   top: 0;
@@ -176,22 +252,6 @@ video {
   flex-direction: column;
   justify-content: center;
   transition: opacity 1s ease;
-}
-
-.black-bg-panel {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  opacity: 1;
-}
-
-.black-bg-translucid-panel {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  opacity: 0.75;
 }
 
 .summary-section {
@@ -835,7 +895,7 @@ video {
   }
 }
 
-.home-header {
+.header {
   text-shadow: black 2px 2px;
   position: fixed;
   width: 100dvw;
@@ -845,13 +905,13 @@ video {
   border-bottom: rgba(0, 0, 0, 0) solid 2px;
   transition: background-color 1s ease, border-bottom 1s ease;
 }
-.home-header.scroll-effect-on {
+.header.scroll-effect-on {
   background-color: rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border-bottom: #8921ff solid 2px;
 }
-.home-header .content {
+.header .content {
   display: flex;
   flex-direction: row;
   justify-content: end;
@@ -863,14 +923,14 @@ video {
   margin-right: auto;
 }
 @media (max-aspect-ratio: 16/9) {
-  .home-header .content {
+  .header .content {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
   }
 }
-.home-header .navigation {
+.header .navigation {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -879,22 +939,22 @@ video {
   color: white;
   padding: 10px;
 }
-.home-header .navigation a {
+.header .navigation a {
   padding-left: 10px;
   padding-right: 10px;
   opacity: 0.8;
   transition: opacity 0.25s ease;
 }
-.home-header .navigation a:hover {
+.header .navigation a:hover {
   opacity: 1;
 }
-.home-header .navigation a img {
+.header .navigation a img {
   height: 8dvh;
   width: auto;
   -o-object-fit: contain;
      object-fit: contain;
 }
-.home-header .navigation .link {
+.header .navigation .link {
   border-left: 1px white solid;
 }
 
@@ -925,6 +985,56 @@ video {
     font-size: 1rem;
     line-height: 1rem;
   }
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 50px;
+  padding-top: 10dvh;
+}
+.footer .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  flex-basis: 28%;
+  gap: 20px;
+}
+.footer .content img {
+  height: 4dvh;
+  width: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.footer .content a {
+  opacity: 0.8;
+  transition: opacity 0.25s ease;
+}
+.footer .content a:hover {
+  opacity: 1;
+}
+.footer .content .flex-x {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.footer .content .flex-y {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  height: auto;
 }
 
 .theme-transparent {
