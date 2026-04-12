@@ -624,7 +624,7 @@ video{
         @media (max-aspect-ratio: 16/9){
             @include flex-y-start();
             flex-basis: 100%;
-            min-height: 50dvh;
+            min-height: 55dvh;
         }
 
         > .content{
@@ -656,14 +656,16 @@ video{
 
         .img-section{
             position: absolute;
+            display: flex;
+            aspect-ratio: 1 / 1;
             right: 0;
             height: 100%;
-            width: 30%;
+            width: auto;
             background-color: black;
 
             @media (max-aspect-ratio: 16/9){
                 width: 100%;
-                height: 70%;
+                height: auto;
                 bottom: 0;
             }
 
