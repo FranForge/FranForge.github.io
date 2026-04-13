@@ -1060,13 +1060,17 @@ input, textarea {
     flex-wrap: wrap;
     align-items: flex-start;
     gap: 50px;
-    padding-top: 10dvh;
-    padding-bottom: 10dvh;
+    box-sizing: border-box;
+    padding: 10dvh 25px;
 
     .content{
         @include flex-y-start();
         flex-basis: 28%;
         gap: 20px;
+
+        @media (max-aspect-ratio: 16/9){
+            flex-basis: 100%;
+        }
 
         img{
             height: 4dvh;
