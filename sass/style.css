@@ -234,6 +234,13 @@ input, textarea {
   opacity: 0.75;
 }
 
+.divider {
+  border-radius: 0.5vh;
+  width: 100%;
+  height: 10px;
+  margin: 10px 0;
+}
+
 .sticky-section, .hero {
   position: sticky;
   top: 0;
@@ -419,6 +426,58 @@ input, textarea {
 }
 .information-section > .content h1 {
   padding-top: 10dvh;
+}
+.information-section > .blog-content {
+  margin-left: 20dvw;
+  margin-right: 20dvw;
+}
+@media (max-aspect-ratio: 16/9) {
+  .information-section > .blog-content {
+    margin-left: 5dvw;
+    margin-right: 5dvw;
+  }
+}
+.information-section > .blog-content {
+  text-align: left;
+  border-radius: 0.5vh;
+  box-sizing: border-box;
+  margin-top: 10dvh;
+  align-self: stretch;
+  padding: 50px;
+}
+@media (max-aspect-ratio: 16/9) {
+  .information-section > .blog-content {
+    padding: 20px;
+  }
+}
+.information-section > .blog-content h1 {
+  padding-top: 10dvh;
+}
+.information-section > .blog-content img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.information-section > .blog-content .title {
+  margin: 0;
+  font-size: 2rem;
+  line-height: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.information-section > .blog-content .subtitle {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.information-section > .blog-content .date {
+  font-size: 1rem;
+  line-height: 1rem;
+  text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 .split-section {
@@ -944,6 +1003,7 @@ input, textarea {
   padding-left: 10px;
   padding-right: 10px;
   opacity: 0.8;
+  color: white;
   transition: opacity 0.25s ease;
 }
 .header .navigation a:hover {
@@ -1044,6 +1104,10 @@ input, textarea {
   height: auto;
 }
 
+.purple-bg {
+  background-color: #b26eff;
+}
+
 .message-box {
   display: none;
   opacity: 0;
@@ -1068,6 +1132,33 @@ input, textarea {
     opacity: 1;
   }
 }
+.theme-header {
+  background: transparent;
+  color: white;
+  font-family: Zain;
+  border-color: transparent;
+}
+.theme-header body {
+  background: transparent;
+  color: white;
+  font-family: Zain;
+}
+.theme-header h1, .theme-header h2, .theme-header h3, .theme-header h4, .theme-header h5 {
+  color: white;
+  font-family: Kanit;
+}
+.theme-header p {
+  color: white;
+  font-family: Zain;
+}
+.theme-header a {
+  color: white;
+  font-family: Zain;
+}
+.theme-header span {
+  color: #8921ff;
+}
+
 .theme-transparent {
   background: transparent;
   color: white;
@@ -1365,5 +1456,32 @@ input, textarea {
   font-family: Zain;
 }
 .theme-failed span {
+  color: black;
+}
+
+.theme-divider {
+  background: #8921ff;
+  color: black;
+  font-family: Zain;
+  border-color: black;
+}
+.theme-divider body {
+  background: #8921ff;
+  color: black;
+  font-family: Zain;
+}
+.theme-divider h1, .theme-divider h2, .theme-divider h3, .theme-divider h4, .theme-divider h5 {
+  color: black;
+  font-family: Zain;
+}
+.theme-divider p {
+  color: black;
+  font-family: Zain;
+}
+.theme-divider a {
+  color: black;
+  font-family: Zain;
+}
+.theme-divider span {
   color: black;
 }/*# sourceMappingURL=style.css.map */
