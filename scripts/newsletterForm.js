@@ -2,6 +2,12 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     const form = document.getElementById("newsletter-form");
+
+    if(form == null){
+        console.log("Form no encontrado, abortando");
+        return;
+    }
+
     console.log("Form encontrado:", form);
 
     form.addEventListener("submit", async (e) => {
