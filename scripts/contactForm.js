@@ -15,11 +15,16 @@ document.addEventListener("DOMContentLoaded", () => {
         const formData = new FormData(form);
         console.log("Formulario creado con exito.");
 
+        displayContactWarn();
+        form.reset();
+
         try {
             const result = await fetch("https://api.franforge.es/api/ContactForm/send", {
                 method: "POST",
                 body: formData
             });
+
+            closeContactWarn();
 
             if (!result.ok) {
                 const text = await result.text();
@@ -33,11 +38,29 @@ document.addEventListener("DOMContentLoaded", () => {
             form.reset();
 
         } catch (err) {
+
+            closeNewsletterWarn();
+
             console.error("Error enviando formulario", err);
             displayContactError(err.message || "Something went wrong.");
         }
     });
 });
+
+//Muestra el aviso en pantalla.
+function displayContactWarn(){
+    const warnContainer = document.getElementById("contact-warn");
+    if(warnContainer == undefined) return;
+
+    warnContainer.classList.add("show");
+}
+
+function closeContactWarn(){
+    const warnContainer = document.getElementById("contact-warn");
+    if(warnContainer == undefined) return;
+
+    warnContainer.classList.remove("show");
+}
 
 //Muestra la confirmacion en pantalla.
 function displayContactSuccess()

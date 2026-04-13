@@ -782,18 +782,20 @@
                 <h1>Contact</h1>
 
                 <!-- RESULT -->
-                <section id="contact-success" class="success-response">
+                 <section id="contact-warn" class="message-box theme-warn">
+                    <p>Your contact has been sended. Please wait a few seconds.</p>
+                </section>
+                <section id="contact-success" class="message-box theme-success">
                     <p>Your message has been sent successfully.</p>
                 </section>
-                <section id="contact-failed" class="failed-response">
+                <section id="contact-failed" class="message-box theme-failed">
                     <p>
-                        There was a problem sending the message.
+                        There was a problem sending the message: <span id="contact-error">Error 404</span>.
                     </p>
-                    <p id="contact-error">ERROR 404</p>
                 </section>
 
                 <!-- CONTACT FORM -->
-                <form id="contact-form" method="POST" class="flex-y">
+                <form id="contact-form" method="POST" class="contact flex-y">
                     <label for="Name">Name:</label>
                     <input type="text" id="name" name="Name" value="" placeholder="Entity or Individual" required />
 
@@ -802,13 +804,13 @@
 
                     <label for="Message">Message:</label>
                     <textarea id="message" name="Message" rows="4" placeholder="Please describe the reason for your contact here…" required></textarea>
-                    <button type="submit" name="Submit" class="buttonLargue">Submit</button>
+                    <button type="submit" name="Submit" class="button">Submit</button>
                 </form>
 
             </section>
 
             <!-- INFO -->
-            <section id="footer-info" class="content">
+            <section id="footer-info" class="content flex-y">
 
                 <h1>Information</h1>
                 <a href="#presentation">About me</a>
@@ -826,21 +828,23 @@
                 <p>Subscribe so you don’t miss anything!</p>
 
                 <!-- RESULT -->
-                <section id="newsletter-success" class="success-response">
+                <section id="newsletter-warn" class="message-box theme-warn">
+                    <p>Your email has been sended. Please wait a few seconds.</p>
+                </section>
+                <section id="newsletter-success" class="message-box theme-success">
                     <p>Your email has been subscribed successfully.</p>
                 </section>
-                <section id="newsletter-failed" class="failed-response">
+                <section id="newsletter-failed" class="message-box theme-failed">
                     <p>
-                        There was a problem.
+                        There was a problem: <span id="newsletter-error">Error 404</span>.
                     </p>
-                    <p id="newsletter-error">ERROR 404</p>
                 </section>
 
                 <!-- NEWSLETTER FORM -->
-                <form id="newsletter-form">
+                <form id="newsletter-form" class="flex-y">
                     <label for="Email">Correo electr&oacute;nico:</label>
-                    <input type="email" id="email" name="Email" value="" placeholder="example@example.com" required />
-                    <button type="submit" name="Submit" class="buttonLargue">Suscribirse</button>
+                    <input type="email" id="email" name="Email" value="" placeholder="example@example.com" required/>
+                    <button type="submit" name="Submit" class="button">Suscribirse</button>
                 </form>
             </section>
 

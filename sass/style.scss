@@ -276,6 +276,7 @@ video{
 input, textarea {
                 width: 100%;
                 padding: 10px;
+                margin-bottom: 10px;
                 box-sizing: border-box;
                 background: rgba(255, 255, 255, 0.1);
                 border: 1px solid white;
@@ -1060,6 +1061,7 @@ input, textarea {
     align-items: flex-start;
     gap: 50px;
     padding-top: 10dvh;
+    padding-bottom: 10dvh;
 
     .content{
         @include flex-y-start();
@@ -1094,6 +1096,38 @@ input, textarea {
             width: 100%;
             height: auto;
         }
+    }
+}
+
+//Messages
+//----------------------------------------------------------------------
+.message-box{
+    display: none;
+    opacity: 0;
+    flex-grow: 1;
+    width: 100%;
+    padding: 0 10px;
+    border-style: solid;
+    border-width: 2px;
+    transition: none-to-flex-display 0.5s ease;
+
+    &.show{
+        display: flex;
+        opacity: 1;
+    }
+}
+
+//======================================================================
+// ANIMATIONS
+//======================================================================
+
+@keyframes none-to-flex-display{
+    0%{
+        display: flex;
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
     }
 }
 
@@ -1175,4 +1209,34 @@ input, textarea {
                 colors.$brand-secondary-color);
 
     @include paint-before-bg();
+}
+
+.theme-success{
+    @include theme(rgb(150, 255, 150), 
+                black, 
+                #{fonts.$main-font}, 
+                black, 
+                #{fonts.$main-font}, 
+                white, 
+                black);
+}
+
+.theme-warn{
+    @include theme(#F6FF9E, 
+                black, 
+                #{fonts.$main-font}, 
+                black, 
+                #{fonts.$main-font}, 
+                white, 
+                black);
+}
+
+.theme-failed{
+    @include theme(rgb(255, 100, 100), 
+                black, 
+                #{fonts.$main-font}, 
+                black, 
+                #{fonts.$main-font}, 
+                white, 
+                black);
 }

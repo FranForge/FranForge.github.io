@@ -84,6 +84,7 @@ video {
 input, textarea {
   width: 100%;
   padding: 10px;
+  margin-bottom: 10px;
   box-sizing: border-box;
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid white;
@@ -996,6 +997,7 @@ input, textarea {
   align-items: flex-start;
   gap: 50px;
   padding-top: 10dvh;
+  padding-bottom: 10dvh;
 }
 .footer .content {
   display: flex;
@@ -1037,6 +1039,30 @@ input, textarea {
   height: auto;
 }
 
+.message-box {
+  display: none;
+  opacity: 0;
+  flex-grow: 1;
+  width: 100%;
+  padding: 0 10px;
+  border-style: solid;
+  border-width: 2px;
+  transition: none-to-flex-display 0.5s ease;
+}
+.message-box.show {
+  display: flex;
+  opacity: 1;
+}
+
+@keyframes none-to-flex-display {
+  0% {
+    display: flex;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 .theme-transparent {
   background: transparent;
   color: white;
@@ -1254,4 +1280,85 @@ input, textarea {
 }
 .theme-semi-transparent::before {
   background-color: white;
+}
+
+.theme-success {
+  background: rgb(150, 255, 150);
+  color: black;
+  font-family: Zain;
+  border-color: white;
+}
+.theme-success body {
+  background: rgb(150, 255, 150);
+  color: black;
+  font-family: Zain;
+}
+.theme-success h1, .theme-success h2, .theme-success h3, .theme-success h4, .theme-success h5 {
+  color: black;
+  font-family: Zain;
+}
+.theme-success p {
+  color: black;
+  font-family: Zain;
+}
+.theme-success a {
+  color: black;
+  font-family: Zain;
+}
+.theme-success span {
+  color: black;
+}
+
+.theme-warn {
+  background: #F6FF9E;
+  color: black;
+  font-family: Zain;
+  border-color: white;
+}
+.theme-warn body {
+  background: #F6FF9E;
+  color: black;
+  font-family: Zain;
+}
+.theme-warn h1, .theme-warn h2, .theme-warn h3, .theme-warn h4, .theme-warn h5 {
+  color: black;
+  font-family: Zain;
+}
+.theme-warn p {
+  color: black;
+  font-family: Zain;
+}
+.theme-warn a {
+  color: black;
+  font-family: Zain;
+}
+.theme-warn span {
+  color: black;
+}
+
+.theme-failed {
+  background: rgb(255, 100, 100);
+  color: black;
+  font-family: Zain;
+  border-color: white;
+}
+.theme-failed body {
+  background: rgb(255, 100, 100);
+  color: black;
+  font-family: Zain;
+}
+.theme-failed h1, .theme-failed h2, .theme-failed h3, .theme-failed h4, .theme-failed h5 {
+  color: black;
+  font-family: Zain;
+}
+.theme-failed p {
+  color: black;
+  font-family: Zain;
+}
+.theme-failed a {
+  color: black;
+  font-family: Zain;
+}
+.theme-failed span {
+  color: black;
 }/*# sourceMappingURL=style.css.map */

@@ -19,11 +19,16 @@ document.addEventListener("DOMContentLoaded", () => {
         console.log("Formulario creado con exito.");
         console.log([...formData.entries()]);
 
+        displayNewsletterWarn();
+        form.reset;
+
         try {
             const result = await fetch("https://api.franforge.es/api/Newsletter/subscribe", {
                 method: "POST",
                 body: formData
             });
+
+            closeNewsletterWarn();
 
             if (!result.ok) {
                 const text = await result.text();
@@ -37,11 +42,30 @@ document.addEventListener("DOMContentLoaded", () => {
             form.reset();
 
         } catch (err) {
+
+            closeNewsletterWarn();
+
             console.error("Error enviando formulario", err);
             displayNewsletterError(err.message || "Something went wrong.");
         }
     });
 });
+
+//Muestra el aviso en pantalla.
+function displayNewsletterWarn()
+{
+    const warnContainer = document.getElementById("newsletter-warn");
+    if(warnContainer == undefined) return;
+
+    warnContainer.classList.add("show");
+}
+
+function closeNewsletterWarn(){
+    const warnContainer = document.getElementById("newsletter-warn");
+    if(warnContainer == undefined) return;
+
+    warnContainer.classList.remove("show");
+}
 
 //Muestra la confirmacion en pantalla.
 function displayNewsletterSuccess()
