@@ -15,39 +15,58 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <link rel="stylesheet" href="../../style.css">
+        <link rel="stylesheet" href="../../sass/style.css">
         <link href="../../icons/logo.ico" rel="icon" type="image/x-icon" />
         <link href="../../icons/logo.ico" rel="shortcut icon" type="image/x-icon" />
 
         <title>First experience with Unreal Engine 5 using C++ | FranForge Game Developer</title>
 
     </head>
-    <body>
+    <body class="purple-bg">
         
         <!-- HEADER NAV -->
-        <header class="scroll-effect" data-scroll-min-y="100" data-scroll-max-y="0">
-            <section>
-                <nav>
-                    <a href="../home.html" class="header-logo">
+        <header class="header scroll-effect theme-header" id="header" 
+                data-scroll-min-y="100" data-scroll-max-y="0">
+
+            <section class="content">
+
+                <nav class="navigation">
+
+                    <a href="../home.html">
                         <img data-src="../../icons/logo.svg" alt="FranForge">
                     </a>
-                    <a href="../home.html#presentation" class="desktop-only">About me</a>
-                    <a href="../projects/all.html">Projects</a>
-                    <a href="../home.html#skills" class="desktop-only">Skills</a>
-                    <a href="../home.html#experience" class="desktop-only">Experience</a>
-                    <a href="../home.html#blog" class="desktop-only">Blogs</a>
-                    <a href="#contact">Contact</a>
+                    <a href="../home.html#presentation" class="link desktop">
+                        About me
+                    </a>
+                    <a href="../home.htmlprojects/all.html" class="link">
+                        Projects
+                    </a>
+                    <a href="../home.html#skills" class="link desktop">
+                        Skills
+                    </a>
+                    <a href="../home.html#experience" class="link desktop">
+                        Experience
+                    </a>
+                    <a href="../home.html#blog" class="link desktop">
+                        Blogs
+                    </a>
+                    <a href="../home.html#contact" class="link">
+                        Contact
+                    </a>
+
                 </nav>
+
             </section>
+
         </header>
 
         <!-- BLOG -->
-        <section id="blog-article">
-            <section class="content">
-                <p id="blog-article-title">First experience with Unreal Engine 5 using C++.</p>
-                <p id="blog-article-subtitle">From Unity to Unreal Engine 5, transitioning from C# to its parent language, C++.</p>
-                <div class="blog-article-divider"></div>
-                <p id="blog-article-date">Updated: 14:23-06/06/2025</p>
+        <section id="blog-article" class="information-section">
+            <section class="blog-content theme-black-over-white-serious">
+                <p class="title">First experience with Unreal Engine 5 using C++.</p>
+                <p class="subtitle">From Unity to Unreal Engine 5, transitioning from C# to its parent language, C++.</p>
+                <div class="divider theme-divider"></div>
+                <p class="date">Updated: 14:23-06/06/2025</p>
                 <img data-src="../../media/blogs/first-time-unreal/empty-floor.webp" alt="Imagen del Editor Unreal Engine.">
                 <p>
                     I had been eyeing <span>Unreal Engine</span> for a while. You might think, 
@@ -60,7 +79,7 @@
                     and manual memory management, along with insights from other programmers 
                     I met at gaming events, I decided to dive into this world.
                 </p>
-                <div class="blog-article-divider"></div>
+                <div class="divider theme-divider"></div>
                 <h1>Easy to get started?</h1>
                 <p>
                     I’ve only been a few weeks into <span>C++</span> and have tried the engine 
@@ -74,7 +93,7 @@
                     game designers, the engine is exactly what they need, as it contains a 
                     wide variety of tools that Unity doesn’t offer natively.
                 </p>
-                <div class="blog-article-divider"></div>
+                <div class="divider theme-divider"></div>
                 <h1>How’s C++?</h1>
                 <p>
                     If you come from native C++, it will probably be easier for you than it 
@@ -85,7 +104,7 @@
                     that’s what I gathered from this brief first look.
                 </p>
                 <img data-src="../../media/blogs/first-time-unreal/cpp.webp" alt="Lenguaje C++ en Unreal">
-                <div class="blog-article-divider"></div>
+                <div class="divider theme-divider"></div>
                 <h1>Will I continue with Unreal Engine?</h1>
                 <p>
                     Absolutely yes. The engine truly captures my interest, and the graphical 
@@ -111,12 +130,12 @@
         </section>
 
         <!-- FOOTER -->
-        <footer>
+        <footer class="footer theme-white-over-black-serious">
 
             <!-- SOCIALS -->
-            <section id="socials">
+            <section id="socials" class="content">
                 <h1>Social</h1>
-                <div>
+                <div class="flex-x">
                     <!-- TWITTER -->
                     <a href="https://x.com/FranForge" target="_blank" aria-label="Visit FranForge X Profile">
                         <img data-src="../../icons/twitter-white.svg" alt="Twitter">
@@ -161,22 +180,24 @@
             </section>
 
             <!-- CONTACT -->
-            <section id="contact">
+            <section id="contact" class="content">
                 <h1>Contact</h1>
 
                 <!-- RESULT -->
-                <section id="contact-success" class="success-response">
+                 <section id="contact-warn" class="message-box theme-warn">
+                    <p>Your contact has been sended. Please wait a few seconds.</p>
+                </section>
+                <section id="contact-success" class="message-box theme-success">
                     <p>Your message has been sent successfully.</p>
                 </section>
-                <section id="contact-failed" class="failed-response">
+                <section id="contact-failed" class="message-box theme-failed">
                     <p>
-                        There was a problem sending the message.
+                        There was a problem sending the message: <span id="contact-error">Error 404</span>.
                     </p>
-                    <p id="contact-error">ERROR 404</p>
                 </section>
 
                 <!-- CONTACT FORM -->
-                <form id="contact-form" method="POST">
+                <form id="contact-form" method="POST" class="contact flex-y">
                     <label for="Name">Name:</label>
                     <input type="text" id="name" name="Name" value="" placeholder="Entity or Individual" required />
 
@@ -185,45 +206,47 @@
 
                     <label for="Message">Message:</label>
                     <textarea id="message" name="Message" rows="4" placeholder="Please describe the reason for your contact here…" required></textarea>
-                    <button type="submit" name="Submit" class="buttonLargue">Submit</button>
+                    <button type="submit" name="Submit" class="button">Submit</button>
                 </form>
 
             </section>
 
             <!-- INFO -->
-            <section id="footer-info">
+            <section id="footer-info" class="content flex-y">
 
                 <h1>Information</h1>
-                <a href="../home.html#presentation">About me</a>
-                <a href="../projects/all.html">Projects</a>
-                <a href="../home.html#skills">Skills</a>
-                <a href="../home.html#experience">Experience</a>
-                <a href="../home.html#blog">Blogs</a>
-                <a href="../home.html#contact">Contact</a>
+                <a href="#presentation">About me</a>
+                <a href="projects/all.html">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#blog">Blogs</a>
+                <a href="#contact">Contact</a>
 
             </section>
 
             <!-- NEWSLETTER -->
-            <section id="newsletter">
+            <section id="newsletter" class="content">
                 <h1>Newsletter</h1>
                 <p>Subscribe so you don’t miss anything!</p>
 
                 <!-- RESULT -->
-                <section id="newsletter-success" class="success-response">
+                <section id="newsletter-warn" class="message-box theme-warn">
+                    <p>Your email has been sended. Please wait a few seconds.</p>
+                </section>
+                <section id="newsletter-success" class="message-box theme-success">
                     <p>Your email has been subscribed successfully.</p>
                 </section>
-                <section id="newsletter-failed" class="failed-response">
+                <section id="newsletter-failed" class="message-box theme-failed">
                     <p>
-                        There was a problem.
+                        There was a problem: <span id="newsletter-error">Error 404</span>.
                     </p>
-                    <p id="newsletter-error">ERROR 404</p>
                 </section>
 
                 <!-- NEWSLETTER FORM -->
-                <form id="newsletter-form">
+                <form id="newsletter-form" class="flex-y">
                     <label for="Email">Correo electr&oacute;nico:</label>
-                    <input type="email" id="email" name="Email" value="" placeholder="example@example.com" required />
-                    <button type="submit" name="Submit" class="buttonLargue">Suscribirse</button>
+                    <input type="email" id="email" name="Email" value="" placeholder="example@example.com" required/>
+                    <button type="submit" name="Submit" class="button">Suscribirse</button>
                 </form>
             </section>
 

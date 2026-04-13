@@ -15,40 +15,59 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <link rel="stylesheet" href="../../style.css">
+        <link rel="stylesheet" href="../../sass/style.css">
         <link href="../../icons/logo.ico" rel="icon" type="image/x-icon" />
         <link href="../../icons/logo.ico" rel="shortcut icon" type="image/x-icon" />
 
-        <title>Creating my own REST API | FranForge Game Developer</title>
+        <title>First experience with Unreal Engine 5 using C++ | FranForge Game Developer</title>
 
     </head>
-    <body>
+    <body class="purple-bg">
         
         <!-- HEADER NAV -->
-        <header class="scroll-effect" data-scroll-min-y="100" data-scroll-max-y="0">
-            <section>
-                <nav>
-                    <a href="../home.html" class="header-logo">
+        <header class="header scroll-effect theme-header" id="header" 
+                data-scroll-min-y="100" data-scroll-max-y="0">
+
+            <section class="content">
+
+                <nav class="navigation">
+
+                    <a href="../home.html">
                         <img data-src="../../icons/logo.svg" alt="FranForge">
                     </a>
-                    <a href="../home.html#presentation" class="desktop-only">About me</a>
-                    <a href="../projects/all.html">Projects</a>
-                    <a href="../home.html#skills" class="desktop-only">Skills</a>
-                    <a href="../home.html#experience" class="desktop-only">Experience</a>
-                    <a href="../home.html#blog" class="desktop-only">Blogs</a>
-                    <a href="#contact">Contact</a>
+                    <a href="../home.html#presentation" class="link desktop">
+                        About me
+                    </a>
+                    <a href="../home.htmlprojects/all.html" class="link">
+                        Projects
+                    </a>
+                    <a href="../home.html#skills" class="link desktop">
+                        Skills
+                    </a>
+                    <a href="../home.html#experience" class="link desktop">
+                        Experience
+                    </a>
+                    <a href="../home.html#blog" class="link desktop">
+                        Blogs
+                    </a>
+                    <a href="../home.html#contact" class="link">
+                        Contact
+                    </a>
+
                 </nav>
+
             </section>
+
         </header>
 
         <!-- BLOG -->
-        <section id="blog-article">
-            <section class="content">
-                <p id="blog-article-title">Creating My Own REST API.</p>
-                <p id="blog-article-subtitle">Using .NET Core, Render, and JS.</p>
-                <div class="blog-article-divider"></div>
-                <p id="blog-article-date">Updated: 13:01-25/11/2025</p>
-                <img data-src="../../media/blogs/creating-my-own-api/api-rest-flow.webp" alt="REST API flow">
+        <section id="blog-article" class="information-section">
+            <section class="blog-content theme-black-over-white-serious">
+                <p class="title">Creating My Own REST API.</p>
+                <p class="subtitle">Using .NET Core, Render, and JS.</p>
+                <div class="divider theme-divider"></div>
+                <p class="date">Updated: 13:01-25/11/2025</p>
+                <img data-src="../../media/blogs/first-time-unreal/empty-floor.webp" alt="Imagen del Editor Unreal Engine.">
                 <p>
                     Recently, I became interested in web development. After rebuilding my website from scratch and dealing with 
                     <span>JavaScript</span>, I decided to take it to the next level by creating my own <span>REST API</span> 
@@ -56,7 +75,7 @@
                     a REST API is a system that allows communication between different points via HTTP requests, a fast protocol 
                     that transports messages and translates them for these endpoints.
                 </p>
-                <div class="blog-article-divider"></div>
+                <div class="divider theme-divider"></div>
                 <h1>How Does a REST API Work?</h1>
                 <p>
                     It’s simple: the client, usually a browser, sends a request to a server that hosts the API using an access URL. 
@@ -67,7 +86,7 @@
                     As I mentioned, the developer enables all this. For example, you can have access to a database, which is quite common, 
                     or generic methods like the ones I currently have active in my API so they can work from this website.
                 </p>
-                <div class="blog-article-divider"></div>
+                <div class="divider theme-divider"></div>
                 <h1>What Have I Developed with the REST API?</h1>
                 <p>
                     I started testing simple things, like creating a <span>SQLite</span> database and connecting it to a controller—
@@ -99,7 +118,7 @@
                     and <span>Discord</span> allow bots to integrate with APIs like this. I immediately went for Telegram to create a bot 
                     and connect it to my API.
                 </p>
-                <div class="blog-article-divider"></div>
+                <div class="divider theme-divider"></div>
                 <h1>Creating a Telegram Bot</h1>
                 <p>
                     Creating a Telegram bot is quite simple: you just need to go to <span>@BotFather</span> in the app—fun, to say the least— 
@@ -122,7 +141,7 @@
                     That’s how I created my personal REST API, and gradually, as I get to know it better, it will have more functionalities for the website, 
                     like a newsletter or other services.
                 </p>
-                <div class="blog-article-divider"></div>
+                <div class="divider theme-divider"></div>
                 <h1>Additional Advice with Render</h1>
                 <p>
                     As mentioned earlier, Render shuts down after a few minutes of inactivity on the free plan until it receives another request. 
@@ -137,14 +156,13 @@
             </section>
         </section>
 
-
         <!-- FOOTER -->
-        <footer>
+        <footer class="footer theme-white-over-black-serious">
 
             <!-- SOCIALS -->
-            <section id="socials">
+            <section id="socials" class="content">
                 <h1>Social</h1>
-                <div>
+                <div class="flex-x">
                     <!-- TWITTER -->
                     <a href="https://x.com/FranForge" target="_blank" aria-label="Visit FranForge X Profile">
                         <img data-src="../../icons/twitter-white.svg" alt="Twitter">
@@ -189,22 +207,24 @@
             </section>
 
             <!-- CONTACT -->
-            <section id="contact">
+            <section id="contact" class="content">
                 <h1>Contact</h1>
 
                 <!-- RESULT -->
-                <section id="contact-success" class="success-response">
+                 <section id="contact-warn" class="message-box theme-warn">
+                    <p>Your contact has been sended. Please wait a few seconds.</p>
+                </section>
+                <section id="contact-success" class="message-box theme-success">
                     <p>Your message has been sent successfully.</p>
                 </section>
-                <section id="contact-failed" class="failed-response">
+                <section id="contact-failed" class="message-box theme-failed">
                     <p>
-                        There was a problem sending the message.
+                        There was a problem sending the message: <span id="contact-error">Error 404</span>.
                     </p>
-                    <p id="contact-error">ERROR 404</p>
                 </section>
 
                 <!-- CONTACT FORM -->
-                <form id="contact-form" method="POST">
+                <form id="contact-form" method="POST" class="contact flex-y">
                     <label for="Name">Name:</label>
                     <input type="text" id="name" name="Name" value="" placeholder="Entity or Individual" required />
 
@@ -213,45 +233,47 @@
 
                     <label for="Message">Message:</label>
                     <textarea id="message" name="Message" rows="4" placeholder="Please describe the reason for your contact here…" required></textarea>
-                    <button type="submit" name="Submit" class="buttonLargue">Submit</button>
+                    <button type="submit" name="Submit" class="button">Submit</button>
                 </form>
 
             </section>
 
             <!-- INFO -->
-            <section id="footer-info">
+            <section id="footer-info" class="content flex-y">
 
                 <h1>Information</h1>
-                <a href="../home.html#presentation">About me</a>
-                <a href="../projects/all.html">Projects</a>
-                <a href="../home.html#skills">Skills</a>
-                <a href="../home.html#experience">Experience</a>
-                <a href="../home.html#blog">Blogs</a>
-                <a href="../home.html#contact">Contact</a>
+                <a href="#presentation">About me</a>
+                <a href="projects/all.html">Projects</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#blog">Blogs</a>
+                <a href="#contact">Contact</a>
 
             </section>
 
             <!-- NEWSLETTER -->
-            <section id="newsletter">
+            <section id="newsletter" class="content">
                 <h1>Newsletter</h1>
                 <p>Subscribe so you don’t miss anything!</p>
 
                 <!-- RESULT -->
-                <section id="newsletter-success" class="success-response">
+                <section id="newsletter-warn" class="message-box theme-warn">
+                    <p>Your email has been sended. Please wait a few seconds.</p>
+                </section>
+                <section id="newsletter-success" class="message-box theme-success">
                     <p>Your email has been subscribed successfully.</p>
                 </section>
-                <section id="newsletter-failed" class="failed-response">
+                <section id="newsletter-failed" class="message-box theme-failed">
                     <p>
-                        There was a problem.
+                        There was a problem: <span id="newsletter-error">Error 404</span>.
                     </p>
-                    <p id="newsletter-error">ERROR 404</p>
                 </section>
 
                 <!-- NEWSLETTER FORM -->
-                <form id="newsletter-form">
+                <form id="newsletter-form" class="flex-y">
                     <label for="Email">Correo electr&oacute;nico:</label>
-                    <input type="email" id="email" name="Email" value="" placeholder="example@example.com" required />
-                    <button type="submit" name="Submit" class="buttonLargue">Suscribirse</button>
+                    <input type="email" id="email" name="Email" value="" placeholder="example@example.com" required/>
+                    <button type="submit" name="Submit" class="button">Suscribirse</button>
                 </form>
             </section>
 
