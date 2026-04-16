@@ -1,13 +1,16 @@
 ---
-// src/pages/es/index.astro
+import VideoHero from "../../components/VideoHero.astro";
+import Layout from "../../layouts/Layout.astro";
+
+// src/pages/index.astro
 ---
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta http-equiv="refresh" content={`0;url=/es/home`} />
-    <title>Redireccionando...</title>
-</head>
-<body>
-    <p>Si no eres redirigido, <a href="/es/home">haz clic aquí</a>.</p>
-</body>
-</html>
+
+<Layout title="FranForge - Game Developer">
+  <VideoHero
+		videoSrc = "/media/projects/magictory/summary.mp4"
+	/>
+</Layout>
+
+<script is:inline>
+        window.location.pathname = '/es/home/';
+</script>
