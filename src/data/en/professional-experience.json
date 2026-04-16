@@ -1,0 +1,61 @@
+[
+    {
+        "title": "Mid Unity Developer",
+        "company": "Freelance",
+        "location": "Remote",
+        "date": "Mar 2026 - Apr 2026",
+        "related-projects": [
+            {
+                "id": "rhidian-you",
+                "name": "Rhidian You"
+            }
+        ],
+        "descriptions": [
+            "Developed systems from scratch with Unity.",
+            "Planned project architecture."
+        ]
+    },
+    {
+        "title": "Junior to Senior Unity Developer",
+        "company": "Enthariel Games",
+        "location": "Seville",
+        "date": "Mar 2023 - Sep 2025",
+        "related-projects": [
+            {
+                "id": "the-sky-project",
+                "name": "The Sky Project"
+            },
+            {
+                "id": "animal-strikers",
+                "name": "Animal Strikers"
+            },
+            {
+                "id": "luminaria-dark-echoes",
+                "name": "Luminaria: Dark Echoes"
+            },
+            {
+                "id": "confinio-reality-prison",
+                "name": "Confinio: Reality Prison"
+            }
+        ],
+        "descriptions": [
+            "Developed systems from scratch with Unity.",
+            "Planned project architecture and version control.",
+            "Mentored other developers.",
+            "Lead small teams of developers.",
+            "Handled console ports, including Nintendo Switch.",
+            "Published games on platforms such as Steam and Google Play."
+        ]
+    },
+    {
+        "title": "Junior IT Technician",
+        "company": "Trece Computer",
+        "location": "Seville",
+        "date": "Mar 2021 - Jun 2021",
+        "descriptions": [
+            "Diagnosed hardware and software issues.",
+            "Repaired mobile devices, laptops, and desktops.",
+            "Handled in-store sales."
+        ]
+    }
+]

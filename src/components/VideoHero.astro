@@ -1,0 +1,33 @@
+---
+const { videoSrc, title, subtitle, rotatingText } = Astro.props;
+---
+
+<section id="hero" class="hero scroll-effect" data-scroll-min-y="100" data-scroll-max-y="0">
+
+    <div class="black-bg-panel">
+        
+        <video preload="auto" autoplay muted loop>
+            <source src={videoSrc} type="video/mp4">
+        </video>
+
+    </div>
+
+    <div id="hero-background-panel" class="black-bg-translucid-panel"></div>
+
+    <div id="hero-content" class="content">
+        
+        <p id="hero-title" class="title">{title}</p>
+
+        <p id="hero-subtitle" class="subtitle">
+            <span class="rotating-text" data-texts={rotatingText}></span>
+            {subtitle}
+        </p>
+
+    </div>
+    
+</section>
+
+<script>
+    import "../scripts/scrollEffector.js";
+    import "../scripts/rotateTexts.js";
+</script>

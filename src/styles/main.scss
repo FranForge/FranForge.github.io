@@ -1,0 +1,1498 @@
+@use 'colors';
+@use 'fonts';
+
+//======================================================================
+// VARIABLES
+//======================================================================
+
+//Textos
+//----------------------------------------------------------------------
+$huge: 5rem;
+$big: 2rem;
+$mid: 1rem;
+$small: 0.75rem;
+$tiny: 0.5rem;
+
+//======================================================================
+// ELEMENTOS BASE (MIXINS)
+//======================================================================
+
+@mixin flex-x-start{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;    
+}
+
+@mixin flex-x-center{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;    
+}
+
+@mixin flex-x-center-reversed{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center; 
+}
+
+@mixin flex-x-end{
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+}
+
+//Muestra sombra en los textos.
+@mixin text-shadow{
+    text-shadow: black 2px 2px;
+}
+
+@mixin flex-y-start{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+@mixin flex-y-start-reversed{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-y-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+@mixin flex-y-center-reversed{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-y-end{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+}
+
+@mixin flex-y-end-reversed{
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: end;
+    align-items: center;
+}
+
+//Muestra una seccion de fondo que no se mueve.
+@mixin sticky-background-section{
+    position: sticky;
+    top: 0;
+    height: 100dvh;
+    width: 100%;
+    z-index: -10;
+    overflow-x: hidden;
+}
+
+@mixin background-panel($background: black, $opacity: 0.75){
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: $background;
+    opacity: $opacity;
+}
+
+//Margen
+//----------------------------------------------------------------------
+@mixin margin-0{margin: 0;}
+
+//Establece la pagina centrada horizontalmente dejando bastante espacio 
+//hacia los lados en PC y poco en movil.
+@mixin margin-x-large{
+    margin-left: 20dvw;
+    margin-right: 20dvw;
+
+    @media (max-aspect-ratio: 16/9) {
+    margin-left: 5dvw;
+    margin-right: 5dvw;
+  }
+}
+
+//Textos
+//----------------------------------------------------------------------
+@mixin text-left { text-align: left; }
+@mixin text-center { text-align: center; }
+@mixin text-right { text-align: right; }
+@mixin uppercase { text-transform: uppercase; }
+@mixin lowercase { text-transform: lowercase; }
+@mixin huge-text { font-size: $huge; }
+@mixin big-text { font-size: $big; }
+@mixin mid-text { font-size: $mid; }
+@mixin small-text { font-size: $small; }
+@mixin tiny-text { font-size: $tiny; }
+@mixin huge-line { line-height: $huge; }
+@mixin big-line { line-height: $big; }
+@mixin mid-line { line-height: $mid; }
+@mixin small-line { line-height: $small; }
+@mixin tiny-line { line-height: $tiny; }
+@mixin bold-text { font-weight: bold; }
+@mixin italic-text { font-style: italic; }
+@mixin underline-text { text-decoration: underline; }
+
+@mixin hanging-indent($amount){
+    padding-left: $amount;
+    padding-right: $amount;
+    text-indent: -$amount;
+}
+
+//Secciones
+//----------------------------------------------------------------------
+@mixin section-base{position: relative;}
+
+//Temas
+//----------------------------------------------------------------------
+@mixin theme($background: white, $text: black, $text-f: #{fonts.$main-font}, 
+             $title: black, $title-f: #{fonts.$title-font}, 
+             $border: black, $span: black){
+
+    background: $background;
+    color: $text;
+    font-family: $text-f;
+    border-color: $border;
+
+    body{
+        background: $background;
+        color: $text;
+        font-family: $text-f;
+    }
+
+    h1, h2, h3, h4, h5 {
+        color: $title;
+        font-family: $title-f;
+    }
+
+    p{
+        color: $text;
+        font-family: $text-f;
+    }
+
+    a {
+        color: $text;
+        font-family: $text-f;
+    }
+
+    span {
+        color: $span;
+    }
+}
+
+@mixin paint-before-bg($background: white){
+    &::before{
+        background-color: $background;
+    }
+}
+
+@mixin blur{
+    background-color: colors.$semi-transparent-color;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+//General
+//----------------------------------------------------------------------
+@mixin rounded{border-radius: 100px;}
+@mixin border-radius{border-radius: 0.5vh;}
+
+//======================================================================
+// HTML PURO
+//======================================================================
+
+:root{
+    scroll-behavior: smooth;
+    font-size: 2dvh;
+    font-family: #{fonts.$main-font};
+}
+
+body{
+    margin: 0;
+    background: colors.$brand-secondary-color;
+    color: white;
+}
+
+h1, h2, h3, h4, h5{
+    @include uppercase();
+    color: white;
+    font-family: #{fonts.$title-font};
+}
+
+h1{
+    font-size: 2rem;
+    line-height: 2rem;
+}
+
+h2{
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+    
+}
+
+h3{
+    font-size: 1.2rem;
+    line-height: 1.2rem;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+span{
+    color: colors.$brand-color;
+    font-weight: bold;
+}
+
+img{
+    height: 10dvh;
+    object-fit: contain;
+}
+
+video{
+    display: block;
+    min-height: 100%;
+    min-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+input, textarea {
+                width: 100%;
+                padding: 10px;
+                margin-bottom: 10px;
+                box-sizing: border-box;
+                background: rgba(255, 255, 255, 0.1);
+                border: 1px solid white;
+                color: inherit;
+                font-family: inherit;
+            }
+
+//======================================================================
+// ELEMENTOS UTILES (CLASES)
+//======================================================================
+
+//Margen
+//----------------------------------------------------------------------
+.margin-0{@include margin-0();}
+
+//Textos
+//----------------------------------------------------------------------
+.text-left { @include text-left(); }
+.text-center { @include text-center(); }
+.text-right { @include text-right(); }
+.uppercase { @include uppercase(); }
+.lowercase { @include lowercase(); }
+.huge-text { @include huge-text(); }
+.big-text { @include big-text(); }
+.mid-text { @include mid-text(); }
+.small-text { @include small-text(); }
+.tiny-text { @include tiny-text(); }
+.huge-line { @include huge-line(); }
+.big-line { @include big-line(); }
+.mid-line { @include mid-line(); }
+.small-line { @include small-line(); }
+.tiny-line { @include tiny-line(); }
+.bold-text { @include bold-text(); }
+.italic-text { @include italic-text(); }
+.underline-text { @include underline-text(); }
+
+//Flex
+//----------------------------------------------------------------------
+.flex-x-start{@include flex-x-start();}
+.flex-x-center{@include flex-x-center();}
+.flex-x-end{@include flex-x-end();}
+.flex-y-start{@include flex-y-start();}
+.flex-y-center{@include flex-y-center();}
+.flex-y-end{@include flex-y-end();}
+.wrap{flex-wrap: wrap;}
+.gap-20{gap: 20px;}
+
+//======================================================================
+// ELEMENTOS COMPLEJOS GENERICOS
+//======================================================================
+
+//Paneles
+//----------------------------------------------------------------------
+.black-bg-panel{@include background-panel(black, 1);}
+.black-bg-translucid-panel{@include background-panel(black, 0.75);}
+
+//Secciones
+//----------------------------------------------------------------------
+
+.divider{
+    @include border-radius();
+    width: 100%;
+    height: 10px;
+    margin: 10px 0;
+}
+
+//Seccion que se muestra por debajo.
+.sticky-section{
+    @include sticky-background-section();
+    
+
+    &.scroll-effect-on{
+
+        > .content{
+            opacity: 0;
+        }
+
+    }
+
+    > .content{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        transition: opacity 1s ease;
+    }
+}
+
+//Seccion resumen que tiene una imagen en el lateral.
+.summary-section{
+    @include section-base();
+    height: 110dvh;
+    width: 100%;
+    overflow: hidden;
+
+    @media (max-aspect-ratio: 16/9){
+        height: auto;
+    }
+
+    .title{
+        @include mid-text();
+        @include mid-line();
+        margin: 3dvh 0;
+        color: grey;
+        font-family: #{fonts.$main-font};
+    }
+
+    .subtitle{
+        @include big-text();
+        @include big-line();
+        @include bold-text();
+        @include uppercase();
+        font-family: #{fonts.$main-font};
+    }
+
+    > .content{
+        @include flex-x-center-reversed();
+        position: absolute;
+        width: 70%;
+        height: 100%;
+        gap: 50px;
+
+        @media (max-aspect-ratio: 16/9){
+            @include flex-y-start();
+            position: relative;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    .short-section{
+        @include flex-y-center();
+        padding: 10dvh 2dvh;
+        flex-basis: 10%;
+        gap: 25px;
+        border-right: colors.$light-grey 2px dashed;
+
+        @media (max-aspect-ratio: 16/9){
+            flex-basis: 100%;
+            width: 100%;
+            height: auto;
+            border: none;
+        }
+
+        .item{
+            @include flex-y-center-reversed();
+            
+            img{
+                height: 8dvh;
+                object-fit: contain;
+            }
+
+            .title{
+                @include margin-0();
+            }
+
+            .subtitle{
+                @include margin-0();
+            }
+        }
+    }
+
+    .long-section{
+        @include flex-y-center();
+        padding: 10dvh 5dvw;
+        flex-basis: 50%;
+
+        @media (max-aspect-ratio: 16/9){
+            flex-basis: 100%;
+            padding: 5dvw 5dvw;
+        }
+
+        .title{
+            font-family: #{fonts.$title-font};
+        }
+    }
+
+    .img-section{
+        @include flex-x-center();
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 35%;
+        height: 100%;
+        overflow: hidden;
+        clip-path: polygon(10% 0, 100% 0%, 100% 100%, 0% 100%);
+
+        img{
+            height: 100%;
+            object-fit: cover;
+
+            @media (max-aspect-ratio: 16/9){
+                min-width: 100%;
+                min-height: 100%;
+            }
+        }
+
+        @media (max-aspect-ratio: 16/9){
+            position: relative;
+            width: auto;
+            height: 50dvh;
+            clip-path: none;
+            margin: 5dvw;
+            clip-path: circle(50% at center);
+        }
+    }
+}
+
+.information-section{
+    @include section-base();
+    @include text-center();
+    @include flex-y-center();
+    gap: 20px;
+    min-height: 70dvh;
+    padding: 10vh 0;
+
+    h1{
+        border-bottom-style: dashed;
+        border-bottom-width: 2px;
+        width: 100%;
+    }
+
+    > .content{
+        @include margin-x-large();
+        align-self: stretch;
+
+        h1{
+            padding-top: 10dvh;
+        }
+    }
+
+    > .blog-content{
+        @include margin-x-large();
+        @include text-left();
+        @include border-radius();
+        box-sizing: border-box;
+        margin-top: 10dvh;
+        align-self: stretch;
+        padding: 50px;
+        word-wrap: break-word;
+        hyphens: auto;
+
+        @media (max-aspect-ratio: 16/9){
+            padding: 20px;
+        }
+
+        h1{
+            padding-top: 10dvh;
+        }
+
+        img{
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .title{
+            @include margin-0();
+            @include big-text();
+            @include big-line();
+            @include bold-text();
+            margin-bottom: 10px;
+        }
+
+        .subtitle{
+            @include margin-0();
+            @include mid-text();
+            @include mid-line();
+            @include uppercase();
+            margin-bottom: 10px;
+        }
+
+        .date{
+            @include mid-text();
+            @include mid-line();
+            @include uppercase();
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.split-section{
+    @include section-base();
+    @include flex-x-center();
+    align-items: stretch;
+    width: 100%;
+
+    @media (max-aspect-ratio: 16/9){
+        @include flex-y-start();
+    }
+
+    .content{
+        @include flex-y-start();
+        align-items: start;
+        flex-basis: 50%;
+        min-height: 50dvh;
+        padding: 10dvh;
+
+        @media (max-aspect-ratio: 16/9){
+            padding: 5dvh 0;
+            width: 100%;
+        }
+
+        h1{
+            width: 100%;
+            border-bottom-style: dashed;
+            border-bottom-width: 2px;
+
+            @media (max-aspect-ratio: 16/9){
+                @include text-center();
+            }
+        }
+    }
+}
+
+.vertical-cards-section{
+    @include section-base();
+    @include flex-x-center();
+    flex-wrap: wrap;
+    gap: 40px;
+
+    .card{
+        @include border-radius();
+        @include flex-y-start();
+        position: relative;
+        flex-basis: 28%;
+        border-style: solid;
+        border-width: 2px;
+        overflow: hidden;
+        height: 70dvh;
+        transition: border-color 0.25s ease;
+
+        > .content{
+            @include flex-y-start();
+            padding: 10px;
+
+            .description{
+                width: 100%;
+            }
+
+            .date{
+                width: 100%;
+                line-height: 1rem;
+                border-top: colors.$light-grey 2px dashed;
+            }
+
+            .attributes-container{
+                @include flex-x-center();
+                width: 100%;
+                overflow: hidden;
+                gap: 5px;
+
+                .attribute-card{
+                    @include border-radius();
+                    padding: 5px;
+                    color: white;
+                    line-height: 1rem;
+                }
+            }
+        }
+
+        .img-section{
+            position: absolute;
+            bottom: 0;
+            height: 45%;
+            width: 100%;
+            background-color: black;
+
+            img{
+                min-height: 100%;
+                min-width: 100%;
+                object-fit: cover;
+            }
+
+            .read-more{
+                @include border-radius();
+                position: absolute;
+                bottom: 10px;
+                right: 10px;
+                background-color: black;
+                padding: 5px;
+                color: white;
+            }
+        }
+
+        &:hover{
+            border-color: colors.$brand-color;
+
+            .read-more{
+                background-color: colors.$brand-color;
+                transition: background-color 0.25s ease;
+            }
+        }
+
+        @media (max-aspect-ratio: 16/9){
+            flex-basis: 100%;
+        }
+    }
+}
+
+.horizontal-cards-section{
+    @include section-base();
+    @include flex-x-center();
+    flex-wrap: wrap;
+    gap: 40px;
+
+    .card{
+        @include border-radius();
+        @include flex-x-start();
+        @include text-left();
+        position: relative;
+        border-style: solid;
+        border-width: 2px;
+        flex-basis: 47%;
+        overflow: hidden;
+        min-height: 15dvh;
+        transition: border-color 0.25s ease;
+
+        @media (max-aspect-ratio: 16/9){
+            @include flex-y-start();
+            flex-basis: 100%;
+            min-height: 55dvh;
+        }
+
+        > .content{
+            @include flex-y-start();
+            padding: 10px;
+            width: 70%;
+            height: 100%;
+
+            @media (max-aspect-ratio: 16/9){
+                width: 100%;
+                height: 30%;
+            }
+
+            h1, h2, h3, h4, h5{
+                @include mid-line();
+                @include mid-text();
+                margin: 0;
+                margin-bottom: 10px;
+                width: 100%;
+            }
+
+            p{
+                @include mid-line();
+                @include mid-text();
+                margin: 0;
+                width: 100%;
+            }
+        }
+
+        .img-section{
+            position: absolute;
+            display: flex;
+            aspect-ratio: 1 / 1;
+            right: 0;
+            height: 100%;
+            width: auto;
+            background-color: black;
+
+            @media (max-aspect-ratio: 16/9){
+                width: 100%;
+                height: auto;
+                bottom: 0;
+            }
+
+            img{
+                min-height: 100%;
+                min-width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &:hover{
+            border-color: colors.$brand-color;
+        }
+    }
+}
+
+//Seccion que muestra cartas donde las cartas tienen columnas.
+.column-cards-section{
+    @include section-base();
+    gap: 20px;
+
+    .card{
+        @include flex-x-start();
+        gap: 50px;
+        width: 90%;
+        margin: auto;
+
+        h1, h2, h3, h4, h5{
+            @include mid-text();
+            @include mid-line();
+            flex: 0 0 20%;
+            width: 20%;
+
+            @media (max-aspect-ratio:16/9){
+                width: auto;
+            }
+        }
+
+        p{
+            @include mid-text();
+            @include mid-line();
+        }
+
+        img{
+            height: 5dvh;
+        }
+
+        &:hover{
+            border-color: colors.$brand-color;
+        }
+    }
+}
+
+.box-cards-section{
+    @include section-base();
+    @include flex-x-center();
+    flex-wrap: wrap;
+    gap: 40px;
+
+    .card{
+        @include border-radius();
+        @include flex-y-start();
+        position: relative;
+        flex-basis: 28%;
+        border-style: solid;
+        border-width: 2px;
+        overflow: hidden;
+        height: 20dvh;
+        transition: border-color 0.25s ease;
+
+        > .content{
+            @include flex-y-start();
+            padding: 10px;
+        }
+
+        .img-section{
+            position: absolute;
+            bottom: 0;
+            height: 60%;
+            width: 100%;
+            background-color: black;
+
+            img{
+                min-height: 100%;
+                min-width: 100%;
+                object-fit: cover;
+            }
+
+            .read-more{
+                @include border-radius();
+                position: absolute;
+                bottom: 10px;
+                right: 10px;
+                background-color: black;
+                padding: 5px;
+                color: white;
+            }
+        }
+
+        &:hover{
+            border-color: colors.$brand-color;
+
+            .read-more{
+                background-color: colors.$brand-color;
+                transition: background-color 0.25s ease;
+            }
+        }
+
+        @media (max-aspect-ratio: 16/9){
+            flex-basis: 100%;
+        }
+    }
+}
+
+//Botones
+//----------------------------------------------------------------------
+.button{
+    @include rounded();
+    @include flex-x-center();
+    position: relative;
+    border: 2px solid;
+    border-color: black;
+    min-width: 200px;
+    min-height: 50px;
+    overflow: hidden;
+    transition: border-color 0.25s ease;
+
+    .content{
+        @include flex-x-center();
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        background-color: white;
+        transition: background-color 0.25s ease;
+
+        p{
+            color: black;
+            transition: color 0.25s ease;
+        }
+    }
+
+    &:hover{
+        border-color: colors.$brand-color;
+
+        .content{
+            background-color: black;
+
+            p{
+                color: white;
+            }
+        }
+    }
+}
+
+.left-arrow-button{
+    border: none;
+    clip-path: polygon(0% 50%, 100% 100%, 100% 0%);
+
+    transition: background-color 0.5s ease;
+
+    &:hover{
+        background-color: colors.$brand-color;
+    }
+}
+
+.right-arrow-button{
+    border: none;
+    clip-path: polygon(100% 50%, 0% 100%, 0% 0%);
+
+    transition: background-color 0.5s ease;
+
+    &:hover{
+        background-color: colors.$brand-color;
+    }
+}
+
+//Bars
+//----------------------------------------------------------------------
+.bar-container{
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+    height: 1vh;
+    border-radius: 100px;
+    background-color: black;
+    overflow: hidden;
+}
+
+.bar{
+    height: 100%;
+    background-color: var(--brandColor);
+    border-radius: 100px;
+
+    transition: width 0.5s ease;
+}
+
+//Timeline
+//----------------------------------------------------------------------
+.timeline{
+    @include flex-y-start();
+    align-items: end;
+    border-left-width: 5px;
+    border-left-style: solid;
+    margin: 0 10px;
+    padding-left: 80px;
+    gap: 50px;
+
+    .event{
+        @include flex-y-center();
+        @include border-radius();
+        @include text-left();
+        @include mid-line();
+        @include mid-text();
+        align-items: start;
+        position: relative;
+        width: 100%;
+        padding: 20px;
+        border-style: double;
+        border-width: 2px;
+
+        &::before{
+            content: "";
+            position: absolute;
+            left: -54px;
+            top: 50%;
+            height: 25px;
+            width: 25px;
+            clip-path: circle(50% at center);
+        }
+
+        h1, h2, h3, h4, h5{
+            @include mid-text();
+            border-bottom-style: dashed;
+            border-bottom-width: 2px;
+            display: flex;
+            flex-wrap: wrap;
+            margin-bottom: 10px;
+            margin-top: 0;
+            width: 100%;
+        }
+
+        p{
+            @include text-left();
+            @include mid-line();
+            @include hanging-indent(20px);
+            margin: 1px 0;
+            width: 100%;
+        }
+
+        .info{
+            @include flex-x-center();
+            margin-bottom: 20px;
+            width: 100%;
+            gap: 10px;
+            padding: 0 15px;
+
+            @media (max-aspect-ratio: 16/9){
+                @include flex-y-start();
+            }
+
+            .name{
+                @include bold-text();
+            }
+
+            .date{
+                @include italic-text();
+                @include text-right();
+
+                @media (max-aspect-ratio: 16/9){
+                    @include text-left();
+                }
+            }
+        }
+    }
+}
+
+//Responsive
+//----------------------------------------------------------------------
+.desktop{
+    @media (max-aspect-ratio: 16/9){
+        display: none;
+    }
+}
+
+.mobile{
+    @media (min-aspect-ratio: 16/9){
+        display: none;
+    }
+}
+
+//======================================================================
+// ELEMENTOS COMPLEJOS DEFINIDOS
+//======================================================================
+
+//Header
+//----------------------------------------------------------------------
+.header{
+    @include text-shadow();
+    position: fixed;
+    width: 100dvw;
+    height: 10dvh;
+    z-index: 10;
+    overflow: hidden;
+    border-bottom: colors.$transparent-color solid 2px;
+    transition: background-color 1s ease, border-bottom 1s ease;
+
+    &.scroll-effect-on{
+        @include blur();
+        border-bottom: colors.$brand-color solid 2px;
+    }
+
+    .content{
+        @include flex-x-end();
+        height: 100%;
+        width: 90dvw;
+        gap: 10px;
+        margin-left: auto;
+        margin-right: auto;
+
+        @media (max-aspect-ratio: 16/9){
+            @include flex-x-center();
+        }
+    }
+
+    .navigation{
+        @include flex-x-center();
+        height: 100%;
+        color: white;
+        padding: 10px;
+
+        a{
+            padding-left: 10px;
+            padding-right: 10px;
+            opacity: 0.8;
+            color: white;
+            transition: opacity 0.25s ease;
+
+            &:hover{
+                opacity: 1;
+            }
+
+            img{
+                height: 8dvh;
+                width: auto;
+                object-fit: contain;
+            }
+        }
+
+        .link{
+            border-left: 1px white solid;
+        }
+    }
+}
+
+//Hero
+//----------------------------------------------------------------------
+.hero{
+    @extend .sticky-section;
+    overflow: hidden;
+
+    img{
+        min-height: 100dvh;
+        min-width: 100dvw;
+        object-fit: cover;
+    }
+
+    .title{
+        @include margin-0();
+        @include huge-text();
+        @include huge-line();
+        @include uppercase();
+        @include bold-text();
+        @include text-center();
+
+        @media (max-aspect-ratio: 16/9){
+            @include big-text();
+            @include big-line();
+        }
+    }
+
+    .subtitle{
+        @include margin-0();
+        @include big-text();
+        @include big-line();
+        @include uppercase();
+        @include bold-text();
+        @include text-center();
+
+        @media (max-aspect-ratio: 16/9){
+            @include mid-text();
+            @include mid-line();
+        }
+    }
+}
+
+//Footer
+//----------------------------------------------------------------------
+.footer{
+    @include flex-x-center();
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 50px;
+    box-sizing: border-box;
+    padding: 10dvh 25px;
+
+    .content{
+        @include flex-y-start();
+        flex-basis: 28%;
+        gap: 20px;
+
+        @media (max-aspect-ratio: 16/9){
+            flex-basis: 100%;
+        }
+
+        img{
+            height: 4dvh;
+            width: auto;
+            object-fit: contain;
+        }
+
+        a{
+            opacity: 0.8;
+            transition: opacity 0.25s ease;
+
+            &:hover{
+                opacity: 1;
+            }
+        }
+
+        form{
+            input, textarea{
+                transition: border-color 0.25s ease;
+
+
+                &:hover{
+                    border-color: colors.$brand-color;
+                }
+            }
+        }
+
+        .flex-x{
+            @include flex-x-center();
+            width: 100%;
+            height: auto;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .flex-y{
+            @include flex-y-start();
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+//Blog BG
+//----------------------------------------------------------------------
+.purple-bg{
+    background-color: colors.$brand-secondary-color;
+}
+
+//Messages
+//----------------------------------------------------------------------
+.message-box{
+    display: none;
+    opacity: 0;
+    flex-grow: 1;
+    width: 100%;
+    padding: 0 10px;
+    border-style: solid;
+    border-width: 2px;
+    transition: none-to-flex-display 0.5s ease;
+
+    &.show{
+        display: flex;
+        opacity: 1;
+    }
+}
+
+//Project content
+//----------------------------------------------------------------------
+.project-content{
+    @include flex-y-start();
+    @include text-left();
+    align-items: stretch;
+    width: 100%;
+
+    p{
+        @include mid-line();
+        margin-bottom: 10px;
+    }
+}
+
+//Platforms
+//----------------------------------------------------------------------
+.platforms{
+    @include flex-x-center();
+    width: 100%;
+    gap: 10px;
+    padding-top: 20px;
+
+    @media (max-aspect-ratio: 16/9){
+        @include flex-y-center();
+    }
+}
+
+.platform-button{
+    @include flex-x-center-reversed();
+    flex-basis: 30%;
+    overflow: hidden;
+    height: 2.5rem;
+    border-radius: 100px;
+    border: black 2px solid;
+    transition: background-color 0.25s ease;
+
+    @media (max-aspect-ratio: 16/9){
+        flex-basis: 100%;
+        width: 100%;
+    }
+
+    img{
+            max-width: 15%;
+            object-fit: contain;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+    > .content{
+        @include flex-x-center();
+        background-color: white;
+        color: black;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        font-size: 1rem;
+
+        transition: width 0.5s ease, font-size 0.5s ease;
+
+        p{
+            color: black;
+        }
+    }
+
+    > .reveal{
+        @include flex-x-center();
+        background-color: black;
+        color: white;
+        width: 0;
+        height: 100%;
+        font-size: 0;
+        overflow: hidden;
+        
+        transition: width 0.5s ease, font-size 0.5s ease;
+
+        p{
+            color: white;
+        }
+    }
+
+    &:hover{
+
+        > .content{
+            width: 0;
+            font-size: 0;
+        }
+
+        > .reveal{
+            width: 100%;
+            font-size: 1rem;
+        }
+    }
+}
+
+//Carousel
+//----------------------------------------------------------------------
+.carousel{
+    @include flex-x-center();
+    position: relative;
+    margin: auto;
+    height: 70dvh;
+    width: 100%;
+    gap: 20px;
+    overflow: hidden;
+
+    @media (max-aspect-ratio: 16/9){
+        height: 40dvh;
+    }
+
+    img{
+        width: auto;
+        height: 70dvh;
+        max-width: 75%;
+
+        @media (max-aspect-ratio: 16/9){
+            height: 40dvh;
+        }
+    }
+
+    button{
+        flex-basis: 10%;
+        max-width: 2.5dvw;
+        min-height: 10vh;
+        max-height: 15vh;
+        overflow: hidden;
+    }
+}
+
+//======================================================================
+// ANIMATIONS
+//======================================================================
+
+@keyframes none-to-flex-display{
+    0%{
+        display: flex;
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+//======================================================================
+// TEMAS
+//======================================================================
+
+.theme-header{
+    @include theme(transparent, 
+                white, 
+                #{fonts.$main-font}, 
+                white, 
+                #{fonts.$title-font}, 
+                transparent, 
+                colors.$brand-color);
+}
+
+.theme-transparent{
+    @include theme(transparent, 
+                white, 
+                #{fonts.$main-font}, 
+                white, 
+                #{fonts.$title-font}, 
+                colors.$brand-color, 
+                colors.$brand-color);
+}
+
+.theme-black-over-white-serious{
+    @include theme(white, 
+                black, 
+                #{fonts.$main-font}, 
+                black, 
+                #{fonts.$title-font}, 
+                black, 
+                black);
+}
+
+.theme-white-over-black-serious{
+    @include theme(black, 
+                white, 
+                #{fonts.$main-font}, 
+                white, 
+                #{fonts.$title-font}, 
+                white, 
+                white);
+}
+
+.theme-white-card{
+    @include theme(white, 
+                black, 
+                #{fonts.$main-font}, 
+                grey, 
+                #{fonts.$title-font}, 
+                white, 
+                colors.$brand-color);
+}
+
+.theme-light-grey-card{
+    @include theme(colors.$light-grey, 
+                black, 
+                #{fonts.$main-font}, 
+                black, 
+                #{fonts.$title-font}, 
+                colors.$light-grey, 
+                colors.$brand-color);
+}
+
+.theme-black-card{
+    @include theme(black, 
+                white, 
+                #{fonts.$main-font}, 
+                grey, 
+                #{fonts.$title-font}, 
+                black, 
+                colors.$brand-color);
+}
+
+.theme-purple-bar{
+    @include theme(colors.$brand-color);
+}
+
+.theme-semi-transparent{
+    @include theme(colors.$semi-transparent-color, 
+                white, 
+                #{fonts.$main-font}, 
+                white, 
+                #{fonts.$main-font}, 
+                white, 
+                colors.$brand-secondary-color);
+
+    @include paint-before-bg();
+}
+
+.theme-success{
+    @include theme(rgb(150, 255, 150), 
+                black, 
+                #{fonts.$main-font}, 
+                black, 
+                #{fonts.$main-font}, 
+                white, 
+                black);
+}
+
+.theme-warn{
+    @include theme(#F6FF9E, 
+                black, 
+                #{fonts.$main-font}, 
+                black, 
+                #{fonts.$main-font}, 
+                white, 
+                black);
+}
+
+.theme-failed{
+    @include theme(rgb(255, 100, 100), 
+                black, 
+                #{fonts.$main-font}, 
+                black, 
+                #{fonts.$main-font}, 
+                white, 
+                black);
+}
+
+.theme-divider{
+    @include theme(colors.$brand-color, 
+                black, 
+                #{fonts.$main-font}, 
+                black, 
+                #{fonts.$main-font}, 
+                black, 
+                black);
+}

@@ -1,0 +1,67 @@
+[
+    {
+        "tile": "Unity",
+        "icon": "unity.svg",
+        "ability": 90
+    },
+    {
+        "tile": "Unreal",
+        "icon": "unreal.svg",
+        "ability": 30
+    },
+    {
+        "tile": "C#",
+        "icon": "c-sharp.svg",
+        "ability": 90
+    },
+    {
+        "tile": "C++",
+        "icon": "c-plus-plus.svg",
+        "ability": 35
+    },
+    {
+        "tile": "HTML",
+        "icon": "html.svg",
+        "ability": 85
+    },
+    {
+        "tile": "CSS",
+        "icon": "css.svg",
+        "ability": 75
+    },
+    {
+        "tile": "JS",
+        "icon": "js.svg",
+        "ability": 35
+    },
+    {
+        "tile": "Plastic",
+        "icon": "plastic-scm.svg",
+        "ability": 80
+    },
+    {
+        "tile": "Git",
+        "icon": "git-bash.svg",
+        "ability": 75
+    },
+    {
+        "tile": "Blender",
+        "icon": "blender.svg",
+        "ability": 80
+    },
+    {
+        "tile": "Premiere",
+        "icon": "premiere.svg",
+        "ability": 75
+    },
+    {
+        "tile": "After Effects",
+        "icon": "after-effects.svg",
+        "ability": 70
+    },
+    {
+        "tile": "Photoshop",
+        "icon": "photoshop.svg",
+        "ability": 50
+    }
+]

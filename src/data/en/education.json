@@ -1,0 +1,23 @@
+[
+    {
+        "title": "Higher Technician in 3D Animation, Games, and Interactive Environments",
+        "company": "IES Profesor Tierno Galván",
+        "location": "Sevilla",
+        "date": "Sep 2021 - Jun 2023"
+    },
+    {
+        "title": "Intermediate Technician in Computer Systems and Networks",
+        "company": "IES San Jerónimo",
+        "location": "Sevilla",
+        "date": "Sep 2019 - Jun 2021",
+        "descriptions": [
+            "Honors: Top grade throughout the program and highest-ranked student of the class."
+        ]
+    },
+    {
+        "title": "Compulsory Secondary Education (CSE)",
+        "company": "IES Torre de los Guzmanes",
+        "location": "Sevilla",
+        "date": "Sep 2015 - Jun 2019"
+    }
+]

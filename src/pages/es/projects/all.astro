@@ -1,0 +1,68 @@
+---
+//Proyectos
+import projectsData from '../../../data/es/projects.json' // Cambiado a /es/
+
+const professionalProjects = projectsData
+.filter(project => project.isProfessional === true);
+
+const personalProjects = projectsData
+.filter(project => project.isProfessional === false);
+
+import Layout from "../../../layouts/Layout.astro";
+import VideoHero from '../../../components/VideoHero.astro';
+import InformationSection from '../../../components/InformationSection.astro';
+import VerticalCard from '../../../components/VerticalCard.astro';
+import VerticalCardsContainer from '../../../components/VerticalCardsContainer.astro';
+---
+
+<Layout title="Proyectos | FranForge - Game Developer" lang="es">
+
+    <VideoHero
+        videoSrc = "/media/projects/magictory/summary.mp4"
+        title = "Proyectos"
+        rotatingText = "Unity, Unreal, Web, C#"
+    />
+
+    <InformationSection id="professional">
+
+        <h1>Proyectos Profesionales</h1>
+        <p>Proyectos desarrollados profesionalmente para empresas o clientes.</p>
+
+        <VerticalCardsContainer>
+
+            {professionalProjects.map((item) => (
+                <VerticalCard
+                    name={item.title}
+                    description={item.description}
+                    date={item.date}
+                    attributes={item.attributes}
+                    img={`/media/projects/${item.id}/thumbnail.webp`}
+                    url={`/es/projects/${item.id}.html`}
+                    lang="es"
+                />
+            ))}
+            
+        </VerticalCardsContainer>
+
+        <h1>Proyectos Personales</h1>
+        <p>Proyectos propios, creados como hobby o para el aprendizaje autónomo.</p>
+
+        <VerticalCardsContainer>
+
+            {personalProjects.map((item) => (
+                <VerticalCard
+                    name={item.title}
+                    description={item.description}
+                    date={item.date}
+                    attributes={item.attributes}
+                    img={`/media/projects/${item.id}/thumbnail.webp`}
+                    url={`/es/projects/${item.id}.html`}
+                    lang="es"
+                />
+            ))}
+            
+        </VerticalCardsContainer>
+
+    </InformationSection>
+
+</Layout>

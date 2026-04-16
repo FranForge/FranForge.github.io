@@ -1,0 +1,23 @@
+[
+    {
+        "title": "Técnico Superior en Animaciones 3D, Juegos y Entornos Interactivos",
+        "company": "IES Profesor Tierno Galván",
+        "location": "Sevilla",
+        "date": "Sep 2021 - Jun 2023"
+    },
+    {
+        "title": "Técnico Medio en Sistemas Microinformáticos y Redes",
+        "company": "IES San Jerónimo",
+        "location": "Sevilla",
+        "date": "Sep 2019 - Jun 2021",
+        "descriptions": [
+            "Menciones: Calificación máxima durante todo el programa y estudiante con el mejor expediente de la clase."
+        ]
+    },
+    {
+        "title": "Educación Secundaria Obligatoria (ESO)",
+        "company": "IES Torre de los Guzmanes",
+        "location": "Sevilla",
+        "date": "Sep 2015 - Jun 2019"
+    }
+]

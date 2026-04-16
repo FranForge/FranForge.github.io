@@ -1,0 +1,26 @@
+---
+const {title, img, url, lang = "en"} = Astro.props;
+
+let readMore = "";
+
+switch (lang) {
+    case "es":
+        readMore = "Leer más";
+        break;
+    case "en":
+    default:
+        readMore = "Read more";
+}
+---
+
+<a href={url} target="_blank" class="card theme-light-grey-card">
+    <section class="content">
+        <section class="description">
+            <h2 data-text="name">{title}</h2>
+        </section>
+    </section>
+    <section class="img-section">
+        <img src={img} alt={title}/>
+        <div class="read-more">{readMore}</div>
+    </section>
+</a>

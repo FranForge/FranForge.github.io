@@ -1,0 +1,89 @@
+[
+    {
+        "id": "franforge-api",
+        "title": "Creando mi propia API REST",
+        "subtitle": "Usando .NET Core, Render y JS",
+        "date": "25/11/2025",
+        "image": "main.webp",
+        "description": "Descubre mi primera experiencia creando mi propia API REST con .NET Core.",
+        "sections": [
+            {
+                "content": "Recientemente me interesé por el desarrollo web. Después de rehacer mi página web desde cero y lidiar con JavaScript, decidí dar un paso más creando mi propia API REST con .NET Core y mi mejor amigo C#. Para los que no lo conozcan, una API REST es un sistema que permite la comunicación entre distintos puntos mediante peticiones HTTP, un protocolo rápido que transporta mensajes y los traduce para estos endpoints."
+            },
+            {
+                "title": "¿Cómo funciona una API REST?",
+                "content": "Es simple: el cliente, normalmente un navegador, envía una petición a un servidor que aloja la API mediante una URL de acceso. El servidor procesa esa petición, que el desarrollador ha creado previamente —en mi caso con .NET Core— y devuelve una respuesta. Esta puede ser un error, un estado, un recurso, ..."
+            },
+            {
+                "content": "Como comenté, todo esto lo habilita el desarrollador. Por ejemplo, puedes tener acceso a una base de datos, que es lo más habitual, o métodos genéricos como los que actualmente tengo activos en mi API para que funcionen desde esta web."
+            },
+            {
+                "title": "¿Qué he desarrollado con la API REST?",
+                "content": "Empecé probando cosas simples, como crear una base de datos SQLite y conectarla a un controlador —el sistema que gestiona tu petición HTTP y la procesa para devolver una respuesta al cliente. También probé Swagger, una herramienta básica pero muy potente incluida con .NET Core al crear un proyecto de API REST, que permite probar todas las peticiones posibles del sistema. La parte de base de datos estaba bien, pero no era suficiente para un proyecto real como el siguiente."
+            },
+            {
+                "content": "Actualmente en la web hay un formulario de contacto que antes apuntaba a un servicio externo. Como mi web está alojada en GitHub Pages, un hosting rápido y gratuito sincronizado con GitHub, no permite usar servicios SMTP ni similares. La opción más fácil era usar un servicio externo. El problema era tener que acceder a ese servicio manualmente, algo que a menudo olvidaba, lo que podía provocar perder notificaciones cuando alguien contactaba conmigo. Mi solución fue crear la API para enviarme un correo directamente y recibir la notificación en el móvil, mucho más simple y directo que usar un servicio externo. Tras un tiempo de pruebas, el sistema de envío de correos funcionó, al menos en local.",
+                "image": "received-mail-from-api.webp"
+            },
+            {
+                "content": "Decidí subirlo a Render, un servicio de hosting en la nube para backend con planes gratuitos y de pago. El plan gratuito tiene limitaciones, como que el sistema se apaga tras unos minutos de inactividad hasta recibir una nueva petición, lo cual me venía perfecto y era algo que GitHub Pages no permitía. Todo parecía bien hasta que me encontré con dos problemas: debía desplegarlo con Docker o similar (no sabía qué era Docker), y los servicios SMTP estaban bloqueados por seguridad en Render y otros proveedores. Ahí decidí cambiar a un sistema basado únicamente en HTTP sin SMTP."
+            },
+            {
+                "content": "Después de ver qué servicios permitían notificaciones rápidas al móvil, descubrí que Telegram y Discord permiten bots integrados con APIs. Me decidí rápidamente por Telegram para crear un bot y conectarlo con mi API."
+            },
+            {
+                "title": "Creando un bot de Telegram",
+                "content": "Crear un bot de Telegram es bastante simple: solo tienes que ir a @BotFather en la app —bastante curioso— y ejecutar el comando /start seguido de /newbot. Te guiará en la creación del bot y te dará el token de API necesario para usarlo desde tu API. Este código es privado y no debe compartirse, así que, igual que con las contraseñas de Google App Password, se guarda en variables de entorno accesibles solo por el sistema operativo durante pruebas y por la API REST."
+            },
+            {
+                "content": "Otro paso necesario para que el bot solo envíe mensajes a tu chat de Telegram es iniciar el bot con /start y obtener tu chat ID mediante una ruta de Telegram que devuelve un JSON con la información del bot (https://api.telegram.org/bot\"BOT_TOKEN\"/getUpdates). Ahí aparece tu chat ID."
+            },
+            {
+                "content": "Una vez tenemos el token del bot y el chat ID, los añadimos como variables de entorno y ya podemos gestionar el bot desde la API REST. Solo queda gestionar la petición desde el cliente, en mi caso un formulario con JS que envía datos y muestra una respuesta visual.",
+                "image": "received-telegram-from-api.webp"
+            },
+            {
+                "content": "Así es como creé mi API REST personal y, poco a poco, a medida que la vaya mejorando, tendrá más funcionalidades para la web, como newsletter u otros servicios."
+            },
+            {
+                "title": "Consejo adicional con Render",
+                "content": "Como mencioné antes, Render apaga los servicios tras unos minutos de inactividad en el plan gratuito hasta que recibe otra petición. Esto puede ralentizar la experiencia del usuario, ya que enviar un formulario requeriría esperar a que la API se reactive."
+            },
+            {
+                "content": "Para solucionarlo, en mi web uso un método en JS que, al entrar en la página y cada 5 minutos, envía una petición de ping al servidor. Si el servidor está apagado, esto lo activa. Así, cuando se envía un formulario, la API ya está activa en la mayoría de los casos y no hay esperas."
+            }
+        ]
+    },
+    {
+        "id": "first-time-unreal",
+        "title": "Primera experiencia con Unreal Engine 5 usando C++",
+        "subtitle": "De Unity a Unreal Engine 5, transición de C# a su lenguaje padre C++",
+        "date": "06/06/2025",
+        "image": "main.webp",
+        "description": "Explora mi experiencia con Unreal Engine 5 desde la perspectiva de un desarrollador de Unity.",
+        "sections": [
+            {
+                "content": "Llevaba tiempo echándole el ojo a Unreal Engine. Podrías pensar, como mucha gente, que era para crear un juego AAA o al menos imitar sus gráficos, pero no. Lo que realmente nos motiva a los desarrolladores son los retos, y en mi caso con la programación suelo complicarme más de lo necesario. Sumado a algunas decisiones recientes cuestionables de Unity y mi interés por C++ y la gestión manual de memoria, además de conversaciones con otros programadores en eventos, decidí entrar en este mundo."
+            },
+            {
+                "title": "¿Fácil de empezar?",
+                "content": "Llevo pocas semanas con C++ y he probado el motor un poco con Blueprints (una forma más visual de programar). Desde mi experiencia con Unity, no es fácil. Es un motor completo, de eso no hay duda, y apenas he visto una pequeña parte de lo que esconde. Es bastante complejo, sobre todo para alguien que empieza con C++. Desde Blueprints es algo más sencillo, y para artistas 3D y diseñadores de juegos es ideal, ya que incluye herramientas que Unity no tiene de forma nativa."
+            },
+            {
+                "title": "¿Qué tal C++?",
+                "content": "Si vienes de C++ nativo probablemente te resulte más fácil que a mí. Aun así, Unreal Engine es enorme y requiere aprender cómo funciona internamente. No es un sistema de arrastrar y soltar como Unity; cada clase está muy orientada a un objeto o blueprint.",
+                "image": "cpp.webp"
+            },
+            {
+                "title": "¿Seguiré con Unreal Engine?",
+                "content": "Sí, sin duda. El motor me ha llamado mucho la atención y los resultados visuales son increíbles con muy poco esfuerzo. También es interesante su enfoque híbrido entre Blueprints y C++, lo que facilita el trabajo en equipo con personas menos técnicas o no programadores."
+            },
+            {
+                "content": "Sin embargo, Unreal es mucho más pesado que Unity, lo que implica necesitar un buen SSD y un equipo decente. Unity puede funcionar incluso en hardware muy modesto."
+            },
+            {
+                "content": "Por ahora me centraré en recrear mecánicas y prototipos, ya que Unreal es más complejo y los tiempos de desarrollo son más largos para un desarrollador en solitario."
+            }
+        ]
+    }
+]

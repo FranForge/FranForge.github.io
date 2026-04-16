@@ -1,0 +1,11 @@
+---
+const { id, additionalClass } = Astro.props; 
+---
+
+<section id={id} class={`information-section ${additionalClass}`}>
+    <slot name="before" />
+    <div class="content">
+        <slot />
+    </div>
+    <slot name="after" />
+</section>

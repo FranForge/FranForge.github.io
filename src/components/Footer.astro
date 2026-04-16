@@ -1,0 +1,125 @@
+---
+const { lang = "en" } = Astro.props;
+
+// Definición de variables
+let socialTitle, contactTitle, contactWarn, contactSuccess, contactFailed, 
+    informationTitle, aboutMe, projects, skills, experience, blog,
+    nameLabel, emailLabel, messageLabel, submitBtn;
+
+// Lógica de traducción
+switch (lang) {
+    case "es":
+        socialTitle = "Redes Sociales";
+        contactTitle = "Contacto";
+        contactWarn = "Tu mensaje se está enviando. Por favor, espera.";
+        contactSuccess = "Tu mensaje ha sido enviado con éxito.";
+        contactFailed = "Hubo un problema al enviar el mensaje:";
+        informationTitle = "Información";
+        aboutMe = "Sobre mí";
+        projects = "Proyectos";
+        skills = "Habilidades";
+        experience = "Experiencia";
+        blog = "Blogs";
+        nameLabel = "Nombre:";
+        emailLabel = "Email:";
+        messageLabel = "Mensaje:";
+        submitBtn = "Enviar";
+        break;
+    case "en":
+    default:
+        socialTitle = "Social";
+        contactTitle = "Contact";
+        contactWarn = "Your contact has been sent. Please wait a few seconds.";
+        contactSuccess = "Your message has been sent successfully.";
+        contactFailed = "There was a problem sending the message:";
+        informationTitle = "Information";
+        aboutMe = "About me";
+        projects = "Projects";
+        skills = "Skills";
+        experience = "Experience";
+        blog = "Blogs";
+        nameLabel = "Name:";
+        emailLabel = "Email:";
+        messageLabel = "Message:";
+        submitBtn = "Submit";
+        break;
+}
+---
+
+<footer class="footer theme-white-over-black-serious">
+
+    <section id="socials" class="content">
+        <h1>{socialTitle}</h1>
+        <div class="flex-x">
+            <a href="https://x.com/FranForge" target="_blank" aria-label="X">
+                <img src="/icons/twitter-white.svg" alt="Twitter">
+            </a>
+            <a href="https://www.instagram.com/franforge.dev/" target="_blank" aria-label="Instagram">
+                <img src="/icons/instagram-white.svg" alt="Instagram">
+            </a>
+            <a href="https://www.tiktok.com/@franforgedev" target="_blank" aria-label="Tiktok">
+                <img src="/icons/tiktok-white.svg" alt="Tiktok">
+            </a>
+            <a href="https://www.youtube.com/@FranForge/videos" target="_blank" aria-label="Youtube">
+                <img src="/icons/youtube-white.svg" alt="Youtube">
+            </a>
+            <a href="https://www.patreon.com/c/FranForge" target="_blank" aria-label="Patreon">
+                <img src="/icons/patreon-white.svg" alt="Patreon">
+            </a>
+            <a href="https://www.linkedin.com/in/francisco-jesus-huerta-hervas/" target="_blank" aria-label="Linkedin">
+                <img src="/icons/linkedin-white.svg" alt="Linkedin">
+            </a>
+            <a href="mailto:franforge3d@gmail.com" target="_blank" aria-label="Mail">
+                <img src="/icons/mail-white.svg" alt="Mail">
+            </a>
+            <a href="https://github.com/FranForge" target="_blank" aria-label="Github">
+                <img src="/icons/github-white.svg" alt="Github">
+            </a>
+        </div>
+    </section>
+
+    <section id="contact" class="content">
+        <h1>{contactTitle}</h1>
+
+        <section id="contact-warn" class="message-box theme-warn">
+            <p>{contactWarn}</p>
+        </section>
+        <section id="contact-success" class="message-box theme-success">
+            <p>{contactSuccess}</p>
+        </section>
+        <section id="contact-failed" class="message-box theme-failed">
+            <p>{contactFailed} <span id="contact-error">Error 404</span>.</p>
+        </section>
+
+        <form id="contact-form" method="POST" class="contact flex-y">
+            <label for="name">{nameLabel}</label>
+            <input type="text" id="name" name="Name" placeholder="Entity or Individual" required />
+
+            <label for="email">{emailLabel}</label>
+            <input type="email" id="email" name="Email" placeholder="example@example.com" required />
+
+            <label for="message">{messageLabel}</label>
+            <textarea id="message" name="Message" rows="4" placeholder="..." required></textarea>
+            
+            <button type="submit" class="button">
+                <section class="content">
+					<p>{submitBtn}</p>
+				</section>
+            </button>
+        </form>
+    </section>
+
+    <section id="footer-info" class="content flex-y">
+        <h1>{informationTitle}</h1>
+        <a href={`/${lang}/home.html#presentation`}>{aboutMe}</a>
+        <a href={`/${lang}/projects/all`}>{projects}</a>
+        <a href={`/${lang}/home.html#skills`}>{skills}</a>
+        <a href={`/${lang}/home.html#experience`}>{experience}</a>
+        <a href={`/${lang}/home.html#blogs-and-articles`}>{blog}</a>
+    </section>
+
+</footer>
+
+<script>
+    import "../scripts/contactForm.js";
+</script>

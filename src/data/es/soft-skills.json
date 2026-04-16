@@ -1,0 +1,42 @@
+[
+    {
+        "title": "Comunicativo",
+        "description": "Capaz de comunicarse eficazmente y extrovertido con el equipo.",
+        "icon": "message.svg"
+    },
+    {
+        "title": "Trabajo en equipo",
+        "description": "Trabajo de forma colaborativa, buscando aportaciones y ofreciendo ayuda siempre que sea posible.",
+        "icon": "team.svg"
+    },
+    {
+        "title": "Resolución de problemas",
+        "description": "Siempre me esfuerzo por resolver problemas, tanto técnica como personalmente.",
+        "icon": "warning.svg"
+    },
+    {
+        "title": "Versátil",
+        "description": "Me adapto rápidamente a nuevos entornos y herramientas, abordando los desafíos con agilidad.",
+        "icon": "versatile.svg"
+    },
+    {
+        "title": "Autónomo",
+        "description": "Aunque trabajo bien en equipo, también soy bastante independiente. Trabajo, aprendo y mejoro por mi cuenta.",
+        "icon": "brain.svg"
+    },
+    {
+        "title": "Empático",
+        "description": "Tengo cierta sensibilidad para ponerme en el lugar de los demás y comprender diferentes perspectivas.",
+        "icon": "handshake.svg"
+    },
+    {
+        "title": "Creativo",
+        "description": "Siempre estoy ideando nuevas propuestas en mi cabeza, explorando diferentes enfoques y creando.",
+        "icon": "idea.svg"
+    },
+    {
+        "title": "Ágil",
+        "description": "Siempre aspiro a tener todo listo a tiempo y, por lo general, soy bastante rápido en el trabajo.",
+        "icon": "speed.svg"
+    }
+]

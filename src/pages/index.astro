@@ -1,0 +1,26 @@
+---
+// src/pages/index.astro
+---
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>FranForge</title>
+    <script is:inline>
+      // Detectamos el idioma del navegador
+      const userLang = navigator.language || navigator.userLanguage;
+      
+      // Si empieza por 'es', vamos a /es/, si no, a /en/
+      if (userLang.startsWith('es')) {
+        window.location.pathname = '/es/';
+      } else {
+        window.location.pathname = '/en/';
+      }
+    </script>
+    
+    <meta http-equiv="refresh" content="0;url=/en/" />
+  </head>
+  <body>
+  </body>
+</html>

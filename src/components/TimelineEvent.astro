@@ -1,0 +1,62 @@
+---
+import { string } from 'astro:schema';
+
+// Definimos la estructura de un proyecto relacionado
+interface Project {
+    url: string;
+    name: string;
+}
+
+// Definimos las Props que recibe el componente
+interface Props {
+    title: string;
+    entity: string;
+    location?: string;
+    date: string;
+    relatedProjects?: Project[];
+    descriptions?: string[];
+    lang?: string;
+}
+
+const { title, entity, location, date, relatedProjects, descriptions, lang = "es" } = Astro.props;
+
+let relatedProjectsTxt;
+
+switch (lang)
+{
+    case "es":
+        relatedProjectsTxt = "Proyectos relacionados:";
+        break;
+    case "en":
+    default:
+        relatedProjectsTxt = "Related Projects:";
+        break;
+}
+---
+
+<article class="event theme-semi-transparent">
+    <h2>{title}</h2>
+
+    <section class="info">
+        <p class="name">{entity}{location ? `, ${location}` : ""}</p>
+        <p class="date">{date}</p>
+    </section>
+
+    {relatedProjects && relatedProjects.length > 0 && (
+        <p>{relatedProjectsTxt}</p>
+        <ul>
+            {relatedProjects.map((project) => (
+            <li><a href={project.url}><span>{project.name}</span></a></li>
+            ))}
+        </ul>
+    )}
+
+    {descriptions && descriptions.length > 0 && (
+        <ul>
+        {descriptions?.map((item) => (
+            <li>{item}</li>
+        ))}
+    </ul>
+    )}
+    
+</article>

@@ -1,0 +1,35 @@
+---
+const { name, description, date, attributes, img, url, lang = "en" } = Astro.props;
+
+let readMore = "";
+
+switch (lang) {
+    case "es":
+        readMore = "Leer más";
+        break;
+    case "en":
+    default:
+        readMore = "Read more";
+}
+---
+
+<a href={url} class="card theme-white-card">
+    <section class="content">
+        <section class="description">
+        <h2>{name}</h2>
+        <p>{description}</p>
+        </section>
+        <section class="date">
+            <p>{date}</p>
+        </section>
+        <section class="attributes-container" data-attributes={attributes}></section>
+    </section>
+    <section class="img-section">
+        <img src={img} alt={name}/>
+        <div class="read-more">{readMore}</div>
+    </section>
+</a>
+
+<script>
+    import "../scripts/attributesDisplayer.js"
+</script>

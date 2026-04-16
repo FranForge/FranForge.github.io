@@ -1,0 +1,13 @@
+---
+const {title, img, url, state} = Astro.props;
+---
+
+<a href={url} target="_blank" class="platform-button">
+    <section class="content">
+        <img src={img} alt={title}>
+        <p>{title}</p>
+    </section>
+    <section class="reveal">
+        <p>{state}</p>
+    </section>
+</a>

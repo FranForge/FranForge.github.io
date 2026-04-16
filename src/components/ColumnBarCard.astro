@@ -1,0 +1,13 @@
+---
+import Bar from "./Bar.astro";
+
+const {title, img, fill} = Astro.props;
+---
+
+<section class="card">
+    <img src={img} alt={title}>
+    <h2>{title}</h2>
+    <article class="bar-container">
+        <Bar fill={fill} />
+    </article>
+</section>

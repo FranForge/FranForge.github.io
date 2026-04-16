@@ -1,0 +1,68 @@
+---
+interface Section{
+    title: string;
+    content: string;
+    image: string;
+}
+
+interface Blog{
+    id: string;
+    title: string;
+    subtitle: string;
+    date: string;
+    image: string;
+    sections: Section[];
+}
+
+interface Props{
+    blog: Blog;
+    lang: string;
+}
+
+const { blog, lang="en" } = Astro.props;
+
+let updateText;
+
+switch (lang)
+{
+    case "es": 
+        updateText = "Actualizado:"
+        break;
+    case "en":
+    default:
+        updateText = "Updated:"
+        break;
+}
+---
+
+<section id="blog-article" class="information-section">
+
+    <section class="blog-content theme-black-over-white-serious">
+        <p class="title">{blog.title}</p>
+        <p class="subtitle">{blog.subtitle}</p>
+        <div class="divider theme-divider"></div>
+        <p class="date">{`${updateText} ${blog.date}`}</p>
+        <img src={`/media/blogs/${blog.id}/${blog.image}`} alt={blog.title}>
+
+        {blog.sections.map((section) => 
+            <Fragment>
+        
+                {section.title && (
+                    <Fragment>
+                        <div class="divider theme-divider"></div>
+                        <h1>{section.title}</h1>
+                    </Fragment>
+                )}
+                
+                <p>{section.content}</p>
+                
+                {section.image && (
+                    <img src={`/media/blogs/${blog.id}/${section.image}`} alt={section.title || "Blog section image"} />
+                )}
+
+            </Fragment>
+        )}
+
+    </section>
+
+</section>

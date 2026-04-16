@@ -1,0 +1,23 @@
+---
+//Blogs data.
+import blogs from "../../../data/en/blogs-and-articles.json";
+
+//Asignacion de ruta.
+export async function getStaticPaths(){
+    return blogs.map((blog) => ({
+        params: {id: blog.id},
+        props: {blog}
+    }));
+}
+
+const { blog } = Astro.props;
+
+import Layout from "../../../layouts/Layout.astro";
+import BlogContent from "../../../components/BlogContent.astro";
+---
+
+<Layout title={`${blog.title} | FranForge - Game Developer`} lang="en">
+    
+    <BlogContent blog={blog} lang="en" />
+
+</Layout>

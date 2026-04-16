@@ -1,0 +1,74 @@
+---
+const { lang = "en" } = Astro.props;
+
+// Definición de variables de texto
+let aboutMe, projects, skills, experience, blog, contact;
+
+// Lógica de traducción
+switch (lang) {
+    case "es":
+        aboutMe = "Sobre mí";
+        projects = "Proyectos";
+        skills = "Habilidades";
+        experience = "Experiencia";
+        blog = "Blogs";
+        contact = "Contacto";
+        break;
+    case "en":
+    default:
+        aboutMe = "About me";
+        projects = "Projects";
+        skills = "Skills";
+        experience = "Experience";
+        blog = "Blogs";
+        contact = "Contact";
+        break;
+}
+---
+
+<header 
+    class="header scroll-effect theme-header" 
+    id="header" 
+    data-scroll-min-y="100" 
+    data-scroll-max-y="0"
+>
+    <section class="content">
+
+        <nav class="navigation">
+
+            <a href={`/${lang}/home.html`}>
+                <img src="/icons/logo.svg" alt="FranForge">
+            </a>
+
+            <a href={`/${lang}/home.html#presentation`} class="link desktop">
+                {aboutMe}
+            </a>
+
+            <a href={`/${lang}/projects/all`} class="link">
+                {projects}
+            </a>
+
+            <a href={`/${lang}/home.html#skills`} class="link desktop">
+                {skills}
+            </a>
+
+            <a href={`/${lang}/home.html#experience`} class="link desktop">
+                {experience}
+            </a>
+
+            <a href={`/${lang}/home.html#blogs-and-articles`} class="link desktop">
+                {blog}
+            </a>
+
+            <a href={`/${lang}/home.html#contact`} class="link">
+                {contact}
+            </a>
+
+        </nav>
+
+    </section>
+</header>
+
+<script>
+    import "../scripts/scrollEffector.js";
+</script>

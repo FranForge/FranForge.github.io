@@ -1,0 +1,12 @@
+---
+const {id, firstSectionId, secondSectionId} = Astro.props;
+---
+
+<section id={id} class="split-section">
+    <section id={firstSectionId} class="content theme-white-over-black-serious column-cards-section">
+        <slot name="first-section" />
+    </section>
+    <section id={secondSectionId} class="content theme-black-over-white-serious column-cards-section">
+        <slot name="second-section" />
+    </section>
+</section>

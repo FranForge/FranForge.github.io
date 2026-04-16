@@ -1,0 +1,61 @@
+[
+    {
+        "title": "Desarrollador Unity Mid",
+        "company": "Freelance",
+        "location": "Remoto",
+        "date": "Mar 2026 - Abr 2026",
+        "related-projects": [
+            {
+                "id": "rhidian-you",
+                "name": "Rhidian You"
+            }
+        ],
+        "descriptions": [
+            "Desarrollo de sistemas desde cero con Unity.",
+            "Planificación de la arquitectura del proyecto."
+        ]
+    },
+    {
+        "title": "Desarrollador Unity Junior a Senior",
+        "company": "Enthariel Games",
+        "location": "Sevilla",
+        "date": "Mar 2023 - Sep 2025",
+        "related-projects": [
+            {
+                "id": "the-sky-project",
+                "name": "The Sky Project"
+            },
+            {
+                "id": "animal-strikers",
+                "name": "Animal Strikers"
+            },
+            {
+                "id": "luminaria-dark-echoes",
+                "name": "Luminaria: Dark Echoes"
+            },
+            {
+                "id": "confinio-reality-prison",
+                "name": "Confinio: Reality Prison"
+            }
+        ],
+        "descriptions": [
+            "Desarrollo de sistemas desde cero con Unity.",
+            "Planificación de la arquitectura del proyecto y control de versiones.",
+            "Mentoría de otros desarrolladores.",
+            "Liderazgo de pequeños equipos de desarrolladores.",
+            "Gestión de ports para consolas, incluyendo Nintendo Switch.",
+            "Publicación de juegos en plataformas como Steam y Google Play."
+        ]
+    },
+    {
+        "title": "Técnico Informático Junior",
+        "company": "Trece Computer",
+        "location": "Sevilla",
+        "date": "Mar 2021 - Jun 2021",
+        "descriptions": [
+            "Diagnóstico de problemas de hardware y software.",
+            "Reparación de dispositivos móviles, portátiles y ordenadores de sobremesa.",
+            "Gestión de ventas en tienda."
+        ]
+    }
+]

@@ -1,0 +1,493 @@
+[
+    {
+        "id": "rhidian-you",
+        "isProfessional": true,
+        "canHighlight": true,
+        "title": "Rhidian You",
+        "subtitle": "A Top-down pixel art retro RPG.",
+        "description": "Retro-style top-down pixel art RPG featuring attacks, spells, and a world with dynamic events.",
+        "date": "Mar 2026 - Apr 2026",
+        "attributes": "Indie,Unity,C#,Git,2D",
+        "images": [ 
+            "keyboard.webp", 
+            "interior.webp",
+            "world.webp",
+            "combat.webp",
+            "boss.webp"
+        ],
+        "video": "summary.mp4",
+        "developer": "Client",
+        "technologies": "Unity, C#, Github",
+        "synopsis": "Rhidian Yiou takes you on a classic fantasy RPG adventure set in tan age of kings, magic and evil creatures. Explore a world full of secrets, traps and twisted realities.",
+        "genre-and-tags": "RPG, Pixel Art, Top-down",
+        "platforms": [
+
+        ],
+        "roles": [
+            {
+                "title": "Programmer",
+                "description": "Program."
+            }
+        ],
+        "systems": [
+            {
+                "title": "System Title",
+                "summary": [
+                    "Point 1",
+                    "Point 2"
+                ],
+                "description": "lorem ipsum"
+            }
+        ],
+        "learn": [
+
+        ],
+        "improvements": [
+
+        ],
+        "additional-notes": "",
+        "awards":[
+
+        ],
+        "links": [
+
+        ]
+    },
+    {
+        "id": "magictory",
+        "isProfessional": false,
+        "canHighlight": false,
+        "title": "Magictory",
+        "subtitle": "A 2D casual game",
+        "description": "3D automation and resource management game set in a medieval world, where your goal is to rebuild a corrupted land through machinery.",
+        "date": "Mar 2026 - Apr 2026",
+        "attributes": "Indie,Unity,C#,Git,2D",
+        "images": [ 
+            "thumbnail.webp", 
+            "img1.webp"
+        ],
+        "video": "summary.mp4",
+        "developer": "Customer",
+        "technologies": "Unity, C#, Github",
+        "synopsis": "blablabla",
+        "genre-and-tags": "Tag1, Tag2",
+        "platforms": [
+
+        ],
+        "roles": [
+            {
+                "title": "Programmer",
+                "description": "Program."
+            }
+        ],
+        "systems": [
+            {
+                "title": "Items and Inventory",
+                "summary": [
+                    "ScriptableObjects to define resource types and reduce memory usage.",
+                    "Structs to represent resource stacks.",
+                    "Structs instead of classes and arrays instead of lists to reduce GC.",
+                    "Crafting: A recipe system based on lists of required resources and a list of structures that can craft them."
+                ],
+                "description": "I implemented a full ScriptableObject-based system that defined each type of resource. Then, a Stack struct contained a reference to the resource type along with an integer representing the amount. Finally, an Inventory class held an array of stacks with a maximum capacity defined through the Unity Inspector."
+            },
+            {
+                "title": "Interaction System",
+                "summary": [
+                "Interface-based interaction system.",
+                "Interaction detection via Physics.OverlapSphere."
+                ],
+                "description": "I implemented an interaction system based on interfaces that every interactable object must implement. Each object handles its own specific logic, while the player's movement is locked during the interaction to ensure consistency."
+            },
+            {
+                "title": "Building System",
+                "summary": [
+                "Exclusive ActionMap for precise construction control.",
+                "ScriptableObjects to define building structures.",
+                "Progression-based structure unlocking.",
+                "Dependencies and connections between specific structures.",
+                "Interface to define and validate construction requirements."
+                ],
+                "description": "The building system uses a dedicated ActionMap that enables a free camera and cursor-based control. Structures are defined through ScriptableObjects and unlocked progressively. Before placement, each building uses an interface to validate its material and spatial requirements."
+            },
+            {
+                "title": "Custom Tick System",
+                "summary": [
+                "Resource optimization through centralized calls.",
+                "Periodic ticks using IEnumerators and Coroutines to reduce Update load.",
+                "Interface-driven tick implementation (ITickable).",
+                "Strict separation between logic and visuals; ticks only handle production calculations."
+                ],
+                "description": "I developed a TickManager that periodically executes the logic for all objects implementing ITickable. Elements register themselves in a list and are processed via Coroutines, significantly reducing the dependency on the Update method for frequent backend calculations."
+            },
+            {
+                "title": "Map Segmentation (Chunks)",
+                "summary": [
+                "Resource optimization through map segmentation.",
+                "Visual loading and unloading based on player proximity."
+                ],
+                "description": "The world map is divided into segments that load or unload depending on the player's distance. This approach saves significant hardware resources by disabling non-visible or irrelevant zones."
+            },
+            {
+                "title": "Levels of Detail (LODs)",
+                "summary": [
+                "Multiple detail levels for enhanced rendering performance."
+                ],
+                "description": "I implemented various LOD levels to ensure the game maintains a high performance and stable frame rate, even with complex environments."
+            },
+            {
+                "title": "Character Movement (NavMesh)",
+                "summary": [
+                "Pathfinding calculations using Unity NavMesh.",
+                "NavMeshObstacles for dynamic map elements.",
+                "Point and Click movement system.",
+                "Differentiated input logic for mouse and gamepad for better fluidity."
+                ],
+                "description": "To handle character movement from a top-down perspective, I utilized Unity's NavMesh for cursor-based navigation. Later, I implemented a direct movement system for gamepads using joysticks to provide a smoother user experience across different platforms."
+            }
+        ],
+        "learn": [
+            "Point 1A"
+        ],
+        "improvements": [
+            "Point 1B"
+        ],
+        "additional-notes": "Project indefinitely paused.",
+        "awards":[
+            
+        ],
+        "links": [
+            
+        ]
+    },
+    {
+        "id": "the-sky-project",
+        "isProfessional": true,
+        "canHighlight": true,
+        "title": "The Sky Project",
+        "subtitle": "A 2D RPG.",
+        "description": "Classic turn-based RPG featuring a complex creature system, including attacks, types, status effects, and more.",
+        "date": "Mar 2026 - Apr 2026",
+        "attributes": "Indie,Unity,C#,Git,2D",
+        "images": [ 
+            "thumbnail.webp", 
+            "img1.webp"
+        ],
+        "video": "summary.mp4",
+        "developer": "Enthariel Games",
+        "technologies": "Unity, C#, Github",
+        "synopsis": " Hola ",
+        "genre-and-tags": "Tag1, Tag2",
+        "platforms": [
+
+        ],
+        "roles": [
+            {
+                "title": "Programmer",
+                "description": "Program."
+            }
+        ],
+        "systems": [
+            {
+                "title": "System Title",
+                "summary": [
+                    "Point 1",
+                    "Point 2"
+                ],
+                "description": "lorem ipsum"
+            }
+        ],
+        "learn": [
+
+        ],
+        "improvements": [
+
+        ],
+        "additional-notes": "",
+        "awards":[
+            
+        ],
+        "links": [
+            
+        ]
+    },
+    {
+        "id": "animal-strikers",
+        "isProfessional": true,
+        "canHighlight": true,
+        "title": "Animal Strikers",
+        "subtitle": "A 2D casual game",
+        "description": "Casual 2D sports game where big-headed characters compete to score goals while using abilities that dynamically change the flow of the match.",
+        "date": "Mar 2026 - Apr 2026",
+        "attributes": "Indie,Unity,C#,Git,2D",
+        "images": [ 
+            "thumbnail.webp", 
+            "img1.webp"
+        ],
+        "video": "summary.mp4",
+        "developer": "Customer",
+        "technologies": "Unity, C#, Github",
+        "synopsis": "blablabla",
+        "genre-and-tags": "Tag1, Tag2",
+        "platforms": [
+            {
+                "title": "Switch",
+                "img": "switch.svg",
+                "url": "link",
+                "state": "Play now!"
+            }
+        ],
+        "roles": [
+            {
+                "title": "Programmer",
+                "description": "Program."
+            }
+        ],
+        "systems": [
+            {
+                "title": "System Title",
+                "summary": [
+                    "Point 1",
+                    "Point 2"
+                ],
+                "description": "lorem ipsum"
+            }
+        ],
+        "learn": [
+
+        ],
+        "improvements": [
+
+        ],
+        "additional-notes": "",
+        "awards":[
+            
+        ],
+        "links": [
+            
+        ]
+    },
+    {
+        "id": "luminaria-dark-echoes",
+        "isProfessional": true,
+        "canHighlight": true,
+        "title": "Luminaria: Dark Echoes",
+        "subtitle": "A 2D casual game",
+        "description": "Story-driven top-down 2D survivor where defeating enemies and unlocking new abilities drives your progression.",
+        "date": "Mar 2026 - Apr 2026",
+        "attributes": "Indie,Unity,C#,Git,2D",
+        "images": [ 
+            "thumbnail.webp", 
+            "img1.webp"
+        ],
+        "video": "summary.mp4",
+        "developer": "Customer",
+        "technologies": "Unity, C#, Github",
+        "synopsis": "blablabla",
+        "genre-and-tags": "Tag1, Tag2",
+        "platforms": [
+            {
+                "title": "Switch",
+                "img": "switch.svg",
+                "url": "link",
+                "state": "Play now!"
+            },
+            {
+                "title": "Steam",
+                "img": "steam.svg",
+                "url": "link",
+                "state": "Play now!"
+            },
+            {
+                "title": "PS5",
+                "img": "ps.svg",
+                "url": "link",
+                "state": "Play now!"
+            }
+        ],
+        "roles": [
+            {
+                "title": "Programmer",
+                "description": "Program."
+            }
+        ],
+        "systems": [
+            {
+                "title": "System Title",
+                "summary": [
+                    "Point 1",
+                    "Point 2"
+                ],
+                "description": "lorem ipsum"
+            }
+        ],
+        "learn": [
+
+        ],
+        "improvements": [
+
+        ],
+        "additional-notes": "",
+        "awards": [
+            {
+                "title": "Best Game",
+                "year": 2024,
+                "icon": "mangafest.webp"
+            },
+            {
+                "title": "Audience's Choice Award",
+                "year": 2024,
+                "icon": "madrid-otaku.webp"
+            },
+            {
+                "title": "Nominated for Best Design",
+                "year": 2024,
+                "icon": "ps-talents-black.webp"
+            },
+            {
+                "title": "Audience's Choice Award",
+                "year": 2023,
+                "icon": "madrid-otaku.webp"
+            }
+        ],
+        "links": [
+            
+        ]
+    },
+    {
+        "id": "confinio-reality-prison",
+        "isProfessional": true,
+        "canHighlight": false,
+        "title": "Confinio Reality Prison",
+        "subtitle": "A 2D casual game",
+        "description": "2D visual novel where you progress through narrative-driven minigames that shape your future.",
+        "date": "Mar 2026 - Apr 2026",
+        "attributes": "Indie,Unity,C#,Git,2D",
+        "images": [ 
+            "thumbnail.webp", 
+            "img1.webp"
+        ],
+        "video": "summary.mp4",
+        "developer": "Customer",
+        "technologies": "Unity, C#, Github",
+        "synopsis": "blablabla",
+        "genre-and-tags": "Tag1, Tag2",
+        "platforms": [
+            {
+                "title": "Switch",
+                "img": "switch.svg",
+                "url": "link",
+                "state": "Play now!"
+            },
+            {
+                "title": "Steam",
+                "img": "steam.svg",
+                "url": "link",
+                "state": "Play now!"
+            },
+            {
+                "title": "PS5",
+                "img": "ps.svg",
+                "url": "link",
+                "state": "Play now!"
+            }
+        ],
+        "roles": [
+            {
+                "title": "Programmer",
+                "description": "Program."
+            }
+        ],
+        "systems": [
+            {
+                "title": "System Title",
+                "summary": [
+                    "Point 1",
+                    "Point 2"
+                ],
+                "description": "lorem ipsum"
+            }
+        ],
+        "learn": [
+
+        ],
+        "improvements": [
+
+        ],
+        "additional-notes": "",
+        "awards": [
+
+        ],
+        "links": [
+            
+        ]
+    },
+    {
+        "id": "mechanic-party",
+        "isProfessional": false,
+        "canHighlight": false,
+        "title": "Mechanic Party",
+        "subtitle": "A 2D casual game",
+        "description": "3D top-down game where your main objective is to repair cars before time runs out, with your skills setting the limit.",
+        "date": "Mar 2026 - Apr 2026",
+        "attributes": "Indie,Unity,C#,Plastic,3D",
+        "images": [ 
+            "thumbnail.webp", 
+            "img1.webp"
+        ],
+        "video": "summary.mp4",
+        "developer": "Customer",
+        "technologies": "Unity, C#, Github",
+        "synopsis": "blablabla",
+        "genre-and-tags": "Tag1, Tag2",
+        "platforms": [
+            {
+                "title": "Switch",
+                "img": "switch.svg",
+                "url": "link",
+                "state": "Play now!"
+            },
+            {
+                "title": "Steam",
+                "img": "steam.svg",
+                "url": "link",
+                "state": "Play now!"
+            },
+            {
+                "title": "PS5",
+                "img": "ps.svg",
+                "url": "link",
+                "state": "Play now!"
+            }
+        ],
+        "roles": [
+            {
+                "title": "Programmer",
+                "description": "Program."
+            }
+        ],
+        "systems": [
+            {
+                "title": "System Title",
+                "summary": [
+                    "Point 1",
+                    "Point 2"
+                ],
+                "description": "lorem ipsum"
+            }
+        ],
+        "learn": [
+
+        ],
+        "improvements": [
+
+        ],
+        "additional-notes": "",
+        "awards": [
+
+        ],
+        "links": [
+            
+        ]
+    }
+]

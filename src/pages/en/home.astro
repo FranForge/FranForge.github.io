@@ -1,0 +1,282 @@
+---
+
+//Data
+//------------------------------------------------------------------------------------
+
+//Proyectos
+import projectsData from '../../data/en/projects.json';
+
+const featuredProjects = projectsData
+.filter(project => project.canHighlight === true)
+.slice(0, 3);
+
+//Habilidades.
+import technicalSkills from '../../data/technical-skills.json';
+import softSkills from '../../data/en/soft-skills.json';
+
+//Experience
+import professionalExp from '../../data/en/professional-experience.json';
+import certificatesAndCourses from '../../data/en/certificates-and-courses.json';
+import education from '../../data/en/education.json';
+
+//Products and services
+import productsAndServices from '../../data/en/products-and-services.json';
+
+//Blogs and articles
+import blogsAndArticles from '../../data/en/blogs-and-articles.json';
+
+//Components
+//------------------------------------------------------------------------------------
+import VideoHero from '../../components/VideoHero.astro';
+import Layout from '../../layouts/Layout.astro';
+import Summary from '../../components/Summary.astro';
+import SummaryItemLink from '../../components/SummaryItemLink.astro';
+import SplittedColumnSection from '../../components/SplittedColumnSection.astro';
+import InformationSection from '../../components/InformationSection.astro';
+import VerticalCardsContainer from '../../components/VerticalCardsContainer.astro';
+import VerticalCard from '../../components/VerticalCard.astro';
+import ColumnBarCard from '../../components/ColumnBarCard.astro';
+import ColumnTextCard from '../../components/ColumnTextCard.astro';
+import Timeline from '../../components/Timeline.astro';
+import TimelineEvent from '../../components/TimelineEvent.astro';
+import BoxCardsContainer from '../../components/BoxCardsContainer.astro';
+import BoxCard from '../../components/BoxCard.astro';
+import HorizontalCardsContainer from '../../components/HorizontalCardsContainer.astro';
+import HorizontalCard from '../../components/HorizontalCard.astro';
+---
+
+<Layout 
+	title="Home | FranForge - Game Developer"
+	metaDescription = "FranForge, a developer of video games, applications, 
+						and web with over 3 years of experience. Has published 
+						projects on Google Play, Steam, and Nintendo Switch."
+
+	metaKeywords = "web, projects, services, english, Unity, C#, Unreal, C++"
+	>
+
+	<!-- HERO ------------------------------------------------------------------------------------ -->
+	<VideoHero
+		videoSrc = "/media/projects/magictory/summary.mp4"
+		title = "FranForge"
+		subtitle = "Developer"
+		rotatingText = "Unity, Unreal, Web, C#"
+	/>
+
+	<!-- SUMMARY ------------------------------------------------------------------------------- -->
+	<Summary
+		id="presentation"
+		title = "Game Developer specialized in Unity"
+		subtitle = "My name is Francisco Jesús Huerta Hervás, Game Developer."
+		resumeTitle = "Resume"
+		img = "/media/owner/FranForge_Logo_Persona.png"
+	>
+
+		<Fragment slot="content">
+			<p>
+				I specialize in developing <span>gameplay</span> and <span>systems</span> 
+				from the ground up. Since 2021, I have been working on various games and 
+				small projects using <span>Unity</span> and briefly <span>Unreal</span>. 
+				With them, I have published on platforms such as <span>Steam</span>, 
+				<span>Google Play</span>, and consoles like <span>Nintendo Switch</span>, 
+				all of which has strengthened my skills as a <span>Game Developer</span>.
+			</p>
+			<img class="h-8 fit" src="/icons/logo.svg" alt="Logo de FranForge">
+			<p>¿Are you interested in my work?</p>
+			<a href="#contact" class="button">
+				<section class="content">
+					<p>Contact me!</p>
+				</section>
+			</a>
+		</Fragment>
+
+		<SummaryItemLink 
+			slot="resume"
+			title="Projects" 
+			subtitle="+10" 
+			url="/projects/all.html" 
+			img="/icons/project.svg" 
+		/>
+
+        <SummaryItemLink 
+            slot="resume"
+            title="Released Projects" 
+            subtitle="3" 
+            url="#highlights" 
+            img="/icons/gamepad.svg" 
+        />
+
+        <SummaryItemLink 
+            slot="resume"
+            title="Unity Assets" 
+            subtitle="1" 
+            url="https://assetstore.unity.com/..." 
+            img="/icons/unity-black.svg" 
+        />
+
+        <SummaryItemLink 
+            slot="resume"
+            title="Certificates" 
+            subtitle="5" 
+            url="#certificates" 
+            img="/icons/certificate.svg" 
+        />
+		
+	</Summary>
+
+	<!-- HIGHLIGHTS ------------------------------------------------------------------------------- -->
+	<InformationSection id="highlights">
+
+		<h1>Highlights</h1>
+		<p>Some of my most notable projects.</p>
+
+		<VerticalCardsContainer>
+
+			{featuredProjects.map((item) => (
+				<VerticalCard
+					name={item.title}
+					description={item.description}
+					date={item.date}
+					attributes={item.attributes}
+					img={`/media/projects/${item.id}/${item.images[0]}`}
+					url={`/en/projects/${item.id}.html`}
+				/>
+			))}
+			
+		</VerticalCardsContainer>
+
+		<Fragment slot="after">
+			<a href="/en/projects/all.html" class="button">
+				<section class="content">
+					<p>See all projects</p>
+				</section>
+			</a>
+		</Fragment>
+
+	</InformationSection>
+
+	<!-- SKILLS ------------------------------------------------------------------------------- -->
+	<SplittedColumnSection id="skills">
+
+		<Fragment slot="first-section">
+			<h1>Technical Skills</h1>
+			{technicalSkills.map((item) =>
+			<ColumnBarCard
+				title={item.tile}
+				img={`/icons/${item.icon}`}
+				fill={item.ability}
+			/>
+			)}
+		</Fragment>
+
+		<Fragment slot="second-section">
+			<h1>Soft Skills</h1>
+			{softSkills.map((item) => 
+			<ColumnTextCard
+			title={item.title}
+			description={item.description}
+			img={`/icons/${item.icon}`}
+			/>
+			)}
+		</Fragment>
+
+	</SplittedColumnSection>
+
+	<InformationSection id="experience">
+
+		<h1>Professional Experience</h1>
+		<Timeline>
+			
+			{professionalExp.map((item) =>
+			<TimelineEvent
+				title={item.title}
+				entity={item.company}
+				location={item.location}
+				date={item.date}
+				relatedProjects={item["related-projects"]?.map(project => ({
+					name: project.name,
+					url: `/en/projects/${project.id}.html`
+				}))}
+				descriptions={item.descriptions}
+			/>
+			)}
+
+		</Timeline>
+
+		<h1>Certificates and Courses</h2>
+		<Timeline>
+			
+			{certificatesAndCourses.map((item) =>
+			<TimelineEvent
+				title={item.title}
+				entity={item.company}
+				date={item.date}
+			/>
+			)}
+
+		</Timeline>
+
+		<h1>Education</h2>
+		<Timeline>
+			
+			{education.map((item) =>
+			<TimelineEvent
+				title={item.title}
+				entity={item.company}
+				location={item.location}
+				date={item.date}
+				descriptions={item.descriptions}
+			/>
+			)}
+
+		</Timeline>
+
+	</InformationSection>
+
+	<InformationSection id="demoreel" additionalClass="theme-white-over-black-serious">
+
+		<h1>Demoreel</h1>
+		<div class="clean-video">
+			<video preload="metadata" controls muted poster="/media/owner/background.webp">
+				<source src="/media/owner/FranForge_Demoreel_December2025_WebOptimized.mp4">
+			</video>
+		</div>
+
+	</InformationSection>
+
+	<InformationSection id="products-and-services" additionalClass="theme-black-over-white-serious">
+
+		<h1>Products and Services</h1>
+		<BoxCardsContainer>
+
+			{productsAndServices?.map((item) => 
+			<BoxCard
+				title={item.title}
+				img={`/media/cards/${item.img}`}
+				url={item.url}
+			/>
+			)}
+
+		</BoxCardsContainer>
+
+	</InformationSection>
+
+	<InformationSection id="blogs-and-articles">
+
+		<h1>Blog and Articles</h1>
+		<HorizontalCardsContainer>
+
+			{blogsAndArticles?.map((item) =>
+			<HorizontalCard 
+				title={item.title}
+				description={item.description}
+				img={`/media/blogs/${item.id}/thumbnail.webp`}
+				url={`/en/blogs/${item.id}.html`}
+				lang="en"
+			/>
+			)}
+
+		</HorizontalCardsContainer>
+
+	</InformationSection>
+	
+</Layout>

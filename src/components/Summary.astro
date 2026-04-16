@@ -1,0 +1,35 @@
+---
+const { id, title, subtitle, resumeTitle, img, lang = "en" } = Astro.props;
+
+const hasResume = Astro.slots.has('resume') && resumeTitle;
+---
+
+<!-- PRESENTATION -->
+<section id={id} class="summary-section theme-black-over-white-serious text-center">
+
+    <div class="content">
+
+        <!-- TEXT -->
+        <div class="long-section">
+            <h1 class="title">{title}</h1>
+            <p id="presentation-name" class="subtitle">{subtitle}</p>
+            <slot name="content" />
+        </div>
+
+        {hasResume && (
+            <div class="short-section">
+            <h1 class="title underline-text">{resumeTitle}</h1>
+            <slot name="resume" />
+        </div>
+        )}
+
+    </div>
+
+    <!-- IMAGE -->
+    <div class="img-section">
+
+        <img src={img} alt={subtitle}>
+
+    </div>
+
+</section>

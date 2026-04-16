@@ -1,0 +1,15 @@
+---
+const { path, imagesArray, additionalButtonsClass } = Astro.props;
+---
+
+<div class="carousel"
+        data-carousel-path={path} 
+        data-carousel-images={imagesArray.join(',')}>
+    <button class={`left-arrow-button ${additionalButtonsClass}`} data-direction="-1"></button>
+    <img alt="Carousel Image">
+    <button class={`right-arrow-button ${additionalButtonsClass}`} data-direction="1"></button>
+</div>
+
+<script>
+    import "../scripts/carouselDisplayer.js"    
+</script>

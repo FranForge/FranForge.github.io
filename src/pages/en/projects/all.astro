@@ -1,0 +1,67 @@
+---
+//Proyectos
+import projectsData from '../../../data/en/projects.json'
+
+const professionalProjects = projectsData
+.filter(project => project.isProfessional === true);
+
+const personalProjects = projectsData
+.filter(project => project.isProfessional === false);
+
+import Layout from "../../../layouts/Layout.astro";
+import VideoHero from '../../../components/VideoHero.astro';
+import InformationSection from '../../../components/InformationSection.astro';
+import VerticalCard from '../../../components/VerticalCard.astro';
+import VerticalCardsContainer from '../../../components/VerticalCardsContainer.astro';
+---
+
+<Layout title="Projects | FranForge - Game Developer">
+
+    <VideoHero
+        videoSrc = "/media/projects/magictory/summary.mp4"
+		title = "Projects"
+		rotatingText = "Unity, Unreal, Web, C#"
+    />
+
+    <!-- PROFESSIONAL ------------------------------------------------------------------------------- -->
+	<InformationSection id="professional">
+
+		<h1>Professional Projects</h1>
+		<p>Projects developed professionally for a company or clients.</p>
+
+		<VerticalCardsContainer>
+
+			{professionalProjects.map((item) => (
+				<VerticalCard
+					name={item.title}
+					description={item.description}
+					date={item.date}
+					attributes={item.attributes}
+					img={`/media/projects/${item.id}/thumbnail.webp`}
+					url={`/en/projects/${item.id}.html`}
+				/>
+			))}
+			
+		</VerticalCardsContainer>
+
+        <h1>Personal Projects</h1>
+		<p>Personal projects, created as a hobby or for self-improvement.</p>
+
+		<VerticalCardsContainer>
+
+			{personalProjects.map((item) => (
+				<VerticalCard
+					name={item.title}
+					description={item.description}
+					date={item.date}
+					attributes={item.attributes}
+					img={`/media/projects/${item.id}/thumbnail.webp`}
+					url={`/en/projects/${item.id}.html`}
+				/>
+			))}
+			
+		</VerticalCardsContainer>
+
+	</InformationSection>
+
+</Layout>

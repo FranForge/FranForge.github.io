@@ -1,1 +1,0 @@
-import"./Header.astro_astro_type_script_index_0_lang.DWEuvJGi.js";function a(){const i=document.querySelectorAll(".rotating-text");for(let e=0;e<i.length;e++){let s=function(){const x=l[o];n.textContent+=x[t],t++,t>=x.length?setTimeout(c,1500):setTimeout(s,100)},c=function(){o=(o+1)%l.length,t=0,n.textContent="",s()};const n=i[e],l=n.dataset.texts.split(",");let o=0,t=0;s()}}a();

@@ -1,0 +1,197 @@
+---
+
+//Projects data.
+import projects from "../../../data/en/projects.json";
+
+//Asignacion de ruta.
+export async function getStaticPaths(){
+    return projects.map((project) => ({
+        params: {id: project.id},
+        props: {project}
+    }));
+}
+
+const { project } = Astro.props;
+
+import Layout from "../../../layouts/Layout.astro";
+import ImageHero from "../../../components/ImageHero.astro";
+import Summary from "../../../components/Summary.astro";
+import PlatformButton from "../../../components/PlatformButton.astro";
+import SummaryItem from "../../../components/SummaryItem.astro";
+import InformationSection from "../../../components/InformationSection.astro";
+import SplittedSection from "../../../components/SplittedSection.astro";
+import Carousel from "../../../components/Carousel.astro";
+---
+
+<Layout title={`${project.title} | FranForge - Game Developer`}>
+    
+    <ImageHero
+		img = {`/media/projects/${project.id}/splashart.webp`}
+		title = {project.title}
+		rotatingText = {project.attributes}
+	/>
+
+    <Summary
+        id="presentation"
+		title = {project.title}
+		subtitle = {project.subtitle}
+        resumeTitle = {project.awards && project.awards.length > 0 ? "Awards" : undefined}
+		img = {`/media/projects/${project.id}/thumbnail.webp`}
+    >
+        
+        <section slot="content" class="project-content">
+            <p>
+                <span>Name:</span>
+                {project.title}
+            </p>
+            <p>
+                <span>Developer:</span>
+                {project.developer}
+            </p>
+            <p>
+                <span>Period:</span>
+                {project.date}
+            </p>
+            <p>
+                <span>Technologies:</span>
+                {project.technologies}
+            </p>
+            <p>
+                <span>Synopsis:</span>
+                {project.synopsis}
+            </p>
+            <p>
+                <span>Genre & Tags:</span>
+                {project["genre-and-tags"]}
+            </p>
+        </section>
+
+        {project.platforms && project.platforms.length > 0 && (
+
+            <section slot="content" class="platforms">
+
+                {project.platforms?.map((platform) => (
+
+                    <PlatformButton
+                        title={platform.title}
+                        img={`/icons/${platform.img}`}
+                        url={platform.url}
+                        state={platform.state}
+                    />
+
+                ))}
+
+            </section>
+
+        )}
+
+        {project.awards && project.awards.length > 0 && (
+            project.awards.map((item) => 
+                <SummaryItem 
+                    slot="resume"
+                    title={item.title} 
+                    subtitle={item.year} 
+                    img={`/media/awards/${item.icon}`} 
+                />
+            )
+        )}
+
+    </Summary>
+
+    {project.video && (
+        <InformationSection id="video" additionalClass="theme-white-over-black-serious">
+
+            <h1>Overview Video</h1>
+            <div class="clean-video">
+                <video preload="metadata" controls muted poster="/media/owner/background.webp">
+                    <source src={`/media/projects/${project.id}/${project.video}`}>
+                </video>
+            </div>
+
+        </InformationSection>
+    )}
+
+    {project.systems && project.systems?.length > 0 && (
+        <InformationSection id="systems" additionalClass="theme-black-over-white-serious">
+
+            <h1 class="title underline-dashed">Systems I worked on</h1>
+
+            {project.systems.map((system) => 
+
+                <h2 class="subtitle text-left">{system.title}</h2>
+                <ul>
+                    {system.summary.map((point) =>
+
+                        <li class="text-left">{point}</li>
+
+                    )}
+                </ul>
+                <h3 class="small-title decorated-left-text text-left">Description</h3>
+                <p class="text-left">{system.description}</p>
+            )}
+
+        </InformationSection>
+    )}
+
+    {project.learn && project.learn.length > 0 && project.improvements && project.improvements.length > 0 && (
+        <SplittedSection>
+
+            <Fragment slot="first-section">
+                <h1>What i did learn?</h1>
+                <ul>
+                    {project.learn.map((item) =>
+                        <li>{item}</li>
+                    )}
+                </ul>
+            </Fragment>
+
+            <Fragment slot="second-section">
+                <h1>Improvements</h1>
+                <ul>
+                    {project.improvements.map((item) =>
+                        <li>{item}</li>
+                    )}
+                </ul>
+            </Fragment>
+
+        </SplittedSection>
+    )}
+
+    {project.roles && project.roles?.length > 0 && (
+        <InformationSection id="roles" additionalClass="theme-white-over-black-serious">
+
+            <h1 class="title underline-dashed">Roles held</h1>
+
+            {project.roles.map((rol) => 
+
+                <h2 class="subtitle text-left">{rol.title}</h2>
+                <p class="text-left">{rol.description}</p>
+            )}
+
+        </InformationSection>
+    )}
+
+    {project.images && project.images.length > 0 && (
+        <InformationSection id="gallery" additionalClass="theme-black-over-white-serious">
+
+            <h1>Gallery</h1>
+            <Carousel
+                path={`/media/projects/${project.id}`}
+                imagesArray={project.images}
+                additionalButtonsClass="theme-white-over-black-serious"
+            />
+
+        </InformationSection>
+    )}
+
+    {project["additional-notes"] && (
+        <InformationSection id="additional-notes">
+
+            <h1>Additional Notes</h1>
+
+            <p>{project["additional-notes"]}</p>
+
+        </InformationSection>
+    )}
+
+</Layout>
