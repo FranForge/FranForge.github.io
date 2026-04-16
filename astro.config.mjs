@@ -1,6 +1,10 @@
 import { defineConfig } from 'astro/config';
 
 export default defineConfig({
-  site: 'https://www.franforge.es', 
-  base: '/', 
+  site: 'https://franforge.es',
+  base: '/',
+  trailingSlash: 'always',
+  build: {
+    format: 'directory'
+  }
 });

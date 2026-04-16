@@ -88,7 +88,7 @@ import HorizontalCard from '../../components/HorizontalCard.astro';
             slot="resume"
             title="Proyectos" 
             subtitle="+10" 
-            url="/es/projects/all.html" 
+            url="/es/projects/all" 
             img="/icons/project.svg" 
         />
 
@@ -132,7 +132,7 @@ import HorizontalCard from '../../components/HorizontalCard.astro';
                     date={item.date}
                     attributes={item.attributes}
                     img={`/media/projects/${item.id}/thumbnail.webp`}
-                    url={`/es/projects/${item.id}.html`}
+                    url={`/es/projects/${item.id}`}
                     lang="es"
                 />
             ))}
@@ -140,7 +140,7 @@ import HorizontalCard from '../../components/HorizontalCard.astro';
         </VerticalCardsContainer>
 
         <Fragment slot="after">
-            <a href="/es/projects/all.html" class="button">
+            <a href="/es/projects/all" class="button">
                 <section class="content">
                     <p>Ver todos los proyectos</p>
                 </section>
@@ -188,7 +188,7 @@ import HorizontalCard from '../../components/HorizontalCard.astro';
                 date={item.date}
                 relatedProjects={item["related-projects"]?.map(project => ({
                     name: project.name,
-                    url: `/es/projects/${project.id}.html`
+                    url: `/es/projects/${project.id}`
                 }))}
                 descriptions={item.descriptions}
             />
@@ -265,7 +265,7 @@ import HorizontalCard from '../../components/HorizontalCard.astro';
                 title={item.title}
                 description={item.description}
                 img={`/media/blogs/${item.id}/thumbnail.webp`}
-                url={`/es/blogs/${item.id}.html`}
+                url={`/es/blogs/${item.id}`}
                 lang="es"
             />
             )}
