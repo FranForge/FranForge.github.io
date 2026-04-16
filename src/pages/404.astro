@@ -1,0 +1,21 @@
+---
+import VideoHero from "../components/VideoHero.astro";
+import Layout from "../layouts/Layout.astro";
+
+
+---
+
+<Layout title="404 Not Found | FranForge - Game Developer">
+	<VideoHero
+		videoSrc = "/media/projects/magictory/summary.mp4"
+		title = "404: Not Found"
+		subtitle = "Redirecting"
+		rotatingText = " ..., ..."
+	/>
+</Layout>
+
+<script>
+	setTimeout(() => {
+    	window.location.replace('/');
+  	}, 3000);
+</script>
