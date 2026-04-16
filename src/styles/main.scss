@@ -96,7 +96,7 @@ $tiny: 0.5rem;
 @mixin sticky-background-section{
     position: sticky;
     top: 0;
-    height: 100dvh;
+    height: 100lvh;
     width: 100%;
     z-index: -10;
     overflow-x: hidden;
@@ -217,7 +217,7 @@ $tiny: 0.5rem;
 
 :root{
     scroll-behavior: smooth;
-    font-size: 2dvh;
+    font-size: 2lvh;
     font-family: #{fonts.$main-font};
 }
 
@@ -260,7 +260,7 @@ span{
 }
 
 img{
-    height: 10dvh;
+    height: 10lvh;
     object-fit: contain;
 }
 
@@ -372,7 +372,7 @@ input, textarea {
 //Seccion resumen que tiene una imagen en el lateral.
 .summary-section{
     @include section-base();
-    height: 110dvh;
+    height: 110lvh;
     width: 100%;
     overflow: hidden;
 
@@ -383,7 +383,7 @@ input, textarea {
     .title{
         @include mid-text();
         @include mid-line();
-        margin: 3dvh 0;
+        margin: 3lvh 0;
         color: grey;
         font-family: #{fonts.$main-font};
     }
@@ -413,7 +413,7 @@ input, textarea {
 
     .short-section{
         @include flex-y-center();
-        padding: 10dvh 2dvh;
+        padding: 10lvh 2lvh;
         flex-basis: 10%;
         gap: 25px;
         border-right: colors.$light-grey 2px dashed;
@@ -429,7 +429,7 @@ input, textarea {
             @include flex-y-center-reversed();
             
             img{
-                height: 8dvh;
+                height: 8lvh;
                 object-fit: contain;
             }
 
@@ -445,7 +445,7 @@ input, textarea {
 
     .long-section{
         @include flex-y-center();
-        padding: 10dvh 5dvw;
+        padding: 10lvh 5dvw;
         flex-basis: 50%;
 
         @media (max-aspect-ratio: 16/9){
@@ -481,7 +481,7 @@ input, textarea {
         @media (max-aspect-ratio: 16/9){
             position: relative;
             width: auto;
-            height: 50dvh;
+            height: 50lvh;
             clip-path: none;
             margin: 5dvw;
             clip-path: circle(50% at center);
@@ -494,7 +494,7 @@ input, textarea {
     @include text-center();
     @include flex-y-center();
     gap: 20px;
-    min-height: 70dvh;
+    min-height: 70lvh;
     padding: 10vh 0;
 
     h1{
@@ -508,7 +508,7 @@ input, textarea {
         align-self: stretch;
 
         h1{
-            padding-top: 10dvh;
+            padding-top: 10lvh;
         }
     }
 
@@ -517,7 +517,7 @@ input, textarea {
         @include text-left();
         @include border-radius();
         box-sizing: border-box;
-        margin-top: 10dvh;
+        margin-top: 10lvh;
         align-self: stretch;
         padding: 50px;
         word-wrap: break-word;
@@ -528,7 +528,7 @@ input, textarea {
         }
 
         h1{
-            padding-top: 10dvh;
+            padding-top: 10lvh;
         }
 
         img{
@@ -576,11 +576,11 @@ input, textarea {
         @include flex-y-start();
         align-items: start;
         flex-basis: 50%;
-        min-height: 50dvh;
-        padding: 10dvh;
+        min-height: 50lvh;
+        padding: 10lvh;
 
         @media (max-aspect-ratio: 16/9){
-            padding: 5dvh 0;
+            padding: 5lvh 0;
             width: 100%;
         }
 
@@ -610,7 +610,7 @@ input, textarea {
         border-style: solid;
         border-width: 2px;
         overflow: hidden;
-        height: 70dvh;
+        height: 70lvh;
         transition: border-color 0.25s ease;
 
         > .content{
@@ -696,13 +696,13 @@ input, textarea {
         border-width: 2px;
         flex-basis: 47%;
         overflow: hidden;
-        min-height: 15dvh;
+        min-height: 15lvh;
         transition: border-color 0.25s ease;
 
         @media (max-aspect-ratio: 16/9){
             @include flex-y-start();
             flex-basis: 100%;
-            min-height: 55dvh;
+            min-height: 55lvh;
         }
 
         > .content{
@@ -788,7 +788,7 @@ input, textarea {
         }
 
         img{
-            height: 5dvh;
+            height: 5lvh;
         }
 
         &:hover{
@@ -811,7 +811,7 @@ input, textarea {
         border-style: solid;
         border-width: 2px;
         overflow: hidden;
-        height: 20dvh;
+        height: 20lvh;
         transition: border-color 0.25s ease;
 
         > .content{
@@ -1045,7 +1045,7 @@ input, textarea {
     @include text-shadow();
     position: fixed;
     width: 100dvw;
-    height: 10dvh;
+    height: 10lvh;
     z-index: 10;
     overflow: hidden;
     border-bottom: colors.$transparent-color solid 2px;
@@ -1087,7 +1087,7 @@ input, textarea {
             }
 
             img{
-                height: 8dvh;
+                height: 8lvh;
                 width: auto;
                 object-fit: contain;
             }
@@ -1106,7 +1106,7 @@ input, textarea {
     overflow: hidden;
 
     img{
-        min-height: 100dvh;
+        min-height: 100lvh;
         min-width: 100dvw;
         object-fit: cover;
     }
@@ -1148,7 +1148,7 @@ input, textarea {
     align-items: flex-start;
     gap: 50px;
     box-sizing: border-box;
-    padding: 10dvh 25px;
+    padding: 10lvh 25px;
 
     .content{
         @include flex-y-start();
@@ -1160,7 +1160,7 @@ input, textarea {
         }
 
         img{
-            height: 4dvh;
+            height: 4lvh;
             width: auto;
             object-fit: contain;
         }
@@ -1325,22 +1325,22 @@ input, textarea {
     @include flex-x-center();
     position: relative;
     margin: auto;
-    height: 70dvh;
+    height: 70lvh;
     width: 100%;
     gap: 20px;
     overflow: hidden;
 
     @media (max-aspect-ratio: 16/9){
-        height: 40dvh;
+        height: 40lvh;
     }
 
     img{
         width: auto;
-        height: 70dvh;
+        height: 70lvh;
         max-width: 75%;
 
         @media (max-aspect-ratio: 16/9){
-            height: 40dvh;
+            height: 40lvh;
         }
     }
 
