@@ -4,12 +4,12 @@
         "isProfessional": true,
         "canHighlight": true,
         "title": "Rhidian You",
-        "subtitle": "A Top-down pixel art retro RPG.",
-        "description": "Retro-style top-down pixel art RPG featuring attacks, spells, and a world with dynamic events.",
+        "subtitle": "A retro pixel art top-down RPG.",
+        "description": "Retro pixel art top-down RPG with attacks, spells and a world with dynamic events.",
         "date": "Mar 2026 - Apr 2026",
         "attributes": "Indie,Unity,C#,Git,2D",
-        "images": [ 
-            "keyboard.webp", 
+        "images": [
+            "keyboard.webp",
             "interior.webp",
             "world.webp",
             "combat.webp",
@@ -18,254 +18,362 @@
         "video": "summary.mp4",
         "developer": "Client",
         "technologies": "Unity, C#, Github",
-        "synopsis": "Rhidian Yiou takes you on a classic fantasy RPG adventure set in tan age of kings, magic and evil creatures. Explore a world full of secrets, traps and twisted realities.",
+        "synopsis": "Rhidian You takes you on a classic fantasy RPG adventure set in an era of kings, magic and dark creatures. Explore a world full of secrets, traps and twisted realities.",
         "genre-and-tags": "RPG, Pixel Art, Top-down",
-        "platforms": [
-
-        ],
+        "platforms": [],
         "roles": [
             {
-                "title": "Programmer",
-                "description": "Program."
+                "title": "Lead Programmer",
+                "description": "I implemented systems from scratch, designing the architecture and developing it through to the polishing phase."
             }
         ],
         "systems": [
             {
-                "title": "System Title",
+                "title": "Grid-based movement system",
                 "summary": [
-                    "Point 1",
-                    "Point 2"
+                    "Cell-based movement in top-down view",
+                    "The player moves cell by cell if there is no collision",
+                    "Movement is locked until the current movement is completed",
+                    "Input system prioritizing the last received input"
                 ],
-                "description": "lorem ipsum"
+                "description": "System that moves the character across the world grid, giving the developer more control over where the player can access. It also processes player input by always prioritizing the latest input to determine movement."
+            },
+            {
+                "title": "Modular dialogue system",
+                "summary": [
+                    "Branching decisions",
+                    "Events attached to dialogue sections",
+                    "ScriptableObjects for dialogue definition and MonoBehaviour for runtime",
+                    "Centralized UI and input system"
+                ],
+                "description": "Modular dialogue system based on ScriptableObjects that enables interactive conversations with branching paths based on player decisions. It includes support for section-based events and is centralized through a manager controlling UI and input."
+            },
+            {
+                "title": "Inventory and equipment system",
+                "summary": [
+                    "Different item types: world, combat or hybrid",
+                    "Equipment with gameplay stats (weapon, armor, shield and passive items)",
+                    "Separation of responsibilities using different ScriptableObject types"
+                ],
+                "description": "Inventory system managing combat, world and mixed items. It includes an equipment system with weapons, armor and shields that modify player stats. It also supports passive items that affect the character while in the inventory."
+            },
+            {
+                "title": "Turn-based RPG combat system",
+                "summary": [
+                    "Turn-based combat inspired by classic RPGs",
+                    "HP, MP and stats management such as strength, defense and agility",
+                    "Simple system designed to be modular, scalable and extensible"
+                ],
+                "description": "Turn-based RPG combat system similar to Dragon Quest, featuring HP, MP and basic stats like strength, defense and agility. Although simple, it is structured to allow easy expansion of mechanics, skills and more complex behaviors in the future."
+            },
+            {
+                "title": "First-person exploration system",
+                "summary": [
+                    "Switch to retro first-person view mode",
+                    "Maze-like tunnel exploration with directional navigation",
+                    "Route validation system penalizing incorrect turns"
+                ],
+                "description": "System that allows switching to a retro-style first-person view inspired by classics like Doom. The player explores maze-structured tunnels where navigation depends on directional choices. Incorrect turns result in being pushed out of the correct path, reinforcing exploration based on orientation and memory."
+            },
+            {
+                "title": "Random encounter system",
+                "summary": [
+                    "Enemy spawns based on zones and conditions",
+                    "Cell-based difficulty control",
+                    "Probability system for spawn frequency"
+                ],
+                "description": "World enemy generation system defining which creatures can appear in each zone. It works through tilemap-painted cells that control spawn probability, sections and available enemies, allowing controlled and simple difficulty progression."
+            },
+            {
+                "title": "Interaction system",
+                "summary": [
+                    "Reusable system for different interaction types",
+                    "Execution of specific logic depending on entity type",
+                    "Interaction with NPCs and world objects"
+                ],
+                "description": "Centralized interaction system allowing the player to interact with NPCs and environmental elements such as shops, rest points and other interactive objects. Each interaction executes specific logic based on entity type through an interface."
+            },
+            {
+                "title": "Global state flags system",
+                "summary": [
+                    "Key-based system (strings) to control world events",
+                    "Event activation and deactivation based on player progress",
+                    "Direct integration with story progression"
+                ],
+                "description": "Key-based flag system storing world state and activating or deactivating events depending on player progress. These keys control event spawning, environment changes and narrative progression dynamically and flexibly."
+            },
+            {
+                "title": "Save system",
+                "summary": [
+                    "Player state persistence in JSON format",
+                    "Static runtime player state for easy access",
+                    "Separation between game data and serializable structure"
+                ],
+                "description": "JSON-based save system persisting full player state. Data is stored in a static class (PlayerState) for easy runtime access. When saving, this data is transferred into a dedicated serializable structure (SavedValues), ensuring separation between gameplay logic and persistence layer."
+            },
+            {
+                "title": "Debug tools system",
+                "summary": [
+                    "Internal tools to modify game state in real time",
+                    "Full control of player stats, inventory and events",
+                    "Flag activation and system testing without gameplay flow"
+                ],
+                "description": "Unity-integrated debug tool system allowing real-time modification of almost any game aspect, including player stats, inventory and event triggers. Designed to speed up testing and validate features without full gameplay flow."
+            },
+            {
+                "title": "On-screen keyboard system",
+                "summary": [
+                    "Retro-style on-screen keyboard for name input",
+                    "Navigation and input controlled via selection system",
+                    "UI adapted to the game’s visual style"
+                ],
+                "description": "On-screen keyboard system allowing players to enter their name in-game. It implements a retro-style interface controlled via input selection, adapted to the project’s visual style to maintain consistency."
             }
         ],
         "learn": [
-
+            "Development of designer tools based on Tilemaps to streamline level creation, along with systems that read this data to generate content and events automatically.",
+            "Implementation of a centralized input system using Unity's Input System through a Singleton pattern, avoiding PlayerInput to maintain greater control and flexibility in input management."
         ],
         "improvements": [
-
+            "I would rethink the development order of the systems, giving higher priority to the dialogue system, as it is the main axis through which actions are communicated to the player. This would allow for better integration and greater scalability of the system."
         ],
         "additional-notes": "",
-        "awards":[
-
-        ],
-        "links": [
-
-        ]
+        "awards": [],
+        "links": []
     },
     {
         "id": "magictory",
         "isProfessional": false,
         "canHighlight": false,
         "title": "Magictory",
-        "subtitle": "A 2D casual game",
-        "description": "3D automation and resource management game set in a medieval world, where your goal is to rebuild a corrupted land through machinery.",
-        "date": "Mar 2026 - Apr 2026",
-        "attributes": "Indie,Unity,C#,Git,2D",
-        "images": [ 
-            "thumbnail.webp", 
-            "img1.webp"
+        "subtitle": "A medieval automation and arcane magic game.",
+        "description": "Automation and resource management game in a 3D medieval world, where your goal is to rebuild a corrupted land through machinery.",
+        "date": "Aug 2025 - Nov 2025",
+        "attributes": "Indie,Unity,C#,Git,3D",
+        "images": [
+            "game1.webp",
+            "game2.webp",
+            "game3.webp"
         ],
         "video": "summary.mp4",
-        "developer": "Customer",
+        "developer": "FranForge",
         "technologies": "Unity, C#, Github",
-        "synopsis": "blablabla",
-        "genre-and-tags": "Tag1, Tag2",
-        "platforms": [
-
-        ],
+        "synopsis": "In a world consumed by dark beings, the king sends you, a simple trusted mage capable of shaping magic to make things work. This is where your adventure begins, building a settlement capable of housing magical protections so the people can live freely.",
+        "genre-and-tags": "Automation, resource management, crafting, base building, construction.",
+        "platforms": [],
         "roles": [
             {
-                "title": "Programmer",
-                "description": "Program."
+                "title": "Solo Developer",
+                "description": "I developed the entire project alone. Design, programming, modeling and animations."
             }
         ],
         "systems": [
             {
-                "title": "Items and Inventory",
+                "title": "Inventory and items",
                 "summary": [
-                    "ScriptableObjects to define resource types and reduce memory usage.",
-                    "Structs to represent resource stacks.",
-                    "Structs instead of classes and arrays instead of lists to reduce GC.",
-                    "Crafting: A recipe system based on lists of required resources and a list of structures that can craft them."
+                    "ScriptableObjects to define resource types and reduce memory usage",
+                    "Structs to represent resource stacks",
+                    "Structs instead of classes and arrays instead of lists to reduce GC",
+                    "Crafting system based on resource recipes"
                 ],
-                "description": "I implemented a full ScriptableObject-based system that defined each type of resource. Then, a Stack struct contained a reference to the resource type along with an integer representing the amount. Finally, an Inventory class held an array of stacks with a maximum capacity defined through the Unity Inspector."
+                "description": "Full system based on ScriptableObjects defining each resource type. A stack struct holds the resource reference and quantity. The inventory stores an array of stacks with a maximum capacity defined in Unity."
             },
             {
-                "title": "Interaction System",
+                "title": "Interaction system",
                 "summary": [
-                "Interface-based interaction system.",
-                "Interaction detection via Physics.OverlapSphere."
+                    "Interface-based interaction system",
+                    "Detection using Physics.OverlapSphere"
                 ],
-                "description": "I implemented an interaction system based on interfaces that every interactable object must implement. Each object handles its own specific logic, while the player's movement is locked during the interaction to ensure consistency."
+                "description": "Interaction system based on interfaces implemented by every interactable object. Each object handles its own logic while player movement is blocked during interaction for consistency."
             },
             {
-                "title": "Building System",
+                "title": "Construction system",
                 "summary": [
-                "Exclusive ActionMap for precise construction control.",
-                "ScriptableObjects to define building structures.",
-                "Progression-based structure unlocking.",
-                "Dependencies and connections between specific structures.",
-                "Interface to define and validate construction requirements."
+                    "Dedicated ActionMap for precise building control",
+                    "ScriptableObjects defining structures",
+                    "Progressive unlocking of structures",
+                    "Dependencies and connections between structures",
+                    "Interface-based requirement validation"
                 ],
-                "description": "The building system uses a dedicated ActionMap that enables a free camera and cursor-based control. Structures are defined through ScriptableObjects and unlocked progressively. Before placement, each building uses an interface to validate its material and spatial requirements."
+                "description": "Construction system using a dedicated ActionMap allowing free camera and cursor control. Structures are defined via ScriptableObjects and unlocked progressively. Before placement, each structure validates material and space requirements."
             },
             {
-                "title": "Custom Tick System",
+                "title": "Custom tick system",
                 "summary": [
-                "Resource optimization through centralized calls.",
-                "Periodic ticks using IEnumerators and Coroutines to reduce Update load.",
-                "Interface-driven tick implementation (ITickable).",
-                "Strict separation between logic and visuals; ticks only handle production calculations."
+                    "Resource optimization via centralized calls",
+                    "Periodic ticks using IEnumerators and Coroutines",
+                    "Interface-based implementation (ITickable)",
+                    "Strict separation between logic and visuals"
                 ],
-                "description": "I developed a TickManager that periodically executes the logic for all objects implementing ITickable. Elements register themselves in a list and are processed via Coroutines, significantly reducing the dependency on the Update method for frequent backend calculations."
+                "description": "TickManager executing logic periodically for all ITickable objects using coroutines, reducing reliance on Update for frequent calculations."
             },
             {
-                "title": "Map Segmentation (Chunks)",
+                "title": "World chunking system",
                 "summary": [
-                "Resource optimization through map segmentation.",
-                "Visual loading and unloading based on player proximity."
+                    "Performance optimization via world segmentation",
+                    "Loading/unloading zones based on player distance"
                 ],
-                "description": "The world map is divided into segments that load or unload depending on the player's distance. This approach saves significant hardware resources by disabling non-visible or irrelevant zones."
+                "description": "World divided into chunks that load or unload based on player distance, reducing resource usage by disabling irrelevant areas."
             },
             {
-                "title": "Levels of Detail (LODs)",
+                "title": "Level of detail (LOD)",
                 "summary": [
-                "Multiple detail levels for enhanced rendering performance."
+                    "Multiple levels of detail for performance optimization"
                 ],
-                "description": "I implemented various LOD levels to ensure the game maintains a high performance and stable frame rate, even with complex environments."
+                "description": "Implemented multiple LOD levels to maintain stable performance in complex environments."
             },
             {
-                "title": "Character Movement (NavMesh)",
+                "title": "Character movement (NavMesh)",
                 "summary": [
-                "Pathfinding calculations using Unity NavMesh.",
-                "NavMeshObstacles for dynamic map elements.",
-                "Point and Click movement system.",
-                "Differentiated input logic for mouse and gamepad for better fluidity."
+                    "Pathfinding using Unity NavMesh",
+                    "NavMeshObstacles for dynamic elements",
+                    "Point & click movement system",
+                    "Separated mouse and controller input"
                 ],
-                "description": "To handle character movement from a top-down perspective, I utilized Unity's NavMesh for cursor-based navigation. Later, I implemented a direct movement system for gamepads using joysticks to provide a smoother user experience across different platforms."
+                "description": "Top-down movement system using NavMesh pathfinding with cursor. Also includes controller movement support for different platforms."
             }
         ],
         "learn": [
-            "Point 1A"
+            "Implementation of different optimization techniques, such as call centralization, use of LODs, chunk division, and the use of structs to reduce heap allocation (GC alloc).",
+            "Modular UI system for different types of panels, reused to manage inventory, crafting, upgrades, construction, and options, allowing similar behaviors with differentiated structures depending on the context.",
+            "Management of different Action Maps with Unity's Input System, adapting controls according to the game context.",
+            "Development of a connection system between structures based on connection points, where elements like belts and containers are capable of detecting adjacent structures and reacting to them dynamically."
         ],
         "improvements": [
-            "Point 1B"
+            "I would migrate the main system architecture toward an approach based on Unity DOTS (Jobs System and Burst Compiler) to improve performance when processing large volumes of data.",
+            "I would simplify the game architecture by eliminating systems unnecessary for the final design, such as player movement, focusing it solely on a more polished construction system."
         ],
-        "additional-notes": "Project indefinitely paused.",
-        "awards":[
-            
-        ],
-        "links": [
-            
-        ]
+        "additional-notes": "Project paused indefinitely.",
+        "awards": [],
+        "links": []
     },
     {
         "id": "the-sky-project",
         "isProfessional": true,
         "canHighlight": true,
         "title": "The Sky Project",
-        "subtitle": "A 2D RPG.",
-        "description": "Classic turn-based RPG featuring a complex creature system, including attacks, types, status effects, and more.",
-        "date": "Mar 2026 - Apr 2026",
-        "attributes": "Indie,Unity,C#,Git,2D",
-        "images": [ 
-            "thumbnail.webp", 
-            "img1.webp"
+        "subtitle": "A 2D metroidvania, monster collector and turn-based RPG.",
+        "description": "Classic turn-based RPG with a complex creature system including attacks, types, status effects and more.",
+        "date": "Nov 2024 - Sep 2025",
+        "attributes": "Indie,Unity,C#,Plastic,2D",
+        "images": [
+            "game1.webp",
+            "game2.webp",
+            "game3.webp"
         ],
         "video": "summary.mp4",
         "developer": "Enthariel Games",
-        "technologies": "Unity, C#, Github",
-        "synopsis": " Hola ",
-        "genre-and-tags": "Tag1, Tag2",
-        "platforms": [
-
-        ],
+        "technologies": "Unity, C#, Plastic SCM",
+        "synopsis": "In a world divided by four planes where mana flows like rivers of power between worlds, a story of love, loss and discovery emerges. A celestial being from a seemingly perfect world embarks on a journey that will challenge everything it knows.",
+        "genre-and-tags": "Monster Collector, Turn-based RPG, 2D platformer, Local multiplayer.",
+        "platforms": [],
         "roles": [
             {
-                "title": "Programmer",
-                "description": "Program."
+                "title": "Team Lead Programmer",
+                "description": "Managed the programming team during development."
+            },
+            {
+                "title": "Game Core Systems Programmer",
+                "description": "Developed core gameplay mechanics and systems."
             }
         ],
         "systems": [
             {
-                "title": "System Title",
+                "title": "Creature system",
                 "summary": [
-                    "Point 1",
-                    "Point 2"
+                    "Creatures with configurable base stats",
+                    "Level progression with experience and attribute growth",
+                    "Skill learning matrix per level"
                 ],
-                "description": "lorem ipsum"
+                "description": "Creature system allowing complex entities with base stats, level growth and experience configuration. Includes an evolution system where each creature defines how attributes grow and which skills are learned at each level."
+            },
+            {
+                "title": "Advanced combat system",
+                "summary": [
+                    "Turn-based combat with single and multi-target selection",
+                    "Type system with effectiveness and weaknesses",
+                    "Global energy per turn limiting skill usage",
+                    "Status effects and usable items during combat"
+                ],
+                "description": "Turn-based combat with advanced target selection, allowing single or area attacks. Includes type effectiveness system, global energy per turn limiting skill usage, random extra attacks per turn, and item usage with status effects."
+            },
+            {
+                "title": "Parametrizable combat AI system",
+                "summary": [
+                    "Enemy behavior configurable via parameters",
+                    "Target priority system (health, level, damage, etc.)",
+                    "Control over skill usage like healing and shields",
+                    "Adaptable AI without modifying base logic"
+                ],
+                "description": "Fully configurable enemy AI system allowing behavior definition without changing base logic, including targeting priorities and skill usage rules."
+            },
+            {
+                "title": "2D platform movement system",
+                "summary": [
+                    "Horizontal movement with air and ground control",
+                    "Double jump and dash with cooldown",
+                    "Gliding mechanic for fall control"
+                ],
+                "description": "Platform movement system with precise control, including jump, double jump, dash and gliding for fluid movement."
+            },
+            {
+                "title": "Wild creature system",
+                "summary": [
+                    "Creature spawns based on zones",
+                    "Level range per area",
+                    "Probability-based spawn system"
+                ],
+                "description": "Wild creature spawning system defining zone-based encounters with configurable probability and level ranges."
+            },
+            {
+                "title": "Creature capture and management system",
+                "summary": [
+                    "Capture wild creatures during combat",
+                    "Rename and customize captured creatures",
+                    "Integration with progression and stats system",
+                    "Player creature management"
+                ],
+                "description": "System allowing capture of creatures during combat and adding them to player control with customization and progression integration."
+            },
+            {
+                "title": "Global state flags system",
+                "summary": [
+                    "Key-based system for world events",
+                    "Event activation based on progression",
+                    "Story integration"
+                ],
+                "description": "Same key-based flag system controlling world events and narrative progression dynamically."
+            },
+            {
+                "title": "Binary save system",
+                "summary": [
+                    "Player state persistence in binary format",
+                    "Manual serialization for performance optimization",
+                    "Integrated with debug tools"
+                ],
+                "description": "Binary save system for optimized loading and saving, with manual serialization and debug integration."
+            },
+            {
+                "title": "Debug tools system",
+                "summary": [
+                    "Real-time game state modification tools",
+                    "Full control over stats, inventory and events",
+                    "Testing without gameplay flow"
+                ],
+                "description": "Debug system allowing real-time modification of game state for testing purposes."
             }
         ],
         "learn": [
-
+            "Data-driven architecture management using ScriptableObjects in Unity, structuring and linking creature, type, and attack data for the RPG system.",
+            "Parametrization of AI systems to adapt behaviors to different game scenarios.",
+            "Development of highly modular code to adapt to frequent changes in requirements and design tests during development."
         ],
         "improvements": [
-
+            "I would reduce design complexity by eliminating systems that do not reinforce the core gameplay, such as deck building, to maintain a more coherent game identity."
         ],
         "additional-notes": "",
-        "awards":[
-            
-        ],
-        "links": [
-            
-        ]
-    },
-    {
-        "id": "animal-strikers",
-        "isProfessional": true,
-        "canHighlight": true,
-        "title": "Animal Strikers",
-        "subtitle": "A 2D casual game",
-        "description": "Casual 2D sports game where big-headed characters compete to score goals while using abilities that dynamically change the flow of the match.",
-        "date": "Mar 2026 - Apr 2026",
-        "attributes": "Indie,Unity,C#,Git,2D",
-        "images": [ 
-            "thumbnail.webp", 
-            "img1.webp"
-        ],
-        "video": "summary.mp4",
-        "developer": "Customer",
-        "technologies": "Unity, C#, Github",
-        "synopsis": "blablabla",
-        "genre-and-tags": "Tag1, Tag2",
-        "platforms": [
-            {
-                "title": "Switch",
-                "img": "switch.svg",
-                "url": "link",
-                "state": "Play now!"
-            }
-        ],
-        "roles": [
-            {
-                "title": "Programmer",
-                "description": "Program."
-            }
-        ],
-        "systems": [
-            {
-                "title": "System Title",
-                "summary": [
-                    "Point 1",
-                    "Point 2"
-                ],
-                "description": "lorem ipsum"
-            }
-        ],
-        "learn": [
-
-        ],
-        "improvements": [
-
-        ],
-        "additional-notes": "",
-        "awards":[
-            
-        ],
-        "links": [
-            
-        ]
+        "awards": [],
+        "links": []
     },
     {
         "id": "luminaria-dark-echoes",
@@ -273,86 +381,162 @@
         "canHighlight": true,
         "title": "Luminaria: Dark Echoes",
         "subtitle": "A 2D casual game",
-        "description": "Story-driven top-down 2D survivor where defeating enemies and unlocking new abilities drives your progression.",
-        "date": "Mar 2026 - Apr 2026",
-        "attributes": "Indie,Unity,C#,Git,2D",
-        "images": [ 
-            "thumbnail.webp", 
-            "img1.webp"
+        "description": "2D survivor with story where defeating enemies and unlocking abilities drives progression.",
+        "date": "Sep 2023 - Dec 2024",
+        "attributes": "Indie,Unity,C#,Plastic,2D",
+        "images": [
+            "game1.webp",
+            "game2.webp",
+            "game3.webp"
         ],
         "video": "summary.mp4",
-        "developer": "Customer",
-        "technologies": "Unity, C#, Github",
-        "synopsis": "blablabla",
-        "genre-and-tags": "Tag1, Tag2",
+        "developer": "Enthariel Games",
+        "technologies": "Unity, C#, Plastic SCM",
+        "synopsis": "You are the hero who must save the world from darkness. This action roguelike offers a steampunk story, bosses and exploration full of mysteries and surprises.",
+        "genre-and-tags": "Survivor, Roguelite, Local multiplayer.",
         "platforms": [
             {
                 "title": "Switch",
                 "img": "switch.svg",
-                "url": "link",
+                "url": "https://www.nintendo.com/es-es/Juegos/Programas-descargables-Nintendo-Switch/Luminaria-Dark-Echoes-2837089.html",
                 "state": "Play now!"
             },
             {
                 "title": "Steam",
                 "img": "steam.svg",
-                "url": "link",
+                "url": "https://store.steampowered.com/app/2690580/Luminaria_Dark_Echoes/",
                 "state": "Play now!"
             },
             {
                 "title": "PS5",
                 "img": "ps.svg",
-                "url": "link",
+                "url": "https://store.playstation.com/es-es/concept/10013956",
                 "state": "Play now!"
             }
         ],
         "roles": [
             {
-                "title": "Programmer",
-                "description": "Program."
+                "title": "Team Lead Programmer",
+                "description": "Managed the programming team during development."
+            },
+            {
+                "title": "Game Core Systems Programmer",
+                "description": "Developed core gameplay systems."
             }
         ],
         "systems": [
             {
-                "title": "System Title",
+                "title": "Skill unlock and progression system",
                 "summary": [
-                    "Point 1",
-                    "Point 2"
+                    "Random skill selection on level up",
+                    "Active and passive skill slots system",
+                    "Upgrades when slots are full"
                 ],
-                "description": "lorem ipsum"
+                "description": "Skill progression system based on random selection during gameplay with limited slots for active and passive skills."
+            },
+            {
+                "title": "Enemy behavior system",
+                "summary": [
+                    "Multiple enemy behavior types",
+                    "Simple, ranged, charge and suicide AI",
+                    "Environmental damage effects"
+                ],
+                "description": "Enemy system with varied behaviors including melee, ranged and environmental interaction."
+            },
+            {
+                "title": "Boss system",
+                "summary": [
+                    "Complex attack patterns",
+                    "Dedicated health bar UI",
+                    "End-of-level events"
+                ],
+                "description": "Boss system with modular attacks and UI presentation."
+            },
+            {
+                "title": "Object pooling system",
+                "summary": [
+                    "Reuse of enemies and projectiles",
+                    "Reduced instantiation cost",
+                    "Performance optimization"
+                ],
+                "description": "Object pooling system improving performance by reusing objects."
+            },
+            {
+                "title": "Local multiplayer system",
+                "summary": [
+                    "Multiple players simultaneously",
+                    "Shared progression",
+                    "Revive system",
+                    "Dynamic difficulty scaling"
+                ],
+                "description": "Local multiplayer system with shared progression and scaling difficulty."
+            },
+            {
+                "title": "Persistent progression system",
+                "summary": [
+                    "Meta progression outside runs",
+                    "Skill unlock shop",
+                    "Skill upgrades",
+                    "Long-term progression impact"
+                ],
+                "description": "Persistent progression system allowing upgrades between runs."
+            },
+            {
+                "title": "Save system (.sav)",
+                "summary": [
+                    "Manual serialization",
+                    "Debug-friendly format",
+                    "No encryption for testing"
+                ],
+                "description": "Save system using .sav files for debugging and testing purposes."
+            },
+            {
+                "title": "Additional features",
+                "summary": [
+                    "Steam leaderboards integration",
+                    "Collectibles system",
+                    "Character skins",
+                    "Dialogue system"
+                ],
+                "description": "Support systems enhancing player experience."
             }
         ],
         "learn": [
-
+            "Experience in the simultaneous management of a large number of on-screen entities, specifically in a survivor-like game, optimizing their behavior and updates.",
+            "First experience using ScriptableObjects for data management and design control, enabling a more flexible and data-oriented architecture.",
+            "First implementation of Unity's Input System, including local multiplayer support, learning to coordinate and extract inputs from multiple players within the same system.",
+            "Deepened integration of the input system with game logic, specifically synchronization between controls and gameplay in a local multiplayer environment.",
+            "First project completed from start to finish, gaining experience in the entire development cycle, from implementation to final delivery and closure."
         ],
         "improvements": [
-
+            "I would eliminate unnecessary systems that slowed down development and project closure, affecting the iteration pace.",
+            "I would design a more modular architecture from the early stages of development to allow for faster iterations and testing.",
+            "I would reduce the number of modes and levels to center the experience on the core gameplay, avoiding design dispersion and improving the game's focus."
         ],
         "additional-notes": "",
         "awards": [
             {
-                "title": "Best Game",
+                "title": "Best game",
                 "year": 2024,
                 "icon": "mangafest.webp"
             },
             {
-                "title": "Audience's Choice Award",
+                "title": "Audience award",
                 "year": 2024,
                 "icon": "madrid-otaku.webp"
             },
             {
-                "title": "Nominated for Best Design",
+                "title": "Nominated for best design",
                 "year": 2024,
                 "icon": "ps-talents-black.webp"
             },
             {
-                "title": "Audience's Choice Award",
+                "title": "Audience award",
                 "year": 2023,
                 "icon": "madrid-otaku.webp"
             }
         ],
-        "links": [
-            
-        ]
+        "links": []
     },
     {
         "id": "confinio-reality-prison",
@@ -360,134 +544,151 @@
         "canHighlight": false,
         "title": "Confinio Reality Prison",
         "subtitle": "A 2D casual game",
-        "description": "2D visual novel where you progress through narrative-driven minigames that shape your future.",
-        "date": "Mar 2026 - Apr 2026",
-        "attributes": "Indie,Unity,C#,Git,2D",
-        "images": [ 
-            "thumbnail.webp", 
-            "img1.webp"
+        "description": "Visual novel in 2D where you progress through narrative minigames that determine your future.",
+        "date": "Sep 2023 - Dec 2024",
+        "attributes": "Indie,Unity,C#,Plastic,2D",
+        "images": [
+            "game1.webp",
+            "game2.webp",
+            "game3.webp"
         ],
         "video": "summary.mp4",
-        "developer": "Customer",
-        "technologies": "Unity, C#, Github",
-        "synopsis": "blablabla",
-        "genre-and-tags": "Tag1, Tag2",
+        "developer": "Client",
+        "technologies": "Unity, C#, Plastic",
+        "synopsis": "Enter Confinio: Reality Prison, a visual novel where darkness surrounds your past and uncertainty guides your steps. Wake up in a cell with no memory where your decisions shape your fate.",
+        "genre-and-tags": "Visual novel, 2D, Psychological horror.",
         "platforms": [
-            {
-                "title": "Switch",
-                "img": "switch.svg",
-                "url": "link",
-                "state": "Play now!"
-            },
             {
                 "title": "Steam",
                 "img": "steam.svg",
-                "url": "link",
-                "state": "Play now!"
-            },
-            {
-                "title": "PS5",
-                "img": "ps.svg",
-                "url": "link",
-                "state": "Play now!"
+                "url": "https://store.steampowered.com/app/3030830/Confinio_Reality_Prison/?l=spanish",
+                "state": "Play demo now!"
             }
         ],
         "roles": [
             {
-                "title": "Programmer",
-                "description": "Program."
+                "title": "Minigames programmer",
+                "description": "Developed the minigames for the visual novel."
             }
         ],
         "systems": [
             {
-                "title": "System Title",
+                "title": "Minigame loading system in Naninovel",
                 "summary": [
-                    "Point 1",
-                    "Point 2"
+                    "Integration of minigames into Naninovel framework",
+                    "Gameplay loading from narrative flow",
+                    "Communication between narrative and gameplay systems"
                 ],
-                "description": "lorem ipsum"
+                "description": "System that integrates minigames inside Naninovel, bridging narrative and gameplay."
+            },
+            {
+                "title": "Minigames integrated into visual novel",
+                "summary": [
+                    "Minigames embedded in narrative flow",
+                    "Rhythm minigame based on music timing",
+                    "Puzzle minigame with clocks and object placement",
+                    "Simplified RPG minigame with stats and abilities"
+                ],
+                "description": "Multiple minigames embedded into the visual novel experience."
             }
         ],
         "learn": [
-
+            "Experimented with different architectural approaches adapted to each minigame, adjusting the structure according to their specific needs."
         ],
         "improvements": [
-
+            "I would dedicate more time to pre-planning minigames, better defining their design before implementation to improve consistency and the quality of the final result."
         ],
         "additional-notes": "",
-        "awards": [
-
-        ],
-        "links": [
-            
-        ]
+        "awards": [],
+        "links": []
     },
     {
         "id": "mechanic-party",
         "isProfessional": false,
         "canHighlight": false,
         "title": "Mechanic Party",
-        "subtitle": "A 2D casual game",
-        "description": "3D top-down game where your main objective is to repair cars before time runs out, with your skills setting the limit.",
-        "date": "Mar 2026 - Apr 2026",
+        "subtitle": "A 3D cooperative casual game",
+        "description": "Play as a mechanic completing vehicle repair orders in the shortest time possible while finishing as many jobs as you can.",
+        "date": "May 2024 - Aug 2024",
         "attributes": "Indie,Unity,C#,Plastic,3D",
-        "images": [ 
-            "thumbnail.webp", 
-            "img1.webp"
+        "images": [
+            "game1.webp",
+            "game2.webp",
+            "game3.webp"
         ],
         "video": "summary.mp4",
-        "developer": "Customer",
-        "technologies": "Unity, C#, Github",
-        "synopsis": "blablabla",
-        "genre-and-tags": "Tag1, Tag2",
-        "platforms": [
-            {
-                "title": "Switch",
-                "img": "switch.svg",
-                "url": "link",
-                "state": "Play now!"
-            },
-            {
-                "title": "Steam",
-                "img": "steam.svg",
-                "url": "link",
-                "state": "Play now!"
-            },
-            {
-                "title": "PS5",
-                "img": "ps.svg",
-                "url": "link",
-                "state": "Play now!"
-            }
-        ],
+        "developer": "FranForge",
+        "technologies": "Unity, C#, Plastic SCM",
+        "synopsis": "Experience a group of mechanics trying to build their dream workshop by traveling across festivals, earning recognition and progress toward their destiny.",
+        "genre-and-tags": "Cooperative, Arcade, Local multiplayer.",
+        "platforms": [],
         "roles": [
             {
-                "title": "Programmer",
-                "description": "Program."
+                "title": "Solo Developer",
+                "description": "I developed the entire project alone. Design, programming, modeling and animations."
             }
         ],
         "systems": [
             {
-                "title": "System Title",
+                "title": "Task and delivery system",
                 "summary": [
-                    "Point 1",
-                    "Point 2"
+                    "Vehicle repair task generation",
+                    "Validation of complete or incomplete delivery",
+                    "Score system based on delivery quality",
+                    "Automatic new task generation"
                 ],
-                "description": "lorem ipsum"
+                "description": "Task system managing vehicle repair workflow and scoring."
+            },
+            {
+                "title": "3D movement system with layered animation",
+                "summary": [
+                    "Character movement using Character Controller",
+                    "Layered animations including hands layer"
+                ],
+                "description": "3D movement system using Character Controller with layered animations."
+            },
+            {
+                "title": "Interaction and object grabbing system",
+                "summary": [
+                    "Interface-based interaction system",
+                    "Modular interaction logic",
+                    "Pickable and throwable objects",
+                    "World object manipulation"
+                ],
+                "description": "Interaction system allowing pickup and manipulation of objects."
+            },
+            {
+                "title": "Level progression and scoring system",
+                "summary": [
+                    "Level unlocks based on score",
+                    "Star rating system",
+                    "Story progression gated by stars"
+                ],
+                "description": "Progression system based on performance and stars."
+            },
+            {
+                "title": "Local multiplayer system",
+                "summary": [
+                    "Support for multiple local players",
+                    "Pre-game skin selection",
+                    "Player configuration before match"
+                ],
+                "description": "Local multiplayer system for shared-device play."
             }
         ],
         "learn": [
-
+            "Learned to work with inheritance and interfaces, applying SOLID principles within project constraints to structure more scalable and sustainable systems.",
+            "Deepened management of the Input System in a local multiplayer environment, controlling the assignment and synchronization of inputs among different players.",
+            "Learned to manage 3D mesh animations using layers, allowing for the modular separation and combination of different behaviors.",
+            "Implementation of custom shaders using Shader Graph to expand the project's visual and stylistic control."
         ],
         "improvements": [
-
+            "I would improve the initial development process by conducting more rapid testing before full production, thus avoiding design issues and accumulated bugs.",
+            "I would incorporate Cinemachine to improve camera management and reduce the complexity of the tracking and visual control system.",
+            "I would develop faster and more efficient level creation tools to improve iteration and allow closing the gameplay loop earlier in development."
         ],
-        "additional-notes": "",
-        "awards": [
-
-        ],
-        "links": [
-            
-        ]
+        "additional-notes": "Project paused indefinitely.",
+        "awards": [],
+        "links": []
     }
 ]

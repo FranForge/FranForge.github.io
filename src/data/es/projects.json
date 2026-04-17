@@ -130,8 +130,13 @@
                 "description": "On-screen keyboard system allowing players to enter their name in-game. It implements a retro-style interface controlled via input selection, adapted to the project’s visual style to maintain consistency."
             }
         ],
-        "learn": [],
-        "improvements": [],
+        "learn": [
+            "Desarrollo de herramientas para diseñadores basadas en Tilemap para agilizar la creación de niveles, junto a sistemas que leen estos datos para generar contenido y eventos de forma automatizada.",
+            "Implementación de un sistema de input centralizado utilizando el Input System de Unity mediante un patrón Singleton, evitando PlayerInput para mantener un mayor control y flexibilidad en la gestión de entradas."
+        ],
+        "improvements": [
+            "Replantearía el orden de desarrollo de los sistemas, dando mayor prioridad al sistema de diálogo, ya que es el eje principal a través del cual se comunican las acciones al jugador. Esto permitiría una mejor integración y mayor escalabilidad del sistema."
+        ],
         "additional-notes": "",
         "awards": [],
         "links": []
@@ -228,8 +233,16 @@
                 "description": "Top-down movement system using NavMesh pathfinding with cursor. Also includes controller movement support for different platforms."
             }
         ],
-        "learn": [],
-        "improvements": [],
+        "learn": [
+            "Implementación de diferentes técnicas de optimización, como centralización de llamadas, uso de LODs, división por chunks y uso de structs para reducir la asignación en el heap (GC alloc).",
+            "Sistema de UI modular para diferentes tipos de paneles, reutilizado para gestionar inventario, crafteo, mejoras, construcción y opciones, permitiendo comportamientos similares con estructuras diferenciadas según el contexto.",
+            "Gestión de diferentes Action Maps con Input System de Unity, adaptando los controles según el contexto del juego.",
+            "Desarrollo de un sistema de conexión entre estructuras basado en puntos de conexión, donde elementos como cintas y contenedores son capaces de detectar estructuras adyacentes y reaccionar a ellas de forma dinámica."
+        ],
+        "improvements": [
+            "Migraría la arquitectura del sistema principal hacia un enfoque basado en Unity DOTS (Jobs System y Burst Compiler) para mejorar el rendimiento en el procesamiento de grandes volúmenes de datos.",
+            "Simplificaría la arquitectura del juego eliminando sistemas innecesarios para el diseño final, como el movimiento del jugador, centrándolo únicamente en un sistema de construcción más pulido."
+        ],
         "additional-notes": "Project paused indefinitely.",
         "awards": [],
         "links": []
@@ -350,8 +363,14 @@
                 "description": "Debug system allowing real-time modification of game state for testing purposes."
             }
         ],
-        "learn": [],
-        "improvements": [],
+        "learn": [
+            "Gestión de arquitectura data-driven utilizando ScriptableObjects en Unity, estructurando y enlazando datos de criaturas, tipos y ataques para el sistema RPG.",
+            "Parametrización de sistemas de IA para adaptar comportamientos a distintos escenarios del juego.",
+            "Desarrollo de código altamente modular para adaptarse a cambios frecuentes en los requisitos y pruebas de diseño durante el desarrollo."
+        ],
+        "improvements": [
+            "Reduciría la complejidad del diseño eliminando sistemas que no refuerzan el núcleo jugable, como el deck building, para mantener una identidad más coherente del juego."
+        ],
         "additional-notes": "",
         "awards": [],
         "links": []
@@ -467,8 +486,14 @@
                 "description": "Binary save system optimized for performance and platform compatibility."
             }
         ],
-        "learn": [],
-        "improvements": [],
+        "learn": [
+            "Experiencia en porting del proyecto a Nintendo Switch adaptando sistemas y flujo de juego para asegurar su correcto funcionamiento en el entornos.",
+            "Implementación de un sistema de aspectos por partes vinculados a datos y estadísticas, permitiendo modificar el gameplay mediante configuraciones asociadas a cada skin y aumentando la libertad del jugador.",
+            "Profundización en la implementación de un sistema de input multijugador local, gestionando múltiples jugadores en el mismo dispositivo y adaptando los controles a distintos contextos de juego."
+        ],
+        "improvements": [
+            "Ampliaría el contenido del juego, añadiendo más variedad de habilidades y opciones de gameplay para aumentar la profundidad y rejugabilidad."
+        ],
         "additional-notes": "",
         "awards": [],
         "links": []
@@ -599,8 +624,18 @@
                 "description": "Support systems enhancing player experience."
             }
         ],
-        "learn": [],
-        "improvements": [],
+        "learn": [
+            "Experiencia en la gestión simultánea de un gran número de entidades en pantalla, especialmente en un juego tipo survivor, optimizando su comportamiento y actualización.",
+            "Primera experiencia utilizando ScriptableObjects para la gestión de datos y control del diseño, permitiendo una arquitectura más flexible y orientada a datos.",
+            "Primera implementación del Input System de Unity, incluyendo soporte para multijugador local, aprendiendo a coordinar y extraer inputs de múltiples jugadores dentro del mismo sistema.",
+            "Profundización en la integración del sistema de input con la lógica del juego, especialmente en la sincronización entre controles y gameplay en un entorno multijugador local.",
+            "Primer proyecto completado de principio a fin, adquiriendo experiencia en todo el ciclo de desarrollo, desde la implementación hasta la finalización y cierre del juego."
+        ],
+        "improvements": [
+            "Eliminaría sistemas innecesarios que ralentizaron el desarrollo y el cierre del proyecto, afectando al ritmo de iteración.",
+            "Diseñaría una arquitectura más modular desde las primeras fases del desarrollo para permitir iteraciones y pruebas más rápidas.",
+            "Reduciría la cantidad de modos y niveles para centrar la experiencia en el núcleo del gameplay, evitando la dispersión del diseño y mejorando el enfoque del juego."
+        ],
         "additional-notes": "",
         "awards": [
             {
@@ -680,8 +715,12 @@
                 "description": "Multiple minigames embedded into the visual novel experience."
             }
         ],
-        "learn": [],
-        "improvements": [],
+        "learn": [
+            "Experimenté con diferentes enfoques de arquitectura adaptados a cada minijuego, ajustando la estructura según sus necesidades específicas."
+        ],
+        "improvements": [
+            "Dedicaría más tiempo a la planificación previa de los minijuegos, definiendo mejor su diseño antes de la implementación para mejorar la coherencia y calidad del resultado final."
+        ],
         "additional-notes": "",
         "awards": [],
         "links": []
@@ -760,8 +799,17 @@
                 "description": "Local multiplayer system for shared-device play."
             }
         ],
-        "learn": [],
-        "improvements": [],
+        "learn": [
+            "Aprendí a trabajar con herencia e interfaces, obligandome a aplicar principios SOLID dentro de las limitaciones del proyecto para estructurar sistemas más escalables y sostenibles.",
+            "Profundicé en la gestión de Input System en un entorno de multijugador local, controlando la asignación y sincronización de inputs entre distintos jugadores.",
+            "Aprendí a gestionar animaciones en meshes 3D utilizando capas, permitiendo separar y combinar distintos comportamientos de forma modular.",
+            "Implementación de shaders personalizados utilizando Shader Graph para ampliar el control visual y estilístico del proyecto."
+        ],
+        "improvements": [
+            "Mejoraría el proceso inicial del desarrollo, realizando más pruebas rápidas antes de producir contenido completo, evitando así problemas de diseño y bugs acumulados.",
+            "Incorporaría Cinemachine para mejorar la gestión de cámaras y reducir la complejidad del sistema de seguimiento y control visual.",
+            "Desarrollaría herramientas de creación de niveles más rápidas y eficientes para mejorar la iteración y permitir cerrar el bucle jugable antes en el desarrollo."
+        ],
         "additional-notes": "Project paused indefinitely.",
         "awards": [],
         "links": []
