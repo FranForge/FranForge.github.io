@@ -4,9 +4,9 @@
         "isProfessional": true,
         "canHighlight": true,
         "title": "Rhidian Yiou",
-        "subtitle": "A retro pixel art top-down RPG.",
-        "description": "Retro pixel art top-down RPG with attacks, spells and a world with dynamic events.",
-        "date": "Mar 2026 - Apr 2026",
+        "subtitle": "Un RPG top-down de pixel art retro.",
+        "description": "RPG top-down de pixel art retro con ataques, hechizos y un mundo con eventos dinámicos.",
+        "date": "Mar 2026 - Abr 2026",
         "attributes": "Indie,Unity,C#,Git,2D",
         "images": [
             "keyboard.webp",
@@ -16,126 +16,126 @@
             "boss.webp"
         ],
         "video": "summary.mp4",
-        "developer": "Client",
+        "developer": "Cliente",
         "technologies": "Unity, C#, Github",
-        "synopsis": "Rhidian Yiou takes you on a classic fantasy RPG adventure set in an era of kings, magic and dark creatures. Explore a world full of secrets, traps and twisted realities.",
-        "genre-and-tags": "RPG, Pixel Art, Top-down",
+        "synopsis": "Rhidian Yiou te lleva a una aventura clásica de RPG de fantasía ambientada en una era de reyes, magia y criaturas oscuras. Explora un mundo lleno de secretos, trampas y realidades distorsionadas.",
+        "genre-and-tags": "RPG, Pixel Art, Vista superior",
         "platforms": [],
         "roles": [
             {
-                "title": "Lead Programmer",
-                "description": "I implemented systems from scratch, designing the architecture and developing it through to the polishing phase."
+                "title": "Programador Principal",
+                "description": "Implementé sistemas desde cero, diseñando la arquitectura y desarrollándolos hasta la fase de pulido."
             }
         ],
         "systems": [
             {
-                "title": "Grid-based movement system",
+                "title": "Sistema de movimiento basado en grid",
                 "summary": [
-                    "Cell-based movement in top-down view",
-                    "The player moves cell by cell if there is no collision",
-                    "Movement is locked until the current movement is completed",
-                    "Input system prioritizing the last received input"
+                    "Movimiento basado en celdas en vista top-down",
+                    "El jugador se mueve celda por celda si no hay colisión",
+                    "El movimiento se bloquea hasta completarse",
+                    "Sistema de input que prioriza la última entrada recibida"
                 ],
-                "description": "System that moves the character across the world grid, giving the developer more control over where the player can access. It also processes player input by always prioritizing the latest input to determine movement."
+                "description": "Sistema que mueve al personaje a través de una cuadrícula, dando al desarrollador más control sobre dónde puede acceder el jugador. También procesa el input priorizando siempre la última entrada recibida."
             },
             {
-                "title": "Modular dialogue system",
+                "title": "Sistema de diálogo modular",
                 "summary": [
-                    "Branching decisions",
-                    "Events attached to dialogue sections",
-                    "ScriptableObjects for dialogue definition and MonoBehaviour for runtime",
-                    "Centralized UI and input system"
+                    "Decisiones ramificadas",
+                    "Eventos asociados a secciones de diálogo",
+                    "ScriptableObjects para la definición y MonoBehaviour para runtime",
+                    "Sistema centralizado de UI e input"
                 ],
-                "description": "Modular dialogue system based on ScriptableObjects that enables interactive conversations with branching paths based on player decisions. It includes support for section-based events and is centralized through a manager controlling UI and input."
+                "description": "Sistema de diálogo modular basado en ScriptableObjects que permite conversaciones interactivas con caminos ramificados según las decisiones del jugador. Incluye soporte para eventos por secciones y está centralizado mediante un gestor que controla la UI y el input."
             },
             {
-                "title": "Inventory and equipment system",
+                "title": "Sistema de inventario y equipamiento",
                 "summary": [
-                    "Different item types: world, combat or hybrid",
-                    "Equipment with gameplay stats (weapon, armor, shield and passive items)",
-                    "Separation of responsibilities using different ScriptableObject types"
+                    "Diferentes tipos de objetos: mundo, combate o híbridos",
+                    "Equipamiento con estadísticas (arma, armadura, escudo y objetos pasivos)",
+                    "Separación de responsabilidades usando distintos tipos de ScriptableObject"
                 ],
-                "description": "Inventory system managing combat, world and mixed items. It includes an equipment system with weapons, armor and shields that modify player stats. It also supports passive items that affect the character while in the inventory."
+                "description": "Sistema de inventario que gestiona objetos de combate, mundo y mixtos. Incluye un sistema de equipamiento con armas, armaduras y escudos que modifican las estadísticas del jugador. También soporta objetos pasivos que afectan al personaje mientras están en el inventario."
             },
             {
-                "title": "Turn-based RPG combat system",
+                "title": "Sistema de combate RPG por turnos",
                 "summary": [
-                    "Turn-based combat inspired by classic RPGs",
-                    "HP, MP and stats management such as strength, defense and agility",
-                    "Simple system designed to be modular, scalable and extensible"
+                    "Combate por turnos inspirado en RPG clásicos",
+                    "Gestión de HP, MP y estadísticas como fuerza, defensa y agilidad",
+                    "Sistema simple diseñado para ser modular y escalable"
                 ],
-                "description": "Turn-based RPG combat system similar to Dragon Quest, featuring HP, MP and basic stats like strength, defense and agility. Although simple, it is structured to allow easy expansion of mechanics, skills and more complex behaviors in the future."
+                "description": "Sistema de combate por turnos similar a Dragon Quest, con HP, MP y estadísticas básicas. Está estructurado para permitir una fácil expansión de mecánicas y habilidades."
             },
             {
-                "title": "First-person exploration system",
+                "title": "Sistema de exploración en primera persona",
                 "summary": [
-                    "Switch to retro first-person view mode",
-                    "Maze-like tunnel exploration with directional navigation",
-                    "Route validation system penalizing incorrect turns"
+                    "Cambio a modo de vista en primera persona retro",
+                    "Exploración de túneles tipo laberinto",
+                    "Sistema de validación de rutas que penaliza errores"
                 ],
-                "description": "System that allows switching to a retro-style first-person view inspired by classics like Doom. The player explores maze-structured tunnels where navigation depends on directional choices. Incorrect turns result in being pushed out of the correct path, reinforcing exploration based on orientation and memory."
+                "description": "Sistema que permite cambiar a una vista en primera persona inspirada en clásicos como Doom. El jugador explora túneles donde la navegación depende de decisiones direccionales."
             },
             {
-                "title": "Random encounter system",
+                "title": "Sistema de encuentros aleatorios",
                 "summary": [
-                    "Enemy spawns based on zones and conditions",
-                    "Cell-based difficulty control",
-                    "Probability system for spawn frequency"
+                    "Aparición de enemigos según zonas",
+                    "Control de dificultad por celdas",
+                    "Sistema de probabilidad"
                 ],
-                "description": "World enemy generation system defining which creatures can appear in each zone. It works through tilemap-painted cells that control spawn probability, sections and available enemies, allowing controlled and simple difficulty progression."
+                "description": "Sistema que define qué enemigos aparecen en cada zona mediante celdas que controlan probabilidad y dificultad."
             },
             {
-                "title": "Interaction system",
+                "title": "Sistema de interacción",
                 "summary": [
-                    "Reusable system for different interaction types",
-                    "Execution of specific logic depending on entity type",
-                    "Interaction with NPCs and world objects"
+                    "Sistema reutilizable para distintos tipos de interacción",
+                    "Lógica específica según tipo de entidad",
+                    "Interacción con NPCs y objetos"
                 ],
-                "description": "Centralized interaction system allowing the player to interact with NPCs and environmental elements such as shops, rest points and other interactive objects. Each interaction executes specific logic based on entity type through an interface."
+                "description": "Sistema centralizado que permite interactuar con NPCs y elementos del entorno como tiendas y puntos de descanso."
             },
             {
-                "title": "Global state flags system",
+                "title": "Sistema de flags globales",
                 "summary": [
-                    "Key-based system (strings) to control world events",
-                    "Event activation and deactivation based on player progress",
-                    "Direct integration with story progression"
+                    "Sistema basado en claves para controlar eventos",
+                    "Activación según progreso del jugador",
+                    "Integración con narrativa"
                 ],
-                "description": "Key-based flag system storing world state and activating or deactivating events depending on player progress. These keys control event spawning, environment changes and narrative progression dynamically and flexibly."
+                "description": "Sistema de flags que controla eventos del mundo y progresión narrativa de forma dinámica."
             },
             {
-                "title": "Save system",
+                "title": "Sistema de guardado",
                 "summary": [
-                    "Player state persistence in JSON format",
-                    "Static runtime player state for easy access",
-                    "Separation between game data and serializable structure"
+                    "Persistencia en JSON",
+                    "Estado del jugador accesible en runtime",
+                    "Separación entre datos y estructura serializable"
                 ],
-                "description": "JSON-based save system persisting full player state. Data is stored in a static class (PlayerState) for easy runtime access. When saving, this data is transferred into a dedicated serializable structure (SavedValues), ensuring separation between gameplay logic and persistence layer."
+                "description": "Sistema de guardado en JSON que almacena el estado completo del jugador."
             },
             {
-                "title": "Debug tools system",
+                "title": "Herramientas de debug",
                 "summary": [
-                    "Internal tools to modify game state in real time",
-                    "Full control of player stats, inventory and events",
-                    "Flag activation and system testing without gameplay flow"
+                    "Modificación del estado en tiempo real",
+                    "Control total de stats, inventario y eventos",
+                    "Testing sin flujo de juego"
                 ],
-                "description": "Unity-integrated debug tool system allowing real-time modification of almost any game aspect, including player stats, inventory and event triggers. Designed to speed up testing and validate features without full gameplay flow."
+                "description": "Sistema de herramientas de debug integrado en Unity para modificar el juego en tiempo real."
             },
             {
-                "title": "On-screen keyboard system",
+                "title": "Teclado en pantalla",
                 "summary": [
-                    "Retro-style on-screen keyboard for name input",
-                    "Navigation and input controlled via selection system",
-                    "UI adapted to the game’s visual style"
+                    "Teclado retro para introducir nombre",
+                    "Control mediante selección",
+                    "UI adaptada al estilo visual"
                 ],
-                "description": "On-screen keyboard system allowing players to enter their name in-game. It implements a retro-style interface controlled via input selection, adapted to the project’s visual style to maintain consistency."
+                "description": "Sistema de teclado en pantalla para introducir el nombre del jugador con estilo retro."
             }
         ],
         "learn": [
-            "Desarrollo de herramientas para diseñadores basadas en Tilemap para agilizar la creación de niveles, junto a sistemas que leen estos datos para generar contenido y eventos de forma automatizada.",
-            "Implementación de un sistema de input centralizado utilizando el Input System de Unity mediante un patrón Singleton, evitando PlayerInput para mantener un mayor control y flexibilidad en la gestión de entradas."
+            "Desarrollo de herramientas para diseñadores basadas en Tilemap para agilizar la creación de niveles, junto a sistemas que leen estos datos para generar contenido y eventos automáticamente.",
+            "Implementación de un sistema de input centralizado utilizando el Input System de Unity mediante un patrón Singleton, evitando PlayerInput para mayor control."
         ],
         "improvements": [
-            "Replantearía el orden de desarrollo de los sistemas, dando mayor prioridad al sistema de diálogo, ya que es el eje principal a través del cual se comunican las acciones al jugador. Esto permitiría una mejor integración y mayor escalabilidad del sistema."
+            "Replantearía el orden de desarrollo de los sistemas, priorizando el sistema de diálogo para mejorar integración y escalabilidad."
         ],
         "additional-notes": "",
         "awards": [],
@@ -146,9 +146,9 @@
         "isProfessional": false,
         "canHighlight": false,
         "title": "Magictory",
-        "subtitle": "A medieval automation and arcane magic game.",
-        "description": "Automation and resource management game in a 3D medieval world, where your goal is to rebuild a corrupted land through machinery.",
-        "date": "Aug 2025 - Nov 2025",
+        "subtitle": "Un juego de automatización medieval y magia arcana.",
+        "description": "Juego de automatización y gestión de recursos en un mundo medieval 3D, donde tu objetivo es reconstruir una tierra corrupta mediante maquinaria.",
+        "date": "Ago 2025 - Nov 2025",
         "attributes": "Indie,Unity,C#,Git,3D",
         "images": [
             "game1.webp",
@@ -158,92 +158,92 @@
         "video": "summary.mp4",
         "developer": "FranForge",
         "technologies": "Unity, C#, Github",
-        "synopsis": "In a world consumed by dark beings, the king sends you, a simple trusted mage capable of shaping magic to make things work. This is where your adventure begins, building a settlement capable of housing magical protections so the people can live freely.",
-        "genre-and-tags": "Automation, resource management, crafting, base building, construction.",
+        "synopsis": "En un mundo consumido por seres oscuros, el rey te envía a ti, un simple mago de confianza capaz de moldear la magia para hacer que las cosas funcionen. Aquí comienza tu aventura, construyendo un asentamiento capaz de albergar protecciones mágicas para que la gente pueda vivir libremente.",
+        "genre-and-tags": "Automatización, gestión de recursos, crafteo, construcción de bases, construcción.",
         "platforms": [],
         "roles": [
             {
-                "title": "Solo Developer",
-                "description": "I developed the entire project alone. Design, programming, modeling and animations."
+                "title": "Desarrollador en solitario",
+                "description": "Desarrollé todo el proyecto yo solo: diseño, programación, modelado y animaciones."
             }
         ],
         "systems": [
             {
-                "title": "Inventory and items",
+                "title": "Inventario y objetos",
                 "summary": [
-                    "ScriptableObjects to define resource types and reduce memory usage",
-                    "Structs to represent resource stacks",
-                    "Structs instead of classes and arrays instead of lists to reduce GC",
-                    "Crafting system based on resource recipes"
+                    "Uso de ScriptableObjects para definir tipos de recursos y reducir uso de memoria",
+                    "Structs para representar pilas de recursos",
+                    "Uso de structs en lugar de clases y arrays en lugar de listas para reducir GC",
+                    "Sistema de crafteo basado en recetas"
                 ],
-                "description": "Full system based on ScriptableObjects defining each resource type. A stack struct holds the resource reference and quantity. The inventory stores an array of stacks with a maximum capacity defined in Unity."
+                "description": "Sistema completo basado en ScriptableObjects que definen cada tipo de recurso. Un struct representa la pila con referencia y cantidad. El inventario almacena un array de pilas con capacidad máxima definida en Unity."
             },
             {
-                "title": "Interaction system",
+                "title": "Sistema de interacción",
                 "summary": [
-                    "Interface-based interaction system",
-                    "Detection using Physics.OverlapSphere"
+                    "Sistema basado en interfaces",
+                    "Detección mediante Physics.OverlapSphere"
                 ],
-                "description": "Interaction system based on interfaces implemented by every interactable object. Each object handles its own logic while player movement is blocked during interaction for consistency."
+                "description": "Sistema de interacción donde cada objeto implementa una interfaz y gestiona su propia lógica. El movimiento del jugador se bloquea durante la interacción para mantener consistencia."
             },
             {
-                "title": "Construction system",
+                "title": "Sistema de construcción",
                 "summary": [
-                    "Dedicated ActionMap for precise building control",
-                    "ScriptableObjects defining structures",
-                    "Progressive unlocking of structures",
-                    "Dependencies and connections between structures",
-                    "Interface-based requirement validation"
+                    "ActionMap dedicado para control preciso",
+                    "Estructuras definidas con ScriptableObjects",
+                    "Desbloqueo progresivo",
+                    "Dependencias y conexiones entre estructuras",
+                    "Validación mediante interfaces"
                 ],
-                "description": "Construction system using a dedicated ActionMap allowing free camera and cursor control. Structures are defined via ScriptableObjects and unlocked progressively. Before placement, each structure validates material and space requirements."
+                "description": "Sistema de construcción con ActionMap dedicado que permite control libre de cámara y cursor. Las estructuras se definen con ScriptableObjects y se desbloquean progresivamente. Antes de colocarse, validan requisitos de materiales y espacio."
             },
             {
-                "title": "Custom tick system",
+                "title": "Sistema de ticks personalizado",
                 "summary": [
-                    "Resource optimization via centralized calls",
-                    "Periodic ticks using IEnumerators and Coroutines",
-                    "Interface-based implementation (ITickable)",
-                    "Strict separation between logic and visuals"
+                    "Optimización mediante llamadas centralizadas",
+                    "Ticks periódicos con Coroutines",
+                    "Implementación mediante interfaz (ITickable)",
+                    "Separación estricta entre lógica y visual"
                 ],
-                "description": "TickManager executing logic periodically for all ITickable objects using coroutines, reducing reliance on Update for frequent calculations."
+                "description": "TickManager que ejecuta lógica periódicamente para todos los objetos ITickable usando coroutines, reduciendo el uso de Update."
             },
             {
-                "title": "World chunking system",
+                "title": "Sistema de chunking del mundo",
                 "summary": [
-                    "Performance optimization via world segmentation",
-                    "Loading/unloading zones based on player distance"
+                    "Optimización mediante segmentación del mundo",
+                    "Carga y descarga según distancia al jugador"
                 ],
-                "description": "World divided into chunks that load or unload based on player distance, reducing resource usage by disabling irrelevant areas."
+                "description": "El mundo se divide en chunks que se cargan o descargan según la distancia al jugador para reducir consumo de recursos."
             },
             {
-                "title": "Level of detail (LOD)",
+                "title": "Nivel de detalle (LOD)",
                 "summary": [
-                    "Multiple levels of detail for performance optimization"
+                    "Múltiples niveles de detalle para optimización"
                 ],
-                "description": "Implemented multiple LOD levels to maintain stable performance in complex environments."
+                "description": "Implementación de varios niveles de detalle para mantener rendimiento estable en entornos complejos."
             },
             {
-                "title": "Character movement (NavMesh)",
+                "title": "Movimiento del personaje (NavMesh)",
                 "summary": [
-                    "Pathfinding using Unity NavMesh",
-                    "NavMeshObstacles for dynamic elements",
-                    "Point & click movement system",
-                    "Separated mouse and controller input"
+                    "Pathfinding con NavMesh de Unity",
+                    "Uso de NavMeshObstacles",
+                    "Movimiento point & click",
+                    "Separación entre input de ratón y mando"
                 ],
-                "description": "Top-down movement system using NavMesh pathfinding with cursor. Also includes controller movement support for different platforms."
+                "description": "Sistema de movimiento top-down usando pathfinding con NavMesh y control por cursor. Incluye soporte para mando."
             }
         ],
         "learn": [
-            "Implementación de diferentes técnicas de optimización, como centralización de llamadas, uso de LODs, división por chunks y uso de structs para reducir la asignación en el heap (GC alloc).",
-            "Sistema de UI modular para diferentes tipos de paneles, reutilizado para gestionar inventario, crafteo, mejoras, construcción y opciones, permitiendo comportamientos similares con estructuras diferenciadas según el contexto.",
-            "Gestión de diferentes Action Maps con Input System de Unity, adaptando los controles según el contexto del juego.",
-            "Desarrollo de un sistema de conexión entre estructuras basado en puntos de conexión, donde elementos como cintas y contenedores son capaces de detectar estructuras adyacentes y reaccionar a ellas de forma dinámica."
+            "Implementación de técnicas de optimización como centralización de llamadas, uso de LODs, división en chunks y uso de structs para reducir asignaciones en memoria (GC).",
+            "Sistema de UI modular reutilizable para inventario, crafteo, mejoras, construcción y opciones.",
+            "Gestión de múltiples Action Maps con el Input System de Unity según el contexto.",
+            "Sistema de conexión entre estructuras mediante puntos de conexión con comportamiento dinámico."
         ],
         "improvements": [
-            "Migraría la arquitectura del sistema principal hacia un enfoque basado en Unity DOTS (Jobs System y Burst Compiler) para mejorar el rendimiento en el procesamiento de grandes volúmenes de datos.",
-            "Simplificaría la arquitectura del juego eliminando sistemas innecesarios para el diseño final, como el movimiento del jugador, centrándolo únicamente en un sistema de construcción más pulido."
+            "Migraría la arquitectura hacia Unity DOTS (Jobs System y Burst Compiler) para mejorar el rendimiento con grandes volúmenes de datos.",
+            "Simplificaría la arquitectura eliminando sistemas innecesarios como el movimiento del jugador, enfocándolo en construcción."
         ],
-        "additional-notes": "Project paused indefinitely.",
+        "additional-notes": "Proyecto pausado indefinidamente.",
         "awards": [],
         "links": []
     },
@@ -252,8 +252,8 @@
         "isProfessional": true,
         "canHighlight": true,
         "title": "The Sky Project",
-        "subtitle": "A 2D metroidvania, monster collector and turn-based RPG.",
-        "description": "Classic turn-based RPG with a complex creature system including attacks, types, status effects and more.",
+        "subtitle": "Un metroidvania 2D, coleccionador de criaturas y RPG por turnos.",
+        "description": "RPG clásico por turnos con un sistema complejo de criaturas que incluye ataques, tipos, efectos de estado y más.",
         "date": "Nov 2024 - Sep 2025",
         "attributes": "Indie,Unity,C#,Plastic,2D",
         "images": [
@@ -264,112 +264,112 @@
         "video": "summary.mp4",
         "developer": "Enthariel Games",
         "technologies": "Unity, C#, Plastic SCM",
-        "synopsis": "In a world divided by four planes where mana flows like rivers of power between worlds, a story of love, loss and discovery emerges. A celestial being from a seemingly perfect world embarks on a journey that will challenge everything it knows.",
-        "genre-and-tags": "Monster Collector, Turn-based RPG, 2D platformer, Local multiplayer.",
+        "synopsis": "En un mundo dividido por cuatro planos donde el maná fluye como ríos de poder entre mundos, surge una historia de amor, pérdida y descubrimiento. Un ser celestial de un mundo aparentemente perfecto emprende un viaje que desafiará todo lo que conoce.",
+        "genre-and-tags": "Coleccionador de criaturas, RPG por turnos, plataformas 2D, multijugador local.",
         "platforms": [],
         "roles": [
             {
-                "title": "Team Lead Programmer",
-                "description": "Managed the programming team during development."
+                "title": "Programador Líder de Equipo",
+                "description": "Gestioné al equipo de programación durante el desarrollo."
             },
             {
-                "title": "Game Core Systems Programmer",
-                "description": "Developed core gameplay mechanics and systems."
+                "title": "Programador de Sistemas Principales",
+                "description": "Desarrollé las mecánicas y sistemas principales del juego."
             }
         ],
         "systems": [
             {
-                "title": "Creature system",
+                "title": "Sistema de criaturas",
                 "summary": [
-                    "Creatures with configurable base stats",
-                    "Level progression with experience and attribute growth",
-                    "Skill learning matrix per level"
+                    "Criaturas con estadísticas base configurables",
+                    "Progresión por niveles con experiencia y crecimiento de atributos",
+                    "Matriz de aprendizaje de habilidades por nivel"
                 ],
-                "description": "Creature system allowing complex entities with base stats, level growth and experience configuration. Includes an evolution system where each creature defines how attributes grow and which skills are learned at each level."
+                "description": "Sistema de criaturas que permite entidades complejas con estadísticas base, crecimiento por nivel y configuración de experiencia. Incluye evolución y aprendizaje de habilidades por nivel."
             },
             {
-                "title": "Advanced combat system",
+                "title": "Sistema de combate avanzado",
                 "summary": [
-                    "Turn-based combat with single and multi-target selection",
-                    "Type system with effectiveness and weaknesses",
-                    "Global energy per turn limiting skill usage",
-                    "Status effects and usable items during combat"
+                    "Combate por turnos con selección de objetivos individuales o múltiples",
+                    "Sistema de tipos con efectividad y debilidades",
+                    "Energía global por turno que limita habilidades",
+                    "Efectos de estado y uso de objetos en combate"
                 ],
-                "description": "Turn-based combat with advanced target selection, allowing single or area attacks. Includes type effectiveness system, global energy per turn limiting skill usage, random extra attacks per turn, and item usage with status effects."
+                "description": "Sistema de combate por turnos con selección avanzada de objetivos. Incluye sistema de tipos, energía por turno, ataques adicionales aleatorios y uso de objetos con efectos de estado."
             },
             {
-                "title": "Parametrizable combat AI system",
+                "title": "Sistema de IA de combate parametrizable",
                 "summary": [
-                    "Enemy behavior configurable via parameters",
-                    "Target priority system (health, level, damage, etc.)",
-                    "Control over skill usage like healing and shields",
-                    "Adaptable AI without modifying base logic"
+                    "Comportamiento configurable mediante parámetros",
+                    "Sistema de prioridad de objetivos",
+                    "Control de uso de habilidades",
+                    "IA adaptable sin modificar lógica base"
                 ],
-                "description": "Fully configurable enemy AI system allowing behavior definition without changing base logic, including targeting priorities and skill usage rules."
+                "description": "Sistema de IA configurable que permite definir comportamientos sin cambiar la lógica base."
             },
             {
-                "title": "2D platform movement system",
+                "title": "Sistema de movimiento de plataformas 2D",
                 "summary": [
-                    "Horizontal movement with air and ground control",
-                    "Double jump and dash with cooldown",
-                    "Gliding mechanic for fall control"
+                    "Movimiento horizontal con control en aire y suelo",
+                    "Doble salto y dash con cooldown",
+                    "Mecánica de planeo"
                 ],
-                "description": "Platform movement system with precise control, including jump, double jump, dash and gliding for fluid movement."
+                "description": "Sistema de movimiento de plataformas con control preciso que incluye salto, doble salto, dash y planeo."
             },
             {
-                "title": "Wild creature system",
+                "title": "Sistema de criaturas salvajes",
                 "summary": [
-                    "Creature spawns based on zones",
-                    "Level range per area",
-                    "Probability-based spawn system"
+                    "Aparición según zonas",
+                    "Rango de niveles por área",
+                    "Sistema de probabilidad"
                 ],
-                "description": "Wild creature spawning system defining zone-based encounters with configurable probability and level ranges."
+                "description": "Sistema de aparición de criaturas basado en zonas con probabilidades y niveles configurables."
             },
             {
-                "title": "Creature capture and management system",
+                "title": "Sistema de captura y gestión de criaturas",
                 "summary": [
-                    "Capture wild creatures during combat",
-                    "Rename and customize captured creatures",
-                    "Integration with progression and stats system",
-                    "Player creature management"
+                    "Captura de criaturas en combate",
+                    "Renombrado y personalización",
+                    "Integración con progresión",
+                    "Gestión por parte del jugador"
                 ],
-                "description": "System allowing capture of creatures during combat and adding them to player control with customization and progression integration."
+                "description": "Sistema que permite capturar criaturas durante el combate y gestionarlas con personalización y progresión."
             },
             {
-                "title": "Global state flags system",
+                "title": "Sistema de flags globales",
                 "summary": [
-                    "Key-based system for world events",
-                    "Event activation based on progression",
-                    "Story integration"
+                    "Sistema basado en claves para eventos",
+                    "Activación según progreso",
+                    "Integración narrativa"
                 ],
-                "description": "Same key-based flag system controlling world events and narrative progression dynamically."
+                "description": "Sistema de flags que controla eventos del mundo y progresión narrativa."
             },
             {
-                "title": "Binary save system",
+                "title": "Sistema de guardado binario",
                 "summary": [
-                    "Player state persistence in binary format",
-                    "Manual serialization for performance optimization",
-                    "Integrated with debug tools"
+                    "Persistencia en formato binario",
+                    "Serialización manual para optimización",
+                    "Integrado con herramientas de debug"
                 ],
-                "description": "Binary save system for optimized loading and saving, with manual serialization and debug integration."
+                "description": "Sistema de guardado en binario optimizado con serialización manual."
             },
             {
-                "title": "Debug tools system",
+                "title": "Herramientas de debug",
                 "summary": [
-                    "Real-time game state modification tools",
-                    "Full control over stats, inventory and events",
-                    "Testing without gameplay flow"
+                    "Modificación del estado en tiempo real",
+                    "Control total del juego",
+                    "Testing sin flujo completo"
                 ],
-                "description": "Debug system allowing real-time modification of game state for testing purposes."
+                "description": "Sistema de debug para modificar el estado del juego en tiempo real."
             }
         ],
         "learn": [
-            "Gestión de arquitectura data-driven utilizando ScriptableObjects en Unity, estructurando y enlazando datos de criaturas, tipos y ataques para el sistema RPG.",
-            "Parametrización de sistemas de IA para adaptar comportamientos a distintos escenarios del juego.",
-            "Desarrollo de código altamente modular para adaptarse a cambios frecuentes en los requisitos y pruebas de diseño durante el desarrollo."
+            "Gestión de arquitectura data-driven usando ScriptableObjects en Unity para estructurar datos de criaturas, tipos y ataques.",
+            "Parametrización de sistemas de IA para adaptarlos a distintos escenarios.",
+            "Desarrollo de código modular para adaptarse a cambios frecuentes en diseño."
         ],
         "improvements": [
-            "Reduciría la complejidad del diseño eliminando sistemas que no refuerzan el núcleo jugable, como el deck building, para mantener una identidad más coherente del juego."
+            "Reduciría la complejidad eliminando sistemas que no refuercen el núcleo jugable para mantener una identidad más clara."
         ],
         "additional-notes": "",
         "awards": [],
@@ -380,9 +380,9 @@
         "isProfessional": true,
         "canHighlight": true,
         "title": "Animal Strikers",
-        "subtitle": "A casual 2D sports game with local multiplayer.",
-        "description": "Arcade football game with chibi characters using abilities to change match outcomes.",
-        "date": "Sep 2023 - Dec 2024",
+        "subtitle": "Un juego casual de deportes en 2D con multijugador local.",
+        "description": "Juego arcade de fútbol con personajes estilo chibi que usan habilidades para cambiar el resultado del partido.",
+        "date": "Sep 2023 - Dic 2024",
         "attributes": "Indie,Unity,C#,Plastic,2D",
         "images": [
             "game1.webp",
@@ -392,107 +392,107 @@
         "video": "summary.mp4",
         "developer": "Enthariel Games",
         "technologies": "Unity, C#, Plastic",
-        "synopsis": "In Animal Strikers you test your skills in football using small characters with incredible abilities to win matches like a true legend. Play solo or with friends on the same device.",
-        "genre-and-tags": "Sports, Casual, Local multiplayer.",
+        "synopsis": "En Animal Strikers pones a prueba tus habilidades en fútbol usando pequeños personajes con habilidades increíbles para ganar partidos como una auténtica leyenda. Juega solo o con amigos en el mismo dispositivo.",
+        "genre-and-tags": "Deportes, Casual, Multijugador local.",
         "platforms": [
             {
                 "title": "Switch",
                 "img": "switch.svg",
                 "url": "https://ec.nintendo.com/NZ/en/titles/70010000092953",
-                "state": "Play now!"
+                "state": "¡Jugar ahora!"
             }
         ],
         "roles": [
             {
-                "title": "Lead Programmer",
-                "description": "Implemented systems from scratch, designing architecture and developing it through polishing."
+                "title": "Programador Principal",
+                "description": "Implementé sistemas desde cero, diseñando la arquitectura y desarrollándolos hasta la fase de pulido."
             }
         ],
         "systems": [
             {
-                "title": "Character movement and control system",
+                "title": "Sistema de movimiento y control del personaje",
                 "summary": [
-                    "Ground and air movement control",
-                    "Context actions (kick or header)",
-                    "Direct interaction with ball physics",
-                    "AI using same movement rules"
+                    "Movimiento en suelo y aire",
+                    "Acciones contextuales (chutar o cabecear)",
+                    "Interacción directa con la física del balón",
+                    "IA usando las mismas reglas de movimiento"
                 ],
-                "description": "Arcade football character control system with context-based actions depending on state: kick on ground, header in air. Designed to interact directly with ball physics."
+                "description": "Sistema de control arcade para personajes de fútbol con acciones contextuales según el estado: chut en suelo o cabezazo en el aire. Diseñado para interactuar directamente con la física del balón."
             },
             {
-                "title": "Game loop system",
+                "title": "Sistema de bucle de juego",
                 "summary": [
-                    "Goal and score management",
-                    "Match reset after kickoff",
-                    "Match timer limit",
-                    "Overall match flow control"
+                    "Gestión de goles y marcador",
+                    "Reinicio del partido tras saque",
+                    "Límite de tiempo",
+                    "Control del flujo completo del partido"
                 ],
-                "description": "Core loop system managing scoring, resets after goals and match timing, coordinating full match flow."
+                "description": "Sistema principal que gestiona la puntuación, reinicios tras goles y duración del partido."
             },
             {
-                "title": "Abilities system",
+                "title": "Sistema de habilidades",
                 "summary": [
-                    "Activatable abilities during match",
-                    "Effects like freeze, size changes, ball speed changes",
-                    "Dynamic gameplay modification"
+                    "Habilidades activables durante el partido",
+                    "Efectos como congelar, cambiar tamaño o velocidad del balón",
+                    "Modificación dinámica del gameplay"
                 ],
-                "description": "Active ability system that modifies gameplay conditions in real time, adding strategy and variability."
+                "description": "Sistema de habilidades activas que modifican las condiciones del gameplay en tiempo real, añadiendo estrategia y variabilidad."
             },
             {
-                "title": "Random match events system",
+                "title": "Sistema de eventos aleatorios",
                 "summary": [
-                    "Random events at end of match",
-                    "Global effects affecting both players",
-                    "Temporary gameplay changes"
+                    "Eventos aleatorios al final del partido",
+                    "Efectos globales para ambos jugadores",
+                    "Cambios temporales en el gameplay"
                 ],
-                "description": "Random post-match events applying global effects that affect both players equally."
+                "description": "Sistema de eventos que aplican efectos globales a ambos jugadores tras el partido."
             },
             {
-                "title": "Level-based narrative progression system",
+                "title": "Sistema de progresión narrativa por niveles",
                 "summary": [
-                    "Level unlocks based on goal advantage wins",
-                    "Secret levels via high-margin victories",
-                    "Mini-games between levels",
-                    "Cosmetic unlocks as rewards"
+                    "Desbloqueo de niveles según diferencia de goles",
+                    "Niveles secretos por victorias amplias",
+                    "Minijuegos entre niveles",
+                    "Recompensas cosméticas"
                 ],
-                "description": "Progression system unlocking levels based on performance, including secret levels and mini-games."
+                "description": "Sistema de progresión que desbloquea niveles según el rendimiento del jugador, incluyendo contenido secreto."
             },
             {
-                "title": "Character skins and stat system",
+                "title": "Sistema de skins y estadísticas",
                 "summary": [
-                    "Modular character parts (head, body, feet, tail)",
-                    "Stats modifications (speed, jump, shot power)",
-                    "Cosmetic visual effects"
+                    "Partes modulares del personaje",
+                    "Modificación de estadísticas (velocidad, salto, potencia)",
+                    "Efectos visuales cosméticos"
                 ],
-                "description": "Customization system with modular skins affecting gameplay stats and visuals."
+                "description": "Sistema de personalización con skins modulares que afectan tanto al aspecto como a las estadísticas."
             },
             {
-                "title": "Local multiplayer system",
+                "title": "Sistema multijugador local",
                 "summary": [
-                    "Up to 2 players on same device",
-                    "Pre-match customization",
-                    "Co-op or competitive local play"
+                    "Hasta 2 jugadores en el mismo dispositivo",
+                    "Personalización previa al partido",
+                    "Modo cooperativo o competitivo"
                 ],
-                "description": "Local multiplayer system supporting two players with pre-match setup and customization."
+                "description": "Sistema multijugador local para dos jugadores con configuración previa al partido."
             },
             {
-                "title": "Binary save system",
+                "title": "Sistema de guardado binario",
                 "summary": [
-                    "Binary persistence of game data",
-                    "Optimized save/load performance",
-                    "Player progression storage",
-                    "Designed for platforms like Nintendo Switch"
+                    "Persistencia en binario",
+                    "Optimización de rendimiento",
+                    "Almacenamiento de progresión",
+                    "Diseñado para plataformas como Nintendo Switch"
                 ],
-                "description": "Binary save system optimized for performance and platform compatibility."
+                "description": "Sistema de guardado optimizado en binario para rendimiento y compatibilidad con plataformas."
             }
         ],
         "learn": [
-            "Experiencia en porting del proyecto a Nintendo Switch adaptando sistemas y flujo de juego para asegurar su correcto funcionamiento en el entornos.",
-            "Implementación de un sistema de aspectos por partes vinculados a datos y estadísticas, permitiendo modificar el gameplay mediante configuraciones asociadas a cada skin y aumentando la libertad del jugador.",
-            "Profundización en la implementación de un sistema de input multijugador local, gestionando múltiples jugadores en el mismo dispositivo y adaptando los controles a distintos contextos de juego."
+            "Experiencia en el porting del proyecto a Nintendo Switch, adaptando sistemas y flujo de juego.",
+            "Implementación de un sistema de skins por partes vinculadas a estadísticas que afectan al gameplay.",
+            "Profundización en multijugador local gestionando múltiples jugadores en el mismo dispositivo."
         ],
         "improvements": [
-            "Ampliaría el contenido del juego, añadiendo más variedad de habilidades y opciones de gameplay para aumentar la profundidad y rejugabilidad."
+            "Ampliaría el contenido añadiendo más habilidades y opciones para mejorar la rejugabilidad."
         ],
         "additional-notes": "",
         "awards": [],
@@ -503,9 +503,9 @@
         "isProfessional": true,
         "canHighlight": true,
         "title": "Luminaria: Dark Echoes",
-        "subtitle": "A 2D casual game",
-        "description": "2D survivor with story where defeating enemies and unlocking abilities drives progression.",
-        "date": "Sep 2023 - Dec 2024",
+        "subtitle": "Un juego casual en 2D",
+        "description": "Survivor en 2D con historia donde derrotar enemigos y desbloquear habilidades impulsa la progresión.",
+        "date": "Sep 2023 - Dic 2024",
         "attributes": "Indie,Unity,C#,Plastic,2D",
         "images": [
             "game1.webp",
@@ -515,146 +515,146 @@
         "video": "summary.mp4",
         "developer": "Enthariel Games",
         "technologies": "Unity, C#, Plastic SCM",
-        "synopsis": "You are the hero who must save the world from darkness. This action roguelike offers a steampunk story, bosses and exploration full of mysteries and surprises.",
-        "genre-and-tags": "Survivor, Roguelite, Local multiplayer.",
+        "synopsis": "Eres el héroe que debe salvar el mundo de la oscuridad. Este roguelike de acción ofrece una historia steampunk, jefes y exploración llena de misterios y sorpresas.",
+        "genre-and-tags": "Survivor, Roguelite, Multijugador local.",
         "platforms": [
             {
                 "title": "Switch",
                 "img": "switch.svg",
                 "url": "https://www.nintendo.com/es-es/Juegos/Programas-descargables-Nintendo-Switch/Luminaria-Dark-Echoes-2837089.html",
-                "state": "Play now!"
+                "state": "¡Jugar ahora!"
             },
             {
                 "title": "Steam",
                 "img": "steam.svg",
                 "url": "https://store.steampowered.com/app/2690580/Luminaria_Dark_Echoes/",
-                "state": "Play now!"
+                "state": "¡Jugar ahora!"
             },
             {
                 "title": "PS5",
                 "img": "ps.svg",
                 "url": "https://store.playstation.com/es-es/concept/10013956",
-                "state": "Play now!"
+                "state": "¡Jugar ahora!"
             }
         ],
         "roles": [
             {
-                "title": "Team Lead Programmer",
-                "description": "Managed the programming team during development."
+                "title": "Programador Líder de Equipo",
+                "description": "Gestioné al equipo de programación durante el desarrollo."
             },
             {
-                "title": "Game Core Systems Programmer",
-                "description": "Developed core gameplay systems."
+                "title": "Programador de Sistemas Principales",
+                "description": "Desarrollé los sistemas principales del gameplay."
             }
         ],
         "systems": [
             {
-                "title": "Skill unlock and progression system",
+                "title": "Sistema de desbloqueo y progresión de habilidades",
                 "summary": [
-                    "Random skill selection on level up",
-                    "Active and passive skill slots system",
-                    "Upgrades when slots are full"
+                    "Selección aleatoria de habilidades al subir de nivel",
+                    "Sistema de slots para habilidades activas y pasivas",
+                    "Mejoras cuando los slots están completos"
                 ],
-                "description": "Skill progression system based on random selection during gameplay with limited slots for active and passive skills."
+                "description": "Sistema de progresión basado en selección aleatoria durante la partida con slots limitados para habilidades."
             },
             {
-                "title": "Enemy behavior system",
+                "title": "Sistema de comportamiento de enemigos",
                 "summary": [
-                    "Multiple enemy behavior types",
-                    "Simple, ranged, charge and suicide AI",
-                    "Environmental damage effects"
+                    "Múltiples tipos de comportamiento",
+                    "IA de melee, rango, carga y suicida",
+                    "Efectos de daño del entorno"
                 ],
-                "description": "Enemy system with varied behaviors including melee, ranged and environmental interaction."
+                "description": "Sistema de enemigos con comportamientos variados incluyendo combate cuerpo a cuerpo, a distancia y con interacción ambiental."
             },
             {
-                "title": "Boss system",
+                "title": "Sistema de jefes",
                 "summary": [
-                    "Complex attack patterns",
-                    "Dedicated health bar UI",
-                    "End-of-level events"
+                    "Patrones de ataque complejos",
+                    "UI de barra de vida dedicada",
+                    "Eventos al final del nivel"
                 ],
-                "description": "Boss system with modular attacks and UI presentation."
+                "description": "Sistema de jefes con ataques modulares y presentación específica en UI."
             },
             {
-                "title": "Object pooling system",
+                "title": "Sistema de object pooling",
                 "summary": [
-                    "Reuse of enemies and projectiles",
-                    "Reduced instantiation cost",
-                    "Performance optimization"
+                    "Reutilización de enemigos y proyectiles",
+                    "Reducción del coste de instanciación",
+                    "Optimización de rendimiento"
                 ],
-                "description": "Object pooling system improving performance by reusing objects."
+                "description": "Sistema de reutilización de objetos para mejorar el rendimiento evitando instanciaciones constantes."
             },
             {
-                "title": "Local multiplayer system",
+                "title": "Sistema multijugador local",
                 "summary": [
-                    "Multiple players simultaneously",
-                    "Shared progression",
-                    "Revive system",
-                    "Dynamic difficulty scaling"
+                    "Múltiples jugadores simultáneos",
+                    "Progresión compartida",
+                    "Sistema de reanimación",
+                    "Escalado dinámico de dificultad"
                 ],
-                "description": "Local multiplayer system with shared progression and scaling difficulty."
+                "description": "Sistema multijugador local con progresión compartida y dificultad adaptativa."
             },
             {
-                "title": "Persistent progression system",
+                "title": "Sistema de progresión persistente",
                 "summary": [
-                    "Meta progression outside runs",
-                    "Skill unlock shop",
-                    "Skill upgrades",
-                    "Long-term progression impact"
+                    "Progresión meta fuera de las partidas",
+                    "Tienda de desbloqueo de habilidades",
+                    "Mejoras de habilidades",
+                    "Impacto a largo plazo"
                 ],
-                "description": "Persistent progression system allowing upgrades between runs."
+                "description": "Sistema de progresión persistente que permite mejoras entre partidas."
             },
             {
-                "title": "Save system (.sav)",
+                "title": "Sistema de guardado (.sav)",
                 "summary": [
-                    "Manual serialization",
-                    "Debug-friendly format",
-                    "No encryption for testing"
+                    "Serialización manual",
+                    "Formato amigable para debug",
+                    "Sin encriptación para testing"
                 ],
-                "description": "Save system using .sav files for debugging and testing purposes."
+                "description": "Sistema de guardado en archivos .sav pensado para debug y pruebas."
             },
             {
-                "title": "Additional features",
+                "title": "Características adicionales",
                 "summary": [
-                    "Steam leaderboards integration",
-                    "Collectibles system",
-                    "Character skins",
-                    "Dialogue system"
+                    "Integración con rankings de Steam",
+                    "Sistema de coleccionables",
+                    "Skins de personajes",
+                    "Sistema de diálogo"
                 ],
-                "description": "Support systems enhancing player experience."
+                "description": "Sistemas adicionales que amplían la experiencia del jugador."
             }
         ],
         "learn": [
-            "Experiencia en la gestión simultánea de un gran número de entidades en pantalla, especialmente en un juego tipo survivor, optimizando su comportamiento y actualización.",
-            "Primera experiencia utilizando ScriptableObjects para la gestión de datos y control del diseño, permitiendo una arquitectura más flexible y orientada a datos.",
-            "Primera implementación del Input System de Unity, incluyendo soporte para multijugador local, aprendiendo a coordinar y extraer inputs de múltiples jugadores dentro del mismo sistema.",
-            "Profundización en la integración del sistema de input con la lógica del juego, especialmente en la sincronización entre controles y gameplay en un entorno multijugador local.",
-            "Primer proyecto completado de principio a fin, adquiriendo experiencia en todo el ciclo de desarrollo, desde la implementación hasta la finalización y cierre del juego."
+            "Experiencia gestionando gran cantidad de entidades simultáneas en pantalla en juegos tipo survivor, optimizando su comportamiento.",
+            "Primer uso de ScriptableObjects para gestión de datos y diseño.",
+            "Implementación del Input System de Unity con soporte multijugador local.",
+            "Integración del input con la lógica de gameplay en entorno multijugador.",
+            "Primer proyecto completado de principio a fin, cubriendo todo el ciclo de desarrollo."
         ],
         "improvements": [
-            "Eliminaría sistemas innecesarios que ralentizaron el desarrollo y el cierre del proyecto, afectando al ritmo de iteración.",
-            "Diseñaría una arquitectura más modular desde las primeras fases del desarrollo para permitir iteraciones y pruebas más rápidas.",
-            "Reduciría la cantidad de modos y niveles para centrar la experiencia en el núcleo del gameplay, evitando la dispersión del diseño y mejorando el enfoque del juego."
+            "Eliminaría sistemas innecesarios que ralentizaron el desarrollo.",
+            "Diseñaría una arquitectura más modular desde el inicio.",
+            "Reduciría modos y niveles para centrar el diseño en el core gameplay."
         ],
         "additional-notes": "",
         "awards": [
             {
-                "title": "Best game",
+                "title": "Mejor juego",
                 "year": 2024,
                 "icon": "mangafest.webp"
             },
             {
-                "title": "Audience award",
+                "title": "Premio del público",
                 "year": 2024,
                 "icon": "madrid-otaku.webp"
             },
             {
-                "title": "Nominated for best design",
+                "title": "Nominado a mejor diseño",
                 "year": 2024,
                 "icon": "ps-talents-black.webp"
             },
             {
-                "title": "Audience award",
+                "title": "Premio del público",
                 "year": 2023,
                 "icon": "madrid-otaku.webp"
             }
@@ -666,9 +666,9 @@
         "isProfessional": true,
         "canHighlight": false,
         "title": "Confinio Reality Prison",
-        "subtitle": "A 2D casual game",
-        "description": "Visual novel in 2D where you progress through narrative minigames that determine your future.",
-        "date": "Sep 2023 - Dec 2024",
+        "subtitle": "Un juego casual en 2D",
+        "description": "Novela visual en 2D donde progresas a través de minijuegos narrativos que determinan tu futuro.",
+        "date": "Sep 2023 - Dic 2024",
         "attributes": "Indie,Unity,C#,Plastic,2D",
         "images": [
             "game1.webp",
@@ -676,50 +676,50 @@
             "game3.webp"
         ],
         "video": "summary.mp4",
-        "developer": "Client",
+        "developer": "Cliente",
         "technologies": "Unity, C#, Plastic",
-        "synopsis": "Enter Confinio: Reality Prison, a visual novel where darkness surrounds your past and uncertainty guides your steps. Wake up in a cell with no memory where your decisions shape your fate.",
-        "genre-and-tags": "Visual novel, 2D, Psychological horror.",
+        "synopsis": "Adéntrate en Confinio: Reality Prison, una novela visual donde la oscuridad rodea tu pasado y la incertidumbre guía tus pasos. Despiertas en una celda sin memoria donde tus decisiones moldean tu destino.",
+        "genre-and-tags": "Novela visual, 2D, Terror psicológico.",
         "platforms": [
             {
                 "title": "Steam",
                 "img": "steam.svg",
                 "url": "https://store.steampowered.com/app/3030830/Confinio_Reality_Prison/?l=spanish",
-                "state": "Play demo now!"
+                "state": "¡Jugar demo ahora!"
             }
         ],
         "roles": [
             {
-                "title": "Minigames programmer",
-                "description": "Developed the minigames for the visual novel."
+                "title": "Programador de minijuegos",
+                "description": "Desarrollé los minijuegos de la novela visual."
             }
         ],
         "systems": [
             {
-                "title": "Minigame loading system in Naninovel",
+                "title": "Sistema de carga de minijuegos en Naninovel",
                 "summary": [
-                    "Integration of minigames into Naninovel framework",
-                    "Gameplay loading from narrative flow",
-                    "Communication between narrative and gameplay systems"
+                    "Integración de minijuegos en el framework Naninovel",
+                    "Carga de gameplay desde el flujo narrativo",
+                    "Comunicación entre narrativa y gameplay"
                 ],
-                "description": "System that integrates minigames inside Naninovel, bridging narrative and gameplay."
+                "description": "Sistema que integra minijuegos dentro de Naninovel, conectando narrativa y jugabilidad."
             },
             {
-                "title": "Minigames integrated into visual novel",
+                "title": "Minijuegos integrados en la novela visual",
                 "summary": [
-                    "Minigames embedded in narrative flow",
-                    "Rhythm minigame based on music timing",
-                    "Puzzle minigame with clocks and object placement",
-                    "Simplified RPG minigame with stats and abilities"
+                    "Minijuegos dentro del flujo narrativo",
+                    "Minijuego de ritmo basado en música",
+                    "Minijuego de puzles con relojes y colocación de objetos",
+                    "Minijuego RPG simplificado con estadísticas y habilidades"
                 ],
-                "description": "Multiple minigames embedded into the visual novel experience."
+                "description": "Conjunto de minijuegos integrados en la experiencia de novela visual."
             }
         ],
         "learn": [
-            "Experimenté con diferentes enfoques de arquitectura adaptados a cada minijuego, ajustando la estructura según sus necesidades específicas."
+            "Experimenté con distintos enfoques de arquitectura adaptados a cada minijuego, ajustando la estructura según sus necesidades específicas."
         ],
         "improvements": [
-            "Dedicaría más tiempo a la planificación previa de los minijuegos, definiendo mejor su diseño antes de la implementación para mejorar la coherencia y calidad del resultado final."
+            "Dedicaría más tiempo a la planificación previa de los minijuegos, definiendo mejor su diseño antes de implementarlos para mejorar coherencia y calidad."
         ],
         "additional-notes": "",
         "awards": [],
@@ -730,9 +730,9 @@
         "isProfessional": false,
         "canHighlight": false,
         "title": "Mechanic Party",
-        "subtitle": "A 3D cooperative casual game",
-        "description": "Play as a mechanic completing vehicle repair orders in the shortest time possible while finishing as many jobs as you can.",
-        "date": "May 2024 - Aug 2024",
+        "subtitle": "Un juego casual cooperativo en 3D",
+        "description": "Juega como un mecánico completando pedidos de reparación de vehículos en el menor tiempo posible mientras haces tantos trabajos como puedas.",
+        "date": "May 2024 - Ago 2024",
         "attributes": "Indie,Unity,C#,Plastic,3D",
         "images": [
             "game1.webp",
@@ -742,75 +742,75 @@
         "video": "summary.mp4",
         "developer": "FranForge",
         "technologies": "Unity, C#, Plastic SCM",
-        "synopsis": "Experience a group of mechanics trying to build their dream workshop by traveling across festivals, earning recognition and progress toward their destiny.",
-        "genre-and-tags": "Cooperative, Arcade, Local multiplayer.",
+        "synopsis": "Vive la experiencia de un grupo de mecánicos intentando construir su taller soñado viajando por festivales, ganando reconocimiento y progresando hacia su destino.",
+        "genre-and-tags": "Cooperativo, Arcade, Multijugador local.",
         "platforms": [],
         "roles": [
             {
-                "title": "Solo Developer",
-                "description": "I developed the entire project alone. Design, programming, modeling and animations."
+                "title": "Desarrollador en solitario",
+                "description": "Desarrollé todo el proyecto yo solo: diseño, programación, modelado y animaciones."
             }
         ],
         "systems": [
             {
-                "title": "Task and delivery system",
+                "title": "Sistema de tareas y entregas",
                 "summary": [
-                    "Vehicle repair task generation",
-                    "Validation of complete or incomplete delivery",
-                    "Score system based on delivery quality",
-                    "Automatic new task generation"
+                    "Generación de tareas de reparación de vehículos",
+                    "Validación de entregas completas o incompletas",
+                    "Sistema de puntuación según calidad",
+                    "Generación automática de nuevas tareas"
                 ],
-                "description": "Task system managing vehicle repair workflow and scoring."
+                "description": "Sistema que gestiona el flujo de reparación de vehículos y la puntuación basada en la calidad de la entrega."
             },
             {
-                "title": "3D movement system with layered animation",
+                "title": "Sistema de movimiento 3D con animación por capas",
                 "summary": [
-                    "Character movement using Character Controller",
-                    "Layered animations including hands layer"
+                    "Movimiento con Character Controller",
+                    "Animaciones por capas incluyendo capa de manos"
                 ],
-                "description": "3D movement system using Character Controller with layered animations."
+                "description": "Sistema de movimiento 3D con Character Controller y animaciones por capas para mayor control."
             },
             {
-                "title": "Interaction and object grabbing system",
+                "title": "Sistema de interacción y agarre de objetos",
                 "summary": [
-                    "Interface-based interaction system",
-                    "Modular interaction logic",
-                    "Pickable and throwable objects",
-                    "World object manipulation"
+                    "Sistema basado en interfaces",
+                    "Lógica modular de interacción",
+                    "Objetos recogibles y lanzables",
+                    "Manipulación de objetos del mundo"
                 ],
-                "description": "Interaction system allowing pickup and manipulation of objects."
+                "description": "Sistema que permite recoger, lanzar y manipular objetos del entorno."
             },
             {
-                "title": "Level progression and scoring system",
+                "title": "Sistema de progresión y puntuación",
                 "summary": [
-                    "Level unlocks based on score",
-                    "Star rating system",
-                    "Story progression gated by stars"
+                    "Desbloqueo de niveles según puntuación",
+                    "Sistema de estrellas",
+                    "Progreso ligado a rendimiento"
                 ],
-                "description": "Progression system based on performance and stars."
+                "description": "Sistema de progresión basado en estrellas y rendimiento del jugador."
             },
             {
-                "title": "Local multiplayer system",
+                "title": "Sistema multijugador local",
                 "summary": [
-                    "Support for multiple local players",
-                    "Pre-game skin selection",
-                    "Player configuration before match"
+                    "Soporte para varios jugadores en local",
+                    "Selección de skins antes de jugar",
+                    "Configuración previa a la partida"
                 ],
-                "description": "Local multiplayer system for shared-device play."
+                "description": "Sistema multijugador local con configuración y personalización previa."
             }
         ],
         "learn": [
-            "Aprendí a trabajar con herencia e interfaces, obligandome a aplicar principios SOLID dentro de las limitaciones del proyecto para estructurar sistemas más escalables y sostenibles.",
-            "Profundicé en la gestión de Input System en un entorno de multijugador local, controlando la asignación y sincronización de inputs entre distintos jugadores.",
-            "Aprendí a gestionar animaciones en meshes 3D utilizando capas, permitiendo separar y combinar distintos comportamientos de forma modular.",
-            "Implementación de shaders personalizados utilizando Shader Graph para ampliar el control visual y estilístico del proyecto."
+            "Aprendí a trabajar con herencia e interfaces aplicando principios SOLID dentro del proyecto.",
+            "Profundicé en el Input System en multijugador local gestionando múltiples jugadores.",
+            "Gestión de animaciones en meshes 3D mediante capas para comportamiento modular.",
+            "Implementación de shaders personalizados con Shader Graph."
         ],
         "improvements": [
-            "Mejoraría el proceso inicial del desarrollo, realizando más pruebas rápidas antes de producir contenido completo, evitando así problemas de diseño y bugs acumulados.",
-            "Incorporaría Cinemachine para mejorar la gestión de cámaras y reducir la complejidad del sistema de seguimiento y control visual.",
-            "Desarrollaría herramientas de creación de niveles más rápidas y eficientes para mejorar la iteración y permitir cerrar el bucle jugable antes en el desarrollo."
+            "Mejoraría la fase inicial con más prototipos para evitar problemas de diseño.",
+            "Integraría Cinemachine para mejorar el sistema de cámaras.",
+            "Desarrollaría herramientas más eficientes para creación de niveles y acelerar iteraciones."
         ],
-        "additional-notes": "Project paused indefinitely.",
+        "additional-notes": "Proyecto pausado indefinidamente.",
         "awards": [],
         "links": []
     }
