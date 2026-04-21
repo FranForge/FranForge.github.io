@@ -893,5 +893,69 @@
         "additional-notes": "Proyecto pausado indefinidamente.",
         "awards": [],
         "links": []
+    },
+    {
+        "id": "neon-space",
+        "isProfessional": false,
+        "canHighlight": false,
+        "isGame": true,
+        "title": "Neon Space",
+        "subtitle": "Un juego arcade y casual en 3D",
+        "description": "Endless runner 3D a bordo de una nave espacial que tendrá que esquivar cubos para asegurar su supervivencia.",
+        "date": "Feb 2023 - Mar 2024",
+        "attributes": "Solo,Unity,C#,3D",
+        "images": [
+            "game1.webp",
+            "game2.webp",
+            "game3.webp"
+        ],
+        "video": "summary.mp4",
+        "developer": "FranForge",
+        "technologies": "Unity, C#, Blender.",
+        "synopsis": "Tu misión es aguantar lo máximo posible a bordo de esta nave espacial sin colisionar con los cubos y pudiendo adquirir mejoras temporales para aumentar tu tasa de supervivencia.",
+        "genre-and-tags": "Arcade, Endless Runner, 3D.",
+        "platforms": [
+        ],
+        "roles": [
+            {
+                "title": "Desarrollador en solitario",
+                "description": "Desarrollé todo el proyecto yo solo: diseño, programación y modelado."
+            }
+        ],
+        "systems": [
+            {
+                "title": "Movimiento de la nave",
+                "summary": [
+                    "Teletransporte de la nave hacia la posición que toque el jugador en la pantalla."
+                ],
+                "description": "La nave se teletransporta hacia la izquierda o derecha dependiendo de la posición donde el jugador toque la pantalla."
+            },
+            {
+                "title": "Obstáculos dinámicos",
+                "summary": [
+                    "Obstáculos que aparecen dinámicamente en 3 carriles.",
+                    "Al colisionar con la nave se pierde el juego.",
+                    "Incremento de velocidad conforme el juego avanza."
+                ],
+                "description": "Sistema que hace aparecer obstáculos delante de la nave, estos se destruyen al final del carril."
+            },
+            {
+                "title": "Potenciadores",
+                "summary": [
+                    "Potenciadores aleatorios en el mapa.",
+                    "Efectos alterados que ayudan al jugador."
+                ],
+                "description": "Para un juego más profundo agregué potenciadores que cambian las reglas del juego mínimamente."
+            }
+        ],
+        "learn": [
+            "Aprendí a usar C# más en profundidad en vez de la programación por nodos de Unity (Bolt)."
+        ],
+        "improvements": [
+            "Cambiaría el sistema principal por algo más estable, en el proyecto aumentaba Time.scale para la velocidad de los cubos."
+        ],
+        "additional-notes": "",
+        "awards": [],
+        "links": []
     }
 ]

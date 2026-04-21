@@ -891,5 +891,68 @@
         "additional-notes": "Project paused indefinitely.",
         "awards": [],
         "links": []
+    },
+    {
+        "id": "neon-space",
+        "isProfessional": false,
+        "canHighlight": false,
+        "isGame": true,
+        "title": "Neon Space",
+        "subtitle": "A 3D arcade and casual game",
+        "description": "A 3D endless runner where you pilot a spaceship that must dodge cubes to survive.",
+        "date": "Feb 2023 - Mar 2024",
+        "attributes": "Solo,Unity,C#,3D",
+        "images": [
+            "game1.webp",
+            "game2.webp",
+            "game3.webp"
+        ],
+        "video": "summary.mp4",
+        "developer": "FranForge",
+        "technologies": "Unity, C#, Blender.",
+        "synopsis": "Your mission is to survive as long as possible aboard this spaceship without colliding with cubes, while collecting temporary upgrades to increase your survival rate.",
+        "genre-and-tags": "Arcade, Endless Runner, 3D.",
+        "platforms": [],
+        "roles": [
+            {
+                "title": "Solo Developer",
+                "description": "I developed the entire project on my own: design, programming, and modeling."
+            }
+        ],
+        "systems": [
+            {
+                "title": "Ship movement",
+                "summary": [
+                    "The ship teleports to the position tapped by the player on the screen."
+                ],
+                "description": "The ship teleports left or right depending on where the player taps on the screen."
+            },
+            {
+                "title": "Dynamic obstacles",
+                "summary": [
+                    "Obstacles spawn dynamically across 3 lanes.",
+                    "Colliding with them ends the game.",
+                    "Speed increases as the game progresses."
+                ],
+                "description": "System that spawns obstacles in front of the ship, which are destroyed at the end of each lane."
+            },
+            {
+                "title": "Power-ups",
+                "summary": [
+                    "Random power-ups appear on the map.",
+                    "Effects that help the player."
+                ],
+                "description": "To add more depth to the game, power-ups were included that slightly modify the gameplay rules."
+            }
+        ],
+        "learn": [
+            "I learned to use C# more deeply instead of Unity’s node-based programming (Bolt)."
+        ],
+        "improvements": [
+            "I would replace the main system with a more stable approach, since the project relied on increasing Time.scale to speed up the cubes."
+        ],
+        "additional-notes": "",
+        "awards": [],
+        "links": []
     }
 ]
