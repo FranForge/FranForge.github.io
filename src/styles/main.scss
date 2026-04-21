@@ -1256,6 +1256,7 @@ input, textarea {
 .platform-button{
     @include flex-x-center-reversed();
     flex-basis: 30%;
+    width: 30%;
     overflow: hidden;
     height: 2.5rem;
     border-radius: 100px;

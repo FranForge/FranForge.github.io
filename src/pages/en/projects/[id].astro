@@ -194,4 +194,26 @@ import Carousel from "../../../components/Carousel.astro";
         </InformationSection>
     )}
 
+    {project.links && project.links.length > 0 && (
+        <InformationSection id="links">
+
+            <h1>External Links</h1>
+            <section class="platforms">
+
+                {project.links?.map((link) => (
+
+                <PlatformButton
+                    title={link.title}
+                    img={`/icons/${link.img}`}
+                    url={link.url}
+                    state={link.state}
+                />
+
+            ))}
+
+            </section>
+
+        </InformationSection>
+    )}
+
 </Layout>
