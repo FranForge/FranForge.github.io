@@ -143,6 +143,79 @@
         "links": []
     },
     {
+        "id": "franforge-api-rest",
+        "isProfessional": false,
+        "canHighlight": false,
+        "isGame": false,
+        "title": "FranForge API REST",
+        "subtitle": "Una API REST simple para interacciones en la web.",
+        "description": "API REST que funciona como emisora de mensajes entre el usuario y el desarrollador desde la web.",
+        "date": "Nov 2025 - Dic 2025",
+        "attributes": "Solo,C#,.NET,Git,Swagger",
+        "images": [
+        ],
+        "video": "",
+        "developer": "FranForge",
+        "technologies": "C#, .NET Core, Swagger, Telegram, MongoDb",
+        "synopsis": "API REST alojada en Render que permite la interacción del usuario y el desarrollador de la web con la que se usará el servicio.",
+        "genre-and-tags": "API REST, C#, .NET Core, Servicio Web.",
+        "platforms": [
+        ],
+        "roles": [
+            {
+                "title": "Desarrollador Full-Stack",
+                "description": "Desarrollé backend en .NET Core y frontend con JavaScript."
+            }
+        ],
+        "systems": [
+            {
+                "title": "Comunicación de la API REST",
+                "summary": [
+                    "Endpoints HTTP para interacción usuario-desarrollador",
+                    "Validación de peticiones y respuestas estructuradas",
+                    "Separación de responsabilidades con controladores, servicios y modelos."
+                ],
+                "description": "Sistema principal de la API REST que gestiona la comunicación entre el cliente web y el desarrollador mediante endpoints HTTP estructurados."
+            },
+            {
+                "title": "Integración con bot de Telegram",
+                "summary": [
+                    "Envío automático de mensajes a Telegram tras usar el formulario de contacto o suscripción a Newsletter"
+                ],
+                "description": "Sistema de integración con un bot de Telegram que permite recibir y gestionar mensajes de usuarios en tiempo real."
+            },
+            {
+                "title": "Suscripción a newsletter",
+                "summary": [
+                    "Endpoint de suscripción de usuarios",
+                    "Almacenamiento y validación de emails",
+                    "Integración con MongoDB para persistencia"
+                ],
+                "description": "Sistema encargado de gestionar la suscripción de usuarios a una newsletter, almacenando y validando los datos en la base de datos."
+            },
+            {
+                "title": "Persistencia con MongoDB",
+                "summary": [
+                    "Estructura de base de datos NoSQL",
+                    "Colecciones para suscripciones"
+                ],
+                "description": "Capa de persistencia que utiliza MongoDB para almacenar mensajes de usuarios y suscripciones a la newsletter."
+            }
+        ],
+        "learn": [
+            "Aprendí a usar .NET Core para la creación de API RESTs.",
+            "Usé por primera vez Swagger para las pruebas en localhost.",
+            "Creé un bot de Telegram que maneja situaciones personalizadas."
+        ],
+        "improvements": [
+            "Escalaría el bot de Telegram para poder visualizar datos de forma similar a Swagger.",
+            "Mudaría mi base de datos MongoDb a SQL."
+        ],
+        "additional-notes": "",
+        "awards": [],
+        "links": []
+    },
+    {
         "id": "magictory",
         "isProfessional": false,
         "canHighlight": false,

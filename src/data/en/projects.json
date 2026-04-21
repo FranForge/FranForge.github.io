@@ -143,6 +143,77 @@
         "links": []
     },
     {
+        "id": "franforge-api-rest",
+        "isProfessional": false,
+        "canHighlight": false,
+        "isGame": false,
+        "title": "FranForge API REST",
+        "subtitle": "A simple REST API for web interactions.",
+        "description": "REST API that acts as a messaging bridge between the user and the developer through the web.",
+        "date": "Nov 2025 - Dec 2025",
+        "attributes": "Solo,C#,.NET,Git,Swagger",
+        "images": [],
+        "video": "",
+        "developer": "FranForge",
+        "technologies": "C#, .NET Core, Swagger, Telegram, MongoDB",
+        "synopsis": "REST API hosted on Render that enables interaction between the user and the developer through the web service.",
+        "genre-and-tags": "REST API, C#, .NET Core, Web Service.",
+        "platforms": [],
+        "roles": [
+            {
+                "title": "Full-Stack Developer",
+                "description": "Developed the backend using .NET Core and the frontend with JavaScript."
+            }
+        ],
+        "systems": [
+            {
+                "title": "REST API communication",
+                "summary": [
+                    "HTTP endpoints for user-developer interaction",
+                    "Request validation and structured responses",
+                    "Separation of concerns with controllers, services, and models"
+                ],
+                "description": "Core REST API system that manages communication between the web client and the developer through structured HTTP endpoints."
+            },
+            {
+                "title": "Telegram bot integration",
+                "summary": [
+                    "Automatic message sending to Telegram after using the contact form or newsletter subscription"
+                ],
+                "description": "Integration system with a Telegram bot that allows receiving and managing user messages in real time."
+            },
+            {
+                "title": "Newsletter subscription",
+                "summary": [
+                    "User subscription endpoint",
+                    "Email storage and validation",
+                    "MongoDB integration for persistence"
+                ],
+                "description": "System responsible for managing user subscriptions to a newsletter, storing and validating data in the database."
+            },
+            {
+                "title": "MongoDB persistence",
+                "summary": [
+                    "NoSQL database structure",
+                    "Collections for subscriptions"
+                ],
+                "description": "Persistence layer using MongoDB to store user messages and newsletter subscriptions."
+            }
+        ],
+        "learn": [
+            "Learned to use .NET Core for building REST APIs.",
+            "Used Swagger for the first time for localhost testing.",
+            "Built a Telegram bot that handles custom scenarios."
+        ],
+        "improvements": [
+            "Would scale the Telegram bot to visualize data similarly to Swagger.",
+            "Would migrate the MongoDB database to SQL."
+        ],
+        "additional-notes": "",
+        "awards": [],
+        "links": []
+    },
+    {
         "id": "magictory",
         "isProfessional": false,
         "canHighlight": false,

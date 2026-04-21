@@ -3,10 +3,10 @@
 import projectsData from '../../../data/en/projects.json'
 
 const professionalProjects = projectsData
-.filter(project => project.isProfessional === true);
+.filter(project => project.isProfessional === true && project.isGame === true);
 
 const personalProjects = projectsData
-.filter(project => project.isProfessional === false);
+.filter(project => project.isProfessional === false && project.isGame === true);
 
 const otherProjects = projectsData
 .filter(project => project.isGame === false);
