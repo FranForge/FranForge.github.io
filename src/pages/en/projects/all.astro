@@ -8,6 +8,9 @@ const professionalProjects = projectsData
 const personalProjects = projectsData
 .filter(project => project.isProfessional === false);
 
+const otherProjects = projectsData
+.filter(project => project.isGame === false);
+
 import Layout from "../../../layouts/Layout.astro";
 import VideoHero from '../../../components/VideoHero.astro';
 import InformationSection from '../../../components/InformationSection.astro';
@@ -24,9 +27,9 @@ import VerticalCardsContainer from '../../../components/VerticalCardsContainer.a
     />
 
     <!-- PROFESSIONAL ------------------------------------------------------------------------------- -->
-	<InformationSection id="professional">
+	<InformationSection>
 
-		<h1>Professional Projects</h1>
+		<h1 id="professional-projects">Professional Projects</h1>
 		<p>Projects developed professionally for a company or clients.</p>
 
 		<VerticalCardsContainer>
@@ -44,7 +47,7 @@ import VerticalCardsContainer from '../../../components/VerticalCardsContainer.a
 			
 		</VerticalCardsContainer>
 
-        <h1>Personal Projects</h1>
+        <h1 id="personal-projects">Personal Projects</h1>
 		<p>Personal projects, created as a hobby or for self-improvement.</p>
 
 		<VerticalCardsContainer>
@@ -61,6 +64,29 @@ import VerticalCardsContainer from '../../../components/VerticalCardsContainer.a
 			))}
 			
 		</VerticalCardsContainer>
+
+		{otherProjects && otherProjects.length > 0 && (
+
+			<h1 id="others-projects">Other Projects</h1>
+			<p>Other projects that are not games.</p>
+
+			<VerticalCardsContainer>
+
+				{otherProjects.map((item) => (
+					<VerticalCard
+						name={item.title}
+						description={item.description}
+						date={item.date}
+						attributes={item.attributes}
+						img={`/media/projects/${item.id}/thumbnail.webp`}
+						url={`/en/projects/${item.id}`}
+					/>
+				))}
+				
+			</VerticalCardsContainer>
+
+		)}
+		
 
 	</InformationSection>
 

@@ -3,6 +3,7 @@
         "id": "rhidian-yiou",
         "isProfessional": true,
         "canHighlight": true,
+        "isGame": true,
         "title": "Rhidian Yiou",
         "subtitle": "A retro pixel art top-down RPG.",
         "description": "Retro pixel art top-down RPG with attacks, spells and a world with dynamic events.",
@@ -145,6 +146,7 @@
         "id": "magictory",
         "isProfessional": false,
         "canHighlight": false,
+        "isGame": true,
         "title": "Magictory",
         "subtitle": "A medieval automation and arcane magic game.",
         "description": "Automation and resource management game in a 3D medieval world, where your goal is to rebuild a corrupted land through machinery.",
@@ -251,6 +253,7 @@
         "id": "the-sky-project",
         "isProfessional": true,
         "canHighlight": true,
+        "isGame": true,
         "title": "The Sky Project",
         "subtitle": "A 2D metroidvania, monster collector and turn-based RPG.",
         "description": "Classic turn-based RPG with a complex creature system including attacks, types, status effects and more.",
@@ -376,9 +379,134 @@
         "links": []
     },
     {
+        "id": "animal-strikers",
+        "isProfessional": true,
+        "canHighlight": true,
+        "isGame": true,
+        "title": "Animal Strikers",
+        "subtitle": "A casual 2D sports game with local multiplayer.",
+        "description": "Arcade-style soccer game with chibi-style characters who use abilities to change the outcome of the match.",
+        "date": "Sep 2024 - July 2024",
+        "attributes": "Indie,Unity,C#,Plastic,2D",
+        "images": [
+            "game1.webp",
+            "game2.webp",
+            "game3.webp"
+        ],
+        "video": "summary.mp4",
+        "developer": "Enthariel Games",
+        "technologies": "Unity, C#, Plastic",
+        "synopsis": "In Animal Strikers, you put your soccer skills to the test using small characters with incredible abilities to win matches like a true legend. Play solo or with friends on the same device.",
+        "genre-and-tags": "Sports, Casual, Local Multiplayer.",
+        "platforms": [
+            {
+                "title": "Switch",
+                "img": "switch.svg",
+                "url": "https://ec.nintendo.com/NZ/en/titles/70010000092953",
+                "state": "Play now!"
+            }
+        ],
+        "roles": [
+            {
+                "title": "Lead Programmer",
+                "description": "I implemented systems from scratch, designing the architecture and developing them through to the polishing phase."
+            }
+        ],
+        "systems": [
+            {
+                "title": "Character movement and control system",
+                "summary": [
+                    "Ground and air movement",
+                    "Contextual actions (shoot or head)",
+                    "Direct interaction with ball physics",
+                    "AI using the same movement rules"
+                ],
+                "description": "Arcade control system for soccer characters with contextual actions depending on the state: ground shot or aerial header. Designed to interact directly with ball physics."
+            },
+            {
+                "title": "Game loop system",
+                "summary": [
+                    "Goal and score management",
+                    "Match reset after kickoff",
+                    "Time limit",
+                    "Full match flow control"
+                ],
+                "description": "Core system that manages scoring, resets after goals, and match duration."
+            },
+            {
+                "title": "Abilities system",
+                "summary": [
+                    "Abilities that can be activated during the match",
+                    "Effects such as freezing, changing ball size or speed",
+                    "Dynamic gameplay modification"
+                ],
+                "description": "Active abilities system that modifies gameplay conditions in real time, adding strategy and variability."
+            },
+            {
+                "title": "Random events system",
+                "summary": [
+                    "Random events at the end of the match",
+                    "Global effects for both players",
+                    "Temporary gameplay changes"
+                ],
+                "description": "Event system that applies global effects to both players after the match."
+            },
+            {
+                "title": "Narrative progression system by levels",
+                "summary": [
+                    "Level unlocks based on goal difference",
+                    "Secret levels for large victories",
+                    "Minigames between levels",
+                    "Cosmetic rewards"
+                ],
+                "description": "Progression system that unlocks levels based on player performance, including secret content."
+            },
+            {
+                "title": "Skins and stats system",
+                "summary": [
+                    "Modular character parts",
+                    "Stat modifications (speed, jump, power)",
+                    "Cosmetic visual effects"
+                ],
+                "description": "Customization system with modular skins that affect both appearance and stats."
+            },
+            {
+                "title": "Local multiplayer system",
+                "summary": [
+                    "Up to 2 players on the same device",
+                    "Pre-match customization",
+                    "Cooperative or competitive mode"
+                ],
+                "description": "Local multiplayer system for two players with pre-match configuration."
+            },
+            {
+                "title": "Binary save system",
+                "summary": [
+                    "Binary persistence",
+                    "Performance optimization",
+                    "Progress storage",
+                    "Designed for platforms like Nintendo Switch"
+                ],
+                "description": "Optimized binary save system for performance and platform compatibility."
+            }
+        ],
+        "learn": [
+            "Experience in porting the project to Nintendo Switch, adapting systems and gameplay flow.",
+            "Implementation of a modular skin system tied to stats that affect gameplay.",
+            "In-depth work on local multiplayer managing multiple players on the same device."
+        ],
+        "improvements": [
+            "I would expand the content by adding more abilities and options to improve replayability."
+        ],
+        "additional-notes": "",
+        "awards": [],
+        "links": []
+    },
+    {
         "id": "luminaria-dark-echoes",
         "isProfessional": true,
         "canHighlight": true,
+        "isGame": true,
         "title": "Luminaria: Dark Echoes",
         "subtitle": "A 2D casual game",
         "description": "2D survivor with story where defeating enemies and unlocking abilities drives progression.",
@@ -542,6 +670,7 @@
         "id": "confinio-reality-prison",
         "isProfessional": true,
         "canHighlight": false,
+        "isGame": true,
         "title": "Confinio Reality Prison",
         "subtitle": "A 2D casual game",
         "description": "Visual novel in 2D where you progress through narrative minigames that determine your future.",
@@ -606,6 +735,7 @@
         "id": "mechanic-party",
         "isProfessional": false,
         "canHighlight": false,
+        "isGame": true,
         "title": "Mechanic Party",
         "subtitle": "A 3D cooperative casual game",
         "description": "Play as a mechanic completing vehicle repair orders in the shortest time possible while finishing as many jobs as you can.",
