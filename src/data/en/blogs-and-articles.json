@@ -85,5 +85,40 @@
                 "content": "For now, I’ll focus on recreating mechanics and prototypes, as Unreal Engine is more complex than Unity for a solo developer, and development times tend to be longer."
             }
         ]
+    },
+    {
+        "id": "unity-masterclass-la-algaba",
+        "title": "Giving a Unity Masterclass in La Algaba",
+        "subtitle": "Introducing CFGS DAM students to Unity and C#",
+        "date": "01/25/2024",
+        "image": "main.jpg",
+        "description": "Explore my experience giving my first masterclass about Unity.",
+        "sections": [
+            {
+                "content": "Some time ago I graduated from IES Torre de los Guzmanes, where I completed my secondary education. It could be said that this was the place where my academic journey truly began, excluding primary school. After finishing my higher education and focusing on game and application development, today I have returned to this center better than ever. Both the center and I have evolved. The school now offers a CFGS in DAM (Multiplatform Application Development), and I have already spent some time experimenting and learning with Unity and C#. After a recent contact, I decided to take part in a Unity masterclass exclusively for first-year students in this program, in order to introduce them to a new branch within OOP (Object-Oriented Programming)."
+            },
+            {
+                "title": "What did the event consist of?",
+                "content": "The event was about briefly and guidedly teaching students what Unity is and how they could create projects with it. Skipping theoretical introductory processes, we went straight into practice by installing Unity on all the computers while I talked with them individually, answering questions and doubts they had about the topic. Some of them were actually very interested in the world of video games. Once Unity was installed on all the computers, we started working on some small, simple but interactive mechanics.",
+                "image": "image1.jpg"
+            },
+            {
+                "title": "What did we do?",
+                "content": "To begin with and avoid unnecessary complexity, we created a 2D project from scratch together and started our first MonoBehaviour script where we moved a 2D sprite by reading the A and D keys from the keyboard. There were some issues with certain students, since jumping straight into a framework without having time to properly set up the environment with Visual Studio and similar tools meant they didn’t have autocomplete, causing multiple errors. I solved these by going around each computer while noticing that some were already starting to change their character sprites."
+            },
+            {
+                "content": "After solving all the problems, I briefly explained what a Prefab was, just enough to create a simple shooting and bullet system. The idea was for students to press a key to instantiate a bullet at a position relative to their character, and the bullet would simply move upwards. No object pooling or anything like that, here the bullet was destroyed after a few seconds.",
+                "image": "image3.jpg"
+            },
+            {
+                "title": "How was the experience?",
+                "content": "The experience for me was incredibly satisfying, and judging by the students’ expressions and participation, I would say it was interesting and enjoyable for them as well. I always tried to interact with everyone, even if that meant not implementing more mechanics. I preferred that everyone enjoyed it as a complementary activity rather than feeling obligated to learn. During the event, I also had the support of the teaching staff, as well as Javier Prada Oliva, the program tutor, Javier Moreno Cabanillas (CEO of Enthariel Games), and José Ángel Castro Áviles (COO of Enthariel Games), the company where I work, who accompanied me to share industry experiences with the students.",
+                "image": "image2.jpg"
+            },
+            {
+                "title": "Acknowledgments",
+                "content": "I would like to sincerely thank IES Torre de los Guzmanes for the opportunity to express myself in a way beyond code, the teaching staff, Javier Prada Oliva as the CFGS tutor and event coordinator, and finally the previously mentioned members of Enthariel Games who accompanied and supported me during the event."
+            }
+        ]
     }
 ]

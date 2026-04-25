@@ -85,5 +85,41 @@
                 "content": "Por ahora me centraré en recrear mecánicas y prototipos, ya que Unreal es más complejo y los tiempos de desarrollo son más largos para un desarrollador en solitario."
             }
         ]
+    },
+    {
+        "id": "unity-masterclass-la-algaba",
+        "title": "Dando una Masterclass de Unity en La Algaba",
+        "subtitle": "Introduciendo a alumnos del CFGS de DAM a Unity y C#",
+        "date": "25/01/2024",
+        "image": "main.jpg",
+        "description": "Recorre mi experiencia dando mi primera masterclass sobre Unity.",
+        "sections": [
+            {
+                "content": "Hace un tiempo me gradué en el centro IES Torre de los Guzmanes de la ESO, se puede decir que fue el centro donde comenzaron mis estudios obviando la primaria, por esto tras haber terminado mis estudios superiores y haberme centrado en el ámbito del desarrollo de videojuegos y aplicaciones. Hoy hue vuelto a este centro mejor que nunca, tanto el centro como yo hemos evolucionado. El centro ahora cuenta con un CFGS de DAM (Desarrollo de Aplicaciones Multiplataforma) y yo ya llevo un tiempo experimentando y aprendiendo con Unity y C# por lo que tras un reciente contacto decidí participar en una Masterclass de Unity dedicada exclusivamente para el alumnado de 1º en este ciclo formativo y así poder mostrarles una nueva rama dentro de la POO (Programación Orientada a Objetos)."
+            },
+            {
+                "title": "¿En qué consistió el evento?",
+                "content": "El evento se trataba de enseñar a los alumnos de forma breve y guiada que es Unity y como podían hacer proyectos en él. Saltandonos procesos introductorios teóricos aqui fuimos directamente a la práctica instalando Unity en los ordenadores de todos mientras que charlaba con ellos de uno a uno con dudas y preguntas que tenían del tema, algunos de hecho muy interesados por el mundo de los videojuegos. Una vez instalado Unity en todos los ordenadores nos pusimos en marcha para realizar algunas pequeñas mecánicas sencillas pero interactivas.",
+                "image": "image1.jpg"
+            },
+            {
+                "title": "¿Qué hicimos?",
+                "content": "Para comenzar y no complicarnos con cosas innecesarias creamos un proyecto 2D desde cero todos juntos e iniciamos nuestro primer script MonoBehaviour en el que movíamos un Sprite 2D leyendo las teclas A y D del teclado. Había algunos problemillas con algunos alumnos ya que entrar de lleno a un Framework cualquiera sin haber tenido tiempo para preparar el entorno con Visual Studio y similar hacia que no tuviesen autocompletado ocasionando múltiples errores que fui resolviendo pasándome por cada ordenador mientras veía como algunos ya empezaban a cambiar los Sprites de su personaje."
+                
+            },
+            {
+                "content": "Tras resolver todos los problemas decidí explicarles brevemente que era un Prefab, lo justo para poder realizar un pequeño sistema de disparo y bala. Simplemente para que los chicos al presionar una tecla instanciaran una bala en una posición relativa a su personaje y la bala fuera simplemente hacia arriba, nada de Object Pooling ni similares, aqui la bala se destruía tras unos segundos.",
+                "image": "image3.jpg"
+            },
+            {
+                "title": "¿Qué tal la experiencia?",
+                "content": "La experiencia para mi fue increíblemente satisfactoria y por las caras y participación de la clase me animo a decir que para ellos también fue algo interesante y ameno, siempre intentaba interactuar con todos aunque eso supusiera no llegar a realizar más mecánicas, prefería que todo el mundo disfrutara de esto como una actividad complementaria y no como una obligación de aprender. Además durante el evento tuve el apoyo del profesorado, así como de Javier Prada Oliva, tutor del ciclo, Javier Moreno Cabanillas CEO de Enthariel Games y José Ángel Castro Áviles COO de Enthariel Games, la empresa donde trabajo que me acompaño como apoyo para poder también contar experiencias de la industria a los alumnos.",
+                "image": "image2.jpg"
+            },
+            {
+                "title": "Agradecimientos",
+                "content": "Agradecer enormemente a IES Torre de los Guzmanes la oportunidad de expresarme de otra forma que no sea código, al profesorado, a Javier Prada Oliva, tutor del CFGS y coordinador del evento, y por último a los miembros anteriormente mencionados de Enthariel Games que me acompañaron y arroparon durante el evento."
+            }
+        ]
     }
 ]
