@@ -327,7 +327,14 @@
         ],
         "additional-notes": "Proyecto pausado indefinidamente.",
         "awards": [],
-        "links": []
+        "links": [
+            {
+                "title": "Github",
+                "img": "github.svg",
+                "url": "https://github.com/FranForge/Magictory",
+                "state": "Ver código fuente"
+            }
+        ]
     },
     {
         "id": "the-sky-project",
