@@ -2,11 +2,14 @@
 //Proyectos
 import projectsData from '../../../data/es/projects.json' // Cambiado a /es/
 
-const professionalProjects = projectsData
-.filter(project => project.isProfessional === true && project.isGame === true);
+const releasedProjects = projectsData
+.filter(project => project['web-category'] === "released" && project.isGame === true);
 
-const personalProjects = projectsData
-.filter(project => project.isProfessional === false && project.isGame === true);
+const upcomingProjects = projectsData
+.filter(project => project['web-category'] === "upcoming" && project.isGame === true);
+
+const prototypeProjects = projectsData
+.filter(project => project['web-category'] === "prototype" && project.isGame === true);
 
 const otherProjects = projectsData
 .filter(project => project.isGame === false);
@@ -28,48 +31,81 @@ import VerticalCardsContainer from '../../../components/VerticalCardsContainer.a
 
     <InformationSection>
 
-        <h1 id="professional-projects">Proyectos Profesionales</h1>
-        <p>Proyectos desarrollados profesionalmente para empresas o clientes.</p>
+        {releasedProjects && releasedProjects.length > 0 && (
 
-        <VerticalCardsContainer>
+			<h1 id="released-projects">Publicados</h1>
+			<p>Aplicaciones listas para producción y juegos lanzados oficialmente.</p>
 
-            {professionalProjects.map((item) => (
-                <VerticalCard
-                    name={item.title}
-                    description={item.description}
-                    date={item.date}
-                    attributes={item.attributes}
-                    img={`/media/projects/${item.id}/thumbnail.webp`}
-                    url={`/es/projects/${item.id}`}
-                    lang="es"
-                />
-            ))}
-            
-        </VerticalCardsContainer>
+			<VerticalCardsContainer>
 
-        <h1 id="personal-projects">Proyectos Personales</h1>
-        <p>Proyectos propios, creados como hobby o para el aprendizaje autónomo.</p>
+				{releasedProjects.map((item) => (
+					<VerticalCard
+						name={item.title}
+						description={item.description}
+						date={item.date}
+						attributes={item.attributes}
+						img={`/media/projects/${item.id}/thumbnail.webp`}
+						url={`/en/projects/${item.id}`}
+					/>
+				))}
+				
+			</VerticalCardsContainer>
 
-        <VerticalCardsContainer>
+		)}
 
-            {personalProjects.map((item) => (
-                <VerticalCard
-                    name={item.title}
-                    description={item.description}
-                    date={item.date}
-                    attributes={item.attributes}
-                    img={`/media/projects/${item.id}/thumbnail.webp`}
-                    url={`/es/projects/${item.id}`}
-                    lang="es"
-                />
-            ))}
-            
-        </VerticalCardsContainer>
+		{upcomingProjects && upcomingProjects.length > 0 && (
 
-        {otherProjects && otherProjects.length > 0 && (
+			<h1 id="upcoming-projects">Próximamente</h1>
+			<p>
+                Proyectos con funcionalidades completas en fase final de 
+                pulido o esperando su lanzamiento oficial.
+            </p>
 
-			<h1 id="others-projects">Otros Proyectos</h1>
-			<p>Otros proyectos que no son videojuegos.</p>
+			<VerticalCardsContainer>
+
+				{upcomingProjects.map((item) => (
+					<VerticalCard
+						name={item.title}
+						description={item.description}
+						date={item.date}
+						attributes={item.attributes}
+						img={`/media/projects/${item.id}/thumbnail.webp`}
+						url={`/en/projects/${item.id}`}
+					/>
+				))}
+				
+			</VerticalCardsContainer>
+
+		)}
+
+		{prototypeProjects && prototypeProjects.length > 0 && (
+
+			<h1 id="prototypes-projects">Prototipos</h1>
+			<p>
+                Una colección de experimentos técnicos y mecánicas de 
+                juego en desarrollo.
+                </p>
+
+			<VerticalCardsContainer>
+
+				{prototypeProjects.map((item) => (
+					<VerticalCard
+						name={item.title}
+						description={item.description}
+						date={item.date}
+						attributes={item.attributes}
+						img={`/media/projects/${item.id}/thumbnail.webp`}
+						url={`/en/projects/${item.id}`}
+					/>
+				))}
+				
+			</VerticalCardsContainer>
+
+		)}
+
+		{otherProjects && otherProjects.length > 0 && (
+
+			<h1 id="others-projects">Other Projects</h1>
 
 			<VerticalCardsContainer>
 

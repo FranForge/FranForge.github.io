@@ -1,8 +1,8 @@
 [
     {
         "id": "rhidian-yiou",
-        "isProfessional": true,
         "canHighlight": true,
+        "web-category": "upcoming",
         "isGame": true,
         "title": "Rhidian Yiou",
         "subtitle": "A retro pixel art top-down RPG.",
@@ -144,8 +144,8 @@
     },
     {
         "id": "franforge-api-rest",
-        "isProfessional": false,
         "canHighlight": false,
+        "web-category": "released",
         "isGame": false,
         "title": "FranForge API REST",
         "subtitle": "A simple REST API for web interactions.",
@@ -222,8 +222,8 @@
     },
     {
         "id": "magictory",
-        "isProfessional": false,
         "canHighlight": false,
+        "web-category": "prototype",
         "isGame": true,
         "title": "Magictory",
         "subtitle": "A medieval automation and arcane magic game.",
@@ -329,8 +329,8 @@
     },
     {
         "id": "the-sky-project",
-        "isProfessional": true,
         "canHighlight": true,
+        "web-category": "upcoming",
         "isGame": true,
         "title": "The Sky Project",
         "subtitle": "A 2D metroidvania, monster collector and turn-based RPG.",
@@ -458,8 +458,8 @@
     },
     {
         "id": "animal-strikers",
-        "isProfessional": true,
         "canHighlight": true,
+        "web-category": "released",
         "isGame": true,
         "title": "Animal Strikers",
         "subtitle": "A casual 2D sports game with local multiplayer.",
@@ -582,8 +582,8 @@
     },
     {
         "id": "luminaria-dark-echoes",
-        "isProfessional": true,
         "canHighlight": true,
+        "web-category": "released",
         "isGame": true,
         "title": "Luminaria: Dark Echoes",
         "subtitle": "A 2D casual game",
@@ -746,8 +746,8 @@
     },
     {
         "id": "confinio-reality-prison",
-        "isProfessional": true,
         "canHighlight": false,
+        "web-category": "released",
         "isGame": true,
         "title": "Confinio Reality Prison",
         "subtitle": "A 2D casual game",
@@ -811,8 +811,8 @@
     },
     {
         "id": "mechanic-party",
-        "isProfessional": false,
         "canHighlight": false,
+        "web-category": "prototype",
         "isGame": true,
         "title": "Mechanic Party",
         "subtitle": "A 3D cooperative casual game",
@@ -901,8 +901,8 @@
     },
     {
         "id": "neon-space",
-        "isProfessional": false,
         "canHighlight": false,
+        "web-category": "prototype",
         "isGame": true,
         "title": "Neon Space",
         "subtitle": "A 3D arcade and casual game",

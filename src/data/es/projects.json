@@ -1,8 +1,8 @@
 [
     {
         "id": "rhidian-yiou",
-        "isProfessional": true,
         "canHighlight": true,
+        "web-category": "upcoming",
         "isGame": true,
         "title": "Rhidian Yiou",
         "subtitle": "Un RPG top-down de pixel art retro.",
@@ -144,8 +144,8 @@
     },
     {
         "id": "franforge-api-rest",
-        "isProfessional": false,
         "canHighlight": false,
+        "web-category": "released",
         "isGame": false,
         "title": "FranForge API REST",
         "subtitle": "Una API REST simple para interacciones en la web.",
@@ -224,8 +224,8 @@
     },
     {
         "id": "magictory",
-        "isProfessional": false,
         "canHighlight": false,
+        "web-category": "prototype",
         "isGame": true,
         "title": "Magictory",
         "subtitle": "Un juego de automatización medieval y magia arcana.",
@@ -331,8 +331,8 @@
     },
     {
         "id": "the-sky-project",
-        "isProfessional": true,
         "canHighlight": true,
+        "web-category": "upcoming",
         "isGame": true,
         "title": "The Sky Project",
         "subtitle": "Un metroidvania 2D, coleccionador de criaturas y RPG por turnos.",
@@ -460,8 +460,8 @@
     },
     {
         "id": "animal-strikers",
-        "isProfessional": true,
         "canHighlight": true,
+        "web-category": "released",
         "isGame": true,
         "title": "Animal Strikers",
         "subtitle": "Un juego casual de deportes en 2D con multijugador local.",
@@ -584,8 +584,8 @@
     },
     {
         "id": "luminaria-dark-echoes",
-        "isProfessional": true,
         "canHighlight": true,
+        "web-category": "released",
         "isGame": true,
         "title": "Luminaria: Dark Echoes",
         "subtitle": "Un juego casual en 2D",
@@ -748,8 +748,8 @@
     },
     {
         "id": "confinio-reality-prison",
-        "isProfessional": true,
         "canHighlight": false,
+        "web-category": "released",
         "isGame": true,
         "title": "Confinio Reality Prison",
         "subtitle": "Un juego casual en 2D",
@@ -813,8 +813,8 @@
     },
     {
         "id": "mechanic-party",
-        "isProfessional": false,
         "canHighlight": false,
+        "web-category": "prototype",
         "isGame": true,
         "title": "Mechanic Party",
         "subtitle": "Un juego casual cooperativo en 3D",
@@ -903,8 +903,8 @@
     },
     {
         "id": "neon-space",
-        "isProfessional": false,
         "canHighlight": false,
+        "web-category": "prototype",
         "isGame": true,
         "title": "Neon Space",
         "subtitle": "Un juego arcade y casual en 3D",
