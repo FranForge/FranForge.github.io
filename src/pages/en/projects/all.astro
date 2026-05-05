@@ -1,19 +1,30 @@
 ---
-//Proyectos
+//Proyects
 import projectsData from '../../../data/en/projects.json'
 
-const releasedProjects = projectsData
-.filter(project => project['web-category'] === "released" && project.isGame === true);
+const allProjects = projectsData;
 
-const upcomingProjects = projectsData
-.filter(project => project['web-category'] === "upcoming" && project.isGame === true);
+//Proyects sections
+const releasedProjects = allProjects.filter(
+  p => p["web-category"] === "released"
+);
 
-const prototypeProjects = projectsData
-.filter(project => project['web-category'] === "prototype" && project.isGame === true);
+const upcomingProjects = allProjects.filter(
+  p => p["web-category"] === "upcoming"
+);
 
-const otherProjects = projectsData
-.filter(project => project.isGame === false);
+const prototypeProjects = allProjects.filter(
+  p => p["web-category"] === "prototype"
+);
 
+const otherProjects = allProjects.filter(
+  p => p["web-category"] === "other"
+);
+
+//Tags
+const allTags = [...new Set(projectsData.flatMap(project => project.tags))];
+
+//Components
 import Layout from "../../../layouts/Layout.astro";
 import VideoHero from '../../../components/VideoHero.astro';
 import InformationSection from '../../../components/InformationSection.astro';
@@ -29,98 +40,142 @@ import VerticalCardsContainer from '../../../components/VerticalCardsContainer.a
 		rotatingText = "Unity, Unreal, Web, C#"
     />
 
-    <!-- PROFESSIONAL ------------------------------------------------------------------------------- -->
-	<InformationSection>
+	<!-- FILTERS -->
+	<div id="filters">
+		<h2>Filter by tags</h2>
 
-		{releasedProjects && releasedProjects.length > 0 && (
+		{allTags.map(tag => (
+		<button class="tag-btn" data-tag={tag}>
+			{tag}
+		</button>
+		))}
 
-			<h1 id="released-projects">Released</h1>
-			<p>Production-ready applications and fully launched games.</p>
+		<button id="clear-filters">Clear</button>
+	</div>
 
-			<VerticalCardsContainer>
+	<div id="filtered-view" style="display: none;">
 
-				{releasedProjects.map((item) => (
+		<InformationSection>
+			<h1>Filtered Projects</h1>
+			<VerticalCardsContainer id="filtered-container">
+				
+				{allProjects.map(p => (
 					<VerticalCard
-						name={item.title}
-						description={item.description}
-						date={item.date}
-						attributes={item.attributes}
-						img={`/media/projects/${item.id}/thumbnail.webp`}
-						url={`/en/projects/${item.id}`}
+						name={p.title}
+						description={p.description}
+						date={p.date}
+						attributes={p.attributes}
+						tags={p.tags.join(",")}
+						img={`/media/projects/${p.id}/thumbnail.webp`}
+						url={`/en/projects/${p.id}`}
 					/>
 				))}
 				
 			</VerticalCardsContainer>
 
-		)}
+			<p id="no-results" style="display: none;">
+				No projects match the selected tags.
+			</p>
 
-		{upcomingProjects && upcomingProjects.length > 0 && (
+		</InformationSection>
 
-			<h1 id="upcoming-projects">Upcoming</h1>
-			<p>Feature-complete projects currently in the final stages 
-				of polishing or awaiting official launch.</p>
+	</div>
 
-			<VerticalCardsContainer>
+	<div id="default-view">
+		<InformationSection>
 
-				{upcomingProjects.map((item) => (
-					<VerticalCard
-						name={item.title}
-						description={item.description}
-						date={item.date}
-						attributes={item.attributes}
-						img={`/media/projects/${item.id}/thumbnail.webp`}
-						url={`/en/projects/${item.id}`}
-					/>
-				))}
-				
-			</VerticalCardsContainer>
+			{releasedProjects && releasedProjects.length > 0 && (
 
-		)}
+				<h1 id="released-projects">Released</h1>
+				<p>Production-ready applications and fully launched games.</p>
 
-		{prototypeProjects && prototypeProjects.length > 0 && (
+				<VerticalCardsContainer>
 
-			<h1 id="prototypes-projects">Prototypes</h1>
-			<p>A collection of technical experiments and gameplay mechanics.</p>
+					{releasedProjects.map((item) => (
+						<VerticalCard
+							name={item.title}
+							description={item.description}
+							date={item.date}
+							attributes={item.attributes}
+							img={`/media/projects/${item.id}/thumbnail.webp`}
+							url={`/en/projects/${item.id}`}
+						/>
+					))}
+					
+				</VerticalCardsContainer>
 
-			<VerticalCardsContainer>
+			)}
 
-				{prototypeProjects.map((item) => (
-					<VerticalCard
-						name={item.title}
-						description={item.description}
-						date={item.date}
-						attributes={item.attributes}
-						img={`/media/projects/${item.id}/thumbnail.webp`}
-						url={`/en/projects/${item.id}`}
-					/>
-				))}
-				
-			</VerticalCardsContainer>
+			{upcomingProjects && upcomingProjects.length > 0 && (
 
-		)}
+				<h1 id="upcoming-projects">Upcoming</h1>
+				<p>Feature-complete projects currently in the final stages 
+					of polishing or awaiting official launch.</p>
 
-		{otherProjects && otherProjects.length > 0 && (
+				<VerticalCardsContainer>
 
-			<h1 id="others-projects">Other Projects</h1>
+					{upcomingProjects.map((item) => (
+						<VerticalCard
+							name={item.title}
+							description={item.description}
+							date={item.date}
+							attributes={item.attributes}
+							img={`/media/projects/${item.id}/thumbnail.webp`}
+							url={`/en/projects/${item.id}`}
+						/>
+					))}
+					
+				</VerticalCardsContainer>
 
-			<VerticalCardsContainer>
+			)}
 
-				{otherProjects.map((item) => (
-					<VerticalCard
-						name={item.title}
-						description={item.description}
-						date={item.date}
-						attributes={item.attributes}
-						img={`/media/projects/${item.id}/thumbnail.webp`}
-						url={`/en/projects/${item.id}`}
-					/>
-				))}
-				
-			</VerticalCardsContainer>
+			{prototypeProjects && prototypeProjects.length > 0 && (
 
-		)}
-		
+				<h1 id="prototypes-projects">Prototypes</h1>
+				<p>A collection of technical experiments and gameplay mechanics.</p>
 
-	</InformationSection>
+				<VerticalCardsContainer>
+
+					{prototypeProjects.map((item) => (
+						<VerticalCard
+							name={item.title}
+							description={item.description}
+							date={item.date}
+							attributes={item.attributes}
+							img={`/media/projects/${item.id}/thumbnail.webp`}
+							url={`/en/projects/${item.id}`}
+						/>
+					))}
+					
+				</VerticalCardsContainer>
+
+			)}
+
+			{otherProjects && otherProjects.length > 0 && (
+
+				<h1 id="others-projects">Other Projects</h1>
+
+				<VerticalCardsContainer>
+
+					{otherProjects.map((item) => (
+						<VerticalCard
+							name={item.title}
+							description={item.description}
+							date={item.date}
+							attributes={item.attributes}
+							img={`/media/projects/${item.id}/thumbnail.webp`}
+							url={`/en/projects/${item.id}`}
+						/>
+					))}
+					
+				</VerticalCardsContainer>
+
+			)}
+		</InformationSection>
+	</div>
 
 </Layout>
+
+<script>
+	import "../../../scripts/projectsFilter.js"
+</script>

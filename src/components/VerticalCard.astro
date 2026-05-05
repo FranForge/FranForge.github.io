@@ -1,5 +1,5 @@
 ---
-const { name, description, date, attributes, img, url, lang = "en" } = Astro.props;
+const { name, description, date, attributes, img, tags, url, lang = "en" } = Astro.props;
 
 let readMore = "";
 
@@ -13,7 +13,7 @@ switch (lang) {
 }
 ---
 
-<a href={url} class="card theme-white-card">
+<a href={url} class="card theme-white-card" data-tags={tags}>
     <section class="content">
         <section class="description">
         <h2>{name}</h2>
