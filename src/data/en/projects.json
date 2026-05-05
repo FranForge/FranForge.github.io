@@ -4,7 +4,28 @@
         "canHighlight": true,
         "web-category": "upcoming",
         "isGame": true,
-        "tags": ["Game", "Unity", "C#", "Git", "Upcoming"],
+        "tags": [
+            {
+                "title": "Game",
+                "type": "primary"
+            },
+            {
+                "title": "Unity",
+                "type": "secondary"
+            },
+            {
+                "title": "C#",
+                "type": "secondary"
+            },
+            {
+                "title": "Git",
+                "type": "secondary"
+            },
+            {
+                "title": "Upcoming",
+                "type": "state"
+            }
+        ],
         "title": "Rhidian Yiou",
         "subtitle": "A retro pixel art top-down RPG.",
         "description": "Retro pixel art top-down RPG with attacks, spells and a world with dynamic events.",
@@ -148,7 +169,32 @@
         "canHighlight": false,
         "web-category": "other",
         "isGame": false,
-        "tags": ["Web Development", ".NET Core", "C#", "Git", "Released"],
+        "tags": [
+            {
+                "title": "Web Development",
+                "type": "primary"
+            },
+            {
+                "title": "C#",
+                "type": "secondary"
+            },
+            {
+                "title": ".NET",
+                "type": "secondary"
+            },
+            {
+                "title": "Git",
+                "type": "secondary"
+            },
+            {
+                "title": "Swagger",
+                "type": "secondary"
+            },
+            {
+                "title": "Released",
+                "type": "state"
+            }
+        ],
         "title": "FranForge API REST",
         "subtitle": "A simple REST API for web interactions.",
         "description": "REST API that acts as a messaging bridge between the user and the developer through the web.",
@@ -227,7 +273,28 @@
         "canHighlight": false,
         "web-category": "prototype",
         "isGame": true,
-        "tags": ["Game", "Unity", "C#", "Git", "Prototype"],
+        "tags": [
+            {
+                "title": "Game",
+                "type": "primary"
+            },
+            {
+                "title": "Unity",
+                "type": "secondary"
+            },
+            {
+                "title": "C#",
+                "type": "secondary"
+            },
+            {
+                "title": "Git",
+                "type": "secondary"
+            },
+            {
+                "title": "Prototype",
+                "type": "state"
+            }
+        ],
         "title": "Magictory",
         "subtitle": "A medieval automation and arcane magic game.",
         "description": "Automation and resource management game in a 3D medieval world, where your goal is to rebuild a corrupted land through machinery.",
@@ -342,7 +409,28 @@
         "canHighlight": true,
         "web-category": "upcoming",
         "isGame": true,
-        "tags": ["Game", "Unity", "C#", "Plastic", "Upcoming"],
+        "tags": [
+            {
+                "title": "Game",
+                "type": "primary"
+            },
+            {
+                "title": "Unity",
+                "type": "secondary"
+            },
+            {
+                "title": "C#",
+                "type": "secondary"
+            },
+            {
+                "title": "Git",
+                "type": "secondary"
+            },
+            {
+                "title": "Upcoming",
+                "type": "state"
+            }
+        ],
         "title": "The Sky Project",
         "subtitle": "A 2D metroidvania, monster collector and turn-based RPG.",
         "description": "Classic turn-based RPG with a complex creature system including attacks, types, status effects and more.",
@@ -472,7 +560,28 @@
         "canHighlight": true,
         "web-category": "released",
         "isGame": true,
-        "tags": ["Game", "Unity", "C#", "Plastic", "Released"],
+        "tags": [
+            {
+                "title": "Game",
+                "type": "primary"
+            },
+            {
+                "title": "Unity",
+                "type": "secondary"
+            },
+            {
+                "title": "C#",
+                "type": "secondary"
+            },
+            {
+                "title": "Plastic",
+                "type": "secondary"
+            },
+            {
+                "title": "Released",
+                "type": "state"
+            }
+        ],
         "title": "Animal Strikers",
         "subtitle": "A casual 2D sports game with local multiplayer.",
         "description": "Arcade-style soccer game with chibi-style characters who use abilities to change the outcome of the match.",
@@ -597,7 +706,28 @@
         "canHighlight": false,
         "web-category": "other",
         "isGame": false,
-        "tags": ["Web Development", "Astro", "JavaScript", "Git", "Released"],
+        "tags": [
+            {
+                "title": "Web Development",
+                "type": "primary"
+            },
+            {
+                "title": "Astro",
+                "type": "secondary"
+            },
+            {
+                "title": "JavaScript",
+                "type": "secondary"
+            },
+            {
+                "title": "Git",
+                "type": "secondary"
+            },
+            {
+                "title": "Released",
+                "type": "state"
+            }
+        ],
         "title": "FranForge Portfolio Website",
         "subtitle": "A personal website to showcase my work and projects.",
         "description": "Personal website developed with Astro.js to display my portfolio of projects as a game and web developer.",
@@ -667,7 +797,28 @@
         "canHighlight": true,
         "web-category": "released",
         "isGame": true,
-        "tags": ["Game", "Unity", "C#", "Plastic", "Released"],
+        "tags": [
+            {
+                "title": "Game",
+                "type": "primary"
+            },
+            {
+                "title": "Unity",
+                "type": "secondary"
+            },
+            {
+                "title": "C#",
+                "type": "secondary"
+            },
+            {
+                "title": "Plastic",
+                "type": "secondary"
+            },
+            {
+                "title": "Released",
+                "type": "state"
+            }
+        ],
         "title": "Luminaria: Dark Echoes",
         "subtitle": "A 2D casual game",
         "description": "2D survivor with story where defeating enemies and unlocking abilities drives progression.",
@@ -832,7 +983,28 @@
         "canHighlight": false,
         "web-category": "released",
         "isGame": true,
-        "tags": ["Game", "Unity", "C#", "Plastic", "Released"],
+        "tags": [
+            {
+                "title": "Game",
+                "type": "primary"
+            },
+            {
+                "title": "Unity",
+                "type": "secondary"
+            },
+            {
+                "title": "C#",
+                "type": "secondary"
+            },
+            {
+                "title": "Plastic",
+                "type": "secondary"
+            },
+            {
+                "title": "Released",
+                "type": "state"
+            }
+        ],
         "title": "Confinio Reality Prison",
         "subtitle": "A 2D casual game",
         "description": "Visual novel in 2D where you progress through narrative minigames that determine your future.",
@@ -898,7 +1070,28 @@
         "canHighlight": false,
         "web-category": "prototype",
         "isGame": true,
-        "tags": ["Game", "Unity", "C#", "Plastic", "Prototype"],
+        "tags": [
+            {
+                "title": "Game",
+                "type": "primary"
+            },
+            {
+                "title": "Unity",
+                "type": "secondary"
+            },
+            {
+                "title": "C#",
+                "type": "secondary"
+            },
+            {
+                "title": "Plastic",
+                "type": "secondary"
+            },
+            {
+                "title": "Prototype",
+                "type": "state"
+            }
+        ],
         "title": "Mechanic Party",
         "subtitle": "A 3D cooperative casual game",
         "description": "Play as a mechanic completing vehicle repair orders in the shortest time possible while finishing as many jobs as you can.",
@@ -989,7 +1182,24 @@
         "canHighlight": false,
         "web-category": "prototype",
         "isGame": true,
-        "tags": ["Game", "Unity", "C#", "Prototype"],
+        "tags": [
+            {
+                "title": "Game",
+                "type": "primary"
+            },
+            {
+                "title": "Unity",
+                "type": "secondary"
+            },
+            {
+                "title": "C#",
+                "type": "secondary"
+            },
+            {
+                "title": "Prototype",
+                "type": "state"
+            }
+        ],
         "title": "Neon Space",
         "subtitle": "A 3D arcade and casual game",
         "description": "A 3D endless runner where you pilot a spaceship that must dodge cubes to survive.",

@@ -22,7 +22,26 @@ const otherProjects = allProjects.filter(
 );
 
 //Tags
-const allTags = [...new Set(projectsData.flatMap(project => project.tags))];
+const rawTags = projectsData.flatMap(project => project.tags);
+
+const uniqueTags = rawTags.filter((tag, index, self) => 
+    index === self.findIndex((t) => t.title === tag.title)
+);
+
+const primaryTags = uniqueTags
+    .filter(tag => tag.type === "primary")
+    .map(tag => tag.title)
+    .sort();
+
+const secondaryTags = uniqueTags
+    .filter(tag => tag.type === "secondary")
+    .map(tag => tag.title)
+    .sort();
+
+const stateTags = uniqueTags
+    .filter(tag => tag.type === "state")
+    .map(tag => tag.title)
+    .sort();
 
 //Components
 import Layout from "../../../layouts/Layout.astro";
@@ -44,17 +63,40 @@ import VerticalCardsContainer from '../../../components/VerticalCardsContainer.a
 	<div id="filters" class="filters-section">
 		<h2>Filter by tags</h2>
 
-		<div class="content">
+		{primaryTags && primaryTags.length > 0 && (
+			<h3>Categories</h2>
+			<div class="content">
+				{primaryTags.map(tag => (
+					<button class="tag-btn" data-tag={tag}>
+						{tag}
+					</button>
+				))}
+			</div>
+		)}
 
-			{allTags.map(tag => (
-				<button class="tag-btn" data-tag={tag}>
-					{tag}
-				</button>
-			))}
+		{stateTags && stateTags.length > 0 && (
+			<h3>State</h2>
+			<div class="content">
+				{stateTags.map(tag => (
+					<button class="tag-btn" data-tag={tag}>
+						{tag}
+					</button>
+				))}
+			</div>
+		)}
 
-			<button id="clear-filters" class="clear-btn">Clear</button>
+		{secondaryTags && secondaryTags.length > 0 && (
+			<h3>Other Tags</h2>
+			<div class="content">
+				{secondaryTags.map(tag => (
+					<button class="tag-btn" data-tag={tag}>
+						{tag}
+					</button>
+				))}
+			</div>
+		)}
 
-		</div>
+		<button id="clear-filters" class="clear-btn">Clear Filters</button>
 		
 	</div>
 
@@ -71,7 +113,7 @@ import VerticalCardsContainer from '../../../components/VerticalCardsContainer.a
 						description={p.description}
 						date={p.date}
 						attributes={p.attributes}
-						tags={p.tags.join(",")}
+						tags={p.tags.map(tag => tag.title).join(",")}
 						img={`/media/projects/${p.id}/thumbnail.webp`}
 						url={`/en/projects/${p.id}`}
 					/>

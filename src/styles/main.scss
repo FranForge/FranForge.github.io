@@ -867,35 +867,38 @@ input, textarea {
         @include flex-x-center();
         flex-wrap: wrap;
         gap: 5px;
+        margin-bottom: 10px;
+    }
 
-        .tag-btn{
-            @include rounded();
-            @include bold-text();
-            padding: 5px 10px;
-            border-color: white;
-            border-style: solid;
-            transition: border-color 0.25s ease;
+    .tag-btn{
+        @include rounded();
+        @include bold-text();
+        padding: 5px 10px;
+        background-color: white;
+        border-color: white;
+        border-style: solid;
+        transition: border-color 0.25s ease;
 
-            &.active{
-                border-color: colors.$brand-color;
-            }
-
-            &:hover{
-                border-color: colors.$brand-secondary-color;
-            }
+        &.active{
+            border-color: colors.$brand-color;
         }
 
-        .clear-btn{
-            @include rounded();
-            @include bold-text();
-            padding: 5px 10px;
-            border-color: white;
-            border-style: solid;
-            transition: border-color 0.25s ease;
+        &:hover{
+            border-color: colors.$brand-secondary-color;
+        }
+    }
 
-            &:hover{
-                border-color: colors.$brand-secondary-color;
-            }
+    .clear-btn{
+        @include rounded();
+        @include bold-text();
+        padding: 5px 10px;
+        background-color: grey;
+        border-color: grey;
+        border-style: solid;
+        transition: border-color 0.25s ease;
+
+        &:hover{
+            border-color: colors.$brand-secondary-color;
         }
     }
 }
