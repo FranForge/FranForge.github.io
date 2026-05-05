@@ -1,75 +1,5 @@
 [
     {
-        "id": "franforge-website",
-        "canHighlight": false,
-        "web-category": "released",
-        "isGame": false,
-        "tags": ["Web Development", "Astro", "JavaScript", "Git", "Released"],
-        "title": "FranForge Portfolio Website",
-        "subtitle": "A personal website to showcase my work and projects.",
-        "description": "Personal website developed with Astro.js to display my portfolio of projects as a game and web developer.",
-        "date": "Nov 2025 - Present",
-        "attributes": "Solo,Astro,JS,Git",
-        "images": [],
-        "video": "",
-        "developer": "FranForge",
-        "technologies": "Astro, SCSS, JavaScript, Git",
-        "synopsis": "Personal website developed with Astro.js to showcase my portfolio of projects as a game and web developer. The site is designed to be fast, accessible, and easy to navigate, focusing on the visual presentation of my projects and skills.",
-        "genre-and-tags": "Web Development, Portfolio, Personal.",
-        "platforms": [],
-        "roles": [
-            {
-            "title": "Full-Stack Developer",
-            "description": "Developed the backend in .NET Core and the frontend with Astro.js and JavaScript."
-            }
-        ],
-        "systems": [
-            {
-            "title": "Decoupled Data",
-            "summary": [
-                "JSON for site-wide data",
-                "Dynamic element creation with Astro.js",
-                "Separation of concerns between logic and page content"
-            ],
-            "description": "I separated the page data into JSON files to keep the content organized and facilitate the dynamic creation of elements with Astro.js."
-            },
-            {
-            "title": "Multiple Reusable Components",
-            "summary": [
-                "Astro.js components for sections, cards, and containers"
-            ],
-            "description": "I modularized the website by creating reusable components for information sections, project cards, and containers, allowing for clean and organized code."
-            },
-            {
-            "title": "Multilingual Support",
-            "summary": [
-                "Support for multiple languages (Spanish and English)",
-                "File structure and routing for each language",
-                "Browser language detection for automatic redirection"
-            ],
-            "description": "A system responsible for managing the translation of the page into different languages, allowing users to switch between Spanish and English seamlessly."
-            }
-        ],
-        "learn": [
-            "I learned how to use Astro.js for web development, creating a fast and optimized site.",
-            "I used JavaScript to create dynamic elements and manage the page logic.",
-            "Deployment on GitHub Pages with GitHub Actions to automate the publishing process."
-        ],
-        "improvements": [
-            "I would create a tool to add project data more easily, avoiding manual JSON editing."
-        ],
-        "additional-notes": "",
-        "awards": [],
-        "links": [
-            {
-            "title": "Github",
-            "img": "github.svg",
-            "url": "https://github.com/FranForge/FranForge.github.io",
-            "state": "View source code"
-            }
-        ]
-    },
-    {
         "id": "rhidian-yiou",
         "canHighlight": true,
         "web-category": "upcoming",
@@ -661,6 +591,76 @@
         "additional-notes": "",
         "awards": [],
         "links": []
+    },
+    {
+        "id": "franforge-website",
+        "canHighlight": false,
+        "web-category": "released",
+        "isGame": false,
+        "tags": ["Web Development", "Astro", "JavaScript", "Git", "Released"],
+        "title": "FranForge Portfolio Website",
+        "subtitle": "A personal website to showcase my work and projects.",
+        "description": "Personal website developed with Astro.js to display my portfolio of projects as a game and web developer.",
+        "date": "Jul 2024 - Present",
+        "attributes": "Solo,Astro,JS,Git",
+        "images": [],
+        "video": "",
+        "developer": "FranForge",
+        "technologies": "Astro, SCSS, JavaScript, Git",
+        "synopsis": "Personal website developed with Astro.js to showcase my portfolio of projects as a game and web developer. The site is designed to be fast, accessible, and easy to navigate, focusing on the visual presentation of my projects and skills.",
+        "genre-and-tags": "Web Development, Portfolio, Personal.",
+        "platforms": [],
+        "roles": [
+            {
+            "title": "Full-Stack Developer",
+            "description": "Developed the backend in .NET Core and the frontend with Astro.js and JavaScript."
+            }
+        ],
+        "systems": [
+            {
+            "title": "Decoupled Data",
+            "summary": [
+                "JSON for site-wide data",
+                "Dynamic element creation with Astro.js",
+                "Separation of concerns between logic and page content"
+            ],
+            "description": "I separated the page data into JSON files to keep the content organized and facilitate the dynamic creation of elements with Astro.js."
+            },
+            {
+            "title": "Multiple Reusable Components",
+            "summary": [
+                "Astro.js components for sections, cards, and containers"
+            ],
+            "description": "I modularized the website by creating reusable components for information sections, project cards, and containers, allowing for clean and organized code."
+            },
+            {
+            "title": "Multilingual Support",
+            "summary": [
+                "Support for multiple languages (Spanish and English)",
+                "File structure and routing for each language",
+                "Browser language detection for automatic redirection"
+            ],
+            "description": "A system responsible for managing the translation of the page into different languages, allowing users to switch between Spanish and English seamlessly."
+            }
+        ],
+        "learn": [
+            "I learned how to use Astro.js for web development, creating a fast and optimized site.",
+            "I used JavaScript to create dynamic elements and manage the page logic.",
+            "Deployment on GitHub Pages with GitHub Actions to automate the publishing process."
+        ],
+        "improvements": [
+            "I would create a tool to add project data more easily, avoiding manual JSON editing."
+        ],
+        "additional-notes": "",
+        "awards": [],
+        "links": [
+            {
+            "title": "Github",
+            "img": "github.svg",
+            "url": "https://github.com/FranForge/FranForge.github.io",
+            "state": "View source code"
+            }
+        ]
     },
     {
         "id": "luminaria-dark-echoes",
