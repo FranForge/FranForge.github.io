@@ -879,6 +879,10 @@ input, textarea {
             &.active{
                 border-color: colors.$brand-color;
             }
+
+            &:hover{
+                border-color: colors.$brand-secondary-color;
+            }
         }
 
         .clear-btn{
@@ -887,6 +891,11 @@ input, textarea {
             padding: 5px 10px;
             border-color: white;
             border-style: solid;
+            transition: border-color 0.25s ease;
+
+            &:hover{
+                border-color: colors.$brand-secondary-color;
+            }
         }
     }
 }
