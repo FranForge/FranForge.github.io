@@ -22,6 +22,10 @@
                 "type": "secondary"
             },
             {
+                "title": "2D",
+                "type": "secondary"
+            },
+            {
                 "title": "Upcoming",
                 "type": "state"
             }
@@ -283,6 +287,10 @@
                 "type": "secondary"
             },
             {
+                "title": "Blender",
+                "type": "secondary"
+            },
+            {
                 "title": "C#",
                 "type": "secondary"
             },
@@ -290,6 +298,11 @@
                 "title": "Git",
                 "type": "secondary"
             },
+            {
+                "title": "3D",
+                "type": "secondary"
+            },
+            
             {
                 "title": "Prototype",
                 "type": "state"
@@ -424,6 +437,10 @@
             },
             {
                 "title": "Git",
+                "type": "secondary"
+            },
+            {
+                "title": "2D",
                 "type": "secondary"
             },
             {
@@ -575,6 +592,10 @@
             },
             {
                 "title": "Plastic",
+                "type": "secondary"
+            },
+            {
+                "title": "2D",
                 "type": "secondary"
             },
             {
@@ -815,6 +836,10 @@
                 "type": "secondary"
             },
             {
+                "title": "2D",
+                "type": "secondary"
+            },
+            {
                 "title": "Released",
                 "type": "state"
             }
@@ -1001,6 +1026,10 @@
                 "type": "secondary"
             },
             {
+                "title": "2D",
+                "type": "secondary"
+            },
+            {
                 "title": "Released",
                 "type": "state"
             }
@@ -1080,11 +1109,19 @@
                 "type": "secondary"
             },
             {
+                "title": "Blender",
+                "type": "secondary"
+            },
+            {
                 "title": "C#",
                 "type": "secondary"
             },
             {
                 "title": "Plastic",
+                "type": "secondary"
+            },
+            {
+                "title": "3D",
                 "type": "secondary"
             },
             {
@@ -1192,7 +1229,15 @@
                 "type": "secondary"
             },
             {
+                "title": "Blender",
+                "type": "secondary"
+            },
+            {
                 "title": "C#",
+                "type": "secondary"
+            },
+            {
+                "title": "3D",
                 "type": "secondary"
             },
             {
