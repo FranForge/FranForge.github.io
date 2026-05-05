@@ -146,7 +146,7 @@
     {
         "id": "franforge-api-rest",
         "canHighlight": false,
-        "web-category": "released",
+        "web-category": "other",
         "isGame": false,
         "tags": ["Desarrollo Web", ".NET Core", "C#", "Git", "Publicado"],
         "title": "FranForge API REST",
@@ -597,7 +597,7 @@
     {
         "id": "franforge-website",
         "canHighlight": false,
-        "web-category": "released",
+        "web-category": "other",
         "isGame": false,
         "tags": ["Desarrollo Web", "Astro", "JavaScript", "Git", "Publicado"],
         "title": "Web Porfolio de FranForge",
