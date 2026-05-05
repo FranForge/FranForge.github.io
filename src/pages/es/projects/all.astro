@@ -56,7 +56,8 @@ import VerticalCardsContainer from '../../../components/VerticalCardsContainer.a
 	<div id="filtered-view" style="display: none;">
 
 		<InformationSection>
-			<h1>Filtered Projects</h1>
+			<h1>Proyectos Filtrados</h1>
+			<p>Proyectos que coinciden con las etiquetas seleccionadas: <span id="filter-tags"></span>.</p>
 			<VerticalCardsContainer id="filtered-container">
 				
 				{allProjects.map(p => (
@@ -74,7 +75,7 @@ import VerticalCardsContainer from '../../../components/VerticalCardsContainer.a
 			</VerticalCardsContainer>
 
 			<p id="no-results" style="display: none;">
-				No projects match the selected tags.
+				No hay proyectos que coincidan con las etiquetas seleccionadas.
 			</p>
 
 		</InformationSection>

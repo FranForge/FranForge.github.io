@@ -4,6 +4,7 @@ const filteredView = document.getElementById("filtered-view");
 const defaultView = document.getElementById("default-view");
 
 const filteredContainer = document.getElementById("filtered-container");
+const filterTagsDisplay = document.getElementById("filter-tags");
 const noResults = document.getElementById("no-results");
 
 const cards = filteredContainer.querySelectorAll(".card");
@@ -25,6 +26,7 @@ function update() {
     } else {
         defaultView.style.display = "none";
         filteredView.style.display = "block";
+        filterTagsDisplay.textContent = activeTags.join(", ");
     }
 
     let visibleCount = 0;
