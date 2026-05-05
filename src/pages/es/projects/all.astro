@@ -41,16 +41,20 @@ import VerticalCardsContainer from '../../../components/VerticalCardsContainer.a
     />
 
 	<!-- FILTERS -->
-	<div id="filters">
-		<h2>Filter by tags</h2>
+	<div id="filters" class="filters-section">
+		<h2>Filtrar por etiquetas</h2>
 
-		{allTags.map(tag => (
-		<button class="tag-btn" data-tag={tag}>
-			{tag}
-		</button>
-		))}
+		<div class="content">
 
-		<button id="clear-filters">Clear</button>
+			{allTags.map(tag => (
+				<button class="tag-btn" data-tag={tag}>
+					{tag}
+				</button>
+			))}
+
+			<button id="clear-filters" class="clear-btn">Clear</button>
+
+		</div>
 	</div>
 
 	<div id="filtered-view" style="display: none;">

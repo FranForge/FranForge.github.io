@@ -859,6 +859,38 @@ input, textarea {
     }
 }
 
+.filters-section{
+    @include section-base();
+    @include flex-y-center();
+
+    >.content{
+        @include flex-x-center();
+        flex-wrap: wrap;
+        gap: 5px;
+
+        .tag-btn{
+            @include rounded();
+            @include bold-text();
+            padding: 5px 10px;
+            border-color: white;
+            border-style: solid;
+            transition: border-color 0.25s ease;
+
+            &.active{
+                border-color: colors.$brand-color;
+            }
+        }
+
+        .clear-btn{
+            @include rounded();
+            @include bold-text();
+            padding: 5px 10px;
+            border-color: white;
+            border-style: solid;
+        }
+    }
+}
+
 //Botones
 //----------------------------------------------------------------------
 .button{
