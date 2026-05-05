@@ -1,18 +1,24 @@
 # What will you find here?
-This repository belongs to my personal website [FranForge](https://franforge.es), where I showcase my projects as a portfolio.
+This repository contains the source code for my personal website, [FranForge](https://franforge.es), where I showcase my projects as a portfolio.
 
 # Why is it public?
-The website was built from scratch by me using HTML, CSS, and JavaScript, so it is also an important project to showcase. In addition, I use GitHub Pages for hosting, a free hosting service to which I later applied my custom domain through Hostinger.
+The website was built from scratch using Astro, HTML, SCSS, and JavaScript, so it also serves as a key project in my portfolio. Additionally, it is hosted on GitHub Pages, a free hosting service, with a custom domain configured through Hostinger.
 
 # Technologies used
-- GitHub as version control.
-- GitHub Pages for web hosting.
-- Hostinger as the domain provider.
-- Visual Studio Code as the IDE.
-- Canva, Krita, and Inkscape for image and logo creation.
-- DaVinci Resolve as the video editor.
+- Astro (framework)
+- JSON (data management)
+- Render (API hosting)
+- Git (version control)
+- GitHub Pages (web hosting)
+- Hostinger (domain provider)
+- Visual Studio Code (IDE)
+- Canva, Krita, and Inkscape (image and logo creation)
+- DaVinci Resolve (video editing)
 
 # Languages used
 - HTML
 - CSS
+- SCSS
 - JavaScript
+- JSON
+- C# ([REST API](https://github.com/FranForge/FranForge-Website-APIRest))
