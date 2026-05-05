@@ -1,5 +1,77 @@
 [
     {
+        "id": "franforge-website",
+        "canHighlight": false,
+        "web-category": "released",
+        "isGame": false,
+        "tags": ["Desarrollo Web", "Astro", "JavaScript", "Git", "Publicado"],
+        "title": "Web Porfolio de FranForge",
+        "subtitle": "Una página web personal para mostrar mi trabajo y proyectos.",
+        "description": "Página web personal desarrollada con Astro.js para mostrar mi portafolio de proyectos como desarrollador de videojuegos y web.",
+        "date": "Nov 2025 - Presente",
+        "attributes": "Solo,Astro,JS,Git",
+        "images": [
+        ],
+        "video": "",
+        "developer": "FranForge",
+        "technologies": "Astro, SCSS, JavaScript, Git",
+        "synopsis": "Web personal desarrollada con Astro.js para mostrar mi portafolio de proyectos como desarrollador de videojuegos y web. La página está diseñada para ser rápida, accesible y fácil de navegar, con un enfoque en la presentación visual de mis proyectos y habilidades.",
+        "genre-and-tags": "Desarrollo Web, Portafolio, Personal.",
+        "platforms": [
+        ],
+        "roles": [
+            {
+                "title": "Desarrollador Full-Stack",
+                "description": "Desarrollé backend en .NET Core y frontend con Astro.js y JavaScript."
+            }
+        ],
+        "systems": [
+            {
+                "title": "Datos separados",
+                "summary": [
+                    "JSON para datos en toda la web",
+                    "Creación de elementos dinámicamente con Astro.js",
+                    "Separación de responsabilidad con contenido de la página"
+                ],
+                "description": "Separé los datos de la página en archivos JSON para mantener el contenido organizado y facilitar la creación de elementos dinámicos con Astro.js."
+            },
+            {
+                "title": "Múltiples componentes reutilizables",
+                "summary": [
+                    "Componentes de Astro.js para secciones, tarjetas y contenedores"
+                ],
+                "description": "Modularicé la web creando componentes reutilizables para secciones de información, tarjetas de proyectos y contenedores, lo que permitió mantener un código limpio y organizado."
+            },
+            {
+                "title": "Página multilingüe",
+                "summary": [
+                    "Soporte para múltiples idiomas (español e inglés)",
+                    "Estructura de archivos y rutas para cada idioma",
+                    "Detección de idioma del navegador para redirección automática"
+                ],
+                "description": "Sistema encargado de gestionar la traducción de la página a diferentes idiomas, permitiendo a los usuarios cambiar entre español e inglés de forma fluida."
+            }
+        ],
+        "learn": [
+            "Aprendí a usar Astro.js para el desarrollo web, creando una página rápida y optimizada.",
+            "Usé JavaScript para crear elementos dinámicos y gestionar la lógica de la página.",
+            "Despliegue en GitHub Pages con GitHub Actions para automatizar el proceso de publicación."
+        ],
+        "improvements": [
+            "Crearía una herramienta que me permita agregar datos a los proyectos de forma más sencilla, evitando la edición manual de JSON."
+        ],
+        "additional-notes": "",
+        "awards": [],
+        "links": [
+            {
+                "title": "Github",
+                "img": "github.svg",
+                "url": "https://github.com/FranForge/FranForge.github.io",
+                "state": "Ver código fuente"
+            }
+        ]
+    },
+    {
         "id": "rhidian-yiou",
         "canHighlight": true,
         "web-category": "upcoming",

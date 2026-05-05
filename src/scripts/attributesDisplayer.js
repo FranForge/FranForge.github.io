@@ -18,6 +18,7 @@ function getColorFor(name)
         case ".NET":
         case ".NET Core":
         case ".NET Framework":
+        case "Astro":
         case "Swagger":
             return "#6C3D8A";
         case "C#":
