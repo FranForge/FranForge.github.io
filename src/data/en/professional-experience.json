@@ -1,6 +1,6 @@
 [
     {
-        "title": "Mid Unity Developer",
+        "title": "Unity Developer",
         "company": "Freelance",
         "location": "Remote",
         "date": "Mar 2026 - Apr 2026",
@@ -16,7 +16,7 @@
         ]
     },
     {
-        "title": "Junior to Senior Unity Developer",
+        "title": "Unity Developer and Technical Lead",
         "company": "Enthariel Games",
         "location": "Seville",
         "date": "Mar 2023 - Sep 2025",
@@ -39,6 +39,7 @@
             }
         ],
         "descriptions": [
+            "Managed a team of 1-5 developers, overseeing code quality, project progress and architecture decisions.",
             "Developed systems from scratch with Unity.",
             "Planned project architecture and version control.",
             "Mentored other developers.",
