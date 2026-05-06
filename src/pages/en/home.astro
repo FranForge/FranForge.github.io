@@ -43,6 +43,7 @@ import BoxCardsContainer from '../../components/BoxCardsContainer.astro';
 import BoxCard from '../../components/BoxCard.astro';
 import HorizontalCardsContainer from '../../components/HorizontalCardsContainer.astro';
 import HorizontalCard from '../../components/HorizontalCard.astro';
+import TimelineEventLink from '../../components/TimelineEventLink.astro';
 ---
 
 <Layout 
@@ -220,14 +221,15 @@ import HorizontalCard from '../../components/HorizontalCard.astro';
 
 		</Timeline>
 
-		<h1>Certificates and Courses</h2>
+		<h1>Certificates and Courses</h1>
 		<Timeline>
 			
 			{certificatesAndCourses.map((item) =>
-			<TimelineEvent
+			<TimelineEventLink
 				title={item.title}
 				entity={item.company}
 				date={item.date}
+				link={item.link}
 			/>
 			)}
 

@@ -2,26 +2,31 @@
     {
         "title": "Aprende a programar videojuegos como en la Universidad",
         "company": "Udemy",
-        "date": "Feb 2026"
+        "date": "Feb 2026",
+        "link": "https://www.udemy.com/certificate/UC-3b08b54b-4a87-4225-9dd2-40d1229c4f24/"
     },
     {
         "title": "C++ Intermedio",
         "company": "sololearn",
-        "date": "Sep 2025"
+        "date": "Sep 2025",
+        "link": "https://www.sololearn.com/es/certificates/CC-MBPVFRRD"
     },
     {
         "title": "Introducción a C++",
         "company": "sololearn",
-        "date": "Sep 2025"
+        "date": "Sep 2025",
+        "link": "https://www.sololearn.com/es/certificates/CC-XZFQ08VJ"
     },
     {
         "title": "C# Total",
         "company": "Udemy",
-        "date": "Sep 2025"
+        "date": "Sep 2025",
+        "link": "https://www.udemy.com/certificate/UC-d9f81b21-1c16-495a-b306-b8bfd5e9af47/"
     },
     {
         "title": "Fundamentos de C#",
         "company": "freeCodeCamp, Microsoft",
-        "date": "Ago 2025"
+        "date": "Ago 2025",
+        "link": "https://www.freecodecamp.org/certification/franforge/foundational-c-sharp-with-microsoft"
     }
 ]
