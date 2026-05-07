@@ -6,6 +6,7 @@ The website was built from scratch using Astro, HTML, SCSS, and JavaScript, so i
 
 # Technologies used
 - Astro (framework)
+- Docker (dev enviroment)
 - JSON (data management)
 - Render (API hosting)
 - Git (version control)
